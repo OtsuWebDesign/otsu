@@ -94,23 +94,31 @@ textarea {
 }
 
 /* ==========================================================================
-   Author's custom styles
+   Our custom styles <!!!!> ~Maciej
    ========================================================================== */
 
+   #container
+   {
+    margin-top: 50px;
+   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+   #nav
+   {
+       width: 100%;
+       height: 50px;
+       z-index: 9999;
+       background-color: #222;
+       opacity: 0.9;
+       filter: alpha(opacity=90); /* For IE8 and earlier */
+       position: fixed;
+       top: 0;
+   }
+   
+   li
+   {
+    float: left;
+    display: inline-block;
+   }
 
 
 /* ==========================================================================
