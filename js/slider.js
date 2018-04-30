@@ -1,8 +1,8 @@
 const Slider = function(elemSelector, opts) {
     const defaultOpts = {
         pauseTime : 0,
-        prevText : "Poprzedni slide",
-        nextText : "Następny slide",
+        prevText : "Poprzedni slajd",
+        nextText : "Następny slajd",
         generateDots : true,
         generatePrevNext : true
     };
@@ -29,7 +29,7 @@ Slider.prototype.generateSlider = function() {
 
     //tworzymy kontener dla slajdow
     const slidesCnt = document.createElement('div');
-    slidesCnt.classList.add('slider-slides-cnt');
+    slidesCnt.classList.add('slides');
 
     //pobieramy element slajdów
     this.slides = this.slider.children;
@@ -37,7 +37,7 @@ Slider.prototype.generateSlider = function() {
     //to jest zywa kolekcja, więc przy przeniesieniu kazdego slajda
     //jej dlugosc maleje
     while (this.slides.length) {
-        this.slides[0].classList.add('slider-slide');
+        this.slides[0].classList.add('slide');
         slidesCnt.appendChild(this.slides[0]);
     }
     this.slides = slidesCnt.children;
@@ -65,20 +65,20 @@ Slider.prototype.slideNext = function() {
 
 Slider.prototype.changeSlide = function(index) {
     [].forEach.call(this.slides, function(slide) {
-        slide.classList.remove('slider-slide-active');
+        slide.classList.remove('slide-active');
         slide.setAttribute('aria-hidden', true);
     });
 
     //dodajemy ją tylko wybranemu
-    this.slides[index].classList.add('slider-slide-active');
+    this.slides[index].classList.add('slide-active');
     this.slides[index].setAttribute('aria-hidden', false);
 
     //podobny manewr robimy dla kropek
     if (this.options.generateDots) {
         this.dots.forEach(function(dot) {
-            dot.classList.remove('slider-dots-element-active');
+            dot.classList.remove('slider-dot-active');
         });
-        this.dots[index].classList.add('slider-dots-element-active');
+        this.dots[index].classList.add('slider-dot-active');
     }
 
     //aktualny slide przestawiamy na wybrany
@@ -109,7 +109,7 @@ Slider.prototype.createPrevNext = function() {
 
     const nav = document.createElement('div');
     nav.classList.add('slider-nav');
-    nav.setAttribute('aria-label', 'Slider prev next');
+    nav.setAttribute('aria-label', 'Przyciski zmiany slajdu: poprzedni, następny');
     nav.appendChild(this.prev);
     nav.appendChild(this.next);
     this.slider.appendChild(nav);
@@ -118,7 +118,7 @@ Slider.prototype.createPrevNext = function() {
 Slider.prototype.createDots = function() {
     const ulDots = document.createElement('ul');
     ulDots.classList.add('slider-dots');
-    ulDots.setAttribute('aria-label', 'Slider pagination');
+    ulDots.setAttribute('aria-label', 'Przyciski zmiany slajdu: kropki');
 
     //tworzymy pętlę w ilości liczby slajów
     for (let i=0; i<this.slides.length; i++) {
@@ -127,10 +127,10 @@ Slider.prototype.createDots = function() {
         //za pomocą metody changeSlide()
 
         const li = document.createElement('li');
-        li.classList.add('slider-dots-element');
+        li.classList.add('slider-dot');
 
         const btn = document.createElement('button');
-        btn.classList.add('slider-dots-button');
+        btn.classList.add('slider-dot-button');
         btn.type = "button";
         btn.innerText = i+1;
         btn.setAttribute('aria-label', 'Ustaw slajd '+(i+1));
