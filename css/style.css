@@ -50,9 +50,6 @@
    /*---------------------------Slider---------------------------*/
 	.slider {
 		position: relative;
-		background: url(../img/slider/1.jpg);
-		background-size: cover;
-		background-position: center center;
 	}
 
 	/* kontener dla wszystkich slajdów */
@@ -76,6 +73,25 @@
 		opacity:0;
 		z-index: 0;
 	}
+	#slide1
+	{
+		background: url(../img/slider/1.jpg);
+		background-size: cover;
+		background-position: center center;
+	}
+	#slide2
+	{
+		background: url(../img/slider/2.jpg);
+		background-size: cover;
+		background-position: center center;
+	}
+	#slide3
+	{
+		background: url(../img/slider/3.jpg);
+		background-size: cover;
+		background-position: center center;
+	}
+	
 	/* slide aktywny */
 	.slide-active
 	{
