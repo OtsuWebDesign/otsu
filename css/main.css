@@ -156,6 +156,12 @@ textarea {
    {
        margin-bottom: 0;
    }
+
+   #squares
+   {
+       line-height: 200px;
+   }
+
    #square1
    {
        width: 25%;
@@ -203,6 +209,7 @@ textarea {
         text-decoration: none;
         color: white;
         text-align: center;
+        
         }
 
     #overlay1:hover .link
