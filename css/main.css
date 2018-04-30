@@ -8,12 +8,17 @@
 
 /* ==========================================================================
    Base styles: opinionated defaults
+   Google fonts available: 
+   font-family: 'Lato', sans-serif;
+   font-family: 'Roboto', sans-serif;
    ========================================================================== */
 
 html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
+    font-family: 'Roboto', sans-serif;
+
 }
 
 /*
@@ -116,8 +121,8 @@ textarea {
    
    li
    {
-    float: left;
     display: inline-block;
+    color: #dddbdc;
    }
 
 
