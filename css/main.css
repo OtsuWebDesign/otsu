@@ -117,12 +117,21 @@ textarea {
        filter: alpha(opacity=90); /* For IE8 and earlier */
        position: fixed;
        top: 0;
+       text-align: center;
    }
    
    li
    {
     display: inline-block;
     color: #dddbdc;
+    height: 50px;
+    line-height: 100%;
+    margin-right: 25px;
+   }
+
+   li:hover
+   {
+       color: #8c8c8c;
    }
 
 
