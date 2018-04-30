@@ -134,6 +134,13 @@ textarea {
        color: #8c8c8c;
        cursor: pointer;
    }
+   
+   #slider
+   {
+       width: 100%;
+       height: 250px;
+       background-color: beige;
+   }
 
 
 /* ==========================================================================
