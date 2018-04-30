@@ -10,7 +10,6 @@
 		<title>Polstronex</title>
 		<!-- Nie wiem co ten tag robi -->
 		<link rel="apple-touch-icon" href="icon.png">
-		<link rel="stylesheet" href="css/normalize.css" type="text/css">
         <link rel="stylesheet" href="css/main.css" type="text/css">
 		<link rel="stylesheet" href="css/style.css"  type="text/css"/>
 		<link rel="stylesheet "href="https://fonts.googleapis.com/css?family=Lato|Roboto" type="text/css">
@@ -29,56 +28,54 @@
 		</nav>
 		<!-- Slider -->
 		<section>
-				<div id="slider">
-					<div class="slides">
-						<article class="slide" aria-label="Pokaz slajdów: nawigowanie przy użyciu przycisków następny i poprzedni">
-							<img class="slideimg" src="img/slider images/coffee.jpg">
-							<h2 class="element-title">
-								1 Lorem ipsum dolor sit.
-							</h2>
-							<div class="element-text">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia dolore inventore, ipsam optio. Magni repellat officia autem fuga, laboriosam facilis?
-							</div>
-						</article>
-						<article class="slide" style="display:none" aria-label="pokaz slajdów: nawigowanie przy użyciu przycisków następny i poprzedni">
-							<img class="slideimg" src="img/slider images/sound.jpg">
-							<h2 class="element-title">
-								2 Lorem ipsum dolor sit.
-							</h2>
-							<div class="element-text">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum exercitationem asperiores perspiciatis sapiente ducimus atque dicta labore dolores sequi ut.
-							</div>
-						</article>
-						<article class="slide" style="display:none" aria-label="pokaz slajdów: nawigowanie przy użyciu przycisków następny i poprzedni">
-							<img class="slideimg" src="img/slider images/workbench.jpg">
-							<h2 class="title">
-								3 Lorem ipsum dolor sit.
-							</h2>
-							<div class="text">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus id quas, quia consectetur repellat quis! Minus voluptatibus, dolores iure deserunt.
-							</div>
-						</article>
-					</div>
-					<div class="slider-nav" aria-label="Przyciski do nawigowania: poprzedni i następny">
-						<button type="button" class="slider-button" id="slider-button-prev" aria-label="Poprzedni">&#10094;</button>
-						<button type="button" class="slider-button" id="slider-button-next" aria-label="Następny">&#10095;</button>
-					</div>
-					<ul class="slider-dots" aria-label="Kropki do nawigacji">
-						<li class="slider-dot">
-							<button class="slider-dot-button" type="button" aria-label="Ustaw slajd 1"></button>
-						</li>
-						<li class="slider-dot">
-							<button class="slider-dot-button" type="button" aria-label="Ustaw sjald 2"></button>
-						</li>
-						<li class="slider-dot slider-dot-active">
-							<button class="slider-dot-button" type="button" aria-label="Ustaw sjald 3"></button>
-						</li>
-					</ul>
+			<div id="slider">
+				<div class="slides">
+					<article class="slide active" aria-label="Pokaz slajdów: nawigowanie przy użyciu przycisków następny i poprzedni">
+						<img class="slideimg" src="img/slider images/coffee.jpg">
+						<h2 class="element-title">
+							1 Lorem ipsum dolor sit.
+						</h2>
+						<div class="element-text">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia dolore inventore, ipsam optio. Magni repellat officia autem fuga, laboriosam facilis?
+						</div>
+					</article>
+					<article class="slide" aria-label="pokaz slajdów: nawigowanie przy użyciu przycisków następny i poprzedni">
+						<img class="slideimg" src="img/slider images/sound.jpg">
+						<h2 class="element-title">
+							2 Lorem ipsum dolor sit.
+						</h2>
+						<div class="element-text">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum exercitationem asperiores perspiciatis sapiente ducimus atque dicta labore dolores sequi ut.
+						</div>
+					</article>
+					<article class="slide" aria-label="pokaz slajdów: nawigowanie przy użyciu przycisków następny i poprzedni">
+						<img class="slideimg" src="img/slider images/workbench.jpg">
+						<h2 class="title">
+							3 Lorem ipsum dolor sit.
+						</h2>
+						<div class="text">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus id quas, quia consectetur repellat quis! Minus voluptatibus, dolores iure deserunt.
+						</div>
+					</article>
 				</div>
-			
-			</section>
-	<div id="container">
-			
+				<div class="slider-nav" aria-label="Przyciski do nawigowania: poprzedni i następny">
+					<button type="button" class="slider-button" id="slider-button-prev" aria-label="Poprzedni">&#10094;</button>
+					<button type="button" class="slider-button" id="slider-button-next" aria-label="Następny">&#10095;</button>
+				</div>
+				<ul class="slider-dots" aria-label="Kropki do nawigacji">
+					<li class="slider-dot">
+						<button class="slider-dot-button" type="button" aria-label="Ustaw slajd 1"></button>
+					</li>
+					<li class="slider-dot">
+						<button class="slider-dot-button" type="button" aria-label="Ustaw sjald 2"></button>
+					</li>
+					<li class="slider-dot slider-dot-active">
+						<button class="slider-dot-button" type="button" aria-label="Ustaw sjald 3"></button>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<div id="container">
 			<!-- Kwadraty -->
 			<section>
 				<div id="squares">
@@ -131,7 +128,7 @@
 					</article>
 				</div>
 			</section>
-	</div>
+		</div>
 		<footer>
 			Polstronex corporation (C) Wszelkie prawa zastrzeżone
 		</footer>
