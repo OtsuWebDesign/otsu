@@ -36,7 +36,8 @@ Slider.prototype.generateSlider = function() {
 
     //to jest zywa kolekcja, więc przy przeniesieniu kazdego slajda
     //jej dlugosc maleje
-    while (this.slides.length) {
+    while (this.slides.length) 
+	{
         this.slides[0].classList.add('slide');
         slidesCnt.appendChild(this.slides[0]);
     }
