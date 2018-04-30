@@ -112,7 +112,7 @@ textarea {
        width: 100%;
        height: 50px;
        z-index: 9999;
-       background-color: #222;
+       background-color: #20326b;
        opacity: 0.9;
        filter: alpha(opacity=90); /* For IE8 and earlier */
        position: fixed;
