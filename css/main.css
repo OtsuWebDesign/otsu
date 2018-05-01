@@ -5,7 +5,15 @@
    font-family: 'Lato', sans-serif;
    font-family: 'Roboto', sans-serif;
    ========================================================================== */
-
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+*:before, *:after {
+	content: " ";
+	display: table;
+}
 html {
     color: #222;
     font-size: 1em;
@@ -68,6 +76,8 @@ textarea {
 a {
 	background-color: transparent;
 	-webkit-text-decoration-skip: objects;
+	text-decoration: none;
+	cursor: pointer;
 }
 b,
 strong {
