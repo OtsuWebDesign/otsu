@@ -289,23 +289,20 @@
 		transition: 0.3s all;
 	}
    /*---------------------------Kwadraty---------------------------*/
-   	h1
-	{
-		font-size: 2em;
-		margin: 0.67em 0;
-		margin-bottom: 0;
-   }
    
    #squares
    {
 		line-height: 200px;
+		max-width: 880px;
+		margin: 0 auto;
    }
 	.square
 	{
 		position: relative;
-		width: 25%;
+		width: 200px;
 		float: left;
 		height: 200px;
+		margin: 10px;
 	}
 	#square1
 		{background-image: url(../img/squares/sq1.jpg);}
@@ -340,3 +337,8 @@
     {
 	    opacity: 0.4;
     }
+   /*--------------------------- Content ---------------------------*/
+   #content
+   {
+	   margin-top: 20px;
+   }
