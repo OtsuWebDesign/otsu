@@ -38,7 +38,7 @@ Slider.prototype.generateSlider = function() {
     //jej dlugosc maleje
     while (this.slides.length) 
 	{
-        this.slides[0].classList.add('slide');
+        this.slides[0].classList.add('slide-js');
         slidesCnt.appendChild(this.slides[0]);
     }
     this.slides = slidesCnt.children;
@@ -120,35 +120,42 @@ Slider.prototype.createDots = function() {
     const ulDots = document.createElement('ul');
     ulDots.classList.add('slider-dots');
     ulDots.setAttribute('aria-label', 'Przyciski zmiany slajdu: kropki');
-
+	
+	const dotsContainer = document.createElement('div');
+	dotsContainer.classList.add('dots-container');
+	
     //tworzymy pętlę w ilości liczby slajów
-    for (let i=0; i<this.slides.length; i++) {
-        //każdorazowo tworzymy LI wraz z buttonem
-        //każdy button po kliknięciu zmieni slajd
-        //za pomocą metody changeSlide()
+    for (let i=0; i<this.slides.length; i++) 
+	{
+		//każdorazowo tworzymy LI wraz z buttonem
+		//każdy button po kliknięciu zmieni slajd
+		//za pomocą metody changeSlide()
 
-        const li = document.createElement('li');
-        li.classList.add('slider-dot');
+		const li = document.createElement('li');
+		li.classList.add('slider-dot');
 
-        const btn = document.createElement('button');
-        btn.classList.add('slider-dot-button');
-        btn.type = "button";
-        btn.innerText = i+1;
-        btn.setAttribute('aria-label', 'Ustaw slajd '+(i+1));
+		const btn = document.createElement('button');
+		btn.classList.add('slider-dot-button');
+		btn.type = "button";
+		btn.innerText = i+1;
+		btn.setAttribute('aria-label', 'Ustaw slajd '+(i+1));
 
-        btn.addEventListener('click', function() {
-            this.changeSlide(i);
-        }.bind(this));
+		btn.addEventListener('click', function()
+		{
+			this.changeSlide(i);
+		}.bind(this));
 
-        li.appendChild(btn);
+		li.appendChild(btn);
 
-        ulDots.appendChild(li);
-        this.dots.push(li);
+		dotsContainer.appendChild(li);
+		this.dots.push(li);
     }
 
-    this.slider.appendChild(ulDots);
+	ulDots.appendChild(dotsContainer);
+	this.slider.appendChild(ulDots);
 }
-const slide = new Slider('#slider', {
+const slide = new Slider('#slider', 
+{
     pauseTime : 7000,
     generateDots : true,
     generatePrevNext : true,

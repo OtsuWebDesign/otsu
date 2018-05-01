@@ -1,10 +1,5 @@
 /* Our custom styles */
-	#slider-container
-	{
-		margin-top: 50px;
-		height: 450px;
-	}
-	
+
    #container
    {
 		margin-top: 20px;
@@ -27,7 +22,7 @@
        text-align: center;
    }
    
-   li
+   #nav li
    {
     display: inline-block;
     color: #dddbdc;
@@ -37,17 +32,24 @@
     cursor: pointer;
    }
 
-   li:hover
+   #nav li:hover
    {
        color: #8c8c8c;
    }
 
-   ul
+   #nav ul
    {
        margin: 0;
    }
    
    /*---------------------------Slider---------------------------*/
+   	#slider-container
+	{
+		margin-top: 50px;
+		height: 450px;
+		text-align: center;
+	}
+	
 	.slider {
 		position: relative;
 	}
@@ -59,7 +61,7 @@
 	}
 
 	/* pojedynczy slide */
-	.slide
+	.slide-js
 	{
 		position: absolute;
 		left:0;
@@ -73,24 +75,17 @@
 		opacity:0;
 		z-index: 0;
 	}
+	.slide
+	{
+		background-size: cover !important;
+		background-position: center center !important;
+	}
 	#slide1
-	{
-		background: url(../img/slider/1.jpg);
-		background-size: cover;
-		background-position: center center;
-	}
+		{background: url(../img/slider/1.jpg);}
 	#slide2
-	{
-		background: url(../img/slider/2.jpg);
-		background-size: cover;
-		background-position: center center;
-	}
+		{background: url(../img/slider/2.jpg);}
 	#slide3
-	{
-		background: url(../img/slider/3.jpg);
-		background-size: cover;
-		background-position: center center;
-	}
+		{background: url(../img/slider/3.jpg);}
 	
 	/* slide aktywny */
 	.slide-active
@@ -130,7 +125,7 @@
 	}
 
 	/* animacja slajdów */
-	.slide
+	.slide-js
 	{
 		opacity: 0;
 		transition:0.8s all;
@@ -173,8 +168,9 @@
 		position: absolute;
 		left:0;
 		top:0;
-		width:4rem;
-		height:100%;
+		width:4%;
+		margin-top: 205px;
+		height:40px;
 		background: rgba(0,0,0,0.1);
 		border:0;
 		text-indent:-999px;
@@ -216,18 +212,25 @@
 	{
 		z-index: 2;
 		position: absolute;
-		left:0;
-		bottom:1rem;
-		margin:0;
+		bottom: 30px;
 		padding:0;
-		width:100%;
-		display: flex;
 		justify-content: center;
 		list-style:none;
+		width: 100%;
+		margin: 0;
+		border-radius: 50%;
+	}
+	.dots-container
+	{
+		display: flex;
+		width: 168px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 	.slider-dot 
 	{
-		
+		margin-left: 12px;
+		margin-right: 12px;
 	}
 	.slider-dot-button
 	{
@@ -263,7 +266,28 @@
 	{
 		outline: none;
 	}
-	
+	/* animacje */
+	.dots-container,
+	.slider-button-prev,
+	.slider-button-next
+	{
+		opacity: 0;
+		transition: 0.3s all;
+	}
+	.slider:hover .dots-container,
+	.slider:hover .slider-button-prev,
+	.slider:hover .slider-button-next
+	{
+		opacity: 0.7;
+		transition: 0.3s all;
+	}
+	.slider:hover .dots-container:hover,
+	.slider:hover .slider-button-prev:hover,
+	.slider:hover .slider-button-next:hover
+	{
+		opacity: 1;
+		transition: 0.3s all;
+	}
    /*---------------------------Kwadraty---------------------------*/
    	h1
 	{
@@ -274,31 +298,23 @@
    
    #squares
    {
-       line-height: 200px;
+		line-height: 200px;
    }
 	.square
 	{
-       position: relative;
-       width: 25%;
-       float: left;
-       height: 200px;
+		position: relative;
+		width: 25%;
+		float: left;
+		height: 200px;
 	}
-   #square1
-   {
-       background-image: url(../img/squares/sq1.jpg);
-   }
-   #square2
-   {
-       background-image: url(../img/squares/sq2.jpg);
-   }
-   #square3
-	{
-		background-image: url(../img/squares/sq3.jpg);
-   }
-   #square4
-   {
-		background-image: url(../img/squares/sq4.jpg);
-   }
+	#square1
+		{background-image: url(../img/squares/sq1.jpg);}
+	#square2
+		{background-image: url(../img/squares/sq2.jpg);}
+	#square3
+		{background-image: url(../img/squares/sq3.jpg);}
+	#square4
+		{background-image: url(../img/squares/sq4.jpg);}
     .square .link
     {
 		display: block;
@@ -313,21 +329,13 @@
 		text-align: center;
 	}
 	#square1 .link
-	{
-	    background-color: #006b8c;
-	}
+		{background-color: #006b8c;}
 	#square2 .link
-    {
-	    background-color: #027004;
-	}
-    #square3 .link
-    {
-	    background-color: #935c08;
-    }
+		{background-color: #027004;}
+	#square3 .link
+		{background-color: #935c08;}
 	#square4 .link
-	{
-         background-color: #a708ad;
-	}
+		{background-color: #a708ad;}
     .square:hover .link
     {
 	    opacity: 0.4;
