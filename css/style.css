@@ -133,19 +133,19 @@
 	.slide
 	{
 		opacity: 0;
-		transition:0.4s all;
+		transition:0.8s all;
 	}
 	.slider .slide-title
 	{
 		left:-3rem;
 		opacity:0;
-		transition: 1.5s left, 1.5s opacity;
+		transition: 1s left, 1s opacity;
 	}
 	.slider .slide-text
 	{
 		left:-3rem;
 		opacity:0;
-		transition: 1.5s 0.7s left, 1.5s 0.7s opacity;
+		transition: 1.2s 0.5s left, 1.2s 0.5s opacity;
 	}
 
 	/* aktywny slide zmienia właściwości elementów */
