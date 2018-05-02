@@ -1,6 +1,4 @@
-# Siema w chuj
-### Nauczyłem się git-owego formatowania dokumentów XD
-**Przeczytaj to frajerze bo ci wybombie**
+﻿### Nauczyłem się git-owego formatowania dokumentów XD
 ## Placeholderowe grafiki pochodzą ze strony Freepik.
 Licencja Free wygląda tak:
 ```
