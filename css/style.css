@@ -21,6 +21,16 @@
        top: 0;
        text-align: center;
    }
+
+   #nav object
+   {
+	   height: 55px;
+	   display: block;
+			position:absolute;
+			top:0;
+			left:0;
+			padding:5px 15px 0px 15px;
+   }
    
    #desktopmenu li
    {
@@ -438,6 +448,11 @@
 
 	@media only screen and (max-width: 1033px)
 	{
+		#nav object 
+		{
+			left: 45%;
+		}
+
 		.step
 		{
 			margin-top: 20px;
@@ -538,7 +553,6 @@
 			display: none;
 		}
 
-
 		.squares-2
 		{
 			float: none;
@@ -568,6 +582,11 @@
 	}
 	@media only screen and (max-width: 550px)
 	{
+		#nav object
+		{
+			left: 40%;
+		}
+
 		.square
 		{
 			position: relative;
