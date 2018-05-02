@@ -50,6 +50,23 @@
    {
 		display: none;
    }
+   /*---------------------------Content---------------------------*/
+
+   .step 
+   {
+	   height: 350px;
+	   margin-top: 50px;
+   }
+
+   .step p
+   {
+	   display: block;
+	   width: 50%;
+	   font-size: 20px;
+   }
+
+   
+
    
    /*---------------------------Slider---------------------------*/
    	#slider-container
