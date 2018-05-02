@@ -2,7 +2,7 @@
 #slider-container
 {
 	margin-top: 50px;
-	height: 450px;
+	height: 170px;
 	text-align: center;
 }
 
@@ -12,7 +12,7 @@
 
 /* kontener dla wszystkich slajdów */
 .slides {
-	height: 450px;
+	height: 170px;
 	position: relative;
 }
 
@@ -37,11 +37,11 @@
 	background-position: center center !important;
 }
 #slide1
-	{background: url(../img/slider/1.jpg);}
+	{background: url(../img/slider/min/1.jpg);}
 #slide2
-	{background: url(../img/slider/2.jpg);}
+	{background: url(../img/slider/min/2.jpg);}
 #slide3
-	{background: url(../img/slider/3.jpg);}
+	{background: url(../img/slider/min/3.jpg);}
 
 /* slide aktywny */
 .slide-active
@@ -244,4 +244,36 @@
 	opacity: 1;
 	transition: 0.3s all;
 }
-/*---------------------------End of slider---------------------------*/
+/* Small devices (phones, 350px and up) */
+@media only screen and (min-width: 350px) {
+	
+} 
+
+/* Small devices (large phones, 540px and up) */
+@media only screen and (min-width: 540px) {
+	
+} 
+/* Small devices (portrait tablets, landscape phones, 640px and up) */
+@media only screen and (min-width: 640px) {
+	
+} 
+
+/* Medium devices (landscape tablets, 800px and up) */
+@media only screen and (min-width: 800px) {
+	
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+	
+}
+
+/* Extra enormous devices (TV, 1700px and up) */
+@media only screen and (min-width: 1700px) {
+	
+}
