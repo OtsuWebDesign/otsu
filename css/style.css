@@ -15,14 +15,13 @@
        height: 50px;
        z-index: 9999;
        background-color: #20326b;
-       opacity: 0.9;
        filter: alpha(opacity=90); /* For IE8 and earlier */
        position: fixed;
        top: 0;
        text-align: center;
    }
    
-   #nav li
+   #desktopmenu li
    {
     display: inline-block;
     color: #dddbdc;
@@ -32,14 +31,24 @@
     cursor: pointer;
    }
 
-   #nav li:hover
+   #desktopmenu li:hover
    {
        color: #8c8c8c;
    }
 
-   #nav ul
+   #desktopmenu ul
    {
        margin: 0;
+   }
+
+   .hamburger
+   {
+	   display: none;
+   }
+
+   .cross
+   {
+		display: none;
    }
    
    /*---------------------------Slider---------------------------*/
@@ -361,6 +370,89 @@
 	}
 	@media only screen and (max-width: 1033px)
 	{
+		.hamburger
+		{
+			display: block;
+			background:none;
+			position:absolute;
+			top:0;
+			right:0;
+			line-height:45px;
+			padding:5px 15px 0px 15px;
+			color:#999;
+			border:0;
+			font-size:1.4em;
+			font-weight:bold;
+			cursor:pointer;
+			outline:none;
+			z-index:10000000000000;
+		  }
+
+		  .cross
+		  {
+			display: block;
+			background:none;
+			position:absolute;
+			top:0px;
+			right:0;
+			padding:7px 15px 0px 15px;
+			color:#999;
+			border:0;
+			font-size:3em;
+			line-height:65px;
+			font-weight:bold;
+			cursor:pointer;
+			outline:none;
+			z-index:10000000000000;
+		  }
+		  
+		.hamburger :hover
+		{
+			color: white;
+		}
+
+		.cross :hover
+		{
+			color: white;
+		}
+
+		#menu 
+		{
+			z-index:1000000; 
+			font-weight:bold;
+			font-size:15px;
+			width:100%;
+			background:#f1f1f1;
+			position:absolute;
+			text-align:center;
+		}
+		#menu ul
+		{
+			margin: 0;
+			padding: 0;
+		}
+
+		#menu li 
+		{
+			display: block;
+			padding:20px 0 20px 0;
+			border-bottom:darkgrey 1px solid;
+			cursor: pointer;
+		}
+
+		#menu li:hover
+		{
+			display: block;
+			background: white;
+			border-bottom: darkgray 1px solid;
+		}
+
+		#desktopmenu
+		{
+			display: none;
+		}
+
+
 		.squares-2
 		{
 			float: none;

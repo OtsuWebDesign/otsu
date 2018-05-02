@@ -18,12 +18,24 @@
 		<!-- Nawigacja -->
 		<nav>
 			<div id="nav">
-				<ul>
-					<li>Strona główna</li>
-					<li>O nas</li>
-					<li>Nasze projekty</li>
-					<li>Kontakt</li>
-				</ul>
+					<button class="hamburger">&#9776;</button>
+					<button class="cross">&#735;</button>
+					<div id="desktopmenu">
+						<ul>
+							<li>Strona główna</li>
+							<li>O nas</li>
+							<li>Nasze projekty</li>
+							<li>Kontakt</li>
+						</ul>
+					</div>
+					<div id="menu">
+						<ul>
+							<li>Strona główna</li>
+							<li>O nas</li>
+							<li>Nasze projekty</li>
+							<li>Kontakt</li>
+						</ul>
+					</div>
 			</div>
 		</nav>
 		<!-- Slider -->
@@ -113,7 +125,8 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-        <script src="js/slider.js"></script>
+		<script src="js/slider.js"></script>
+		<script src="js/hamburger.js"></script>
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID in google analytics -->
         <script>
             window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
