@@ -1,94 +1,94 @@
-/* Our custom styles */
+	/* Our custom styles */
 
 
-   #container
-   {
+	#container
+	{
 		margin: 20px 0 0 0;
 		width: 100%;
 		padding-left: 5%;
 		padding-right: 5%;
-   }
+	}
 
-   /*---------------------------Nawigacja---------------------------*/
-   #nav
-   {
-       width: 100%;
-       height: 50px;
-       z-index: 9999;
-       background-color: #20326b;
-       filter: alpha(opacity=90); /* For IE8 and earlier */
-       position: fixed;
-       top: 0;
-       text-align: center;
-   }
-
-   #nav object
-   {
-	   height: 55px;
-	   display: block;
-			position:absolute;
-			top:0;
-			left:0;
-			padding:5px 15px 0px 15px;
-   }
-   
-   #desktopmenu li
-   {
-    display: inline-block;
-    color: #dddbdc;
-    height: 50px;
-    line-height: 50px;
-    margin-right: 25px;
-    cursor: pointer;
-   }
-
-   #desktopmenu li:hover
-   {
-       color: #8c8c8c;
-   }
-
-   #desktopmenu ul
-   {
-       margin: 0;
-   }
-
-   .hamburger
-   {
-	   display: none;
-   }
-
-   .cross
-   {
-		display: none;
-   }
-   /*---------------------------Content---------------------------*/
-
-   #text
-   {
-	   width: 1300px;
-	   margin-left: auto;
-	   margin-right: auto;
+	/*---------------------------Nawigacja---------------------------*/
+	#nav
+	{
+	   width: 100%;
+	   height: 50px;
+	   z-index: 9999;
+	   background-color: #20326b;
+	   filter: alpha(opacity=90); /* For IE8 and earlier */
+	   position: fixed;
+	   top: 0;
 	   text-align: center;
-	   margin-top: 50px;
-   }
+	}
 
-   .step 
-   {
-	   height: 350px;
-	   margin-top: 50px;
-	   
-   }
+	#nav object
+	{
+		height: 55px;
+		display: block;
+		position: absolute;
+		top:0;
+		left:0;
+		padding:5px 15px 0px 15px;
+	}
 
-   .step p
-   {
-	   width: 50%;
-	   font-size: 20px;
-	   float: left;
-	   text-align: left;
-   }
+	#menu li
+	{
+		display: inline-block;
+		color: #a0a0a0;
+		height: 50px;
+		line-height: 50px;
+		margin-right: 25px;
+		cursor: pointer;
+	}
 
-   .stepimg
-   {
+	#menu li:hover
+	{
+	   color: #8c8c8c;
+	}
+
+	#menu ul
+	{
+	   margin: 0;
+	}
+
+	.hamburger
+	{
+	   display: none;
+	}
+
+	.cross
+	{
+		display: none;
+	}
+	/*---------------------------Content---------------------------*/
+
+	#text
+	{
+		width: 1300px;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		margin-top: 50px;
+	}
+
+	.step 
+	{
+		height: 350px;
+		margin-top: 50px;
+
+	}
+
+	.step p
+	{
+		width: 50%;
+		font-size: 20px;
+		float: left;
+		text-align: left;
+	}
+
+	.stepimg
+	{
 	   width: 310px;
 	   display: inline-block;
 	   height: 100%;
@@ -104,23 +104,23 @@
 
 	#stepimg2
 	{
-	 	background-image: url(../img/steps/s2.png);
+		background-image: url(../img/steps/s2.png);
 	} 
 
 	#stepimg3
 	{
 		background-image: url(../img/steps/s3.png);
 	}
- 
- 
-   /*---------------------------Slider---------------------------*/
-   	#slider-container
+
+
+	/*---------------------------Slider---------------------------*/
+	#slider-container
 	{
 		margin-top: 50px;
 		height: 450px;
 		text-align: center;
 	}
-	
+
 	.slider {
 		position: relative;
 	}
@@ -157,7 +157,7 @@
 		{background: url(../img/slider/2.jpg);}
 	#slide3
 		{background: url(../img/slider/3.jpg);}
-	
+
 	/* slide aktywny */
 	.slide-active
 	{
@@ -359,16 +359,16 @@
 		opacity: 1;
 		transition: 0.3s all;
 	}
-   /*---------------------------Kwadraty---------------------------*/
-   #squares
-   {
+	/*---------------------------Kwadraty---------------------------*/
+	#squares
+	{
 	   margin-left: -2%;
 	   margin-right: -2%;
-   }
-   #squares::after
-   {
+	}
+	#squares::after
+	{
 	   clear: both;
-   }
+	}
 	.squares-2
 	{
 		float:left;
@@ -430,7 +430,7 @@
 	{
 		opacity: 0.5;
 	}
-   /*---------------------------Footer---------------------------*/
+	/*---------------------------Footer---------------------------*/
 	footer
 	{
 		width: 100%;
@@ -445,14 +445,108 @@
 		line-height: 20px;
 		
 	}
-
+	@media only screen and (min-width: 1033px)
+	{
+		#menu
+		{display: block!important;} /*owerride none after resolution change */
+	}
 	@media only screen and (max-width: 1033px)
 	{
 		#nav object 
 		{
-			left: 45%;
+			top:0;
+			left: 50%;
+			right: 50%;
+			transform: translate(-50%, 0);
+			
+			height: 55px;
+			display: block;
+			position: absolute;
+			padding:5px 15px 0px 15px;'
+		}
+		
+		.hamburger
+		{
+			display: block;
+			background:none;
+			position:absolute;
+			top:0;
+			right:0;
+			line-height:45px;
+			padding:5px 15px 0px 15px;
+			color:#999;
+			border:0;
+			font-size:1.4em;
+			font-weight:bold;
+			cursor:pointer;
+			outline:none;
+			z-index:1000;
 		}
 
+		  .cross
+		  {
+			display: block;
+			background:none;
+			position:absolute;
+			top:0px;
+			right:0;
+			padding:7px 15px 0px 15px;
+			color:#999;
+			border:0;
+			font-size:3em;
+			line-height:65px;
+			font-weight:bold;
+			cursor:pointer;
+			outline:none;
+			z-index:10000;
+		}
+		  
+		.hamburger :hover
+		{
+			color: white;
+		}
+
+		.cross :hover
+		{
+			color: white;
+		}
+
+		#menu 
+		{
+			top: 50px;
+			z-index:1000000; 
+			font-weight:bold;
+			font-size:15px;
+			width:100%;
+			background:#f1f1f1;
+			position:absolute;
+			text-align:center;
+			display: none;
+		}
+		#menu ul
+		{
+			margin: 0;
+			padding: 0;
+		}
+
+		#menu li 
+		{
+			display: block;
+			padding:20px 0 20px 0;
+			border-bottom:darkgrey 1px solid;
+			cursor: pointer;
+			margin: 0;
+			line-height: normal;
+			height: 50px;
+		}
+
+		#menu li:hover
+		{
+			display: block;
+			background: white;
+			border-bottom: darkgray 1px solid;
+		}
+		
 		.step
 		{
 			margin-top: 20px;
@@ -470,87 +564,6 @@
 		{
 			width: 100%;
 			margin-top: 20px;
-		}
-		.hamburger
-		{
-			display: block;
-			background:none;
-			position:absolute;
-			top:0;
-			right:0;
-			line-height:45px;
-			padding:5px 15px 0px 15px;
-			color:#999;
-			border:0;
-			font-size:1.4em;
-			font-weight:bold;
-			cursor:pointer;
-			outline:none;
-			z-index:10000000000000;
-		  }
-
-		  .cross
-		  {
-			display: block;
-			background:none;
-			position:absolute;
-			top:0px;
-			right:0;
-			padding:7px 15px 0px 15px;
-			color:#999;
-			border:0;
-			font-size:3em;
-			line-height:65px;
-			font-weight:bold;
-			cursor:pointer;
-			outline:none;
-			z-index:10000000000000;
-		  }
-		  
-		.hamburger :hover
-		{
-			color: white;
-		}
-
-		.cross :hover
-		{
-			color: white;
-		}
-
-		#menu 
-		{
-			z-index:1000000; 
-			font-weight:bold;
-			font-size:15px;
-			width:100%;
-			background:#f1f1f1;
-			position:absolute;
-			text-align:center;
-		}
-		#menu ul
-		{
-			margin: 0;
-			padding: 0;
-		}
-
-		#menu li 
-		{
-			display: block;
-			padding:20px 0 20px 0;
-			border-bottom:darkgrey 1px solid;
-			cursor: pointer;
-		}
-
-		#menu li:hover
-		{
-			display: block;
-			background: white;
-			border-bottom: darkgray 1px solid;
-		}
-
-		#desktopmenu
-		{
-			display: none;
 		}
 
 		.squares-2
@@ -582,11 +595,6 @@
 	}
 	@media only screen and (max-width: 550px)
 	{
-		#nav object
-		{
-			left: 40%;
-		}
-
 		.square
 		{
 			position: relative;
@@ -629,8 +637,8 @@
 			transform: translate(-50%, -50%);
 		}
 	}
-   /*--------------------------- Content ---------------------------*/
-   #content
-   {
+	/*--------------------------- Content ---------------------------*/
+	#content
+	{
 	   margin-top: 20px;
-   }
+	}
