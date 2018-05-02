@@ -1,0 +1,247 @@
+/*---------------------------Slider---------------------------*/
+#slider-container
+{
+	margin-top: 50px;
+	height: 450px;
+	text-align: center;
+}
+
+.slider {
+	position: relative;
+}
+
+/* kontener dla wszystkich slajdów */
+.slides {
+	height: 450px;
+	position: relative;
+}
+
+/* pojedynczy slide */
+.slide-js
+{
+	position: absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	opacity:0;
+	z-index: 0;
+}
+.slide
+{
+	background-size: cover !important;
+	background-position: center center !important;
+}
+#slide1
+	{background: url(../img/slider/1.jpg);}
+#slide2
+	{background: url(../img/slider/2.jpg);}
+#slide3
+	{background: url(../img/slider/3.jpg);}
+
+/* slide aktywny */
+.slide-active
+{
+	z-index: 1;
+}
+
+/* elementy pojedynczego slajdu */
+.slider .slide-title
+{
+	color:#fff;
+	font-family: sans-serif;
+	position: relative;
+	left:-3rem;
+	opacity:0;
+	font-size: 60px;
+	text-transform: uppercase;
+	font-weight: normal;
+	margin-top:0;
+	text-align: center;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+.slider .slide-text
+{
+	color:#fff;
+	position: relative;
+	left:-3rem;
+	opacity:0;
+	font-size:30px;
+	color:rgba(255,255,255,.6);
+	padding-left:4rem;
+	padding-right:4rem;
+	text-align: center;
+	font-family: serif;
+	font-style: italic;
+	max-width:60%;
+}
+
+/* animacja slajdów */
+.slide-js
+{
+	opacity: 0;
+	transition:0.8s all;
+}
+.slider .slide-title
+{
+	left:-3rem;
+	opacity:0;
+	transition: 1s left, 1s opacity;
+}
+.slider .slide-text
+{
+	left:-3rem;
+	opacity:0;
+	transition: 1.2s 0.5s left, 1.2s 0.5s opacity;
+}
+
+/* aktywny slide zmienia właściwości elementów */
+.slide-active
+{
+	opacity: 1;
+}
+.slide-active .slide-title 
+{
+	left:0;
+	opacity:1;
+}
+.slide-active .slide-text 
+{
+	left:0;
+	opacity:1;
+}
+
+/* przyciski strzałek slajdu */
+.slider-button-prev,
+.slider-button-next
+{
+	cursor: pointer;
+	z-index: 2;
+	position: absolute;
+	left:0;
+	top:0;
+	width:4%;
+	margin-top: 205px;
+	height:40px;
+	background: rgba(0,0,0,0.1);
+	border:0;
+	text-indent:-999px;
+	overflow:hidden;
+}
+.slider-button-next 
+{
+	left:auto;
+	right:0;
+}
+.slider-button-prev:focus,
+.slider-button-next:focus
+{
+	outline: none;
+}
+.slider-button-prev:before,
+.slider-button-next:before 
+{
+	content:'<';
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	font-size:2rem;
+	color:#fff;
+	text-indent: 0;
+}
+.slider-button-next:before
+{
+	content: '>';
+}
+
+/* slider dots */
+.slider-dots
+{
+	z-index: 2;
+	position: absolute;
+	bottom: 30px;
+	padding:0;
+	justify-content: center;
+	list-style:none;
+	width: 100%;
+	margin: 0;
+	border-radius: 50%;
+}
+.dots-container
+{
+	display: flex;
+	width: 168px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.slider-dot 
+{
+	margin-left: 12px;
+	margin-right: 12px;
+}
+.slider-dot-button
+{
+	background: transparent;
+	width:2rem;
+	height:2rem;
+	border:0;
+	text-indent:-999px;
+	overflow: hidden;
+	cursor: pointer;
+	position: relative;
+}
+.slider-dot-button:before
+{
+	content:'';
+	position: absolute;
+	left:50%;
+	top:50%;
+	transform:translate(-50%, -50%);
+	background: transparent;
+	width:0.9rem;
+	height:0.9rem;
+	border-radius: 50%;
+	transition:0.5s all;
+	box-shadow:inset 0 0 0 2px rgba(255,255,255,0.5);
+}
+.slider-dot-active .slider-dot-button:before
+{
+	background: #fff;
+	transform:translate(-50%, -50%) scale(1.2);
+}
+.slider-dot-button:focus
+{
+	outline: none;
+}
+/* animacje */
+.dots-container,
+.slider-button-prev,
+.slider-button-next
+{
+	opacity: 0;
+	transition: 0.3s all;
+}
+.slider:hover .dots-container,
+.slider:hover .slider-button-prev,
+.slider:hover .slider-button-next
+{
+	opacity: 0.7;
+	transition: 0.3s all;
+}
+.slider:hover .dots-container:hover,
+.slider:hover .slider-button-prev:hover,
+.slider:hover .slider-button-next:hover
+{
+	opacity: 1;
+	transition: 0.3s all;
+}
+/*---------------------------End of slider---------------------------*/
