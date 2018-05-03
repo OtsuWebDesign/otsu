@@ -129,6 +129,24 @@
 		height: 50px;
 		line-height: 50px;
 	}
+	
+	.hamburger
+	{
+		line-height:50px;
+		padding:0 15px 0 0;
+		font-size:1.5em;
+		font-weight:bold;
+		cursor:pointer;
+		outline:none;
+		z-index:1000;
+	}
+
+	  .cross
+	  {
+		padding:10.5px 16px 0 0;
+		font-size:3em;
+		line-height:50px;
+	}
 } 
 
 /* Large devices (laptops/desktops, 992px and up) */
