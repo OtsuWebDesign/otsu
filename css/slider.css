@@ -1,4 +1,5 @@
-/*---------------------------Slider---------------------------*/
+/*Super Extra small devices ( extra small phones, 280px and down)*/
+
 #slider-container
 {
 	margin-top: 40px;
@@ -227,6 +228,56 @@
 {
 	opacity: 0.7;
 }
+/* Extra small devices ( small phones, 280px and up) */
+@media only screen and (min-width: 280px) {
+	
+	/* elementy pojedynczego slajdu */
+	.slider .slide-title
+	{
+		font-size: 21px;
+		margin-top:0;
+		margin-bottom:5px;
+		max-width:76%;
+	}
+	.slider .slide-text
+	{
+		font-size:15px;
+		max-width:76%;
+	}
+	
+	/* przyciski strzałek slajdu */
+	.slider-button-prev,
+	.slider-button-next
+	{
+		width:12%;
+		height:100%;
+	}
+	
+	/* slider dots */
+	.slider-dots
+	{
+		bottom: 11px;
+		padding:0;
+	}
+	.dots-container
+	{
+		width: 81px;
+	}
+	.slider-dot 
+	{
+		margin: 0 3.5px;
+	}
+	.slider-dot-button
+	{
+		width:20px;
+		height:20px;
+	}
+	.slider-dot-button:before
+	{
+		width:12px;
+		height:12px;
+	}
+} 
 /* Small devices (phones, 350px and up) */
 @media only screen and (min-width: 350px) {
 	
