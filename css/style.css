@@ -7,6 +7,11 @@
 	padding-right: 5%;
 }
 
+#content 
+{
+	width: 100%;
+}
+
 #text
 {
 	width: 100%;
@@ -16,16 +21,21 @@
 .step
 {
 	margin-top: 20px;
-	height: 350px;
+	transform: translate(0)!important;
 }
 .step:after
 {
 	clear: both;
 }
+.aos-animate
+{
+	width: 100%;
+}
 .step p 
 {
 	width: 100%;
-	font-size: 12px;
+	display: inline-block;
+	font-size: 19px;
 	float: left;
 	text-align: left;
 }
@@ -82,13 +92,8 @@ footer
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 	
-	
-	
 	#text
 	{
-		width: 1300px;
-		margin-left: auto;
-		margin-right: auto;
 		text-align: center;
 		margin-top: 50px;
 	}
@@ -98,20 +103,23 @@ footer
 		margin-top: 50px;
 	}
 
-	.step p
+	.step p 
 	{
-		width: 50%;
-		font-size: 20px;
+		width: calc(100% - 280px);
+		display: inline-block;
+		font-size: 25px;
+		float: left;
+		text-align: left;
 	}
 
 	.stepimg
 	{
-	   width: 310px;
-	   display: inline-block;
-	   height: 100%;
-	   background-repeat: no-repeat;
-	   color: black;
-	   font-family: 'Lato', sans-serif;
+		display: inline-block;
+		float: left;
+		margin-left: 30px;
+		width: 250px;
+		height: 250px;
+		background-repeat: no-repeat;
 	}
 } 
 
