@@ -281,6 +281,13 @@
 /* Small devices (phones, 350px and up) */
 @media only screen and (min-width: 350px) {
 	
+	#slide1
+		{background: url(../img/slider/middle/1.jpg);}
+	#slide2
+		{background: url(../img/slider/middle/2.jpg);}
+	#slide3
+		{background: url(../img/slider/middle/3.jpg);}
+	
 	#slider-container
 	{
 		height: 200px;
@@ -492,6 +499,13 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 	
+	#slide1
+		{background: url(../img/slider/max/1.jpg);}
+	#slide2
+		{background: url(../img/slider/max/2.jpg);}
+	#slide3
+		{background: url(../img/slider/max/3.jpg);}
+	
 	#slider-container
 	{
 		height: 360px;
@@ -589,12 +603,13 @@
 @media only screen and (min-width: 1700px) {
 	#slider-container
 	{
-		height: 410px;
+		height: 420px;
+		max-width: 2500px;
 	}
 
 	/* kontener dla wszystkich slajdów */
 	.slides {
-		height: 410px;
+		height: 420px;
 	}
 	
 	/* elementy pojedynczego slajdu */
@@ -616,6 +631,6 @@
 	.slider-button-next
 	{
 		width:3%;
-		margin-top: 180px;
+		margin-top: 185px;
 	}
 }
