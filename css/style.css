@@ -125,5 +125,8 @@ footer
 
 /* Extra enormous devices (TV, 1700px and up) */
 @media only screen and (min-width: 1700px) {
-	
+	#container
+	{
+		max-width: 2200px;
+	}
 }
