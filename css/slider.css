@@ -403,6 +403,29 @@
 /* Small devices (portrait tablets, landscape phones, 640px and up) */
 @media only screen and (min-width: 640px) {
 	
+	#slider-container
+	{
+		height: 330px;
+	}
+
+	/* kontener dla wszystkich slajdów */
+	.slides {
+		height: 330px;
+	}
+	
+	/* elementy pojedynczego slajdu */
+	.slider .slide-title
+	{
+		font-size: 45px;
+		margin-top:0;
+		margin-bottom:20px;
+		max-width:86%;
+	}
+	.slider .slide-text
+	{
+		font-size:28px;
+		max-width:86%;
+	}
 } 
 
 /* Medium devices (landscape tablets, 800px and up) */
