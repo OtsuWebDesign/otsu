@@ -133,18 +133,10 @@
 	.hamburger
 	{
 		line-height:50px;
-		padding:0 15px 0 0;
-		font-size:1.5em;
-		font-weight:bold;
-		cursor:pointer;
-		outline:none;
-		z-index:1000;
 	}
 
-	  .cross
-	  {
-		padding:10.5px 16px 0 0;
-		font-size:3em;
+	.cross
+	{
 		line-height:50px;
 	}
 } 
