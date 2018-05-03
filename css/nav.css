@@ -11,16 +11,20 @@
    text-align: center;
 }
 	
-#nav object 
+#nav #logo
 {
-	height: 40px;
-	top:0;
+	background-image: url(../img/logo/340.png);
+	background-size: 30px !important;
+	background-position: center center !important;
+	background-repeat: no-repeat;
+	height: 30px;
+	top:5px;
+	width: 30px;
 	left: 50%;
 	right: 50%;
 	transform: translate(-50%, 0);
 	display: block;
 	position: absolute;
-	padding:5px 15px 0px 15px;
 }
 	
 .hamburger
@@ -114,9 +118,12 @@
 	   height: 50px;
 	}
 		
-	#nav object 
+	#nav #logo
 	{
-		height: 50px;
+		height: 40px;
+		width: 40px;
+		background-size: 40px !important;
+		background-image: url(../img/logo/640.png);
 	}
 	  
 	#menu 
@@ -144,9 +151,13 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 	
-	#nav object
+	#nav #logo
 	{
-		left:0;
+		background-image: url(../img/logo/full.png);
+		background-size: auto 40px !important;
+		height: 40px;
+		width: 120px;
+		left:10px;
 		right: 0;
 		transform: translate(0, 0);
 	}
