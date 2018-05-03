@@ -1,7 +1,7 @@
 /*---------------------------Slider---------------------------*/
 #slider-container
 {
-	margin-top: 50px;
+	margin-top: 40px;
 	height: 170px;
 	text-align: center;
 }
@@ -57,12 +57,14 @@
 	position: relative;
 	left:-3rem;
 	opacity:0;
-	font-size: 60px;
+	font-size: 17px;
 	text-transform: uppercase;
 	font-weight: normal;
 	margin-top:0;
+	margin-bottom:2px;
 	text-align: center;
 	font-family: 'Roboto Condensed', sans-serif;
+	max-width:70%;
 }
 .slider .slide-text
 {
@@ -70,14 +72,12 @@
 	position: relative;
 	left:-3rem;
 	opacity:0;
-	font-size:30px;
+	font-size:13px;
 	color:rgba(255,255,255,.6);
-	padding-left:4rem;
-	padding-right:4rem;
 	text-align: center;
 	font-family: serif;
 	font-style: italic;
-	max-width:60%;
+	max-width:70%;
 }
 
 /* animacja slajdów */
@@ -124,9 +124,9 @@
 	position: absolute;
 	left:0;
 	top:0;
-	width:4%;
-	margin-top: 205px;
-	height:40px;
+	width:15%;
+	margin: 0;
+	height:100%;
 	background: rgba(0,0,0,0.1);
 	border:0;
 	text-indent:-999px;
@@ -168,7 +168,7 @@
 {
 	z-index: 2;
 	position: absolute;
-	bottom: 30px;
+	bottom: 11px;
 	padding:0;
 	justify-content: center;
 	list-style:none;
@@ -179,20 +179,18 @@
 .dots-container
 {
 	display: flex;
-	width: 168px;
-	margin-left: auto;
-	margin-right: auto;
+	width: 81px;
+	margin: 0 auto;
 }
 .slider-dot 
 {
-	margin-left: 12px;
-	margin-right: 12px;
+	margin: 0 3.5px;
 }
 .slider-dot-button
 {
 	background: transparent;
-	width:2rem;
-	height:2rem;
+	width:20px;
+	height:20px;
 	border:0;
 	text-indent:-999px;
 	overflow: hidden;
@@ -207,8 +205,8 @@
 	top:50%;
 	transform:translate(-50%, -50%);
 	background: transparent;
-	width:0.9rem;
-	height:0.9rem;
+	width:12px;
+	height:12px;
 	border-radius: 50%;
 	transition:0.5s all;
 	box-shadow:inset 0 0 0 2px rgba(255,255,255,0.5);
@@ -227,22 +225,7 @@
 .slider-button-prev,
 .slider-button-next
 {
-	opacity: 0;
-	transition: 0.3s all;
-}
-.slider:hover .dots-container,
-.slider:hover .slider-button-prev,
-.slider:hover .slider-button-next
-{
 	opacity: 0.7;
-	transition: 0.3s all;
-}
-.slider:hover .dots-container:hover,
-.slider:hover .slider-button-prev:hover,
-.slider:hover .slider-button-next:hover
-{
-	opacity: 1;
-	transition: 0.3s all;
 }
 /* Small devices (phones, 350px and up) */
 @media only screen and (min-width: 350px) {
@@ -266,6 +249,28 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 	
+	/* animacje */
+	.dots-container,
+	.slider-button-prev,
+	.slider-button-next
+	{
+		opacity: 0;
+		transition: 0.3s all;
+	}
+	.slider:hover .dots-container,
+	.slider:hover .slider-button-prev,
+	.slider:hover .slider-button-next
+	{
+		opacity: 0.7;
+		transition: 0.3s all;
+	}
+	.slider:hover .dots-container:hover,
+	.slider:hover .slider-button-prev:hover,
+	.slider:hover .slider-button-next:hover
+	{
+		opacity: 1;
+		transition: 0.3s all;
+	}
 } 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
