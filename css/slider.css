@@ -552,6 +552,38 @@
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 	
+	#slider-container
+	{
+		height: 390px;
+	}
+
+	/* kontener dla wszystkich slajdów */
+	.slides {
+		height: 390px;
+	}
+	
+	/* elementy pojedynczego slajdu */
+	.slider .slide-title
+	{
+		font-size: 70px;
+		margin-top:0;
+		margin-bottom:25px;
+		max-width:94%;
+	}
+	.slider .slide-text
+	{
+		font-size:35px;
+		max-width:94%;
+	}
+	
+	/* przyciski strzałek slajdu */
+	.slider-button-prev,
+	.slider-button-next
+	{
+		width:3%;
+		height: 50px;
+		margin-top: 170px;
+	}
 }
 
 /* Extra enormous devices (TV, 1700px and up) */
