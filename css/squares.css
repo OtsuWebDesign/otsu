@@ -9,7 +9,13 @@
 {
    clear: both;
 }
-
+.squares-2
+{
+	float: none;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
 .square
 {
 	position: relative;

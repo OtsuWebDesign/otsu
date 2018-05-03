@@ -18,6 +18,10 @@
 	margin-top: 20px;
 	height: 350px;
 }
+.step:after
+{
+	clear: both;
+}
 .step p 
 {
 	width: 100%;
@@ -28,14 +32,6 @@
 .stepimg
 {
 	display: none;
-}
-
-.squares-2
-{
-	float: none;
-	width: 100%;
-	margin: 0;
-	padding: 0;
 }
 
 #stepimg1
