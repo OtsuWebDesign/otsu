@@ -1,4 +1,4 @@
-/* Extra super small devices (small phones, 300px and down) */
+/* Extra super small devices (small phones, 350px and down) */
 #container
 {
 	margin: 20px 0 0 0;
@@ -10,7 +10,7 @@
 #nav
 {
    width: 100%;
-   height: 50px;
+   height: 40px;
    z-index: 9999;
    background-color: #20326b;
    filter: alpha(opacity=90); /* For IE8 and earlier */
@@ -21,13 +21,11 @@
 	
 #nav object 
 {
-	height: 55px;
+	height: 40px;
 	top:0;
 	left: 50%;
 	right: 50%;
 	transform: translate(-50%, 0);
-	
-	height: 55px;
 	display: block;
 	position: absolute;
 	padding:5px 15px 0px 15px;'
@@ -40,11 +38,11 @@
 	position:absolute;
 	top:0;
 	right:0;
-	line-height:45px;
-	padding:5px 15px 0px 15px;
+	line-height:40px;
+	padding:0 15px 0 0;
 	color:#999;
 	border:0;
-	font-size:1.4em;
+	font-size:1.5em;
 	font-weight:bold;
 	cursor:pointer;
 	outline:none;
@@ -58,11 +56,11 @@
 	position:absolute;
 	top:0px;
 	right:0;
-	padding:7px 15px 0px 15px;
+	padding:10.5px 16px 0 0;
 	color:#999;
 	border:0;
 	font-size:3em;
-	line-height:65px;
+	line-height:40px;
 	font-weight:bold;
 	cursor:pointer;
 	outline:none;
@@ -81,7 +79,7 @@
 
 #menu 
 {
-	top: 50px;
+	top: 40px;
 	z-index:1000000; 
 	font-weight:bold;
 	font-size:15px;
@@ -101,13 +99,12 @@
 {
 	display: block;
 	color: #a0a0a0;
-	height: 50px;
-	padding:20px 0 20px 0;
+	height: 40px;
+	padding:0;
 	border-bottom:darkgrey 1px solid;
 	cursor: pointer;
 	margin: 0;
-	line-height: normal;
-	height: 50px;
+	line-height: 40px;
 }
 	
 #menu li:hover
