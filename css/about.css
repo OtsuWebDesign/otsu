@@ -45,6 +45,13 @@ body
 {
     margin-top: 50px;
     text-align: center;
+   color: firebrick;
+   text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+  
 }
 
 #aboutlogo
@@ -102,7 +109,7 @@ body
     
     h2 
     {
-        font-size: 36px;
+        font-size: 46px;
     }
 
     .section
@@ -177,6 +184,7 @@ body
   {
       width: 1000px;
   }
+
 
 
 }
