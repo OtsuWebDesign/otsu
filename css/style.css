@@ -1,12 +1,9 @@
 /* Extra super small devices (small phones, 350px and down) */
 /* Background pattern from Toptal Subtle Patterns */
 
-html, body
+body
 {
-	/*this*/
-	overflow-x: hidden !important;
-	max-width: 100% !important;
-	background-image: url(../img/aboutphoto/bginv.png)
+	background-image: url(../img/aboutphoto/bginv.png);
 }
 
 #container
@@ -63,6 +60,12 @@ html, body
 #stepimg3
 	{background-image: url(../img/steps/s3.png);}
 
+.last:after
+{
+	height: 50px;
+	width: 100%;
+}
+	
 footer
 {
 	width: 100%;
