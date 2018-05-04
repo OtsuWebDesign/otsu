@@ -7,6 +7,44 @@ body
     text-align: center;
 }
 
+#mainheader
+{
+	margin-top: 50px;
+	text-align: center;
+	color: firebrick;
+	font-size: 20px;
+	text-shadow:
+		-1px -1px 0 #000,  
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+  
+}
+
+#aboutlogo
+{
+    background-image: url('../img/logo/full-transp-black.png');
+	background-size: cover !important;
+	background-position: center center !important;
+    background-repeat: no-repeat;
+    width: 180px;
+    height: 69.3px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#aboutphoto
+{
+    background-image: url(../img/aboutphoto/250.png);
+	background-size: cover !important;
+	background-position: center center !important;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 152px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .nameheader
 {
     font-size: 20px;
@@ -16,19 +54,22 @@ body
     font-weight: bold;
 }
 
-.section
+
+.indphoto
 {
-    padding-left: 15px;
-    padding-right: 15px;
-    font-size: 14px;
-    font-weight: bold;
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
 .quote
 {
-    width: 170px;
+    min-width: 170px;
+    max-width: 400px;
+	width: 60%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
@@ -41,46 +82,26 @@ body
     box-shadow: 10px 10px 9px -2px rgba(0,0,0,0.43);
 }
 
-#mainheader
+.section
 {
-    margin-top: 50px;
-    text-align: center;
-   color: firebrick;
-   text-shadow:
-   -1px -1px 0 #000,  
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-     1px 1px 0 #000;
-  
-}
-
-#aboutlogo
-{
-    background-image: url('../img/logo/full-transp-black.png');
-    background-repeat: no-repeat;
-    width: 200px;
-    height: 77px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#aboutphoto
-{
-    background-image: url(../img/aboutphoto/250.png);
-    width: 250px;
-    height: 190px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.indphoto
-{
-    width: 100px;
-    height: 100px;
-    margin-left: auto;
-    margin-right: auto;
+	width: 90%;
+	margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 14px;
+    font-weight: bold;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.person
+{
+	float: left;
+	width: 100%;
+}
+.last:after
+{
+	clear: both;
 }
 
 #maciej
@@ -97,11 +118,21 @@ body
 /* Small devices (phones, 350px and up) */
 @media only screen and (min-width: 350px) {
     
-    .quote
+	#aboutlogo
+	{
+		width: 200px;
+		height: 77px;
+	}
+	#aboutphoto 
     {
         width: 300px;
+        height: 203px;
+        background-image: url(../img/aboutphoto/400.png)
     }
-
+	.section
+	{
+		width: 80%;
+	}
 } 
 
 /* Small devices (large phones, 540px and up) */
@@ -109,12 +140,12 @@ body
     
     h2 
     {
-        font-size: 46px;
+        font-size: 40px;
     }
 
     .section
     {
-        font-size: 20px;
+        font-size: 18px;
     }
 	
 	
@@ -126,12 +157,11 @@ body
     {
         width: 400px;
         height: 271px;
-        background-image: url(../img/aboutphoto/400.png)
     }
     
     .nameheader
     {
-        font-size: 30px;
+        font-size: 25px;
     }
     
 } 
@@ -154,27 +184,28 @@ body
 
     .quote
     {
-        width: 500px;
-        height: 100px;
         line-height: 30px;
         font-weight: bold;
     }
     .section
     {
         font-size: 24px;
-        width: 600px;
-        margin-left: auto;
-        margin-right: auto;
     }
 } 
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 
-    .person
-    {
-        display: inline-block;
-    }
+	#aboutlogo
+	{
+		width: 250px;
+		height: 96.25px;
+	}
+	.person
+	{
+		width: 50%;
+	}
+    
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -184,9 +215,11 @@ body
   {
       width: 1000px;
   }
-
-
-
+  
+    .section
+    {
+        font-size: 30px;
+    }
 }
 
 /* Extra enormous devices (TV, 1700px and up) */
