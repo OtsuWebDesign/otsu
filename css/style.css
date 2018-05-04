@@ -1,4 +1,11 @@
 /* Extra super small devices (small phones, 350px and down) */
+
+html, body
+{
+	overflow-x: hidden !important;
+	max-width: 100% !important;
+}
+
 #container
 {
 	margin: 20px 0 0 0;
@@ -21,7 +28,7 @@
 .step
 {
 	margin-top: 20px;
-	transform: translate(0)!important;
+
 }
 .step:after
 {
@@ -133,4 +140,5 @@ footer
 	{
 		max-width: 2200px;
 	}
+}
 }

@@ -1,0 +1,186 @@
+/* Extra super small devices (small phones, 350px and down) */
+
+body
+{
+    text-align: center;
+}
+
+.nameheader
+{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: lightseagreen;
+    font-weight: bold;
+}
+
+.section
+{
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.quote
+{
+    width: 170px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    background-color: lemonchiffon;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-style: italic;
+    -webkit-box-shadow: 10px 10px 9px -2px rgba(0,0,0,0.43);
+    -moz-box-shadow: 10px 10px 9px -2px rgba(0,0,0,0.43);
+    box-shadow: 10px 10px 9px -2px rgba(0,0,0,0.43);
+}
+
+#mainheader
+{
+    margin-top: 50px;
+    text-align: center;
+}
+
+#aboutlogo
+{
+    background-image: url('../img/logo/full-transp-black.png');
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 77px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#aboutphoto
+{
+    background-image: url(../img/aboutphoto/250.png);
+    width: 250px;
+    height: 190px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.indphoto
+{
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#maciej
+{
+    background-image: url(../img/aboutphoto/m.png);
+}
+
+#radek
+{
+    background-image: url(../img/aboutphoto/r.png)
+}
+
+
+/* Small devices (phones, 350px and up) */
+@media only screen and (min-width: 350px) {
+    
+    .quote
+    {
+        width: 300px;
+    }
+
+} 
+
+/* Small devices (large phones, 540px and up) */
+@media only screen and (min-width: 540px) {
+    
+    h2 
+    {
+        font-size: 36px;
+    }
+
+    .section
+    {
+        font-size: 20px;
+    }
+	
+	
+} 
+/* Small devices (portrait tablets, landscape phones, 640px and up) */
+@media only screen and (min-width: 640px) {
+    
+    #aboutphoto 
+    {
+        width: 400px;
+        height: 271px;
+        background-image: url(../img/aboutphoto/400.png)
+    }
+    
+    .nameheader
+    {
+        font-size: 30px;
+    }
+    
+} 
+
+/* Medium devices (landscape tablets, 800px and up) */
+@media only screen and (min-width: 800px) {
+    #maciej
+    {
+        width: 180px;
+        height: 180px;
+        background-image: url(../img/aboutphoto/mbig.png);
+    }
+
+	#radek
+    {
+        width: 180px;
+        height: 180px;
+        background-image: url(../img/aboutphoto/rbig.png);
+    }
+
+    .quote
+    {
+        width: 500px;
+        height: 100px;
+        line-height: 30px;
+        font-weight: bold;
+    }
+    .section
+    {
+        font-size: 24px;
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+    .person
+    {
+        display: inline-block;
+    }
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+  #introduction .section
+  {
+      width: 1000px;
+  }
+
+
+}
+
+/* Extra enormous devices (TV, 1700px and up) */
+@media only screen and (min-width: 1700px) {
+	
+}

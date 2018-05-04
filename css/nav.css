@@ -102,7 +102,7 @@
 	margin: 0;
 	line-height: 40px;
 }
-	
+
 #menu li:hover
 {
 	color: black;
@@ -169,6 +169,12 @@
 		width: 100%;
 		background: none;
 	}
+
+	#menu a
+	{
+	display: inline-block;
+	}
+	
 
 	#menu li
 	{
