@@ -5,6 +5,7 @@
 	margin-top: 40px;
 	height: 170px;
 	text-align: center;
+	margin: 0 auto;
 }
 
 .slider {
@@ -26,11 +27,13 @@
 	top:0;
 	width:100%;
 	height:100%;
-	display: flex;
+	/*display: flex;
+	display: -webkit-flex; 
 	justify-content: center;
 	align-items: center;
+	-webkit-align-items: center; 
 	flex-direction: column;
-	opacity:0;
+	-webkit-flex-direction: column; */
 	z-index: 0;
 }
 .slide
@@ -52,13 +55,19 @@
 }
 
 /* elementy pojedynczego slajdu */
+.slide-content
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width:70%;
+	margin: 0 auto;
+}
 .slider .slide-title
 {
 	color:#fff;
-	font-family: sans-serif;
 	position: relative;
-	left:-3rem;
-	opacity:0;
 	font-size: 17px;
 	text-transform: uppercase;
 	font-weight: normal;
@@ -66,20 +75,15 @@
 	margin-bottom:2px;
 	text-align: center;
 	font-family: 'Roboto Condensed', sans-serif;
-	max-width:70%;
 }
 .slider .slide-text
 {
 	color:#fff;
 	position: relative;
-	left:-3rem;
-	opacity:0;
 	font-size:13px;
-	color:rgba(255,255,255,.6);
 	text-align: center;
 	font-family: serif;
 	font-style: italic;
-	max-width:70%;
 }
 
 /* animacja slajdów */
@@ -124,7 +128,6 @@
 	cursor: pointer;
 	z-index: 2;
 	position: absolute;
-	left:0;
 	top:0;
 	width:15%;
 	margin: 0;
@@ -134,9 +137,12 @@
 	text-indent:-999px;
 	overflow:hidden;
 }
+.slider-button-prev
+{
+	left:0;
+}
 .slider-button-next 
 {
-	left:auto;
 	right:0;
 }
 .slider-button-prev:focus,
@@ -147,7 +153,6 @@
 .slider-button-prev:before,
 .slider-button-next:before 
 {
-	content:'<';
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -159,6 +164,10 @@
 	font-size:2rem;
 	color:#fff;
 	text-indent: 0;
+}
+.slider-button-prev:before
+{
+	content:'<';
 }
 .slider-button-next:before
 {
@@ -233,17 +242,18 @@
 @media only screen and (min-width: 280px) {
 	
 	/* elementy pojedynczego slajdu */
+	.slide-content
+	{
+		width:76%;
+	}
 	.slider .slide-title
 	{
 		font-size: 21px;
-		margin-top:0;
 		margin-bottom:5px;
-		max-width:76%;
 	}
 	.slider .slide-text
 	{
 		font-size:15px;
-		max-width:76%;
 	}
 	
 	/* przyciski strzałek slajdu */
@@ -300,17 +310,18 @@
 	}
 	
 	/* elementy pojedynczego slajdu */
+	.slide-content
+	{
+		max-width:80%;
+	}
 	.slider .slide-title
 	{
 		font-size: 28px;
-		margin-top:0;
 		margin-bottom:7px;
-		max-width:80%;
 	}
 	.slider .slide-text
 	{
 		font-size:19px;
-		max-width:80%;
 	}
 	
 	/* przyciski strzałek slajdu */
@@ -325,7 +336,6 @@
 	.slider-dots
 	{
 		bottom: 11px;
-		padding:0;
 	}
 	.dots-container
 	{
@@ -362,17 +372,18 @@
 	}
 	
 	/* elementy pojedynczego slajdu */
+	.slide-content
+	{
+		max-width:86%;
+	}
 	.slider .slide-title
 	{
 		font-size: 34px;
-		margin-top:0;
 		margin-bottom:12px;
-		max-width:86%;
 	}
 	.slider .slide-text
 	{
 		font-size:26px;
-		max-width:86%;
 	}
 	
 	/* przyciski strzałek slajdu */
@@ -387,7 +398,6 @@
 	.slider-dots
 	{
 		bottom: 15px;
-		padding:0;
 	}
 	.dots-container
 	{
@@ -425,14 +435,11 @@
 	.slider .slide-title
 	{
 		font-size: 45px;
-		margin-top:0;
 		margin-bottom:20px;
-		max-width:86%;
 	}
 	.slider .slide-text
 	{
 		font-size:28px;
-		max-width:86%;
 	}
 } 
 
@@ -450,17 +457,18 @@
 	}
 	
 	/* elementy pojedynczego slajdu */
+	.slide-content
+	{
+		max-width:90%;
+	}
 	.slider .slide-title
 	{
 		font-size: 45px;
-		margin-top:0;
 		margin-bottom:15px;
-		max-width:90%;
 	}
 	.slider .slide-text
 	{
 		font-size:28px;
-		max-width:90%;
 	}
 	
 	/* przyciski strzałek slajdu */
@@ -475,7 +483,6 @@
 	.slider-dots
 	{
 		bottom: 17px;
-		padding:0;
 	}
 	.dots-container
 	{
@@ -518,17 +525,18 @@
 	}
 	
 	/* elementy pojedynczego slajdu */
+	.slide-content
+	{
+		max-width:92%;
+	}
 	.slider .slide-title
 	{
 		font-size: 60px;
-		margin-top:0;
 		margin-bottom:20px;
-		max-width:92%;
 	}
 	.slider .slide-text
 	{
 		font-size:30px;
-		max-width:92%;
 	}
 	
 	/* przyciski strzałek slajdu */
@@ -578,17 +586,18 @@
 	}
 	
 	/* elementy pojedynczego slajdu */
+	.slide-content
+	{
+		max-width:94%;
+	}
 	.slider .slide-title
 	{
 		font-size: 70px;
-		margin-top:0;
 		margin-bottom:30px;
-		max-width:94%;
 	}
 	.slider .slide-text
 	{
 		font-size:35px;
-		max-width:94%;
 	}
 	
 	/* przyciski strzałek slajdu */
@@ -618,21 +627,17 @@
 	.slider .slide-title
 	{
 		font-size: 100px;
-		margin-top:0;
 		margin-bottom:45px;
-		max-width:94%;
 	}
 	.slider .slide-text
 	{
 		font-size:50px;
-		max-width:94%;
 	}
 	
 	/* przyciski strzałek slajdu */
 	.slider-button-prev,
 	.slider-button-next
 	{
-		width:3%;
 		margin-top: 200px;
 	}
 }
