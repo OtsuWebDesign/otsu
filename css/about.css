@@ -168,18 +168,6 @@ body
     {
         display: inline-block;
     }
-
-    #introduction 
-    {
-        color: white;
-        background-image: url(../img/aboutphoto/bg.png);
-    }
-
-    #aboutlogo 
-    {
-        background-image: url('../img/logo/full-transp-white.png');
-    }
-
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
