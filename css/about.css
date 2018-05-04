@@ -1,4 +1,6 @@
 /* Extra super small devices (small phones, 350px and down) */
+/* Background pattern from Toptal Subtle Patterns */
+
 
 body
 {
@@ -165,6 +167,17 @@ body
     .person
     {
         display: inline-block;
+    }
+
+    #introduction 
+    {
+        color: white;
+        background-image: url(../img/aboutphoto/bg.png);
+    }
+
+    #aboutlogo 
+    {
+        background-image: url('../img/logo/full-transp-white.png');
     }
 
 }

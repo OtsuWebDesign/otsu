@@ -1,9 +1,11 @@
 /* Extra super small devices (small phones, 350px and down) */
+/* Background pattern from Toptal Subtle Patterns */
 
 html, body
 {
 	overflow-x: hidden !important;
 	max-width: 100% !important;
+	background-image: url(../img/aboutphoto/bginv.png)
 }
 
 #container

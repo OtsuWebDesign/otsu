@@ -9,6 +9,7 @@
 
 .slider {
 	position: relative;
+	border-bottom: 1px black solid;
 }
 
 /* kontener dla wszystkich slajdów */
