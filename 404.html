@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Otsu - Page Not Found</title>
+    <title>Page Not Found</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/nav.css"  type="text/css"/>
     <style>
 
         * {
@@ -36,6 +37,21 @@
             margin: 0 auto;
             width: 280px;
         }
+        
+        footer
+        {
+	        width: 100%;
+            height: 20px;
+            color: whitesmoke;
+            background: #20326b;
+            position: fixed;
+            bottom: 0;
+            text-align: center;
+            border-top: gray 1px solid;
+            font-size: 9px;
+            line-height: 20px;
+            
+        }        
 
         @media only screen and (max-width: 280px) {
 
@@ -53,8 +69,26 @@
     </style>
 </head>
 <body>
+        <nav>
+                <div id="nav">
+                        <a href='index.html'><div id="logo"></div></a>
+                        <button class="hamburger">&#9776;</button>
+                        <button class="cross">&#735;</button>
+                        <div id="menu">
+                            <ul>
+                                <a href='index.html'><li>Strona główna</li></a>
+                                <a href='about.html'><li>O nas</li></a>
+                                <a href='index.html'><li>Nasze projekty</li></a>
+                                <a href='index.html'><li>Kontakt</li></a>
+                            </ul>
+                        </div>
+                </div>
+            </nav>
     <h1>Page Not Found</h1>
     <p>Sorry, but the page you were trying to view does not exist.</p>
+    <footer>
+			Polstronex&trade; corporation &copy; Maciej Witkowski i Radosław Kamiński - Wszelkie prawa zastrzeżone
+		</footer>
 </body>
 </html>
 <!-- IE needs 512+ bytes: https://blogs.msdn.microsoft.com/ieinternals/2010/08/18/friendly-http-error-pages/ -->
