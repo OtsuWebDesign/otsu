@@ -588,6 +588,10 @@
 		width:3%;
 		margin-top: 175px;
 		height: 60px;
+		border-radius: 200px 200px 200px 200px;
+		-moz-border-radius: 200px 200px 200px 200px;
+		-webkit-border-radius: 200px 200px 200px 200px;
+		border: 0px solid #000000;
 	}
 }
 
