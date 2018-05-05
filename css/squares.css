@@ -75,6 +75,17 @@
 #square4>a
 	{background-color: #a708ad;}
 
+#square1 :hover
+	{background-color: #3b89a1;}
+#square2 :hover
+	{background-color: #348d35;}
+#square3 :hover
+	{background-color: #b98b46;}
+#square4 :hover
+	{background-color: #ce41d3;}
+
+
+
 
 /* Small devices (phones, 350px and up) */
 @media only screen and (min-width: 350px) {
@@ -89,6 +100,8 @@
 		min-width: 110px;
 		font-size: 16px;
 	}
+
+
 } 
 
 /* Small devices (large phones, 540px and up) */
@@ -112,6 +125,7 @@
 		{background-image: url(../img/squares/middle/3.jpg);}
 	#square4
 		{background-image: url(../img/squares/middle/4.jpg);}
+
 } 
 /* Small devices (portrait tablets, landscape phones, 640px and up) */
 @media only screen and (min-width: 640px) {
