@@ -1,3 +1,11 @@
+/*Extra small devices (small phones, 350px and down)*/
+
+
+.name
+{
+    font-weight: bold;
+}
+
 body
 {
     text-align: center;
@@ -13,8 +21,60 @@ body
     padding-bottom: 10px;
     margin-top: 15px;
 }
+
 #fb:hover
 {
     cursor: pointer;
     background: #4b71c5;
+}
+
+.element
+{
+    height: 60px;
+    line-height: 60px;
+    background: rgb(0, 82, 107);
+    color: white;
+    font-size: 17px;
+    border-top : 1px white dashed;
+
+}
+
+
+
+/* Small devices (phones, 350px and up) */
+@media only screen and (min-width: 350px) {
+	
+
+} 
+
+/* Small devices (large phones, 540px and up) */
+@media only screen and (min-width: 540px) {
+	
+	
+} 
+/* Small devices (portrait tablets, landscape phones, 640px and up) */
+@media only screen and (min-width: 640px) {
+	
+	
+} 
+
+/* Medium devices (landscape tablets, 800px and up) */
+@media only screen and (min-width: 800px) {
+	
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	
+	
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+	
+
+}
+/* Extra enormous devices (TV, 1700px and up) */
+@media only screen and (min-width: 1700px) {
+	
 }
