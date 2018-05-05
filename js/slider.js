@@ -1,13 +1,11 @@
-const Slider = function(elemSelector, opts) {
+const Slider = function(elemSelector, opts) {//////////////////////////////////
     const defaultOpts = {
-        pauseTime : 0,
+        pauseTime : 7000,
         prevText : "Poprzedni slajd",
-        nextText : "Następny slajd",
-        generateDots : true,
-        generatePrevNext : true
+        nextText : "Następny slajd"
     };
     this.options = Object.assign({}, defaultOpts, opts);
-    this.sliderSelector = elemSelector;
+    this.sliderSelector = '#slider';
     this.currentSlide = 0; //aktualny slide
     this.time = null; //tutaj będziemy podczepiać setTimeout
     this.slider = null;
@@ -25,27 +23,26 @@ const Slider = function(elemSelector, opts) {
 Slider.prototype.generateSlider = function() {
     //pobieramy element który zamienimy na slider
     this.slider = document.querySelector(this.sliderSelector);
-    this.slider.classList.add('slider');
 
     //tworzymy kontener dla slajdow
-    const slidesCnt = document.createElement('div');
-    slidesCnt.classList.add('slides');
+    const slidesCnt = document.getElementById('slides');
+    //slidesCnt.classList.add('slides');
 
     //pobieramy element slajdów
-    this.slides = this.slider.children;
+    this.slides = slidesCnt.children;
 
     //to jest zywa kolekcja, więc przy przeniesieniu kazdego slajda
     //jej dlugosc maleje
-    while (this.slides.length) 
-	{
-        this.slides[0].classList.add('slide-js');
-        slidesCnt.appendChild(this.slides[0]);
-    }
-    this.slides = slidesCnt.children;
-    this.slider.appendChild(slidesCnt);
+    //while (this.slides.length) 
+	//{
+       //this.slides[0].classList.add('slide');
+    //    slidesCnt.appendChild(this.slides[0]);
+    //}
+    //this.slides = slidesCnt.children;
+    //this.slider.appendChild(slidesCnt);
 
-    if (this.options.generatePrevNext) this.createPrevNext();
-    if (this.options.generateDots) this.createDots();
+    this.createPrevNext();
+    this.createDots();
 }
 
 Slider.prototype.slidePrev = function() {
@@ -157,8 +154,6 @@ Slider.prototype.createDots = function() {
 const slide = new Slider('#slider', 
 {
     pauseTime : 7000,
-    generateDots : true,
-    generatePrevNext : true,
     prevText : "Poprzedni",
     nextText : "Następny"
 });
