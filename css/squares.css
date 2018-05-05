@@ -62,7 +62,7 @@
 	top: 0px;
 	margin: 0;
 	padding: 5px;
-	transition: opacity 0.5s ease-in-out;
+	transition: opacity 0.4s ease-in-out;
 	text-decoration: none;
 	color: white;
 	position: relative;
@@ -184,10 +184,6 @@
 	.square:hover>a
 	{
 		opacity: 0.5;
-	}
-	.square span:hover
-	{
-		opacity: 1.0;
 	}
 
 } 

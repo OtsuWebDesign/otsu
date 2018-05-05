@@ -1,0 +1,20 @@
+body
+{
+    text-align: center;
+    margin-top:50px;
+}
+
+#fb
+{
+    background: #3b5999;
+    color: white;
+    height: 120px;
+    padding-top:10px;
+    padding-bottom: 10px;
+    margin-top: 15px;
+}
+#fb:hover
+{
+    cursor: pointer;
+    background: #4b71c5;
+}
