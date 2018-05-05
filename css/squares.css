@@ -41,6 +41,7 @@
 	min-width: 80px;
 	max-width: 100%;
 	transform: translate(-50%, -50%);
+	
 }
 
 #square1
@@ -65,8 +66,8 @@
 	text-decoration: none;
 	color: white;
 	position: relative;
-	
 	opacity: 0.5;
+	
 }
 
 #square1>a
@@ -86,9 +87,6 @@
 	{background-color: #b98b46;}
 #square4 :hover
 	{background-color: #ce41d3;}
-
-
-
 
 /* Small devices (phones, 350px and up) */
 @media only screen and (min-width: 350px) {
@@ -187,6 +185,11 @@
 	{
 		opacity: 0.5;
 	}
+	.square span:hover
+	{
+		opacity: 1.0;
+	}
+
 } 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
