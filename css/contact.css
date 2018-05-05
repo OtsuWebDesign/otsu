@@ -6,6 +6,17 @@
     font-weight: bold;
 }
 
+.element
+{
+    height: 60px;
+    line-height: 60px;
+    background: rgb(0, 82, 107);
+    color: white;
+    font-size: 17px;
+    border-top : 1px white dashed;
+
+}
+
 body
 {
     text-align: center;
@@ -28,18 +39,11 @@ body
     background: #4b71c5;
 }
 
-.element
+#reginfo
 {
-    height: 60px;
-    line-height: 60px;
-    background: rgb(0, 82, 107);
-    color: white;
-    font-size: 17px;
-    border-top : 1px white dashed;
-
+    padding-left: 10px;
+    padding-right: 10px;
 }
-
-
 
 /* Small devices (phones, 350px and up) */
 @media only screen and (min-width: 350px) {
@@ -49,12 +53,27 @@ body
 
 /* Small devices (large phones, 540px and up) */
 @media only screen and (min-width: 540px) {
-	
+    body 
+    {
+        margin-top: 60px;
+    }
 	
 } 
 /* Small devices (portrait tablets, landscape phones, 640px and up) */
 @media only screen and (min-width: 640px) {
-	
+    
+    #fb
+    {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .element
+    {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 	
 } 
 
