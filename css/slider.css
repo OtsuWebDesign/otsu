@@ -36,12 +36,9 @@
 	background-size: cover !important;
 	background-position: center center !important;
 }
-#slide1
-	{background-color: #1dc8d1}
-#slide2
-	{background-color: #191a21}
-#slide3
-	{background-color: #e0e0e0}
+#slide1 {background-color: #086484}
+#slide2 {background-color: #232323}
+#slide3 {background-color: #cacaca}
 
 .slide-1 {background: url("../img/slider/min/1.jpg")}
 .slide-2 {background: url("../img/slider/min/2.jpg")}
