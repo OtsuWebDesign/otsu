@@ -9,7 +9,6 @@
 		<meta name="keywords" content="słowa, kluczowe, wypisane, po, porzecinku" />
 		<link rel="manifest" href="site.webmanifest">
 		<title>Otsu Webdesign</title>
-		<!-- Nie wiem co ten tag robi -->
 		<link rel="apple-touch-icon" href="icon.png">
         <link rel="stylesheet" href="css/main.css" type="text/css">
 		<link rel="stylesheet" href="css/style.css"  type="text/css"/>
@@ -26,7 +25,7 @@
 			<div id="nav">
 					<a href='index.html'><div id="logo"></div></a>
 					<button class="hamburger">&#9776;</button>
-					<button class="cross">&#735;</button>
+					<button class="cross" style="display:none">&#735;</button>
 					<div id="menu">
 						<ul>
 							<a href='index.html'><li>Strona główna</li></a>
@@ -120,13 +119,13 @@
 			Polstronex&trade; corporation &copy; Maciej Witkowski i Radosław Kamiński - Wszelkie prawa zastrzeżone
 		</footer>
 		<!-- Skrypty -->
-		<script src="js/vendor/modernizr-3.5.0.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script defer src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 		<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-		<script src="js/hamburger.js"></script>
-		<script src="js/slider.js"></script>
-		<script src="js/imgload.js"></script>
+        <script defer src="js/plugins.js"></script>
+		<script defer src="js/hamburger.js"></script>
+        <script defer src="js/aos.js"></script>
+		<script defer src="js/slider.js"></script>
+		<script defer src="js/imgload.js"></script>
 		<script>
 			window.onload = function()
 			{
@@ -134,12 +133,11 @@
 				bind_images();
 			}
 		</script>
-        <script src="js/aos.js"></script>
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID in google analytics -->
         <script>
             window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
             ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
         </script>
-		<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+		<script async defer src="https://www.google-analytics.com/analytics.js"></script>
 	</body>
 </html>
