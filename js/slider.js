@@ -1,6 +1,6 @@
 var currentSlide = 0, //aktualny slide
 	time = null, //tutaj będziemy podczepiać setTimeout
-	slider = null,
+	slider = document.getElementById('slider'),
 	elem = null,
 	slides = null,
 	prev = null, //przycisk prev
@@ -9,12 +9,9 @@ var currentSlide = 0, //aktualny slide
 	pauseTime = 7000,
 	prevText = "Poprzedni slajd",
 	nextText = "Następny slajd";
-window.onload = function()
+function generate_slider()
 {
-    slider = document.getElementById('slider');
     var slidesCnt = document.getElementById('slides');
-
-    //pobieramy element slajdów
     slides = slidesCnt.children;
 
     createPrevNext();
