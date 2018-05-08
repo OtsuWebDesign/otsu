@@ -207,6 +207,9 @@
 	position: absolute;
 	left:50%;
 	top:50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
 	transform:translate(-50%, -50%);
 	background: transparent;
 	width:12px;
@@ -218,6 +221,9 @@
 .slider-dot-active .slider-dot-button:before
 {
 	background: #fff;
+	-webkit-transform: translate(-50%, -50%) scale(1.2);
+	-moz-transform: translate(-50%, -50%) scale(1.2);
+	-o-transform: translate(-50%, -50%) scale(1.2);
 	transform:translate(-50%, -50%) scale(1.2);
 }
 .slider-dot-button:focus

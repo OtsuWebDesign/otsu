@@ -40,6 +40,9 @@
 	font-size: 15px;
 	min-width: 80px;
 	max-width: 100%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-o-transform:translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 	
 }
