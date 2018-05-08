@@ -8,13 +8,11 @@
 
 .element
 {
-    height: 60px;
     line-height: 60px;
     background: rgb(0, 82, 107);
     color: white;
     font-size: 17px;
     border-top : 1px white dashed;
-
 }
 
 body
