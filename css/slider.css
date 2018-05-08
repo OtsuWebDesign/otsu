@@ -41,10 +41,6 @@
 #slide2 {background: #232323 url("../img/slider/pixel/2.jpg")}
 #slide3 {background: #cacaca url("../img/slider/pixel/3.jpg")}
 
-#slide1.slide-1 {background-image: url("../img/slider/min/1.jpg")}
-#slide2.slide-2 {background-image: url("../img/slider/min/2.jpg")}
-#slide3.slide-3 {background-image: url("../img/slider/min/3.jpg")}
-
 /* slide aktywny */
 .slide-active
 {
@@ -360,10 +356,6 @@
 		height: 300px;
 	}
 	
-	#slide1.slide-1 {background-image: url("../img/slider/middle/1.jpg")}
-	#slide2.slide-2 {background-image: url("../img/slider/middle/2.jpg")}
-	#slide3.slide-3 {background-image: url("../img/slider/middle/3.jpg")}
-	
 	/* elementy pojedynczego slajdu */
 	.slider .slide-title
 	{
@@ -505,10 +497,6 @@
 	.slides {
 		height: 360px;
 	}
-	
-	#slide1.slide-1 {background-image: url("../img/slider/max/1.jpg")}
-	#slide2.slide-2 {background-image: url("../img/slider/max/2.jpg")}
-	#slide3.slide-3 {background-image: url("../img/slider/max/3.jpg")}
 
 	/* elementy pojedynczego slajdu */
 	.slider .slide-title
