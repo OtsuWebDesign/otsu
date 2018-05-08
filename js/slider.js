@@ -1,134 +1,114 @@
-const Slider = function(elemSelector, opts) {//////////////////////////////////
-    const defaultOpts = {
-        pauseTime : 7000,
-        prevText : "Poprzedni slajd",
-        nextText : "Następny slajd"
-    };
-    this.options = Object.assign({}, defaultOpts, opts);
-    this.sliderSelector = '#slider';
-    this.currentSlide = 0; //aktualny slide
-    this.time = null; //tutaj będziemy podczepiać setTimeout
-    this.slider = null;
-    this.elem = null;
-    this.slides = null;
-
-    this.prev = null; //przycisk prev
-    this.next = null; //przucisl next
-    this.dots = [];
-
-    this.generateSlider();
-    this.changeSlide(this.currentSlide);
-}
-
-Slider.prototype.generateSlider = function() {
-    //pobieramy element który zamienimy na slider
-    this.slider = document.querySelector(this.sliderSelector);
-
-    //tworzymy kontener dla slajdow
-    const slidesCnt = document.getElementById('slides');
-    //slidesCnt.classList.add('slides');
+var currentSlide = 0, //aktualny slide
+	time = null, //tutaj będziemy podczepiać setTimeout
+	slider = null,
+	elem = null,
+	slides = null,
+	prev = null, //przycisk prev
+	next = null, //przucisl next
+	dots = [],
+	pauseTime = 7000,
+	prevText = "Poprzedni slajd",
+	nextText = "Następny slajd";
+window.onload = function()
+{
+    slider = document.getElementById('slider');
+    var slidesCnt = document.getElementById('slides');
 
     //pobieramy element slajdów
-    this.slides = slidesCnt.children;
+    slides = slidesCnt.children;
 
-    //to jest zywa kolekcja, więc przy przeniesieniu kazdego slajda
-    //jej dlugosc maleje
-    //while (this.slides.length) 
-	//{
-       //this.slides[0].classList.add('slide');
-    //    slidesCnt.appendChild(this.slides[0]);
-    //}
-    //this.slides = slidesCnt.children;
-    //this.slider.appendChild(slidesCnt);
+    createPrevNext();
+    createDots();
+    changeSlide(currentSlide);
+};
 
-    this.createPrevNext();
-    this.createDots();
-}
-
-Slider.prototype.slidePrev = function() {
-    this.currentSlide--;
-    if (this.currentSlide < 0) {
-        this.currentSlide = this.slides.length - 1;
+function slidePrev() 
+{
+    currentSlide--;
+    if (currentSlide < 0) {
+        currentSlide = slides.length - 1;
     }
-    this.changeSlide(this.currentSlide);
+    changeSlide(currentSlide);
 }
 
-Slider.prototype.slideNext = function() {
-    this.currentSlide++;
-    if (this.currentSlide > this.slides.length - 1) {
-        this.currentSlide = 0;
+function slideNext() 
+{ 
+    currentSlide++;
+    if (currentSlide > slides.length - 1) {
+        currentSlide = 0;
     }
-    this.changeSlide(this.currentSlide);
+    changeSlide(currentSlide);
 }
 
-Slider.prototype.changeSlide = function(index) {
-    [].forEach.call(this.slides, function(slide) {
+function changeSlide(index) 
+{
+    [].forEach.call(slides, function(slide) {
         slide.classList.remove('slide-active');
         slide.setAttribute('aria-hidden', true);
     });
 
     //dodajemy ją tylko wybranemu
-    this.slides[index].classList.add('slide-active');
-    this.slides[index].setAttribute('aria-hidden', false);
+    slides[index].classList.add('slide-active');
+    slides[index].setAttribute('aria-hidden', false);
 
     //podobny manewr robimy dla kropek
     
-	this.dots.forEach(function(dot) {
+	dots.forEach(function(dot) {
 		dot.classList.remove('slider-dot-active');
 	});
-	this.dots[index].classList.add('slider-dot-active');
+	dots[index].classList.add('slider-dot-active');
 
     //aktualny slide przestawiamy na wybrany
-    this.currentSlide = index;
+    currentSlide = index;
 
-	clearInterval(this.time);
-	this.time = setTimeout(function() {
-		this.slideNext();
-	}.bind(this), this.options.pauseTime)
+	clearInterval(time);
+	time = setTimeout(function() { slideNext(); }.bind(this), pauseTime)
 }
 
-Slider.prototype.createPrevNext = function() {
-    this.prev = document.createElement('button');
-    this.prev.type = "button";
-    this.prev.innerText = this.options.prevText;
-    this.prev.classList.add('slider-button');
-    this.prev.classList.add('slider-button-prev');
-    this.prev.addEventListener('click', this.slidePrev.bind(this));
+function createPrevNext() 
+{
+    prev = document.createElement('button');
+    prev.type = "button";
+    prev.innerText = prevText;
+    prev.classList.add('slider-button');
+    prev.classList.add('slider-button-prev');
+    prev.addEventListener('click', slidePrev.bind(this));
 
-    this.next = document.createElement('button');
-    this.next.type = "button";
-    this.next.innerText = this.options.nextText;
-    this.next.classList.add('slider-button');
-    this.next.classList.add('slider-button-next');
-    this.next.addEventListener('click', this.slideNext.bind(this));
+    next = document.createElement('button');
+    next.type = "button";
+    next.innerText = nextText;
+    next.classList.add('slider-button');
+    next.classList.add('slider-button-next');
+    next.addEventListener('click', slideNext.bind(this));
 
-    const nav = document.createElement('div');
+    var nav = document.createElement('div');
     nav.classList.add('slider-nav');
     nav.setAttribute('aria-label', 'Przyciski zmiany slajdu: poprzedni, następny');
-    nav.appendChild(this.prev);
-    nav.appendChild(this.next);
-    this.slider.appendChild(nav);
+    nav.appendChild(prev);
+    nav.appendChild(next);
+    slider.appendChild(nav);
 }
 
-Slider.prototype.createDots = function() {
-    const ulDots = document.createElement('ul');
+function createDots() 
+{
+    var ulDots = document.createElement('ul');
     ulDots.classList.add('slider-dots');
     ulDots.setAttribute('aria-label', 'Przyciski zmiany slajdu: kropki');
 	
-	const dotsContainer = document.createElement('div');
+	var dotsContainer = document.createElement('div');
 	dotsContainer.classList.add('dots-container');
 	
     //tworzymy pętlę w ilości liczby slajów
-    for (let i=0; i<this.slides.length; i++) 
+    for (let i=0; i<slides.length; i++) 
 	{
 		//każdorazowo tworzymy LI wraz z buttonem
 		//każdy button po kliknięciu zmieni slajd
 		//za pomocą metody changeSlide()
 
-		const li = document.createElement('li');
+		var li = document.createElement('li');
 		li.classList.add('slider-dot');
 
-		const btn = document.createElement('button');
+		var btn = document.createElement('button');
 		btn.classList.add('slider-dot-button');
 		btn.type = "button";
 		btn.innerText = i+1;
@@ -136,21 +116,15 @@ Slider.prototype.createDots = function() {
 
 		btn.addEventListener('click', function()
 		{
-			this.changeSlide(i);
+			changeSlide(i);
 		}.bind(this));
 
 		li.appendChild(btn);
 
 		dotsContainer.appendChild(li);
-		this.dots.push(li);
+		dots.push(li);
     }
 
 	ulDots.appendChild(dotsContainer);
-	this.slider.appendChild(ulDots);
+	slider.appendChild(ulDots);
 }
-const slide = new Slider('#slider', 
-{
-    pauseTime : 7000,
-    prevText : "Poprzedni",
-    nextText : "Następny"
-});
