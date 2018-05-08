@@ -48,10 +48,10 @@
 	
 }
 
-.square-1 {background-image: url(../img/squares/min/1.jpg);}
-.square-2 {background-image: url(../img/squares/min/2.jpg);}
-.square-3 {background-image: url(../img/squares/min/3.jpg);}
-.square-4 {background-image: url(../img/squares/min/4.jpg);}
+#square1 {background-image: url(../img/squares/pixel/1.jpg);}
+#square2 {background-image: url(../img/squares/pixel/2.jpg);}
+#square3 {background-image: url(../img/squares/pixel/3.jpg);}
+#square4 {background-image: url(../img/squares/pixel/4.jpg);}
 
 .square>a
 {
@@ -118,10 +118,6 @@
 		min-width: 150px;
 		font-size: 18px;
 	}
-	.square-1 {background-image: url(../img/squares/middle/1.jpg);}
-	.square-2 {background-image: url(../img/squares/middle/2.jpg);}
-	.square-3 {background-image: url(../img/squares/middle/3.jpg);}
-	.square-4 {background-image: url(../img/squares/middle/4.jpg);}
 
 } 
 /* Small devices (portrait tablets, landscape phones, 640px and up) */
@@ -197,11 +193,6 @@
 		min-width: 250px;
 		font-size: 25px;
 	}
-		
-	.square-1 {background-image: url(../img/squares/max/1.jpg);}
-	.square-2 {background-image: url(../img/squares/max/2.jpg);}
-	.square-3 {background-image: url(../img/squares/max/3.jpg);}
-	.square-4 {background-image: url(../img/squares/max/4.jpg);}
 	
 }
 
