@@ -3,9 +3,8 @@
 #slider-container
 {
 	height: 170px;
-	margin-top: 40px!important;
+	margin: 40px auto 0 auto;
 	text-align: center;
-	margin: 0 auto;
 }
 
 .slider {
