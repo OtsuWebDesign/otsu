@@ -36,13 +36,14 @@
 	background-size: cover !important;
 	background-position: center center !important;
 }
-#slide1 {background-color: #086484}
-#slide2 {background-color: #232323}
-#slide3 {background-color: #cacaca}
 
-.slide-1 {background: url("../img/slider/min/1.jpg")}
-.slide-2 {background: url("../img/slider/min/2.jpg")}
-.slide-3 {background: url("../img/slider/min/3.jpg")}
+#slide1 {background: #086484 url("../img/slider/pixel/1.jpg")}
+#slide2 {background: #232323 url("../img/slider/pixel/2.jpg")}
+#slide3 {background: #cacaca url("../img/slider/pixel/3.jpg")}
+
+#slide1.slide-1 {background-image: url("../img/slider/min/1.jpg")}
+#slide2.slide-2 {background-image: url("../img/slider/min/2.jpg")}
+#slide3.slide-3 {background-image: url("../img/slider/min/3.jpg")}
 
 /* slide aktywny */
 .slide-active
@@ -359,9 +360,9 @@
 		height: 300px;
 	}
 	
-	.slide-1 {background: url("../img/slider/middle/1.jpg")}
-	.slide-2 {background: url("../img/slider/middle/2.jpg")}
-	.slide-3 {background: url("../img/slider/middle/3.jpg")}
+	#slide1.slide-1 {background-image: url("../img/slider/middle/1.jpg")}
+	#slide2.slide-2 {background-image: url("../img/slider/middle/2.jpg")}
+	#slide3.slide-3 {background-image: url("../img/slider/middle/3.jpg")}
 	
 	/* elementy pojedynczego slajdu */
 	.slider .slide-title
@@ -505,9 +506,9 @@
 		height: 360px;
 	}
 	
-	.slide-1 {background: url("../img/slider/max/1.jpg")}
-	.slide-2 {background: url("../img/slider/max/2.jpg")}
-	.slide-3 {background: url("../img/slider/max/3.jpg")}
+	#slide1.slide-1 {background-image: url("../img/slider/max/1.jpg")}
+	#slide2.slide-2 {background-image: url("../img/slider/max/2.jpg")}
+	#slide3.slide-3 {background-image: url("../img/slider/max/3.jpg")}
 
 	/* elementy pojedynczego slajdu */
 	.slider .slide-title
