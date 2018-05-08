@@ -529,6 +529,19 @@
 		width:4%;
 		height: 50px;
 		margin-top: 155px;
+		border: 0px solid #000000;
+	}
+	.slider-button-prev
+	{
+		border-radius: 0px 200px 200px 0px;
+		-moz-border-radius: 0px 200px 200px 0px;
+		-webkit-border-radius: 0px 200px 200px 0px;
+	}
+	.slider-button-next
+	{
+		border-radius: 200px 0px 0px 200px;
+		-moz-border-radius: 200px 0px 0px 200px;
+		-webkit-border-radius: 200px 0px 0px 200px;
 	}
 	
 	/* animacje */
@@ -588,10 +601,6 @@
 		width:3%;
 		margin-top: 175px;
 		height: 60px;
-		border-radius: 200px 200px 200px 200px;
-		-moz-border-radius: 200px 200px 200px 200px;
-		-webkit-border-radius: 200px 200px 200px 200px;
-		border: 0px solid #000000;
 	}
 }
 
