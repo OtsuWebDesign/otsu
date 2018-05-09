@@ -26,12 +26,6 @@ html, body
     width: 100%;
 }
 
-.footerfix
-{
-    height: 1px;
-    margin-bottom: 50px;
-}
-
 @media only screen and (min-width: 995px) {
     /* For desktop: */
     .col-1 {width: 8.33%;}
