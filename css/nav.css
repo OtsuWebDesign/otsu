@@ -12,13 +12,13 @@
 	
 #nav #logo
 {
-	background-image: url(../img/logo/340.png);
-	background-size: 30px !important;
+	background-image: url(../img/logo/full-transp-white.png);
+	background-size: cover !important;
 	background-position: center center !important;
 	background-repeat: no-repeat;
 	height: 30px;
+	width: 78px;
 	top:5px;
-	width: 30px;
 	left: 50%;
 	right: 50%;
 	-webkit-transform:translate(-50%, 0);
