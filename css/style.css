@@ -4,6 +4,7 @@
 body
 {
 	background-image: url(../img/bg.png);
+    font-family: 'Roboto', sans-serif;
 }
 
 #container
