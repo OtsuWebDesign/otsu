@@ -16,8 +16,8 @@
 	background-size: cover !important;
 	background-position: center center !important;
 	background-repeat: no-repeat;
-	height: 30px;
-	width: 78px;
+	height: 40px;
+	width: 104px;
 	top: 50%;
 	left: 50%;
 	-webkit-transform:translate(-50%, -50%);
@@ -26,6 +26,7 @@
 	transform: translate(-50%, -50%);
 	display: block;
 	position: absolute;
+	z-index: 11;
 }
 	
 #hamburger
@@ -46,8 +47,8 @@
 	z-index:11;
 }
 
-  #cross
-  {
+#cross
+{
 	display: none;
 	background:none;
 	position:absolute;
@@ -82,7 +83,7 @@
 	width:100%;
 	height: 100%;
 	font-weight:bold;
-	font-size:15px;
+	font-size:18px;
 	text-align: center;
 	background-color: black;
 	opacity:0;
@@ -108,7 +109,6 @@
 #menu>ul
 {
 	height: 100%;
-	min-height: 250px;
 	margin: 0;
 	padding: 0;
 }
@@ -134,101 +134,58 @@
 #menu>ul>a:hover
 {
 	color: black;
-	background-color: white;
+	background-color: #20adff;
 }
-
-/* Small devices (large phones, 540px and up) */
-@media only screen and (min-width: 540px) {
-	
-	#nav
-	{
-	   height: 50px;
-	}
-		
-	#nav #logo
-	{
-		height: 40px;
-		width: 40px;
-		background-size: 40px !important;
-		background-image: url(../img/logo/640.png);
-	}
-	  
-	#menu 
-	{
-		top: 50px;
-		font-size:15px;
-	}
-	#menu li 
-	{
-		height: 50px;
-		line-height: 50px;
-	}
-	
-	#hamburger
-	{
-		line-height:50px;
-	}
-
-	#cross
-	{
-		line-height:50px;
-	}
-} 
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 	
+	#nav
+	{
+	   height: 80px;
+	}
+	
 	#nav #logo
 	{
-		background-image: url(../img/logo/full.png);
-		background-size: auto 40px !important;
-		height: 40px;
-		width: 120px;
-		left:10px;
-		right: 0;
-		-webkit-transform: translate(0, 0);
-		-moz-transform: translate(0, 0);
-		-o-transform: translate(0, 0);
-		transform: translate(0, 0);
+		height: 50px;
+		width: 130px;
+		left:20px;
+		top: 50%;
+		-webkit-transform: translate(0, -50%);
+		-moz-transform: translate(0, -50%);
+		-o-transform: translate(0, -50%);
+		transform: translate(0, -50%);
 	}
 
 	#menu
 	{
-		display: block!important;
+		visibility: visible;
+		opacity: 1;
+		position: relative;
 		top: 0;
 		width: 100%;
 		background: none;
 	}
 
-	#menu a
+	#menu>ul>a
 	{
-	display: inline-block;
+		display: inline-block;
+		height: 100%;
+		padding: 0 20px;
 	}
-	
 
 	#menu li
 	{
-		display: inline-block;
-		line-height: 50px;
-		padding: 0;
-		border: none;
-		margin-right: 25px;
-	}
-	
-	#menu li:hover
-	{
-	   color: #8c8c8c;
-	   background: none;
-	   border: none;
+		display: block;
 	}
 	
 	#hamburger
 	{
-	   display: none;
+	   display: none!important;
 	}
 
 	#cross
 	{
-		display: none;
+		display: none!important;
 	}
 } 
