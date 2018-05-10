@@ -20,21 +20,37 @@
 	</head>
 	<body>
 		<!-- Nawigacja -->
+		<noscript>
+			<div style="width:100%; position:fixed; top:0; color:red; z-index: 13;">
+				Twoja przeglądarka ma wyłączony Javascript! Strona nie będzie wyświetlana w pełni poprawnie.
+			</div>
+		</noscript>
 		<nav>
 			<div id="nav">
-					<a href='index.html'><div id="logo"></div></a>
-					<button id="hamburger">&#9776;</button>
-					<button id="cross">&#735;</button>
-					<div id="menu">
-						<ul>
-							<li><a href='index.html'>Strona główna</a></li>
-							<li><a href='about.html'>O nas</a></li>
-							<li><a href='index.html'>Nasze projekty</a></li>
-							<li><a href='index.html'>Cennik</a></li>
-							<li><a href='contact.html'>Kontakt</a></li>
-						</ul>
-					</div>
+				<a href='index.html'><div id="logo"></div></a>
+				<button id="hamburger">&#9776;</button>
+				<button id="cross">&#735;</button>
+				<div id="menu">
+					<ul>
+						<li><a href='index.html'>Strona główna</a></li>
+						<li><a href='about.html'>O nas</a></li>
+						<li><a href='index.html'>Nasze projekty</a></li>
+						<li><a href='index.html'>Cennik</a></li>
+						<li><a href='contact.html'>Kontakt</a></li>
+					</ul>
+				</div>
 			</div>
+			<noscript>
+				<div id="nojs-menu">
+					<ul>
+						<li><a href='index.html'>Strona główna</a></li>
+						<li><a href='about.html'>O nas</a></li>
+						<li><a href='index.html'>Nasze projekty</a></li>
+						<li><a href='index.html'>Cennik</a></li>
+						<li><a href='contact.html'>Kontakt</a></li>
+					</ul>
+				</div>
+			</noscript>
 		</nav>
 		<!-- Slider -->
 		<section>
@@ -138,6 +154,5 @@
             ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
         </script>
 		<script async defer src="https://www.google-analytics.com/analytics.js"></script>
-		<noscript>Twoja przeglądarka ma wyłączony Javascript! Strona nie będzie wyświetlana w pełni poprawnie.</noscript>
 	</body>
 </html>
