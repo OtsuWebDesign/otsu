@@ -3,19 +3,10 @@
    width: 100%;
    height: 50px;
    z-index: 10;
-   background-color: transparent;
+   background-color: white;
    position: fixed;
    top: 0;
    text-align: center;
-}
-#nav:hover
-{
-	background-color:white;
-	-webkit-transition: 0.5s;
-	-moz-transition: 0.5s;
-	-ms-transition: 0.5s;
-	-o-transition: 0.5s;
-	transition: 0.5s;
 }
 	
 #nav #logo
@@ -172,7 +163,19 @@ nav ul>li>a:hover
 @media only screen and (min-width: 992px) {
 	
 	#nav
-	{height: 80px;}
+	{
+		background-color:transparent;
+		height: 80px;
+	}
+	#nav:hover
+	{
+		background-color:white;
+		-webkit-transition: 0.5s;
+		-moz-transition: 0.5s;
+		-ms-transition: 0.5s;
+		-o-transition: 0.5s;
+		transition: 0.5s;
+	}
 	
 	#nav #logo
 	{
