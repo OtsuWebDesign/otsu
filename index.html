@@ -131,10 +131,9 @@
 			Polstronex&trade; corporation &copy; Maciej Witkowski i Radosław Kamiński - Wszelkie prawa zastrzeżone
 		</footer>
 		<!-- Skrypty -->
-        <script src="js/plugins.js"></script>
         <script src="js/navcolor.js"></script>
+        <script src="js/plugins.js"></script>
 		<script src="js/hamburger.js"></script>
-        <script src="js/aos.js"></script>
 		<script src="js/slider.js"></script>
 		<script src="js/imgload.js"></script>
 		<!-- strona się wczytuje szybciej bez async lub defer -->
@@ -145,6 +144,10 @@
 				bind_images();
 				more992.addListener(bind_images);
 				more540.addListener(bind_images);
+			}
+			window.onscroll = function()
+			{
+				navcolor();
 			}
 		</script>
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID in google analytics -->
