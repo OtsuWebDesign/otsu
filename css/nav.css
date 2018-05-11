@@ -173,7 +173,8 @@ nav ul>li>a:hover
 		height: 80px;
 		background-color:transparent;
 	}
-	#nav:hover
+	#nav:hover,
+	#nav.nav-active
 	{
 		background-color:white;
 		-webkit-transition: 0.5s;

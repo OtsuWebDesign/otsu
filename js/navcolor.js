@@ -1,8 +1,11 @@
 function navcolor()
 {
-	alert('s');
-	if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50)
+	if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30)
 	{
-		alert('ju');
+		document.getElementById('nav').classList.add('nav-active');
+	}
+	else
+	{
+		document.getElementById('nav').classList.remove('nav-active');
 	}
 };
