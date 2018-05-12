@@ -8,7 +8,7 @@ body
 
 h1 
 {
-    margin-top: 70px;
+    margin-top: 100px;
     color: rgb(0, 171, 214);
 }
 
@@ -109,25 +109,63 @@ h1
 /* Small devices (portrait tablets, landscape phones, 640px and up) */
 @media only screen and (min-width: 640px) {
     
-    
-	
+    section p
+    {
+        font-size: 18px;
+    }
+    .elementtitle
+    {
+        font-size: 28px;
+    }
 } 
 
 /* Medium devices (landscape tablets, 800px and up) */
 @media only screen and (min-width: 800px) {
-	
+	.elementtitle
+    {
+        font-size: 23px;
+        display: inline-block;
+        margin-right: 50px;
+    }
+    .elementpic
+    {
+        display: inline-block;
+        vertical-align: middle;
+    }
 } 
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-	
-	
+    .howcontent
+    {
+        max-width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+  
 } 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-	
-
+    h1 
+    {
+        font-size: 40px;
+    }
+    .elementtitle
+    {
+        font-size: 30px;
+        display: inline-block;
+        margin-right: 50px;
+    }
+    .elementpic
+    {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    section p 
+    {
+        font-size: 28px;
+    }
 }
 /* Extra enormous devices (TV, 1700px and up) */
 @media only screen and (min-width: 1700px) {
