@@ -147,19 +147,6 @@ h1
         margin-left: auto;
         margin-right: auto;
     }
-    .howparalax
-    {
-        display: block;
-        height: 500px;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background: red;
-        width: 100vw;
-        margin-left: calc(-50vw + 50%);
-
-    }
   
 } 
 
