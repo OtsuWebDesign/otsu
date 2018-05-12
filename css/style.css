@@ -122,18 +122,22 @@ footer
 		width: calc(100% - 280px);
 		display: inline-block;
 		font-size: 25px;
-		float: left;
 		text-align: left;
 	}
 
 	.stepimg
 	{
 		display: inline-block;
-		float: left;
 		margin-left: 30px;
 		width: 250px;
 		height: 250px;
 		background-repeat: no-repeat;
+	}
+	#text 
+	{
+		margin-left: auto;
+		margin-right: auto;
+		width: 70%;
 	}
 } 
 
