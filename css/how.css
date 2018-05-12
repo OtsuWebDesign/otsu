@@ -35,6 +35,7 @@ h1
     margin-right: auto;
 }
 
+
 .element p
 {
     text-align: justify;
@@ -48,6 +49,51 @@ h1
 #passiontitle
 {
     color: rgb(228, 59, 59);
+}
+
+#techimg
+{
+    width: 250px;
+    height: 102px;
+    background-image: url(../img/how/min/tech.png);
+}
+
+#techtitle
+{
+    color: green;
+}
+
+#knowledgeimg
+{
+    margin-top: 10px;
+    background-image: url(../img/how/min/knowledge.png);
+}
+
+#knowledgetitle
+{
+    color: orangered;
+}
+
+#intuitiveimg
+{
+    margin-top: 10px;
+    background-image: url(../img/how/min/intuitive.png);
+}
+
+#intuitivetitle
+{
+    color: rgb(95, 95, 95);
+}
+
+#responsiveimg
+{
+    margin-top: 10px;
+    background-image: url(../img/how/min/responsive.png);
+}
+
+#responsivetitle
+{
+    color: rgb(192, 91, 138);
 }
 
 /* Small devices (phones, 350px and up) */
