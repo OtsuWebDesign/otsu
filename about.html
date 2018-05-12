@@ -95,8 +95,21 @@
         <script src="js/plugins.js"></script>
         <script src="js/aos.js"></script>
 		<script src="js/hamburger.js"></script>
+		<script src="js/navcolor.js"></script>
+
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID in google analytics -->
         <script>
+			window.onload = function()
+			{
+				generate_slider();
+				bind_images();
+				more992.addListener(bind_images);
+				more540.addListener(bind_images);
+			}
+			window.onscroll = function()
+			{
+				navcolor();
+			}
             window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
             ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
         </script>
