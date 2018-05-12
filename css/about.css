@@ -11,14 +11,9 @@ body
 {
 	margin-top: 80px;
 	text-align: center;
-	color: firebrick;
+	color: rgb(0, 131, 192);
 	font-size: 20px;
-	text-shadow:
-		-1px -1px 0 #000,  
-		1px -1px 0 #000,
-		-1px 1px 0 #000,
-		1px 1px 0 #000;
-  
+
 }
 
 #aboutlogo
