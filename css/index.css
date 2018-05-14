@@ -1,0 +1,107 @@
+body
+{
+	background-color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+#container
+{
+	margin: 20px 0 0 0;
+	width: 100%;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+#content 
+{
+	width: 100%;
+}
+
+#text
+{
+	width: 100%;
+	margin-top: 20px;
+}
+
+.step
+{
+	margin-top: 20px;
+
+}
+.step:after
+{
+	clear: both;
+}
+.step p 
+{
+	width: 100%;
+	display: inline-block;
+	font-size: 19px;
+	float: left;
+	text-align: left;
+}
+.stepimg
+{
+	display: none;
+}
+
+#stepimg1
+	{background-image: url(../img/steps/s1.png);}
+
+#stepimg2
+	{background-image: url(../img/steps/s2.png);} 
+
+#stepimg3
+	{background-image: url(../img/steps/s3.png);}
+
+.last:after
+{
+	height: 50px;
+	width: 100%;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	
+	#text
+	{
+		text-align: center;
+		margin-top: 50px;
+	}
+	
+	.step 
+	{
+		margin-top: 50px;
+	}
+
+	.step p 
+	{
+		width: calc(100% - 280px);
+		display: inline-block;
+		font-size: 25px;
+		text-align: left;
+	}
+
+	.stepimg
+	{
+		display: inline-block;
+		margin-left: 30px;
+		width: 250px;
+		height: 250px;
+		background-repeat: no-repeat;
+	}
+	#text 
+	{
+		margin-left: auto;
+		margin-right: auto;
+		width: 70%;
+	}
+} 
+/* Extra enormous devices (TV, 1700px and up) */
+@media only screen and (min-width: 1700px) {
+	#container
+	{
+		max-width: 2200px;
+		margin: 0 auto;
+	}
+}
