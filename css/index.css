@@ -12,21 +12,19 @@ body
 	padding-right: 5%;
 }
 
-#content 
-{
-	width: 100%;
-}
-
-#text
+#content
 {
 	width: 100%;
 	margin-top: 20px;
 }
 
+#content>h1
+{
+	font-size: 25px;
+}
 .step
 {
 	margin-top: 20px;
-
 }
 .step:after
 {
@@ -58,12 +56,19 @@ body
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 	
-	#text
+	#content
 	{
 		text-align: center;
 		margin-top: 50px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 90%;
 	}
 	
+	#content>h1
+	{
+		font-size: 34px;
+	}
 	.step 
 	{
 		margin-top: 50px;
@@ -85,18 +90,20 @@ body
 		height: 250px;
 		background-repeat: no-repeat;
 	}
-	#text 
-	{
-		margin-left: auto;
-		margin-right: auto;
-		width: 70%;
-	}
 } 
 /* Extra enormous devices (TV, 1700px and up) */
 @media only screen and (min-width: 1700px) {
-	#container
+	#content
 	{
-		max-width: 2200px;
-		margin: 0 auto;
+		margin-top: 70px;
+	}
+	
+	#content>h1
+	{
+		font-size: 40px;
+	}
+	.step p 
+	{
+		font-size: 34px;
 	}
 }
