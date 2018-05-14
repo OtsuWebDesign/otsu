@@ -12,7 +12,6 @@
    position: fixed;
    top: 0;
    text-align: center;
-   
 }
 
 	
@@ -132,7 +131,8 @@ nav ul>li>a
 }
 nav ul>li>a:hover
 {
-	background-color: #20adff;
+	color: white;
+	background-color: black;
 	-webkit-transition: 0.5s;
 	-moz-transition: 0.5s;
 	-ms-transition: 0.5s;
@@ -185,11 +185,6 @@ nav ul>li>a:hover
 	#nav.nav-active
 	{
 		background-color:white;
-		-webkit-transition: 0.5s;
-		-moz-transition: 0.5s;
-		-ms-transition: 0.5s;
-		-o-transition: 0.5s;
-		transition: 0.5s;
 	}
 	
 	#nav #logo
