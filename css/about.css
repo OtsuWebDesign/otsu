@@ -1,5 +1,4 @@
 /* Extra super small devices (small phones, 350px and down) */
-/* Background pattern from Toptal Subtle Patterns */
 
 
 body
@@ -94,10 +93,6 @@ body
 {
 	float: left;
 	width: 100%;
-}
-.last:after
-{
-	clear: both;
 }
 
 #maciej
