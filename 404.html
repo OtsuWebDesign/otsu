@@ -71,36 +71,53 @@
     </style>
 </head>
 <body>
-        <nav>
-                <div id="nav">
-                        <a href='index.html'><div id="logo"></div></a>
-                        <button class="hamburger">&#9776;</button>
-                        <button class="cross">&#735;</button>
-                        <div id="menu">
-                            <ul>
-                                <a href='index.html'><li>Strona główna</li></a>
-                                <a href='about.html'><li>O nas</li></a>
-                                <a href='index.html'><li>Nasze projekty</li></a>
-                                <a href='index.html'><li>Kontakt</li></a>
-                            </ul>
-                        </div>
-                </div>
-            </nav>
-    <h1>Page Not Found</h1>
-    <p>Sorry, but the page you were trying to view does not exist.</p>
-    <footer>
-			Polstronex&trade; corporation &copy; Maciej Witkowski i Radosław Kamiński - Wszelkie prawa zastrzeżone
-		</footer>
-		<script src="js/vendor/modernizr-3.5.0.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-		<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
-		<script src="js/hamburger.js"></script>
-        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID in google analytics -->
-        <script>
-            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
-        </script>
-		<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+	<noscript>
+		<div style="width:100%; position:fixed; top:0; color:red; z-index: 13;">
+			Twoja przeglądarka ma wyłączony Javascript! Strona nie będzie wyświetlana w pełni poprawnie.
+		</div>
+	</noscript>
+	<nav>
+		<div id="nav" class="nav-transparent">
+			<a href='index.html'><div id="logo"></div></a>
+			<button id="hamburger">&#9776;</button>
+			<button id="cross">&#735;</button>
+			<div id="menu">
+				<ul>
+					<li><a class="current" href='index.html'>Główna</a></li>
+					<li><a href='about.html'>O nas</a></li>
+					<li><a href='projects.html'>Nasze projekty</a></li>
+					<li><a href='prices.html'>Cennik</a></li>
+					<li><a href='contact.html'>Kontakt</a></li>
+				</ul>
+			</div>
+			<noscript>
+				<div id="nojs-menu">
+					<ul>
+						<li><a class="current" href='index.html'>Główna</a></li>
+						<li><a href='about.html'>O nas</a></li>
+						<li><a href='projects.html'>Nasze projekty</a></li>
+						<li><a href='prices.html'>Cennik</a></li>
+						<li><a href='contact.html'>Kontakt</a></li>
+					</ul>
+				</div>
+			</noscript>
+		</div>
+	</nav>
+	<h1>Page Not Found</h1>
+	<p>Sorry, but the page you were trying to view does not exist.</p>
+	<footer>
+		<div id="footer">Polstronex&trade; corporation &copy; Maciej Witkowski i Radosław Kamiński - Wszelkie prawa zastrzeżone</div>
+	</footer>
+		
+	<script src="js/onload.js"></script>
+	<script src="js/navcolor.js"></script>
+	<script src="js/plugins.js"></script>
+	<script src="js/hamburger.js"></script>
+	<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID in google analytics -->
+	<script>
+		window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+		ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+	</script>
+	<script src="https://www.google-analytics.com/analytics.js" async defer></script>
 </body>
 </html>
-<!-- IE needs 512+ bytes: https://blogs.msdn.microsoft.com/ieinternals/2010/08/18/friendly-http-error-pages/ -->

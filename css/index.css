@@ -54,11 +54,6 @@ body
 #stepimg3
 	{background-image: url(../img/steps/s3.png);}
 
-.last:after
-{
-	height: 50px;
-	width: 100%;
-}
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
