@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="pl">
+<html lang="pl">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,6 @@
 		<meta name="keywords" content="słowa, kluczowe, wypisane, po, porzecinku" />
 		<link rel="manifest" href="site.webmanifest">
 		<title>Otsu webdesign</title>
-		<!-- Nie wiem co ten tag robi -->
 		<link rel="apple-touch-icon" href="icon.png">
         <link rel="stylesheet" href="css/main.css" type="text/css">
         <link rel="stylesheet" href="css/style.css" type="text/css">
@@ -36,18 +35,18 @@
 						<li><a href='contact.html'>Kontakt</a></li>
 					</ul>
 				</div>
+				<noscript>
+					<div id="nojs-menu">
+						<ul>
+							<li><a href='index.html'>Główna</a></li>
+							<li><a class="current" href='about.html'>O nas</a></li>
+							<li><a href='projects.html'>Nasze projekty</a></li>
+							<li><a href='prices.html'>Cennik</a></li>
+							<li><a href='contact.html'>Kontakt</a></li>
+						</ul>
+					</div>
+				</noscript>
 			</div>
-			<noscript>
-				<div id="nojs-menu">
-					<ul>
-						<li><a href='index.html'>Główna</a></li>
-						<li><a class="current" href='about.html'>O nas</a></li>
-						<li><a href='projects.html'>Nasze projekty</a></li>
-						<li><a href='prices.html'>Cennik</a></li>
-						<li><a href='contact.html'>Kontakt</a></li>
-					</ul>
-				</div>
-			</noscript>
 		</nav>
 
 		<!-- Content -->
@@ -96,20 +95,9 @@
         <script src="js/aos.js"></script>
 		<script src="js/hamburger.js"></script>
 		<script src="js/navcolor.js"></script>
-
+		<script src="js/onload.js"></script>
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID in google analytics -->
         <script>
-			window.onload = function()
-			{
-				generate_slider();
-				bind_images();
-				more992.addListener(bind_images);
-				more540.addListener(bind_images);
-			}
-			window.onscroll = function()
-			{
-				navcolor();
-			}
             window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
             ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
         </script>
