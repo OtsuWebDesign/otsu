@@ -228,11 +228,12 @@
 	{
 		display: inline-block;
 		height: 100%;
+		width: 140px;
 	}
 
 	#menu>ul>li>a
 	{
-		padding: 0 20px;
+		padding: 0 15px;
 	}
 	
 	#hamburger
