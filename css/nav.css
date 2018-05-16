@@ -141,7 +141,6 @@
 	-o-transition: 0.5s;
 	transition: 0.5s;
 }
-#nav:hover ul>li>a.current,
 #nav.nav-active ul>li>a.current
 {
 	color: white;
