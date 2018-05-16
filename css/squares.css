@@ -66,27 +66,18 @@
 	text-decoration: none;
 	color: white;
 	position: relative;
-	opacity: 0.5;
+	opacity: 0.9;
 	
 }
 
 #square1>a
-	{background-color: #006b8c;}
+	{background-color: black;color:white}
 #square2>a
-	{background-color: #027004;}
+	{background-color: white;color:black}
 #square3>a
-	{background-color: #935c08;}
+	{background-color: white;color:black}
 #square4>a
-	{background-color: #a708ad;}
-
-#square1 :hover
-	{background-color: #3b89a1;}
-#square2 :hover
-	{background-color: #348d35;}
-#square3 :hover
-	{background-color: #b98b46;}
-#square4 :hover
-	{background-color: #ce41d3;}
+	{background-color: black;color:white}
 
 /* Small devices (phones, 350px and up) */
 @media only screen and (min-width: 350px) {
@@ -169,14 +160,22 @@
 		min-width: 210px;
 		font-size: 20px;
 	}
-	.square>a
-	{
-		opacity: 0;
-	}
 	.square:hover>a
 	{
 		opacity: 0.5;
 	}
+	.square:hover span
+	{
+		font-size: 22px;
+	}
+#square1>a
+	{background-color: black;color:white}
+#square2>a
+	{background-color: white;color:black}
+#square3>a
+	{background-color: black;color:white}
+#square4>a
+	{background-color: white;color:black}
 
 } 
 
