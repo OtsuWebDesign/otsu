@@ -1,6 +1,6 @@
 ## Po pierwsze
 **Kontaktujesz się z nami.**
-Wybierz formę , która jest dla Ciebie najwygodniejsza. Możesz użyć *formularza składania zamówienia* lub *skontaktować się z nami tradycyjnie*, drogą mailową lub telefoniczną. Potrzebujemy dokładnego opisu tego, czego potrzebujesz. Wytłumacz nam jaki rodzaj strony Cię interesuje. Jeśli nie jesteś przekonany czego Ci potrzeba, lub nie znasz się na witrynach internetowych - to żaden problem. Zajrzyj do sekcji *Jak się za to zabrać?*, a następnie podejmij decyzję.
+Wybierz formę , która jest dla Ciebie najwygodniejsza. Możesz użyć *formularza składania zamówienia* lub *skontaktować się z nami tradycyjnie*, drogą mailową lub telefoniczną. Potrzebujemy opisu tego, czego potrzebujesz. Wytłumacz nam jaki rodzaj strony Cię interesuje. Jeśli nie jesteś przekonany czego Ci potrzeba, lub nie znasz się na witrynach internetowych - to żaden problem. Zajrzyj do sekcji *Jak się za to zabrać?*, a następnie podejmij decyzję.
 Twój opis pomoże nam przedstawić Ci indywidualną wycenę, a także orientacyjny czas wykonania projektu. Przedstawimy Ci twoje możliwości, a także ustalimy szczegóły Twojego zamówienia. 
 
 ## Po drugie
