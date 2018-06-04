@@ -37,6 +37,7 @@
 
         p {
             margin: 0 auto;
+			margin-bottom: 50px;
             width: 280px;
         }
         
@@ -79,11 +80,12 @@
 	<nav>
 		<div id="nav" class="nav-transparent">
 			<a href='index.html'><div id="logo"></div></a>
-			<button id="hamburger">&#9776;</button>
-			<button id="cross">&#735;</button>
+			<div id="outerburger">
+				<i id="hamburger" class="icon-hamburger"></i>
+			</div>
 			<div id="menu">
 				<ul>
-					<li><a href='index.html'>Główna</a></li>
+					<li><a class="current" href='index.html'>Główna</a></li>
 					<li><a href='about.html'>O nas</a></li>
 					<li><a href='projects.html'>Nasze projekty</a></li>
 					<li><a href='prices.html'>Cennik</a></li>
@@ -93,7 +95,7 @@
 			<noscript>
 				<div id="nojs-menu">
 					<ul>
-						<li><a href='index.html'>Główna</a></li>
+						<li><a class="current" href='index.html'>Główna</a></li>
 						<li><a href='about.html'>O nas</a></li>
 						<li><a href='projects.html'>Nasze projekty</a></li>
 						<li><a href='prices.html'>Cennik</a></li>
