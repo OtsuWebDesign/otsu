@@ -9,6 +9,9 @@ body
 h1
 {
     text-align: center;
+    border-bottom: rgba(212, 212, 212, 0.596) 1px dashed;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 h2
@@ -103,7 +106,11 @@ h2
 /* Small devices (large phones, 540px and up) */
 @media only screen and (min-width: 540px) {
      
-    
+    .servicedesc
+    {
+        font-size: 20px;
+    }
+
   
 } 
 /* Small devices (portrait tablets, landscape phones, 640px and up) */
@@ -115,13 +122,67 @@ h2
 
 /* Medium devices (landscape tablets, 800px and up) */
 @media only screen and (min-width: 800px) {
+
+    .servicedesc
+    {
+        font-size: 22px;
+    }
+    
+    .servicedetails
+    {
+        font-size: 20px;
+    }
+
+    h2 
+    {
+        font-size: 32px;
+    }
+
+    h1 
+    {
+        padding: 20px;
+        border-top: rgba(212, 212, 212, 0.596) 1px dashed;
+    }
 	
 } 
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-	
-	
+ 
+
+    body 
+    {
+        margin-top: 80px;
+    }
+
+    .service
+    {
+        width: 30%;
+        display: inline-block;
+        margin-left: 1.5%;
+        margin-right: 1.5%;
+        border: 0;
+    }
+
+    .servicedesc
+    {
+        font-size: 16px;
+        height: 100px;
+    }
+
+    #wwwpage 
+    {
+        border-right: 1px rgb(224, 224, 224) dashed;
+        border-left: 1px rgb(224, 224, 224) dashed;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    
+    h2 
+    {
+        font-size: 25px;
+    }
+
 } 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
