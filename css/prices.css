@@ -6,6 +6,12 @@ body
     color: rgb(119, 119, 119);
 }
 
+
+.serviceheader
+    {
+        height: 100px;
+    }
+
 h1
 {
     text-align: center;
@@ -142,8 +148,7 @@ h2
     {
         padding: 20px;
         border-top: rgba(212, 212, 212, 0.596) 1px dashed;
-    }
-	
+    }	
 } 
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -182,6 +187,15 @@ h2
     {
         font-size: 25px;
     }
+
+    .bottomservice
+    {
+        width: 40%;
+        margin-left: 6%;
+        margin-right: 3.5%;
+    }
+
+    
 
 } 
 
