@@ -29,6 +29,17 @@ h2
     font-size: 20px;
 }
 
+.servicedetails p
+{
+    margin: 1px;
+    font-weight: bold;
+}
+
+.servicedetails h4
+{
+    margin-bottom: 0px;
+}
+
 .service
 {
    
