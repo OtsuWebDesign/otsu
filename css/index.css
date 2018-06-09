@@ -45,6 +45,26 @@ body
 	display: none;
 }
 
+.orderbtn {
+	margin-top: 20px;
+	cursor: pointer;
+	margin-bottom: 20px;
+	border-radius: 10px;
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  text-align: center;
+  color: #ffffff;
+  font-size: 20px;
+  background: #00a3cc;
+  padding: 20px 30px 20px 30px;
+  text-decoration: none;
+}
+
+.orderbtn:hover {
+  background: #00aeff;
+  text-decoration: none;
+}
+
 #stepimg1
 	{background-image: url(../img/steps/s1.png);}
 
@@ -92,6 +112,14 @@ body
 		height: 250px;
 		background-repeat: no-repeat;
 	}
+	
+	.orderbtn
+	{
+		padding-top: 50px;
+		padding-bottom: 50px;
+		font-size: 36px;
+	}
+	
 } 
 /* Extra enormous devices (TV, 1700px and up) */
 @media only screen and (min-width: 1700px) {
