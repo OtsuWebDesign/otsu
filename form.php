@@ -13,7 +13,6 @@
 		<link rel="stylesheet" href="css/style.css"  type="text/css"/>
 		<link rel="stylesheet" href="css/nav.css"  type="text/css"/>
 		<link rel="stylesheet" href="css/aos.css"  type="text/css"/>
-		<link rel="stylesheet" href="css/order.css"  type="text/css"/>
 		<link rel="stylesheet "href="https://fonts.googleapis.com/css?family=Lato|Roboto" type="text/css">
 	</head>
 	<body>
@@ -53,41 +52,17 @@
 			</div>
 		</nav>
 
-		<!-- Content -->
+        <!-- Content -->
+        <div style='margin-top: 100px; text-align: center;'>
+        <h1>Dziękujemy za wypełnienie formularza! (który nie działa :d)</h1>
+        <a href='order.php'><h2>Placeholderowy przycisk powrotu do formularza</h2></a>
 
-		<div id='formcontainer'>
-		<form method="post" action="form.php">
-		<h2>Typ strony, jaki Cię interesuje:</h2>
-		<select name="service">
-  			<option value="vcard">Wizytówka</option>
-  			<option value="wwwpage">Strona internetowa</option>
-  			<option value="onlinestore">Sklep internetowy</option>
-			<option value="rebuild">Przebudowa witryny</option>
-			<option value="rebuildour">Przebudowa witryny naszego autorstwa</option>
-		</select>
-		<h2>E-mail:</h2>
-		<input type='email' name='email'></input>
-		<h2>Imię:</h2>
-		<input type='text'></input>
-		<h2>Nazwisko:</h2>
-		<input type='text'></input>
-		<h2>Telefon kontaktowy:</h2>
-		<input type='tel'></input>
-		<h2>Preferowany sposób kontaktu:</h2>
-		<div id='radiochoice'>
-			<input type="radio" id="contactChoice1"
-			name="contact" value="email" checked>E-mailowy
-			</br>
-			<input type="radio" id="contactChoice2"
-			name="contact" value="phone">Telefoniczny
-		  </div>
-		  
-		<input type='submit' value='Złóż zamówienie'>
-		</form>
-		</div>
+        <?php
+            $email = $_POST['email'];
+            echo "Test PHP. E-mail podany w formularzu to $email";
+        ?>
 
-
-
+        </div>
 		<footer>
 			<div id="footer">Otsu&trade; Webdesign Maciej Witkowski i Radosław Kamiński - Wszelkie prawa zastrzeżone &copy;</div>
 		</footer>
