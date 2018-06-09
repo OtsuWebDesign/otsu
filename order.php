@@ -54,8 +54,10 @@
 		</nav>
 
 		<!-- Content -->
+
 		<div id='formcontainer'>
 		<form method="post" action="form.php">
+		<h2>Typ strony, jaki Cię interesuje:</h2>
 		<select name="service">
   			<option value="vcard">Wizytówka</option>
   			<option value="wwwpage">Strona internetowa</option>
@@ -63,8 +65,29 @@
 			<option value="rebuild">Przebudowa witryny</option>
 			<option value="rebuildour">Przebudowa witryny naszego autorstwa</option>
 		</select>
-		</div>
+		<h2>E-mail:</h2>
+		<input type='email'></input>
+		<h2>Imię:</h2>
+		<input type='text'></input>
+		<h2>Nazwisko:</h2>
+		<input type='text'></input>
+		<h2>Telefon kontaktowy:</h2>
+		<input type='tel'></input>
+		<h2>Preferowany sposób kontaktu:</h2>
+		<div id='radiochoice'>
+			<input type="radio" id="contactChoice1"
+			name="contact" value="email" checked>E-mailowy
+			</br>
+			<input type="radio" id="contactChoice2"
+			name="contact" value="phone">Telefoniczny
+		  </div>
+		  
+		<input type='submit' value='Złóż zamówienie'>
 		</form>
+		</div>
+
+
+
 		<footer>
 			<div id="footer">Otsu&trade; Webdesign Maciej Witkowski i Radosław Kamiński - Wszelkie prawa zastrzeżone &copy;</div>
 		</footer>
