@@ -4,11 +4,13 @@ body
 {
 	margin-top: 100px;
 	text-align: center;
+	
 }
 
 .projects h1
 {
 	margin-bottom: 30px;
+	color: rgb(119, 119, 119);
 }
 
 .projectsquare hover
