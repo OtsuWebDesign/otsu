@@ -13,6 +13,7 @@
 		<link rel="stylesheet" href="css/style.css"  type="text/css"/>
 		<link rel="stylesheet" href="css/nav.css"  type="text/css"/>
 		<link rel="stylesheet" href="css/aos.css"  type="text/css"/>
+		<link rel="stylesheet" href="css/order.css"  type="text/css"/>
 		<link rel="stylesheet "href="https://fonts.googleapis.com/css?family=Lato|Roboto" type="text/css">
 	</head>
 	<body>
@@ -53,7 +54,17 @@
 		</nav>
 
 		<!-- Content -->
-		
+		<div id='formcontainer'>
+		<form method="post" action="form.php">
+		<select name="service">
+  			<option value="vcard">Wizytówka</option>
+  			<option value="wwwpage">Strona internetowa</option>
+  			<option value="onlinestore">Sklep internetowy</option>
+			<option value="rebuild">Przebudowa witryny</option>
+			<option value="rebuildour">Przebudowa witryny naszego autorstwa</option>
+		</select>
+		</div>
+		</form>
 		<footer>
 			<div id="footer">Otsu&trade; Webdesign Maciej Witkowski i Radosław Kamiński - Wszelkie prawa zastrzeżone &copy;</div>
 		</footer>
