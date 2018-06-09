@@ -5,6 +5,19 @@ body
 	margin-top: 80px;
 }
 
+.projectsquare hover
+{
+	-webkit-transform: scale(0.9);
+	-ms-transform: scale(0.9);
+	transform: scale(0.9);
+}	
+
+.projects
+{
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 /* Small devices (phones, 350px and up) */
 @media only screen and (min-width: 350px) {
