@@ -57,7 +57,7 @@
 
 		<div id='formcontainer'>
 		<form method="post" action="form.php">
-		<h2>Typ strony, jaki Cię interesuje:</h2>
+		<h2>Typ usługi, jaka Cię interesuje:</h2>
 		<select name="service">
   			<option value="vcard">Wizytówka</option>
   			<option value="wwwpage">Strona internetowa</option>
