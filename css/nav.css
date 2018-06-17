@@ -123,6 +123,7 @@
 {
 	position: relative;
 	color: black;
+	background-color:transparent;
 	height: 100%;
 	width: 100%;
 	display: flex;
@@ -143,7 +144,7 @@
 	-o-transition: 0.5s;
 	transition: 0.5s;
 }
-#nav.nav-active ul>li>a.current
+#nav ul>li>a.current
 {
 	color: white;
 	background-color: black;
@@ -241,6 +242,44 @@
 		{display: none!important}
 	#cross
 		{display: none!important}
+		
+	
+	#nav ul>li>a.current
+	{
+		position: relative;
+		color: black;
+		background-color:transparent;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		transition: 0.5s;
+	}
+	#nav ul>li>a:hover
+	{
+		color: white;
+		opacity: 1!important;
+		font-size: 110%;
+		background-color: black;
+		-webkit-transition: 0.5s;
+		-moz-transition: 0.5s;
+		-ms-transition: 0.5s;
+		-o-transition: 0.5s;
+		transition: 0.5s;
+	}
+	#nav.nav-active ul>li>a.current
+	{
+		color: white;
+		background-color: black;
+		opacity: 0.9;
+		-webkit-transition: 0.5s;
+		-moz-transition: 0.5s;
+		-ms-transition: 0.5s;
+		-o-transition: 0.5s;
+		transition: 0.5s;
+	}
 	#nojs-menu
 		{display: none}
 } 
