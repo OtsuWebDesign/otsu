@@ -61,6 +61,20 @@ body
 .topic a>h1
 {
 	font-size:17px;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+}
+.topic a>h1:hover
+{
+	font-size:20px;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
 }
 .step
 {
@@ -114,6 +128,10 @@ body
 	.topic a>h1
 	{
 		font-size:35px;
+	}
+	.topic a>h1:hover
+	{
+		font-size:38px;
 	}
 	.step
 	{
