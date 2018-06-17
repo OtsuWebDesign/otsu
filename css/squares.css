@@ -1,0 +1,211 @@
+/*Extra small devices (small phones, 350px and down)*/
+
+#squares
+{
+   margin-left: -2%;
+   margin-right: -2%;
+}
+#squares::after
+{
+   clear: both;
+}
+.squares-2
+{
+	float: none;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+.square
+{
+	background-color: lightgrey;
+	position: relative;
+	min-width: 80px;
+	width: 46%;
+	float: left;
+	height: 100px;
+	margin: 2%;
+	text-align: center;
+	background-size: cover !important;
+	background-position: center center !important;
+	-webkit-box-shadow: 10px 10px 16px -6px rgba(0,0,0,0.8);
+	-moz-box-shadow: 10px 10px 16px -6px rgba(0,0,0,0.8);
+	box-shadow: 10px 10px 16px -6px rgba(0,0,0,0.8);
+}
+.square span
+{
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-size: 15px;
+	min-width: 80px;
+	max-width: 100%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-o-transform:translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	
+}
+
+#square1 {background-image: url(../img/squares/pixel/1.jpg);}
+#square2 {background-image: url(../img/squares/pixel/2.jpg);}
+#square3 {background-image: url(../img/squares/pixel/3.jpg);}
+#square4 {background-image: url(../img/squares/pixel/4.jpg);}
+
+.square>a
+{
+	display: block;
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+	margin: 0;
+	padding: 5px;
+	transition: opacity 0.4s ease-in-out;
+	text-decoration: none;
+	color: white;
+	position: relative;
+	opacity: 0.9;
+	
+}
+
+#square1>a
+	{background-color: black;color:white}
+#square2>a
+	{background-color: white;color:black}
+#square3>a
+	{background-color: white;color:black}
+#square4>a
+	{background-color: black;color:white}
+
+/* Small devices (phones, 350px and up) */
+@media only screen and (min-width: 350px) {
+	
+	.square
+	{
+		min-width: 110px;
+		height: 110px;
+	}
+	.square span
+	{
+		min-width: 110px;
+		font-size: 16px;
+	}
+
+
+} 
+
+/* Small devices (large phones, 540px and up) */
+@media only screen and (min-width: 540px) {
+	
+	.square
+	{
+		min-width: 150px;
+		height: 150px;
+	}
+	.square span
+	{
+		min-width: 150px;
+		font-size: 18px;
+	}
+
+} 
+/* Small devices (portrait tablets, landscape phones, 640px and up) */
+@media only screen and (min-width: 640px) {
+	
+	.square
+	{
+		min-width: 220px;
+		height: 220px;
+	}
+	.square span
+	{
+		min-width: 220px;
+		font-size: 20px;
+	}
+} 
+
+/* Medium devices (landscape tablets, 800px and up) */
+@media only screen and (min-width: 800px) {
+	
+	.square
+	{
+		min-width: 240px;
+		height: 240px;
+	}
+	.square span
+	{
+		min-width: 240px;
+		font-size: 22px;
+	}
+	
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	
+	.squares-2
+	{
+		float:left;
+		width: 50%;
+	}
+	.square
+	{
+		min-width: 210px;
+		height: 210px;
+	}
+	.square span
+	{
+		min-width: 210px;
+		font-size: 20px;
+	}
+	.square:hover>a
+	{
+		opacity: 0.5;
+	}
+	.square:hover span
+	{
+		font-size: 22px;
+	}
+#square1>a
+	{background-color: black;color:white}
+#square2>a
+	{background-color: white;color:black}
+#square3>a
+	{background-color: black;color:white}
+#square4>a
+	{background-color: white;color:black}
+
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+	
+	.square
+	{
+		min-width: 250px;
+		height: 250px;
+	}
+	.square span
+	{
+		min-width: 250px;
+		font-size: 25px;
+	}
+	
+}
+
+/* Extra enormous devices (TV, 1700px and up) */
+@media only screen and (min-width: 1700px) {
+	
+	.square
+	{
+		min-width: 310px;
+		height: 310px;
+	}
+	.square span
+	{
+		min-width: 310px;
+		font-size: 28px;
+	}
+}
