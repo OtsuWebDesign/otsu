@@ -7,24 +7,6 @@
 	margin-top: 50px;
 	text-align: center;
 }
-#slider-container:after
-{
-	width: 100%;
-	height: 0px;
-	background:linear-gradient(to bottom left, transparent 50%,white 0);
-	position:relative;
-	top:calc(-10% + 2px); /*2px to be sure that there is no space between triangle and content*/
-	margin-top:calc(10% - 2px);
-	z-index: 2;
-	transition: 1s ease-in-out;
-}
-#slider-container.cuted:after
-{
-	width: 100%;
-	height: 10%;
-	transition: 1s ease-in-out;
-	margin-top:0px;
-}
 .slider {
 	position: relative;
 	height: 100%;
@@ -263,6 +245,14 @@
 	{
 		height: calc(100% - 70px)!important;
 	}
+	
+	#slider-container.cuted:after
+	{
+		width: 100%;
+		height: 40px;
+		transition: 1s ease-in-out;
+		margin-top:0px;
+	}
 }
 
 /* Extra small devices ( small phones, 280px and up) */
@@ -484,6 +474,24 @@
 		margin-top: 0;
 	}
 
+	#slider-container:after
+	{
+		width: 100%;
+		height: 0px;
+		background:linear-gradient(to bottom left, transparent 50%,white 0);
+		position:relative;
+		top:-69px; /*1px to be sure that there is no space between triangle and content*/
+		margin-top:70px;
+		z-index: 2;
+		transition: 1s ease-in-out;
+	}
+	#slider-container.cuted:after
+	{
+		width: 100%;
+		height: 70px;
+		transition: 1s ease-in-out;
+		margin-top:0px;
+	}
 	/* elementy pojedynczego slajdu */
 	.slider .slide-title
 	{
