@@ -75,24 +75,24 @@ body
 }
 
 .orderbtn {
-	margin-top: 20px;
-	cursor: pointer;
-	margin-bottom: 20px;
+	margin: 20px auto;
+	padding: 20px 30px 20px 30px;
+	-webkit-border-radius: 10;
+	-moz-border-radius: 10;
 	border-radius: 10px;
-  -webkit-border-radius: 10;
-  -moz-border-radius: 10;
-  text-align: center;
-  color: #ffffff;
-  font-size: 20px;
-  background: #00a3cc;
-  padding: 20px 30px 20px 30px;
-  text-decoration: none;
+	text-align: center;
+	color: #ffffff;
+	font-size: 20px;
+	background: #00a3cc;
+	text-decoration: none;
+	cursor: pointer;
+	width:80%;
 }
 
 .orderbtn:hover {
-  background: #00aeff;
-  text-decoration: none;
-  
+	background: #00aeff;
+	font-size: 23px;
+	text-decoration: none;
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -125,7 +125,9 @@ body
 		padding-bottom: 50px;
 		font-size: 36px;
 	}
-	
+	.orderbtn:hover {
+		font-size: 40px;
+	}
 } 
 /* Extra enormous devices (TV, 1700px and up) */
 @media only screen and (min-width: 1700px) {
