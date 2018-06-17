@@ -9,6 +9,14 @@ var currentSlide = 0, //aktualny slide
 	pauseTime = 7000,
 	prevText = "Poprzedni slajd",
 	nextText = "Następny slajd";
+	
+function cutslider()
+{
+	if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50)
+		document.getElementById('slider-container').classList.add('cuted');
+	else
+		document.getElementById('slider-container').classList.remove('cuted');
+};
 function generate_slider()
 {
     var slidesCnt = document.getElementById('slides');
