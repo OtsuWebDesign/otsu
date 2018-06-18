@@ -53,28 +53,9 @@ body
 	-o-transform:translate(-50%,-50%);
 	transform: translate(-50%,-50%);
 }
-.topic a
-{
-	text-decoration: none;
-	padding: 15px;
-}
-.topic a>h1
+.topic h1
 {
 	font-size:17px;
-	-webkit-transition: 0.5s;
-	-moz-transition: 0.5s;
-	-ms-transition: 0.5s;
-	-o-transition: 0.5s;
-	transition: 0.5s;
-}
-.topic a>h1:hover
-{
-	font-size:20px;
-	-webkit-transition: 0.5s;
-	-moz-transition: 0.5s;
-	-ms-transition: 0.5s;
-	-o-transition: 0.5s;
-	transition: 0.5s;
 }
 .step
 {
@@ -82,7 +63,53 @@ body
 	margin: 0px auto 0px auto;
 	text-align: center;
 }
-
+.step p
+{
+	margin: 15px 0 10px 0;
+}
+.step a .more
+{
+	font-size: 13px;
+	width: 150px;
+	height: 60px;
+	margin: 0 auto;
+}
+.arrow-down.icon
+{
+	color: currentColor;
+	position: absolute;
+	margin: 12px 0 0 0;
+	left:50%;
+	width: 2px;
+	height: 20px;
+	background-color: currentColor;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition:0.5s;
+	-o-transition:0.5s;
+	transition: 0.5s;
+}
+.arrow-down.icon:before
+{
+	position: absolute;
+	left: -5px;
+	top: 8px;
+	width: 10px;
+	height: 10px;
+	border-top: solid 2px currentColor;
+	border-right: solid 2px currentColor;
+	-webkit-transform: rotate(135deg);
+	transform: rotate(135deg);
+}
+.step a .more:hover .arrow-down.icon
+{
+	margin: 20px 0 0 0;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition:0.5s;
+	-o-transition:0.5s;
+	transition: 0.5s;
+}
 #orderbottomheader
 {
 	text-align: center;
@@ -125,18 +152,24 @@ body
 	{
 		top: calc(50% - 35px);
 	}
-	.topic a>h1
+	.topic h1
 	{
 		font-size:35px;
-	}
-	.topic a>h1:hover
-	{
-		font-size:38px;
 	}
 	.step
 	{
 		font-size: 25px;
 	}
+	
+	.step a .more
+	{
+		font-size: 17px;
+	}
+	.arrow-down.icon {
+	}
+	.arrow-down.icon:before {
+	}
+
 	.orderbtn
 	{
 		padding-top: 50px;
