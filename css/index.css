@@ -9,21 +9,34 @@ body
 	width: 100%;
 }
 
-.topic 
+.topic
 {
 	position:relative;
+	height: 300px;
 	width: 100%;
 	text-align: center;
 	background-size: cover !important;
 	background-position: center center !important;
 }
+.fakespace
+{
+	height: 0px;
+	width:100%;
+	-webkit-transition: 2s;
+	-moz-transition: 2s;
+	-ms-transition:2s;
+	-o-transition:2s;
+	transition: 2s;
+}
+.fakespace.more
+{
+	height: 2000px;
+}
 #topic1,
 #topic3
 	{background-color: white}
 #topic2
-	{background-color: black}
-#topic2
-	{color:white}
+	{background-color: black;color:white}
 .topic::before
 {
 	position: absolute;
@@ -62,13 +75,23 @@ body
 {
 	margin: 15px 0 10px 0;
 }
-.step .more
+.step .showmore
 {
 	font-size: 13px;
 	width: 150px;
 	height: 60px;
 	margin: 0 auto;
 	cursor: pointer;
+	opacity: 1;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition:0.5s;
+	-o-transition:0.5s;
+	transition: 0.5s;
+}
+.step .showmore.nopacity
+{
+	opacity: 0;
 }
 .arrow-down.icon
 {
@@ -97,7 +120,7 @@ body
 	-webkit-transform: rotate(135deg);
 	transform: rotate(135deg);
 }
-.step .more:hover .arrow-down.icon
+.step #more:hover .arrow-down.icon
 {
 	margin: 20px 0 0 0;
 	-webkit-transition: 0.5s;
@@ -109,7 +132,19 @@ body
 
 #howcontent
 {
-	margin-top:85px;
+	overflow: hidden;
+	height: 0px;
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	-ms-transition:1s;
+	-o-transition:1s;
+	transition: 1s;
+}
+
+#howcontent.more
+{
+	height: auto;
+	position:absolute;
 }
 
 .element
@@ -133,11 +168,6 @@ body
     height: 150px;
     margin-left: auto;
     margin-right: auto;
-}
-
-.element p
-{
-    text-align: justify;
 }
 
 #passionimg
@@ -197,8 +227,6 @@ body
 
 
 
-
-
 #orderbottomheader
 {
 	text-align: center;
@@ -254,9 +282,13 @@ body
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 	
-	.topic 
+	.topic
 	{
 		height: 500px;
+	}
+	.fakespace.more
+	{
+		height: 1400px;
 	}
 	.topic::before
 	{
@@ -280,18 +312,6 @@ body
 	{
 		font-size: 17px;
 	}
-	.arrow-down.icon {
-	}
-	.arrow-down.icon:before {
-	}
-	
-	
-    #howcontent
-    {
-        max-width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-    }
 	
 	.orderbtn
 	{
