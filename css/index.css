@@ -54,7 +54,7 @@ body
 .step
 {
 	font-size: 12px;
-	margin: 0px auto 0px auto;
+	margin: 0 auto 0 auto;
 	text-align: center;
 }
 .step p
@@ -174,9 +174,13 @@ body
 	-ms-transition:1s ease-in-out;
 	-o-transition:1s ease-in-out;
 	transition: 1s ease-in-out;
-	z-index: 3;
 	position:relative;
 	top: -100px;
+}
+.morecontent[topic-id="2"]
+{
+	color:white;
+	background-color:black;
 }
 .morecontent.less
 {
@@ -193,9 +197,7 @@ body
 }
 .element
 {
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
+	margin: -15px auto 40px auto;
     width: 90%;
 }
 .elementtitle
@@ -316,14 +318,11 @@ body
 	}
 	.morecontent
 	{
-		width: 85%;
-		margin: auto;
 	}
 } 
 /* Medium devices (landscape tablets, 800px and up) */
 @media only screen and (min-width: 800px) {
-	.innertopic,
-	.morecontent
+	.innertopic
 	{
 		width:80%;
 	}
@@ -373,8 +372,7 @@ body
 	
 	.morecontent
 	{
-		top: -200px;
-		width: 80%;
+		top: -180px;
 	}
     .step p,
 	.element p 
