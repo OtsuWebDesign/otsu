@@ -130,7 +130,7 @@
 							<div class="elementpic" id="responsiveimg"></div>
 							<p>Integer lobortis posuere iaculis. Duis aliquam cursus ultricies. Praesent non turpis at nisl feugiat elementum. Nam nulla diam, facilisis vel nisi id, vestibulum pharetra tortor.</p>
 						</div>
-						<div showless-id="1" class="showless jsonly" onclick="togglemore(1)"><div class="arrow-up icon"></div>Pokaż mniej</div>
+						<div showless-id="1" class="showless jsonly" onclick="togglemore(1) data-aos="fade-up""><div class="arrow-up icon"></div>Pokaż mniej</div>
 					</section>
 				</div>
 				<div class="topic" id="topic2" >
@@ -170,13 +170,13 @@
 		<script src="js/more.js"></script>
 		<script src="js/indeximgload.js"></script>
 		<script src="js/aos.js"></script>
+		<script src="js/scrollto.js"></script>
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID in google analytics -->
         <script>
 			window.onload = function()
 			{
 				activeNav();
 				generate_slider();
-				//hidemore();
 				bind_images();
 				more992.addListener(bind_images);
 				more540.addListener(bind_images);
