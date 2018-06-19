@@ -5,19 +5,14 @@ function hidemore()
 	{
 		showmores[i].classList.toggle('nopacity');
 	}
-	var fakespaces = document.getElementsByClassName('fakespace');
-	for (let i = 0; i < fakespaces.length; i++) 
+	var morecontents = document.getElementsByClassName('morecontent');
+	for (let i = 0; i < morecontents.length; i++) 
 	{
-		fakespaces[i].classList.toggle('more');
+		morecontents[i].classList.toggle('less');
 	}
-	document.getElementById('howcontent').classList.toggle('more');
 }
 function togglemore(topic_id)
 {
 	document.querySelector("[showmore-id='"+topic_id+"']").classList.toggle('nopacity');
-	var toToggle = document.querySelectorAll("[topic-id='"+topic_id+"']");
-	for (let i = 0; i < toToggle.length; i++) 
-	{
-		toToggle[i].classList.toggle('more');
-	}
+	document.querySelector("[topic-id='"+topic_id+"']").classList.toggle('less');
 };

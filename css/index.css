@@ -18,20 +18,6 @@ body
 	background-size: cover !important;
 	background-position: center center !important;
 }
-.fakespace
-{
-	height: 0px;
-	width:100%;
-	-webkit-transition: 2s;
-	-moz-transition: 2s;
-	-ms-transition:2s;
-	-o-transition:2s;
-	transition: 2s;
-}
-.fakespace.more
-{
-	height: 2000px;
-}
 #topic1,
 #topic3
 	{background-color: white}
@@ -53,7 +39,7 @@ body
 .innertopic
 {
 	position:relative;
-	width:70%;
+	width:90%;
 	top: 50%;
 	left:50%;
 	-webkit-transform: translate(-50%,-50%);
@@ -67,7 +53,7 @@ body
 }
 .step
 {
-	font-size: 14px;
+	font-size: 12px;
 	margin: 0px auto 0px auto;
 	text-align: center;
 }
@@ -120,7 +106,7 @@ body
 	-webkit-transform: rotate(135deg);
 	transform: rotate(135deg);
 }
-.step #more:hover .arrow-down.icon
+.step .showmore:hover .arrow-down.icon
 {
 	margin: 20px 0 0 0;
 	-webkit-transition: 0.5s;
@@ -130,34 +116,38 @@ body
 	transition: 0.5s;
 }
 
-#howcontent
-{
-	margin-top:-50px;
-	overflow: hidden;
-	height: 0px;
-	-webkit-transition: 1s;
-	-moz-transition: 1s;
-	-ms-transition:1s;
-	-o-transition:1s;
-	transition: 1s;
-}
-
-#howcontent.more
+.morecontent
 {
 	height: auto;
-	position:absolute;
+	width:100%;
+	overflow:hidden;
+	-webkit-transition: 2s;
+	-moz-transition: 2s;
+	-ms-transition:2s;
+	-o-transition:2s;
+	transition: 2s;
+	z-index: 3;
+	position:relative;
+	top: -100px;
 }
-
+.morecontent.less
+{
+	height: 0px;
+}
+#howcontent
+{
+	text-align:center;
+}
 .element
 {
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    width: 90%;
 }
 .elementtitle
 {
-    font-size: 20px;
+    font-size: 17px;
     font-weight: bold;
     font-style: italic;
 }
@@ -165,10 +155,17 @@ body
 .elementpic
 {
     background-repeat: no-repeat;
-    width: 150px;
-    height: 150px;
+	background-size: cover !important;
+	background-position: center center !important;
+    width: 80px;
+    height: 80px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.element p 
+{
+	font-size: 12px;
 }
 
 #passionimg
@@ -183,8 +180,8 @@ body
 
 #techimg
 {
-    width: 250px;
-    height: 102px;
+    width: 197px;
+    height: 80px;
     background-image: url(../img/how/min/tech.png);
 }
 
@@ -254,10 +251,34 @@ body
 	text-decoration: none;
 }
 
+/* Small devices (phones, 350px and up) */
+@media only screen and (min-width: 350px) {
+	
+	.step
+	{
+		font-size: 15px;
+	}
+	.elementpic
+	{
+		width: 100px;
+		height: 100px;
+	}
+	.element p 
+	{
+		font-size: 15px;
+	}
+} 
 /* Small devices (portrait tablets, landscape phones, 640px and up) */
 @media only screen and (min-width: 640px) {
-    
-    section p
+    .step
+	{
+		font-size:18px;
+	}
+	.innertopic
+	{
+		width:85%;
+	}
+	.element p
     {
         font-size: 18px;
     }
@@ -265,9 +286,18 @@ body
     {
         font-size: 28px;
     }
+	.elementpic
+	{
+		width: 120px;
+		height: 120px;
+	}
 } 
 /* Medium devices (landscape tablets, 800px and up) */
 @media only screen and (min-width: 800px) {
+	.innertopic
+	{
+		width:80%;
+	}
 	.elementtitle
     {
         font-size: 23px;
@@ -278,6 +308,8 @@ body
     {
         display: inline-block;
         vertical-align: middle;
+		width: 150px;
+		height: 150px;
     }
 } 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -287,33 +319,37 @@ body
 	{
 		height: 500px;
 	}
-	.fakespace.more
-	{
-		height: 1400px;
-	}
 	.topic::before
 	{
 		height: 70px;
 		top:-35px;
 	}
-	.innertopic.afterfake
-	{
-		top: calc(50% - 35px);
-	}
 	.topic h1
 	{
 		font-size:35px;
+	}
+	.innertopic
+	{
+		width:80%;
+	}
+	.innertopic.afterfake
+	{
+		top: calc(50% - 35px);
 	}
 	.step
 	{
 		font-size: 25px;
 	}
 	
-	.step .more
+	.step .showmore
 	{
 		font-size: 17px;
 	}
 	
+	.morecontent
+	{
+		top: -200px;
+	}
 	.orderbtn
 	{
 		padding-top: 50px;
