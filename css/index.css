@@ -81,6 +81,7 @@ body
 	opacity: 0;
 	visibility: hidden;
 }
+.arrow-right.icon,
 .arrow-down.icon,
 .arrow-up.icon
 {
@@ -96,9 +97,17 @@ body
 	-ms-transition:0.5s;
 	-o-transition:0.5s;
 	transition: 0.5s;
-}.arrow-up.icon
+}
+.arrow-up.icon
 {
 	margin: 12px 0 12px 0;
+}
+.arrow-right.icon
+{
+	float:right;
+	margin: 12px 10px 12px 0;
+	width: 20px;
+	height: 2px;
 }
 .arrow-down.icon:before
 {
@@ -124,8 +133,21 @@ body
 	-webkit-transform: rotate(-45deg);
 	transform: rotate(-45deg);
 }
+.arrow-right.icon:before
+{
+	position: relative;
+	right: 1px;
+	top: -5px;
+	width: 10px;
+	height: 10px;
+	border-top: solid 2px currentColor;
+	border-right: solid 2px currentColor;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
 .showless:hover .arrow-up.icon,
 .step .showmore:hover .arrow-down.icon
+.step .showmore:hover .arrow-right.icon
 {
 	margin: 20px 0 0 0;
 	-webkit-transition: 0.5s;
@@ -138,7 +160,10 @@ body
 {
 	margin: 4px 0 20px 0;
 }
-
+.showless:hover .arrow-right.icon
+{
+	margin: 0 20px 0 0;
+}
 .morecontent
 {
 	max-height:1600px; /*value bigger than div can ever get, but as small as possible*/
