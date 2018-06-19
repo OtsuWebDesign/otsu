@@ -12,7 +12,6 @@ body
 .topic 
 {
 	position:relative;
-	height: 350px;
 	width: 100%;
 	text-align: center;
 	background-size: cover !important;
@@ -23,11 +22,7 @@ body
 	{background-color: white}
 #topic2
 	{background-color: black}
-#topic1 a,
-#topic3 a
-	{color:black}
-#topic2,
-#topic2 a
+#topic2
 	{color:white}
 .topic::before
 {
@@ -44,7 +39,7 @@ body
 	
 .innertopic
 {
-	position:absolute;
+	position:relative;
 	width:70%;
 	top: 50%;
 	left:50%;
@@ -67,17 +62,18 @@ body
 {
 	margin: 15px 0 10px 0;
 }
-.step a .more
+.step .more
 {
 	font-size: 13px;
 	width: 150px;
 	height: 60px;
 	margin: 0 auto;
+	cursor: pointer;
 }
 .arrow-down.icon
 {
 	color: currentColor;
-	position: absolute;
+	position: relative;
 	margin: 12px 0 0 0;
 	left:50%;
 	width: 2px;
@@ -91,7 +87,7 @@ body
 }
 .arrow-down.icon:before
 {
-	position: absolute;
+	position: relative;
 	left: -5px;
 	top: 8px;
 	width: 10px;
@@ -101,7 +97,7 @@ body
 	-webkit-transform: rotate(135deg);
 	transform: rotate(135deg);
 }
-.step a .more:hover .arrow-down.icon
+.step .more:hover .arrow-down.icon
 {
 	margin: 20px 0 0 0;
 	-webkit-transition: 0.5s;
@@ -110,6 +106,99 @@ body
 	-o-transition:0.5s;
 	transition: 0.5s;
 }
+
+#howcontent
+{
+	margin-top:85px;
+}
+
+.element
+{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+.elementtitle
+{
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.elementpic
+{
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.element p
+{
+    text-align: justify;
+}
+
+#passionimg
+{
+    background-image: url(../img/how/min/passion.png);
+}
+
+#passiontitle
+{
+    color: rgb(228, 59, 59);
+}
+
+#techimg
+{
+    width: 250px;
+    height: 102px;
+    background-image: url(../img/how/min/tech.png);
+}
+
+#techtitle
+{
+    color: green;
+}
+
+#knowledgeimg
+{
+    margin-top: 10px;
+    background-image: url(../img/how/min/knowledge.png);
+}
+
+#knowledgetitle
+{
+    color: orangered;
+}
+
+#intuitiveimg
+{
+    margin-top: 10px;
+    background-image: url(../img/how/min/intuitive.png);
+}
+
+#intuitivetitle
+{
+    color: rgb(95, 95, 95);
+}
+
+#responsiveimg
+{
+    margin-top: 10px;
+    background-image: url(../img/how/min/responsive.png);
+}
+
+#responsivetitle
+{
+    color: rgb(192, 91, 138);
+}
+
+
+
+
+
 #orderbottomheader
 {
 	text-align: center;
@@ -136,6 +225,32 @@ body
 	text-decoration: none;
 }
 
+/* Small devices (portrait tablets, landscape phones, 640px and up) */
+@media only screen and (min-width: 640px) {
+    
+    section p
+    {
+        font-size: 18px;
+    }
+    .elementtitle
+    {
+        font-size: 28px;
+    }
+} 
+/* Medium devices (landscape tablets, 800px and up) */
+@media only screen and (min-width: 800px) {
+	.elementtitle
+    {
+        font-size: 23px;
+        display: inline-block;
+        margin-right: 50px;
+    }
+    .elementpic
+    {
+        display: inline-block;
+        vertical-align: middle;
+    }
+} 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 	
@@ -161,7 +276,7 @@ body
 		font-size: 25px;
 	}
 	
-	.step a .more
+	.step .more
 	{
 		font-size: 17px;
 	}
@@ -169,7 +284,15 @@ body
 	}
 	.arrow-down.icon:before {
 	}
-
+	
+	
+    #howcontent
+    {
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+	
 	.orderbtn
 	{
 		padding-top: 50px;
@@ -180,6 +303,28 @@ body
 		font-size: 40px;
 	}
 } 
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .element
+    {
+        margin-bottom: 200px;
+    }
+    .elementtitle
+    {
+        font-size: 30px;
+        display: inline-block;
+        margin-right: 50px;
+    }
+    .elementpic
+    {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    section p 
+    {
+        font-size: 28px;
+    }
+}
 /* Extra enormous devices (TV, 1700px and up) */
 @media only screen and (min-width: 1700px) {
 
