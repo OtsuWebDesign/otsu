@@ -132,6 +132,7 @@ body
 
 #howcontent
 {
+	margin-top:-50px;
 	overflow: hidden;
 	height: 0px;
 	-webkit-transition: 1s;
