@@ -140,14 +140,14 @@ body
 
 .morecontent
 {
-	max-height:2000px;
+	max-height:1400px; /*value bigger than div can ever get, but as small as possible*/
 	width:100%;
 	overflow:hidden;
-	-webkit-transition: 2s;
-	-moz-transition: 2s;
-	-ms-transition:2s;
-	-o-transition:2s;
-	transition: 2s;
+	-webkit-transition: 1s ease-in-out;
+	-moz-transition: 1s ease-in-out;
+	-ms-transition:1s ease-in-out;
+	-o-transition:1s ease-in-out;
+	transition: 1s ease-in-out;
 	z-index: 3;
 	position:relative;
 	top: -100px;
@@ -155,11 +155,11 @@ body
 .morecontent.less
 {
 	max-height: 0px;
-	-webkit-transition: 2s;
-	-moz-transition: 2s;
-	-ms-transition:2s;
-	-o-transition:2s;
-	transition: 2s;
+	-webkit-transition: 1s ease-in-out;
+	-moz-transition: 1s ease-in-out;
+	-ms-transition:1s ease-in-out;
+	-o-transition:1s ease-in-out;
+	transition: 1s ease-in-out;
 }
 #howcontent
 {
@@ -178,7 +178,6 @@ body
     font-weight: bold;
     font-style: italic;
 }
-
 .elementpic
 {
     background-repeat: no-repeat;
@@ -189,66 +188,45 @@ body
     margin-left: auto;
     margin-right: auto;
 }
-
 .element p 
 {
 	font-size: 12px;
 }
 
-#passionimg
-{
-    background-image: url(../img/how/min/passion.png);
-}
-
 #passiontitle
-{
-    color: rgb(228, 59, 59);
-}
-
+	{color: rgb(228, 59, 59);}
+#passionimg
+	{background-image: url(../img/how/min/passion.png);}
+#techtitle
+	{color: green;}
 #techimg
 {
     width: 197px;
     height: 80px;
     background-image: url(../img/how/min/tech.png);
 }
-
-#techtitle
-{
-    color: green;
-}
-
+#knowledgetitle
+	{color: orangered;}
 #knowledgeimg
 {
     margin-top: 10px;
     background-image: url(../img/how/min/knowledge.png);
 }
-
-#knowledgetitle
-{
-    color: orangered;
-}
-
+#intuitivetitle
+	{color: rgb(95, 95, 95);}
 #intuitiveimg
 {
     margin-top: 10px;
     background-image: url(../img/how/min/intuitive.png);
 }
-
-#intuitivetitle
-{
-    color: rgb(95, 95, 95);
-}
-
+#responsivetitle
+	{color: rgb(192, 91, 138);}
 #responsiveimg
 {
-    margin-top: 10px;
-    background-image: url(../img/how/min/responsive.png);
+	margin-top: 10px;
+	background-image: url(../img/how/min/responsive.png);
 }
 
-#responsivetitle
-{
-    color: rgb(192, 91, 138);
-}
 #orderbottomheader
 {
 	text-align: center;
@@ -388,11 +366,11 @@ body
 @media only screen and (min-width: 1200px) {
     .element
     {
-        margin-bottom: 200px;
+        margin-bottom: 50px;
     }
     .elementtitle
     {
-        font-size: 30px;
+        font-size: 35px;
         display: inline-block;
         margin-right: 50px;
     }
@@ -403,10 +381,17 @@ body
     }
     section p 
     {
-        font-size: 28px;
+        font-size: 30px;
     }
 }
 /* Extra enormous devices (TV, 1700px and up) */
 @media only screen and (min-width: 1700px) {
-
+    .elementtitle
+    {
+        font-size: 40px;
+    }
+    section p 
+    {
+        font-size: 35px;
+    }
 }

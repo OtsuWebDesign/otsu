@@ -16,6 +16,7 @@
 		<link rel="stylesheet" href="css/slider.css"  type="text/css"/>
 		<link rel="stylesheet" href="css/aos.css"  type="text/css"/>
 		<link rel="stylesheet "href="https://fonts.googleapis.com/css?family=Lato|Roboto" type="text/css">
+		<noscript><style> .jsonly { display: none } </style></noscript>
 	</head>
 	<body>
 		<!-- Nawigacja -->
@@ -89,13 +90,23 @@
 				<div class="topic" id="topic1" >
 					<div class="innertopic afterfake">
 						<h1>Jak działamy?</h1>
-						<div class="step">
+						<noscript>
+							<div class="step" >
+						</noscript>
+						<script>
+							document.write('<div class="step" data-aos="fade-up">');
+						</script>
 							<p>Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym.</p>
-							<div showmore-id="1" class="showmore nopacity" onclick="togglemore(1)">Zobacz więcej<div class="arrow-down icon"></div></div>
+							<div showmore-id="1" class="showmore jsonly" onclick="togglemore(1)">Zobacz więcej<div class="arrow-down icon"></div></div>
 						</div>
 					</div>
 				</div>
-				<div class="morecontent" topic-id="1" >
+				<noscript>
+					<div class="morecontent" topic-id="1" >
+				</noscript>
+				<script>
+					document.write('<div class="morecontent less" topic-id="1" >');
+				</script>
 					<section id="howcontent">
 						<div class="element">
 							<div class="elementtitle" id="passiontitle">Przede wszystkim: Pasja</div>
@@ -168,7 +179,7 @@
 			{
 				activeNav();
 				generate_slider();
-				hidemore();
+				//hidemore();
 				bind_images();
 				more992.addListener(bind_images);
 				more540.addListener(bind_images);
