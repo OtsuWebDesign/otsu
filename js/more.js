@@ -10,9 +10,15 @@ function hidemore()
 	{
 		morecontents[i].classList.toggle('less');
 	}
+	var showlesss = document.getElementsByClassName('showlesss');
+	for (let i = 0; i < showlesss.length; i++) 
+	{
+		showlesss[i].classList.toggle('nopacity');
+	}
 }
 function togglemore(topic_id)
 {
 	document.querySelector("[showmore-id='"+topic_id+"']").classList.toggle('nopacity');
 	document.querySelector("[topic-id='"+topic_id+"']").classList.toggle('less');
+	document.querySelector("[showless-id='"+topic_id+"']").classList.toggle('nopacity');
 };
