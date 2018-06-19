@@ -91,9 +91,9 @@
 						<h1>Jak działamy?</h1>
 						<div class="step">
 							<p>Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym.</p>
-							<div class="showmore nopacity" topic-id="1">Zobacz więcej<div class="arrow-down icon"></div></div>
+							<div showmore-id="1" class="showmore nopacity" onclick="togglemore(1)">Zobacz więcej<div class="arrow-down icon"></div></div>
 						</div>
-						<section id="howcontent" class="more">
+						<section id="howcontent" class="more" topic-id="1" >
 							<div class="element">
 								<div class="elementtitle" id="passiontitle">Przede wszystkim: Pasja</div>
 								<div class="elementpic" id="passionimg"></div>
@@ -122,7 +122,7 @@
 						</section>
 					</div>
 				</div>
-				<div id="fakespace1" class="fakespace more"></div>
+				<div id="fakespace1" class="fakespace more" topic-id="1" ></div>
 				<div class="topic" id="topic2" >
 					<div class="innertopic">
 						<h1>Co możesz z nami osiagnąć</h1>
@@ -166,7 +166,7 @@
 			{
 				activeNav();
 				generate_slider();
-				togglemore();
+				hidemore();
 				bind_images();
 				more992.addListener(bind_images);
 				more540.addListener(bind_images);

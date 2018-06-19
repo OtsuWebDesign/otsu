@@ -1,18 +1,23 @@
-function togglemore()
+function hidemore()
 {
 	var showmores = document.getElementsByClassName('showmore');
-	for (var i = 0; i < showmores.length; i++) 
+	for (let i = 0; i < showmores.length; i++) 
 	{
 		showmores[i].classList.toggle('nopacity');
 	}
 	var fakespaces = document.getElementsByClassName('fakespace');
-	for (var i = 0; i < fakespaces.length; i++) 
+	for (let i = 0; i < fakespaces.length; i++) 
 	{
 		fakespaces[i].classList.toggle('more');
 	}
 	document.getElementById('howcontent').classList.toggle('more');
 }
-document.getElementById('showmore').onclick = function()
+function togglemore(topic_id)
 {
-	togglemore();
+	document.querySelector("[showmore-id='"+topic_id+"']").classList.toggle('nopacity');
+	var toToggle = document.querySelectorAll("[topic-id='"+topic_id+"']");
+	for (let i = 0; i < toToggle.length; i++) 
+	{
+		toToggle[i].classList.toggle('more');
+	}
 };
