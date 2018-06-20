@@ -382,7 +382,8 @@ body
 		top: calc(50% - 35px);
 	}
 	
-	.step .showmore
+	.showmore,
+	.showless
 	{
 		font-size: 17px;
 	}
