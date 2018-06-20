@@ -167,7 +167,6 @@ body
 .morecontent
 {
 	max-height:1700px; /*value bigger than div can ever get, but as small as possible */
-	overflow:hidden;
 	-webkit-transition: 1s ease-in-out;
 	-moz-transition: 1s ease-in-out;
 	-ms-transition:1s ease-in-out;
@@ -181,6 +180,7 @@ body
 }
 .morecontent.less
 {
+	visibility:hidden;
 	max-height: 0px;
 	-webkit-transition: 1s ease-in-out;
 	-moz-transition: 1s ease-in-out;
@@ -192,7 +192,7 @@ body
 #whatcontent
 {
 	text-align:center;
-	margin: -100px 0 100px 0;
+	margin: -80px 0 100px 0;
 }
 .element
 {
@@ -369,7 +369,7 @@ body
 	#howcontent,
 	#whatcontent
 	{
-		margin: -180px 0 180px 0;
+		margin: -150px 0 180px 0;
 	}
     .step p,
 	.element p 
