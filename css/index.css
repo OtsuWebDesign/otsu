@@ -167,15 +167,12 @@ body
 .morecontent
 {
 	max-height:1700px; /*value bigger than div can ever get, but as small as possible */
-	width:100%;
 	overflow:hidden;
 	-webkit-transition: 1s ease-in-out;
 	-moz-transition: 1s ease-in-out;
 	-ms-transition:1s ease-in-out;
 	-o-transition:1s ease-in-out;
 	transition: 1s ease-in-out;
-	position:relative;
-	top: -100px;
 }
 .morecontent[topic-id="2"]
 {
@@ -191,9 +188,11 @@ body
 	-o-transition:1s ease-in-out;
 	transition: 1s ease-in-out;
 }
-#howcontent
+#howcontent,
+#whatcontent
 {
 	text-align:center;
+	margin: -100px 0 100px 0;
 }
 .element
 {
@@ -263,8 +262,8 @@ body
 .orderbtn {
 	margin: 20px auto;
 	padding: 20px 30px 20px 30px;
-	-webkit-border-radius: 10;
-	-moz-border-radius: 10;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
 	border-radius: 10px;
 	text-align: center;
 	color: #ffffff;
@@ -315,9 +314,6 @@ body
 	{
 		width: 120px;
 		height: 120px;
-	}
-	.morecontent
-	{
 	}
 } 
 /* Medium devices (landscape tablets, 800px and up) */
@@ -370,9 +366,10 @@ body
 		font-size: 17px;
 	}
 	
-	.morecontent
+	#howcontent,
+	#whatcontent
 	{
-		top: -180px;
+		margin: -180px 0 180px 0;
 	}
     .step p,
 	.element p 
