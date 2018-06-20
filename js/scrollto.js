@@ -46,17 +46,16 @@ function scrollIt(destination, owerscroll = 100, duration = 1000, easing = 'ease
     const time = Math.min(1, ((now - startTime) / duration));
     const timeFunction = easings[easing](time);
 	if(documentHeight - start > windowHeight)
+	{
 		window.scroll(0, Math.ceil((timeFunction * (destinationOffsetToScroll - start)) + start));
-	else
-		break;
-    if (window.pageYOffset === destinationOffsetToScroll) {
-      if (callback) {
-        callback();
-      }
-      return;
-    }
-
-    requestAnimationFrame(scroll);
+		if (window.pageYOffset === destinationOffsetToScroll) {
+			if (callback) {
+				callback();
+			}
+			return;
+		}
+		requestAnimationFrame(scroll);
+	}
   }
 
   scroll();
