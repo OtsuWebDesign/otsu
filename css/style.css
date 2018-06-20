@@ -6,7 +6,8 @@
 }
 .aos-area
 {
-	overflow:hidden;
+	overflow:hidden!important;
+	max-width:100%!important;
 }
 footer
 {

@@ -166,7 +166,7 @@ body
 }
 .morecontent
 {
-	max-height:1600px; /*value bigger than div can ever get, but as small as possible*/
+	max-height:1700px; /*value bigger than div can ever get, but as small as possible */
 	width:100%;
 	overflow:hidden;
 	-webkit-transition: 1s ease-in-out;
