@@ -74,11 +74,11 @@ body
 	margin: 0 auto;
 	cursor: pointer;
 	opacity: 1;
-	-webkit-transition: 0.5s;
-	-moz-transition: 0.5s;
-	-ms-transition:0.5s;
-	-o-transition:0.5s;
-	transition: 0.5s;
+	-webkit-transition: .2s;
+	-moz-transition: .2s;
+	-ms-transition:.2s;
+	-o-transition:.2s;
+	transition: .2s;
 }
 #topic3 .showmore
 {
@@ -90,6 +90,17 @@ body
 	opacity: 0;
 	visibility: hidden;
 }
+/* 
+**********nie wiem czy animacja z zejściem jest lepsza czy nie*****************
+.novisibility.showmore
+{
+	transform: translate(0,50px);
+}
+.novisibility.showless
+{
+	transform: translate(0,-50px);
+}
+*/
 .arrow-right.icon,
 .arrow-down.icon,
 .arrow-up.icon
