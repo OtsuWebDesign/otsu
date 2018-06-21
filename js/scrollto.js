@@ -7,7 +7,7 @@ document.querySelector('[showless-id="2"]').addEventListener('click', () => {
 document.querySelector('[showless-id="2"]').addEventListener('click', () => {
 	scrollIt(document.querySelector('#topic2'));
 });
-function scrollIt(destination, owerscroll = 100, duration = 1000, easing = 'easeOutQuad', callback) {
+function scrollIt(destination, overscroll = 100, duration = 1000, easing = 'easeOutQuad', callback) {
 
 	const easings = {
 		linear(t) {return t;},
@@ -30,7 +30,7 @@ function scrollIt(destination, owerscroll = 100, duration = 1000, easing = 'ease
 
   const documentHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);
   const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
-  const destinationOffset = typeof destination === 'number' ? destination : (destination.offsetTop-owerscroll>0 ? destination.offsetTop - owerscroll :destination.offsetTop);
+  const destinationOffset = typeof destination === 'number' ? destination : destination.offsetTop - overscroll;
   const destinationOffsetToScroll = Math.round(documentHeight - destinationOffset < windowHeight ? documentHeight - windowHeight : destinationOffset);
 
   if ('requestAnimationFrame' in window === false) {
@@ -45,17 +45,17 @@ function scrollIt(destination, owerscroll = 100, duration = 1000, easing = 'ease
     const now = 'now' in window.performance ? performance.now() : new Date().getTime();
     const time = Math.min(1, ((now - startTime) / duration));
     const timeFunction = easings[easing](time);
-	if(documentHeight - start > windowHeight)
-	{
-		window.scroll(0, Math.ceil((timeFunction * (destinationOffsetToScroll - start)) + start));
-		if (window.pageYOffset === destinationOffsetToScroll) {
-			if (callback) {
-				callback();
-			}
-			return;
+	if(documentHeight - destinationOffsetToScroll - windowHeight  <= windowHeight)
+		destinationOffsetToScroll += documentHeight - start;
+	
+	window.scroll(0, Math.ceil((timeFunction * (destinationOffsetToScroll - start)) + start));
+	if (window.pageYOffset === destinationOffsetToScroll) {
+		if (callback) {
+			callback();
 		}
-		requestAnimationFrame(scroll);
+		return;
 	}
+	requestAnimationFrame(scroll);
   }
 
   scroll();
