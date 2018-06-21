@@ -192,11 +192,11 @@ body
 .morecontent
 {
 	max-height:1700px; /*value bigger than div can ever get, but as small as possible */
-	-webkit-transition: .8s ease-in-out;
-	-moz-transition: .8s ease-in-out;
-	-ms-transition: .8s ease-in-out;
-	-o-transition: .8s ease-in-out;
-	transition: .8s ease-in-out;
+	-webkit-transition: .8s linear;
+	-moz-transition: .8s linear;
+	-ms-transition: .8s linear;
+	-o-transition: .8s linear;
+	transition: .8s linear;
 }
 .morecontent[topic-id="2"]
 {

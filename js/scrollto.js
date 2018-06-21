@@ -1,13 +1,10 @@
 document.querySelector('[showless-id="1"]').addEventListener('click', () => {
-	scrollIt(document.querySelector('#topic1'));
+	scrollIt(document.querySelector('.morecontent[topic-id="1"]'));
 });
 document.querySelector('[showless-id="2"]').addEventListener('click', () => {
-	scrollIt(document.querySelector('#topic2'));
+	scrollIt(document.querySelector('.morecontent[topic-id="2"]'));
 });
-document.querySelector('[showless-id="2"]').addEventListener('click', () => {
-	scrollIt(document.querySelector('#topic2'));
-});
-function scrollIt(destination, overscroll = 100, duration = 1000, easing = 'easeOutQuad', callback) {
+function scrollIt(destination, overscroll = 100, duration = 800, easing = 'linear', callback) {
 
 	const easings = {
 		linear(t) {return t;},
@@ -25,38 +22,36 @@ function scrollIt(destination, overscroll = 100, duration = 1000, easing = 'ease
 		easeInOutQuint(t) {return t < 0.5 ? 16 * t * t * t * t * t : 1 + 16 * (--t) * t * t * t * t;}
 	};
 
-  const start = window.pageYOffset;
-  const startTime = 'now' in window.performance ? performance.now() : new Date().getTime();
+	const start = window.pageYOffset;
+	const startTime = 'now' in window.performance ? performance.now() : new Date().getTime();
 
-  const documentHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);
-  const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
-  const destinationOffset = typeof destination === 'number' ? destination : destination.offsetTop - overscroll;
-  const destinationOffsetToScroll = Math.round(documentHeight - destinationOffset < windowHeight ? documentHeight - windowHeight : destinationOffset);
-
-  if ('requestAnimationFrame' in window === false) {
-    window.scroll(0, destinationOffsetToScroll);
-    if (callback) {
-      callback();
-    }
-    return;
-  }
-
-  function scroll() {
-    const now = 'now' in window.performance ? performance.now() : new Date().getTime();
-    const time = Math.min(1, ((now - startTime) / duration));
-    const timeFunction = easings[easing](time);
-	if(documentHeight - destinationOffsetToScroll - windowHeight  <= windowHeight)
-		destinationOffsetToScroll += documentHeight - start;
-	
-	window.scroll(0, Math.ceil((timeFunction * (destinationOffsetToScroll - start)) + start));
-	if (window.pageYOffset === destinationOffsetToScroll) {
+	const documentHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);
+	const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
+	const destinationHeight = destination.offsetHeight;
+	const destinationOffsetToScroll =  start - destinationHeight;
+	if ('requestAnimationFrame' in window === false) {
+		window.scroll(0, destinationOffsetToScroll);
 		if (callback) {
 			callback();
 		}
 		return;
 	}
-	requestAnimationFrame(scroll);
-  }
+	
+	function scroll() 
+	{
+		const now = 'now' in window.performance ? performance.now() : new Date().getTime();
+		const time = Math.min(1, ((now - startTime) / duration));
+		const timeFunction = easings[easing](time);
 
-  scroll();
+		window.scroll(0, Math.ceil((timeFunction * (destinationOffsetToScroll - start)) + start));
+		if (window.pageYOffset === destinationOffsetToScroll) {
+			if (callback) {
+			callback();
+			}
+			return;
+		}
+		requestAnimationFrame(scroll);
+	}
+	
+	scroll();
 }
