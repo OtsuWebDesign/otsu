@@ -7,7 +7,7 @@ function togglemore(topic_id)
 		setTimeout(function()
 		{
 			document.querySelector("[topic-id='"+topic_id+"']").style.maxHeight = document.querySelector("[topic-id='"+topic_id+"']").offsetHeight+'px';
-		}, 900);
+		}, 1050);
 	}
 	else 
 	{
@@ -15,6 +15,6 @@ function togglemore(topic_id)
 		setTimeout(function()
 		{
 			document.querySelector("[topic-id='"+topic_id+"']").removeAttribute('style');
-		}, 900);
+		}, 1050);
 	}
 };

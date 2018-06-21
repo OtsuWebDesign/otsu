@@ -4,7 +4,7 @@ document.querySelector('[showless-id="1"]').addEventListener('click', () => {
 document.querySelector('[showless-id="2"]').addEventListener('click', () => {
 	scrollIt(document.querySelector('.morecontent[topic-id="2"]'));
 });
-function scrollIt(destination, duration = 800) {
+function scrollIt(destination, duration = 1000) {
 
 	const start = window.pageYOffset;
 	const startTime = performance.now() || new Date().getTime();
