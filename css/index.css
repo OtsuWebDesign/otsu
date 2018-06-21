@@ -281,19 +281,25 @@ body
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	border-radius: 10px;
-	text-align: center;
-	color: #ffffff;
-	font-size: 20px;
+	
 	background: #00a3cc;
+	color: white;
+	text-align: center;
+	font-size: 20px;
 	text-decoration: none;
-	cursor: pointer;
+	line-height: 50px;
 	width:80%;
+	
+	-webkit-transition: .7s;
+	-moz-transition: .7s;
+	-ms-transition:.7s;
+	-o-transition:.7s;
+	transition: .7s;
 }
 
 .orderbtn:hover {
 	background: #00aeff;
 	font-size: 23px;
-	text-decoration: none;
 }
 
 /* Small devices (phones, 350px and up) */
