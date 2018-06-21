@@ -9,6 +9,10 @@ body
 	width: 100%;
 }
 
+#topics
+{
+	overflow: hidden;
+}
 .topic
 {
 	position:relative;
