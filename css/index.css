@@ -83,10 +83,12 @@ body
 	-o-transition:.2s;
 	transition: .2s;
 }
-#topic3 .showmore
+#outertopic3 .showmore
 {
-	width: 200px;
-	height: 30px;
+	display: inline-block;
+	padding:10px;
+	width: auto;
+	height: auto;
 }
 
 #topic3 .showmore a 
