@@ -8,8 +8,25 @@ body
 {
 	width: 100%;
 }
-
-#topics
+.outertopic
+{
+	position: relative;
+}
+#outertopic2
+	{background-color: black;color:white}
+.outertopic::before
+{
+	position: absolute;
+	width: 100%;
+	height: 40px;
+	z-index: 2;
+	margin-top:-20px;
+}
+#outertopic2::before
+	{background:linear-gradient(to bottom left, white 50%,black 0)}
+#outertopic3::before
+	{background:linear-gradient(to bottom left, black 50%,white 0)}
+.overflow-wrapper
 {
 	overflow: hidden;
 }
@@ -22,24 +39,6 @@ body
 	background-size: cover !important;
 	background-position: center center !important;
 }
-#topic1,
-#topic3
-	{background-color: white}
-#topic2
-	{background-color: black;color:white}
-.topic::before
-{
-	position: absolute;
-	width: 100%;
-	height: 40px;
-	z-index: 2;
-	top:-20px;
-}
-#topic2::before
-	{background:linear-gradient(to bottom left, white 50%,black 0)}
-#topic3::before
-	{background:linear-gradient(to bottom left, black 50%,white 0)}
-	
 .innertopic
 {
 	position:relative;
@@ -197,11 +196,6 @@ body
 	-ms-transition: .8s linear;
 	-o-transition: .8s linear;
 	transition: .8s linear;
-}
-.morecontent[topic-id="2"]
-{
-	color:white;
-	background-color:black;
 }
 .morecontent.less
 {
@@ -363,7 +357,7 @@ body
 	{
 		height: 500px;
 	}
-	.topic::before
+	.outertopic::before
 	{
 		height: 70px;
 		top:-35px;
