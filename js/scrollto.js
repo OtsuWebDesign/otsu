@@ -7,13 +7,14 @@ document.querySelector('[showless-id="2"]').addEventListener('click', () => {
 function scrollIt(destination, duration = 800) {
 
 	const start = window.pageYOffset;
-	const startTime = 'now' in window.performance ? performance.now() : new Date().getTime();
+	const startTime = performance.now() || new Date().getTime();
 	const destinationOffsetToScroll =  start - destination.offsetHeight;
 	
-	if ('requestAnimationFrame' in window === false) {
-		window.scroll(0, destinationOffsetToScroll);
-		return;
-	}
+	var requestAnimationFrame = window.requestAnimationFrame || 
+                            window.mozRequestAnimationFrame || 
+                            window.webkitRequestAnimationFrame || 
+                            window.oRequestAnimationFrame || 
+                            window.msRequestAnimationFrame || false;
 	
 	function scroll() 
 	{
@@ -24,7 +25,11 @@ function scrollIt(destination, duration = 800) {
 		if (window.pageYOffset === destinationOffsetToScroll) {
 			return;
 		}
-		requestAnimationFrame(scroll, 0.1);
+		requestAnimationFrame(scroll);
 	}
-	scroll();
+	
+	if (requestAnimationFrame) 
+		scroll();
+	else
+		window.scroll(0, destinationOffsetToScroll);
 }
