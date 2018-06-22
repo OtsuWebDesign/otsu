@@ -57,9 +57,9 @@
         <h1>Dziękujemy za wypełnienie formularza! (który nie działa :d)</h1>
         <a href='order.html'><h2>Placeholderowy przycisk powrotu do formularza</h2></a>
 
-        <?html
+        <?php
             $email = $_POST['email'];
-            echo "Test html. E-mail podany w formularzu to $email";
+            echo "Test php. E-mail podany w formularzu to $email";
         ?>
 
         </div>
