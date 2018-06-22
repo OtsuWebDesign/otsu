@@ -117,7 +117,7 @@ body
 {
 	-webkit-transform: translate(-50%, 0) rotateX(90deg);
 	-moz-transform: translate(-50%, 0) rotateX(90deg);
-	-o-transform:translate(-50%, 0) rotateX(90deg);
+	-o-transform: translate(-50%, 0) rotateX(90deg);
 	transform: translate(-50%, 0) rotateX(90deg);
 }
 .novisibility.showmore
@@ -125,7 +125,7 @@ body
 	-webkit-transform: rotateX(90deg);
 	-moz-transform: rotateX(90deg);
 	-o-transform:rotateX(90deg);
-	transform: rotateX(-90deg);
+	transform: rotateX(90deg);
 }
 .arrow-right.icon,
 .arrow-down.icon,
@@ -209,11 +209,11 @@ body
 .morecontent
 {
 	max-height:1700px; /*value bigger than div can ever get, but as small as possible */
-	-webkit-transition: 1s linear;
-	-moz-transition: 1s linear;
-	-ms-transition: 1s linear;
-	-o-transition: 1s linear;
-	transition: 1s linear;
+	-webkit-transition: 1s ease-in-out;
+	-moz-transition: 1s ease-in-out;
+	-ms-transition: 1s ease-in-out;
+	-o-transition: 1s ease-in-out;
+	transition: 1s ease-in-out;
 }
 .morecontent.less
 {
