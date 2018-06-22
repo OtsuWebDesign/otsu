@@ -370,6 +370,10 @@ body
 		width:85%;
 	}
 	
+	.innertopic.afterfake
+	{
+		margin-top:-20px;
+	}
     .elementtitle
     {
         font-size: 28px;

@@ -12,7 +12,7 @@ var currentSlide = 0, //aktualny slide
 	
 function cutslider()
 {
-	if (document.body.scrollTop > 395 || document.documentElement.scrollTop > 395)
+	if (document.body.scrollTop > 0.6*document.getElementById('slider-container').offsetHeight || document.documentElement.scrollTop > 0.6*document.getElementById('slider-container').offsetHeight)
 		document.getElementById('slider-container').classList.add('cuted');
 	else
 		document.getElementById('slider-container').classList.remove('cuted');
