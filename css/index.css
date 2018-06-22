@@ -91,10 +91,10 @@ body
 {
 	position: absolute;
 	left: 50%;
-	-webkit-transform: translate(-50%, 0);
-	-moz-transform: translate(-50%, 0);
-	-o-transform:translate(-50%, 0);
-	transform: translate(-50%, 0);
+	-webkit-transform: translate(-50%, -15%);
+	-moz-transform: translate(-50%, -15%);
+	-o-transform:translate(-50%, -15%);
+	transform: translate(-50%, -15%);
 	top: 0;
 }
 .novisibility
@@ -121,7 +121,7 @@ body
 {
 	color: currentColor;
 	position: relative;
-	margin: 2vw 0 2vw 0;
+	margin: 1vw 0 1vw 0;
 	left:50%;
 	width: 1px;
 	height: 15px;
@@ -132,11 +132,15 @@ body
 	-o-transition:0.5s;
 	transition: 0.5s;
 }
+.arrow-up.icon
+{
+	margin: 1vw 0 1vw 0;
+}
 .arrow-right.icon
 {
 	margin:0;
 	display:inline-block;
-	left: 2vw;
+	left: 1vw;
 	top:-3px;
 	width: 15px;
 	height: 1px;
@@ -179,15 +183,15 @@ body
 }
 .showmore:hover .arrow-down.icon
 {
-	margin: 4vw 0 0 0;
+	margin: 2vw 0 0 0;
 }
 .showless:hover .arrow-up.icon
 {
-	margin: 1vw 0 3vw 0;
+	margin: 0 0 2vw 0;
 }
 .showmore:hover .arrow-right.icon
 {
-	left:4vw;
+	left:2vw;
 }
 .morecontent
 {
@@ -350,6 +354,11 @@ body
 	{
 		font-size: 3vw;
 	}
+	.showmore,
+	.showless
+	{
+		padding: 1vw;
+	}
     .step p,
 	.element p 
     {
@@ -497,7 +506,7 @@ body
 	#howcontent,
 	#whatcontent
 	{
-		margin: -150px 0 180px 0;
+		margin: -110px 0 180px 0;
 	}
 .element
 {
