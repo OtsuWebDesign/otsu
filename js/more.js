@@ -1,8 +1,9 @@
 function togglemore(topic_id)
 {
-	document.querySelector("[showmore-id='"+topic_id+"']").classList.toggle('novisibility');
 	if(document.querySelector("[topic-id='"+topic_id+"']").classList.contains('less'))
 	{
+		document.querySelector("[showmore-id='"+topic_id+"']").classList.add('novisibility');
+		setTimeout(() => document.querySelector("[showless-id='"+topic_id+"']").classList.remove('novisibility') ,500);
 		document.querySelector("[topic-id='"+topic_id+"']").classList.remove('less');
 		setTimeout(function()
 		{
@@ -11,6 +12,8 @@ function togglemore(topic_id)
 	}
 	else 
 	{
+		document.querySelector("[showless-id='"+topic_id+"']").classList.add('novisibility');
+		setTimeout(() => document.querySelector("[showmore-id='"+topic_id+"']").classList.remove('novisibility') ,500);
 		document.querySelector("[topic-id='"+topic_id+"']").classList.add('less');
 		setTimeout(function()
 		{
