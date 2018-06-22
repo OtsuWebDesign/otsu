@@ -18,9 +18,9 @@ body
 {
 	position: absolute;
 	width: 100%;
-	height: 20vw;
+	height: 16vw;
 	z-index: 2;
-	margin-top:-10vw;
+	margin-top:-8vw;
 }
 #outertopic2::before
 	{background:linear-gradient(to bottom left, white 50%,black 0)}
@@ -33,7 +33,7 @@ body
 .topic
 {
 	position:relative;
-	height: 120vw;
+	height: 110vw;
 	width: 100%;
 	text-align: center;
 	background-size: cover !important;
@@ -71,12 +71,12 @@ body
 .show-buttons
 {
 	position: relative;
-	display:inline-block;
+	font-size: 4vw;
 }
 .showmore,
 .showless
 {
-	font-size: 4vw;
+	display:inline-block;
 	padding: 2vw;
 	margin: 0 auto;
 	cursor: pointer;
@@ -121,7 +121,7 @@ body
 {
 	color: currentColor;
 	position: relative;
-	margin: 8px 0 0 0;
+	margin: 2vw 0 2vw 0;
 	left:50%;
 	width: 1px;
 	height: 15px;
@@ -132,18 +132,14 @@ body
 	-o-transition:0.5s;
 	transition: 0.5s;
 }
-.arrow-up.icon
-{
-	margin: 8px 0 8px 0;
-}
 .arrow-right.icon
 {
 	margin:0;
 	display:inline-block;
-	left:10px;
+	left: 2vw;
 	top:-3px;
-	width: 20px;
-	height: 2px;
+	width: 15px;
+	height: 1px;
 }
 .arrow-down.icon:before
 {
@@ -172,26 +168,26 @@ body
 .arrow-right.icon:before
 {
 	position: relative;
-	left:7px;
+	left: 4px;
 	top: -5px;
 	width: 10px;
 	height: 10px;
-	border-top: solid 2px currentColor;
-	border-right: solid 2px currentColor;
+	border-top: solid 1px currentColor;
+	border-right: solid 1px currentColor;
 	-webkit-transform: rotate(45deg);
 	transform: rotate(45deg);
 }
 .showmore:hover .arrow-down.icon
 {
-	margin: 14px 0 0 0;
+	margin: 4vw 0 0 0;
 }
 .showless:hover .arrow-up.icon
 {
-	margin: 4px 0 20px 0;
+	margin: 1vw 0 3vw 0;
 }
 .showmore:hover .arrow-right.icon
 {
-	left:18px;
+	left:4vw;
 }
 .morecontent
 {
@@ -308,11 +304,26 @@ body
 /* Small devices (phones, 350px and up) */
 @media only screen and (min-width: 350px) {
 	
+	.outertopic::before
+	{
+		height: 10vw;
+		margin-top:-5vw;
+	}
+	.topic
+	{
+		height: 100vw;
+	}
+	.show-buttons
+	{
+		font-size: 3.5vw;
+	}
     .step p,
 	.element p 
     {
-        font-size: 15px;
+        font-size: 4.5vw;
+		margin: 4.5vw 0 2.5vw 0;
     }
+	
 	.elementpic
 	{
 		width: 100px;
@@ -322,15 +333,34 @@ body
 /* Small devices (portrait tablets, landscape phones, 640px and up) */
 @media only screen and (min-width: 640px) {
     
+	.outertopic::before
+	{
+		height: 80px;
+		margin-top:-40px;
+	}
+	.topic
+	{
+		height: 80vw;
+	}
+	.topic h1
+	{
+		font-size:5.5vw;
+	}
+	.show-buttons
+	{
+		font-size: 3vw;
+	}
     .step p,
 	.element p 
     {
-        font-size: 18px;
+        font-size: 4vw;
+		margin: 4vw 0 2vw 0;
     }
 	.innertopic
 	{
 		width:85%;
 	}
+	
     .elementtitle
     {
         font-size: 28px;
@@ -343,6 +373,26 @@ body
 } 
 /* Medium devices (landscape tablets, 800px and up) */
 @media only screen and (min-width: 800px) {
+	
+	.topic
+	{
+		height: 65vw;
+	}
+	.topic h1
+	{
+		font-size:5vw;
+	}
+	.show-buttons
+	{
+		font-size: 2.5vw;
+	}
+    .step p,
+	.element p 
+    {
+        font-size: 3vw;
+		margin: 3vw 0 1.5vw 0;
+    }
+	
 	.innertopic
 	{
 		width:80%;
@@ -366,142 +416,70 @@ body
 	
 	.topic
 	{
-		height: 500px;
-	}
-	.outertopic::before
-	{
-		height: 70px;
-		top:-35px;
+		height: 50vw;
 	}
 	.topic h1
 	{
-		font-size:35px;
+		font-size:4.5vw;
 	}
+	.show-buttons
+	{
+		font-size: 2vw;
+	}
+    .step p,
+	.element p 
+    {
+        font-size: 2.5vw;
+		margin: 2.5vw 0 1vw 0;
+    }
+	
 	.innertopic
 	{
 		width:80%;
 	}
-	.innertopic.afterfake
+	
+	.arrow-down.icon,
+	.arrow-up.icon
 	{
-		top: calc(50% - 35px);
+		width: 2px;
+		height: 20px;
+	}
+	.arrow-right.icon
+	{
+		width: 20px;
+		height: 2px;
+	}
+	.arrow-down.icon:before
+	{
+		position: relative;
+		left: -5px;
+		top: 8px;
+		width: 10px;
+		height: 10px;
+		border-top: solid 2px currentColor;
+		border-right: solid 2px currentColor;
+	}
+	.arrow-up.icon:before 
+	{
+		position: relative;
+		left: -5px;
+		top: 1px;
+		width: 10px;
+		height: 10px;
+		border-top: solid 2px currentColor;
+		border-right: solid 2px currentColor;
+	}
+	.arrow-right.icon:before
+	{
+		position: relative;
+		left:7px;
+		top: -5px;
+		width: 10px;
+		height: 10px;
+		border-top: solid 2px currentColor;
+		border-right: solid 2px currentColor;
 	}
 	
-.showmore,
-.showless
-{
-	font-size: 13px;
-	width: 150px;
-	height: 60px;
-	margin: 0 auto;
-	cursor: pointer;
-	opacity: 1;
-	-webkit-transition: .5s;
-	-moz-transition: .5s;
-	-ms-transition: .5s;
-	-o-transition: .5s;
-	transition: .5s;
-}
-.showless
-{
-	position: absolute;
-	left: 50%;
-	-webkit-transform: translate(-50%, 0);
-	-moz-transform: translate(-50%, 0);
-	-o-transform:translate(-50%, 0);
-	transform: translate(-50%, 0);
-	top: 0;
-}
-#outertopic3 .showmore
-{
-	display: inline-block;
-	padding:10px;
-	width: auto;
-	height: auto;
-}
-
-#topic3 .showmore a 
-{
-	line-height:30px;
-}
-.arrow-right.icon,
-.arrow-down.icon,
-.arrow-up.icon
-{
-	color: currentColor;
-	position: relative;
-	margin: 12px 0 0 0;
-	left:50%;
-	width: 2px;
-	height: 20px;
-	background-color: currentColor;
-	-webkit-transition: 0.5s;
-	-moz-transition: 0.5s;
-	-ms-transition:0.5s;
-	-o-transition:0.5s;
-	transition: 0.5s;
-}
-.arrow-up.icon
-{
-	margin: 12px 0 12px 0;
-}
-.arrow-right.icon
-{
-	margin:0;
-	display:inline-block;
-	left:10px;
-	top:-3px;
-	width: 20px;
-	height: 2px;
-}
-.arrow-down.icon:before
-{
-	position: relative;
-	left: -5px;
-	top: 8px;
-	width: 10px;
-	height: 10px;
-	border-top: solid 2px currentColor;
-	border-right: solid 2px currentColor;
-	-webkit-transform: rotate(135deg);
-	transform: rotate(135deg);
-}
-.arrow-up.icon:before 
-{
-	position: relative;
-	left: -5px;
-	top: 1px;
-	width: 10px;
-	height: 10px;
-	border-top: solid 2px currentColor;
-	border-right: solid 2px currentColor;
-	-webkit-transform: rotate(-45deg);
-	transform: rotate(-45deg);
-}
-.arrow-right.icon:before
-{
-	position: relative;
-	left:7px;
-	top: -5px;
-	width: 10px;
-	height: 10px;
-	border-top: solid 2px currentColor;
-	border-right: solid 2px currentColor;
-	-webkit-transform: rotate(45deg);
-	transform: rotate(45deg);
-}
-.showless:hover .arrow-up.icon,
-.showmore:hover .arrow-down.icon
-{
-	margin: 20px 0 0 0;
-}
-.showless:hover .arrow-up.icon
-{
-	margin: 4px 0 20px 0;
-}
-.showmore:hover .arrow-right.icon
-{
-	left:18px;
-}
 .morecontent
 {
 	max-height:1700px; /*value bigger than div can ever get, but as small as possible */
@@ -526,12 +504,6 @@ body
 	margin: -15px auto 40px auto;
     width: 90%;
 }
-	
-    .step p,
-	.element p 
-    {
-        font-size: 25px;
-    }
 	.orderbtn
 	{
 		padding-top: 50px;
@@ -544,7 +516,27 @@ body
 } 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    .element
+    
+	.topic
+	{
+		height: 40vw;
+	}
+	.topic h1
+	{
+		font-size:4vw;
+	}
+	.show-buttons
+	{
+		font-size: 1.5vw;
+	}
+    .step p,
+	.element p 
+    {
+        font-size: 2vw;
+		margin: 2vw 0 1vw 0;
+    }
+	
+	.element
     {
         margin-bottom: 50px;
     }
@@ -559,21 +551,19 @@ body
         display: inline-block;
         vertical-align: middle;
     }
-    .step p,
-	.element p 
-    {
-        font-size: 30px;
-    }
 }
 /* Extra enormous devices (TV, 1700px and up) */
 @media only screen and (min-width: 1700px) {
+	.topic
+	{
+		height: 35vw;
+	}
+	.topic h1
+	{
+		font-size:3.5vw;
+	}
     .elementtitle
     {
         font-size: 40px;
-    }
-    .step p,
-	.element p 
-    {
-        font-size: 35px;
     }
 }
