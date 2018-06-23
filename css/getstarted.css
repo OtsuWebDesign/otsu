@@ -1,0 +1,156 @@
+/*Extra small devices (small phones, 350px and down)*/
+
+body
+{
+    margin-top: 60px;
+    color: rgb(119, 119, 119);
+}
+
+ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ol
+{
+    margin: 0;
+    padding: 0;
+}
+
+.chapter
+{
+    border-bottom: rgba(212, 212, 212, 0.596) 1px dashed;
+}
+
+#chapters
+{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#gscontainer
+{
+    width: 100%;
+    text-align: center;
+}
+
+#intro
+{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#index
+{
+    background: black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#index h3
+{
+    color: rgb(177, 177, 177);
+}
+
+#index h2
+{
+    color: rgb(24, 95, 153);
+}
+
+ul a
+{
+    color: rgb(85, 85, 85);
+    text-decoration: none;
+}
+ul li ul li
+{
+    padding: 5px;
+}
+
+ul a:hover
+{
+    color: rgb(197, 197, 197);
+}
+
+/* Small devices (phones, 350px and up) */
+@media only screen and (min-width: 350px) {
+	
+
+} 
+
+/* Small devices (large phones, 540px and up) */
+@media only screen and (min-width: 540px) {
+
+	
+} 
+/* Small devices (portrait tablets, landscape phones, 640px and up) */
+@media only screen and (min-width: 640px) {
+    
+} 
+
+/* Medium devices (landscape tablets, 800px and up) */
+@media only screen and (min-width: 800px) {
+	
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	
+    #intro 
+    {
+        font-size: 20px;
+    }
+
+    ul li 
+    {
+        display: inline-block;
+        padding: 30px;
+    }
+
+    ul li ul li
+    {
+        display: block;
+    }
+
+    #index h2 
+    {
+        font-size: 30px;
+    }
+
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+    .chapter h2
+    {
+        font-size: 36px;
+    }
+
+    .chapterelement
+    {
+        height: 40vh;
+        font-size: 20px;
+        margin-bottom: 60px;
+    }
+
+    .chapterelement h3
+    {
+        font-size: 28px;
+    }
+
+    #intro 
+    {
+        font-size: 40px;
+        height: 100vh;
+    }
+
+}
+/* Extra enormous devices (TV, 1700px and up) */
+@media only screen and (min-width: 1700px) {
+	
+}
