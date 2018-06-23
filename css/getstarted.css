@@ -100,12 +100,54 @@ ul a:hover
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 	
-	
+    #intro 
+    {
+        font-size: 20px;
+    }
+
+    ul li 
+    {
+        display: inline-block;
+        padding: 30px;
+    }
+
+    ul li ul li
+    {
+        display: block;
+    }
+
+    #index h2 
+    {
+        font-size: 30px;
+    }
+
 } 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-	
+
+    .chapter h2
+    {
+        font-size: 36px;
+    }
+
+    .chapterelement
+    {
+        height: 40vh;
+        font-size: 20px;
+        margin-bottom: 60px;
+    }
+
+    .chapterelement h3
+    {
+        font-size: 28px;
+    }
+
+    #intro 
+    {
+        font-size: 40px;
+        height: 100vh;
+    }
 
 }
 /* Extra enormous devices (TV, 1700px and up) */
