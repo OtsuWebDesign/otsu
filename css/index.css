@@ -196,6 +196,7 @@ body
 }
 .morecontent
 {
+	margin-top: -110px;
 	max-height:1700px; /*value bigger than div can ever get, but as small as possible */
 	-webkit-transition: 1s ease-in-out;
 	-moz-transition: 1s ease-in-out;
@@ -212,11 +213,11 @@ body
 #whatcontent
 {
 	text-align:center;
-	margin: -15px 0 100px 0;
+	margin: 0 0 100px 0;
 }
 .element
 {
-	margin: -15px auto 40px auto;
+	margin: 0 auto 25px auto;
     width: 90%;
 }
 .elementtitle
@@ -430,7 +431,7 @@ body
 	
 	.topic
 	{
-		height: 50vw;
+		height: 60vw;
 	}
 	.topic h1
 	{
@@ -494,30 +495,25 @@ body
 		border-right: solid 2px currentColor;
 	}
 	
-.morecontent
+/*.morecontent
 {
-	max-height:1700px; /*value bigger than div can ever get, but as small as possible */
-	-webkit-transition: 1s ease-in-out;
-	-moz-transition: 1s ease-in-out;
-	-ms-transition: 1s ease-in-out;
-	-o-transition: 1s ease-in-out;
-	transition: 1s ease-in-out;
+	max-height:1700px;
 }
 .morecontent.less
 {
 	visibility:hidden;
 	max-height: 0px!important;
-}
+}*/
 	#howcontent,
 	#whatcontent
 	{
-		margin: -110px 0 180px 0;
+		margin: 0 0 180px 0;
 	}
-.element
+/*.element
 {
 	margin: -15px auto 40px auto;
     width: 90%;
-}
+}*/
 	.orderbtn
 	{
 		padding-top: 50px;
@@ -533,7 +529,7 @@ body
     
 	.topic
 	{
-		height: 40vw;
+		height: 50vw;
 	}
 	.topic h1
 	{
@@ -569,7 +565,7 @@ body
 @media only screen and (min-width: 1700px) {
 	.topic
 	{
-		height: 35vw;
+		height: 40vw;
 	}
 	.topic h1
 	{
