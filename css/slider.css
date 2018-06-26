@@ -282,12 +282,7 @@
 	opacity: 0.7;
 }
 
-@media only screen and (orientation: landscape) and (max-width: 992px) {
-	#slider-container
-	{
-		height: calc(100% - 70px)!important;
-	}
-	
+@media only screen and (orientation: landscape) {
 	#slider-container:after
 	{
 		top:-39px; /*1px to be sure that there is no space between triangle and content*/
@@ -296,6 +291,12 @@
 	#slider-container.cuted:after
 	{
 		height: 40px;
+	}
+}
+@media only screen and (orientation: landscape) and (max-width: 992px) {
+	#slider-container
+	{
+		height: calc(100% - 70px)!important;
 	}
 }
 
@@ -448,6 +449,15 @@
 /* Small devices (portrait tablets, landscape phones, 640px and up) */
 @media only screen and (min-width: 640px) {
 	
+	#slider-container:after
+	{
+		top:-39px; /*1px to be sure that there is no space between triangle and content*/
+		margin-top:40px;
+	}
+	#slider-container.cuted:after
+	{
+		height: 40px;
+	}
 	/* elementy pojedynczego slajdu */
 	.slider .slide-title
 	{
@@ -516,16 +526,6 @@
 	{
 		height: 100%;
 		margin-top: 0;
-	}
-
-	#slider-container:after
-	{
-		top:-69px; /*1px to be sure that there is no space between triangle and content*/
-		margin-top:70px;
-	}
-	#slider-container.cuted:after
-	{
-		height: 70px;
 	}
 	/* elementy pojedynczego slajdu */
 	.slider .slide-title

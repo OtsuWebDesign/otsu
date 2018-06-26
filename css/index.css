@@ -18,6 +18,8 @@ body
 	z-index: 2;
 	margin-top:-8vw;
 }
+#outertopic1::before
+	{display:none;}
 #outertopic2::before
 	{background:linear-gradient(to bottom left, white 50%,black 0)}
 #outertopic3::before
@@ -336,8 +338,8 @@ body
     
 	.outertopic::before
 	{
-		height: 80px;
-		margin-top:-40px;
+		height: 40px;
+		margin-top:-20px;
 	}
 	.topic
 	{
@@ -365,11 +367,6 @@ body
 	.innertopic
 	{
 		width:85%;
-	}
-	
-	.innertopic.afterfake
-	{
-		margin-top:-40px;
 	}
     .elementtitle
     {
