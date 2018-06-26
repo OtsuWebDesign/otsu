@@ -8,10 +8,6 @@ body
 {
 	width: 100%;
 }
-.outertopic
-{
-	position: relative;
-}
 #outertopic2
 	{background-color: black;color:white}
 .outertopic::before
@@ -36,8 +32,6 @@ body
 	height: 110vw;
 	width: 100%;
 	text-align: center;
-	background-size: cover !important;
-	background-position: center center !important;
 	margin-top: 10px;
 }
 .innertopic
@@ -196,7 +190,7 @@ body
 }
 .morecontent
 {
-	margin-top: -110px;
+	margin-top: -50px;
 	max-height:1700px; /*value bigger than div can ever get, but as small as possible */
 	-webkit-transition: 1s ease-in-out;
 	-moz-transition: 1s ease-in-out;
@@ -495,25 +489,15 @@ body
 		border-right: solid 2px currentColor;
 	}
 	
-/*.morecontent
-{
-	max-height:1700px;
-}
-.morecontent.less
-{
-	visibility:hidden;
-	max-height: 0px!important;
-}*/
+	.morecontent
+	{
+		margin-top: 110px;
+	}
 	#howcontent,
 	#whatcontent
 	{
 		margin: 0 0 180px 0;
 	}
-/*.element
-{
-	margin: -15px auto 40px auto;
-    width: 90%;
-}*/
 	.orderbtn
 	{
 		padding-top: 50px;
