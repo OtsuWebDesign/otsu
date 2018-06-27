@@ -192,8 +192,8 @@ body
 }
 .morecontent
 {
-	margin-top: -50px;
-	max-height:1700px; /*value bigger than div can ever get, but as small as possible */
+	margin-top: -14vw;
+	max-height:500vw; /*value bigger than div can ever get, but as small as possible */
 	-webkit-transition: 1s ease-in-out;
 	-moz-transition: 1s ease-in-out;
 	-ms-transition: 1s ease-in-out;
@@ -210,16 +210,16 @@ body
 #whatcontent
 {
 	text-align:center;
-	margin: 0 0 100px 0;
+	margin: 0 0 20vw 0;
 }
 .element
 {
-	margin: 0 auto 25px auto;
+	margin: 0 auto 4vw auto;
     width: 90%;
 }
 .elementtitle
 {
-    font-size: 17px;
+    font-size: 6vw;
     font-weight: bold;
     font-style: italic;
 }
@@ -228,16 +228,13 @@ body
     background-repeat: no-repeat;
 	background-size: cover !important;
 	background-position: center center !important;
-    width: 80px;
-    height: 80px;
+    width: 25vw;
+    height: 25vw;
     margin-left: auto;
     margin-right: auto;
 }
 .element p 
-{
-	font-size: 12px;
-}
-
+	{font-size: 5vw;}
 #passiontitle
 	{color: rgb(228, 59, 59);}
 #passionimg
@@ -246,29 +243,30 @@ body
 	{color: green;}
 #techimg
 {
-    width: 197px;
-    height: 80px;
+	margin-top: 3vw;
+    width: 50vw;
+    height: 20vw;
     background-image: url(../img/how/min/tech.png);
 }
 #knowledgetitle
 	{color: orangered;}
 #knowledgeimg
 {
-    margin-top: 10px;
+	margin-top: 3vw;
     background-image: url(../img/how/min/knowledge.png);
 }
 #intuitivetitle
 	{color: rgb(95, 95, 95);}
 #intuitiveimg
 {
-    margin-top: 10px;
+	margin-top: 3vw;
     background-image: url(../img/how/min/intuitive.png);
 }
 #responsivetitle
 	{color: rgb(192, 91, 138);}
 #responsiveimg
 {
-	margin-top: 10px;
+	margin-top: 3vw;
 	background-image: url(../img/how/min/responsive.png);
 }
 
@@ -313,51 +311,52 @@ body
 		margin-top:-5vw;
 	}
 	.topic
-	{
-		height: 100vw;
-	}
+		{height: 90vw;}
 	.show-buttons
-	{
-		font-size: 3.5vw;
-	}
+		{font-size: 3.5vw;}
+	.morecontent
+		{margin-top: -12vw;}
     .step p,
 	.element p 
     {
         font-size: 4.5vw;
 		margin: 4.5vw 0 2.5vw 0;
     }
-	
+	.element
+		{margin: 0 auto 3vw auto;}
 	.elementpic
 	{
-		width: 100px;
-		height: 100px;
+		width: 20vw;
+		height: 20vw;
 	}
-} 
+	#techimg
+	{
+		width: 45vw;
+		height: 18vw;
+	}
 /* Small devices (portrait tablets, landscape phones, 640px and up) */
 @media only screen and (min-width: 640px) {
     
+	.morecontent
+	{
+		max-height:700vw; /*value bigger than div can ever get, but as small as possible */
+	}
 	.outertopic::before
 	{
 		height: 40px;
 		margin-top:-20px;
 	}
 	.topic
-	{
-		height: 80vw;
-	}
+		{height: 75vw;}
 	.topic h1
-	{
-		font-size:5.5vw;
-	}
+		{font-size:5.5vw;}
 	.show-buttons
-	{
-		font-size: 3vw;
-	}
+		{font-size: 3vw;}
 	.showmore,
 	.showless
-	{
-		padding: 1vw;
-	}
+		{padding: 1vw;}
+	.morecontent
+		{margin-top: -10vw;}
     .step p,
 	.element p 
     {
@@ -365,65 +364,65 @@ body
 		margin: 4vw 0 2vw 0;
     }
 	.innertopic
-	{
-		width:85%;
-	}
-    .elementtitle
-    {
-        font-size: 28px;
-    }
-	.elementpic
-	{
-		width: 120px;
-		height: 120px;
-	}
+		{width:85%;}
+	#howcontent,
+	#whatcontent
+		{margin: 0 0 16vw 0;}
+	.element
+		{margin: 0 auto 3vw auto;}
+	.elementtitle
+		{font-size: 4vw;}
 } 
 /* Medium devices (landscape tablets, 800px and up) */
 @media only screen and (min-width: 800px) {
 	
 	.topic
-	{
-		height: 65vw;
-	}
+		{height: 65vw;}
 	.topic h1
-	{
-		font-size:5vw;
-	}
+		{font-size:5vw;}
 	.show-buttons
-	{
-		font-size: 2.5vw;
-	}
+		{font-size: 2.5vw;}
+	.innertopic
+		{width:80%;}
     .step p,
 	.element p 
     {
         font-size: 3vw;
 		margin: 3vw 0 1.5vw 0;
     }
-	
-	.innertopic
-	{
-		width:80%;
-	}
+	.morecontent
+		{margin-top: -15vw;}
+	#howcontent,
+	#whatcontent
+		{margin: 0 0 12vw 0;}
+	.element
+		{margin: 0 auto 1vw auto;}
 	.elementtitle
     {
-        font-size: 23px;
+		font-size: 3vw;
         display: inline-block;
-        margin-right: 50px;
+        margin-right: 2vw;
     }
     .elementpic
     {
+		margin-top: 0!important;
         display: inline-block;
         vertical-align: middle;
 		width: 150px;
 		height: 150px;
     }
-} 
+	#techimg
+	{
+		width: 300px;
+		height: 120px;
+	}
+}
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 	
 	.topic
 	{
-		height: 60vw;
+		height: 45vw;
 	}
 	.topic h1
 	{
@@ -486,16 +485,13 @@ body
 		border-top: solid 2px currentColor;
 		border-right: solid 2px currentColor;
 	}
-	
 	.morecontent
 	{
-		margin-top: 110px;
+		margin-top: -8vw;
 	}
 	#howcontent,
 	#whatcontent
-	{
-		margin: 0 0 180px 0;
-	}
+		{margin: 0 0 10vw 0;}
 	.orderbtn
 	{
 		padding-top: 50px;
@@ -511,7 +507,7 @@ body
     
 	.topic
 	{
-		height: 50vw;
+		height: 35vw;
 	}
 	.topic h1
 	{
@@ -526,35 +522,27 @@ body
     {
         font-size: 2vw;
     }
-	
-	.element
-    {
-        margin-bottom: 50px;
-    }
-    .elementtitle
-    {
-        font-size: 35px;
-        display: inline-block;
-        margin-right: 50px;
-    }
-    .elementpic
-    {
-        display: inline-block;
-        vertical-align: middle;
-    }
+	.morecontent
+	{
+		margin-top: -7vw;
+		max-height: 900vw; /*value bigger than div can ever get, but as small as possible */
+	}
+	#howcontent,
+	#whatcontent
+		{margin: 0 0 7vw 0;}
 }
 /* Extra enormous devices (TV, 1700px and up) */
 @media only screen and (min-width: 1700px) {
 	.topic
 	{
-		height: 40vw;
+		height: 30vw;
 	}
 	.topic h1
 	{
 		font-size:3.5vw;
 	}
-    .elementtitle
-    {
-        font-size: 40px;
-    }
+	.morecontent
+	{
+		margin-top: -5vw;
+	}
 }
