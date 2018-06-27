@@ -2,7 +2,7 @@
 
 #slider-container
 {
-	height: 30%;
+	height: 50%;
     width: 100%;
 	margin-top: 50px;
 	text-align: center;
@@ -348,12 +348,8 @@
 	}
 } 
 /* Small devices (phones, 350px and up) */
-@media only screen and (min-width: 360px) {
+@media only screen and (min-width: 350px) {
 	
-	#slider-container
-	{
-		height: 50%;
-	}
 	/* elementy pojedynczego slajdu */
 	.slider .slide-title
 	{
