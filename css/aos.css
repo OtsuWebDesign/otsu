@@ -1,3 +1,6 @@
+[class*=aos]{
+    transition: 1s all;
+}
 [class*=fade]{
     opacity:0;
     transition-property:opacity,transform

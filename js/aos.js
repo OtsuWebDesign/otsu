@@ -9,6 +9,8 @@ function aos()
 		const elementOffset = elements[i].offsetTop;
 		const elementHeight = elements[i].offsetHeight;
 		if(scrolled + windowHeight > elementOffset + elementHeight)
-			elements[i].classList.add('aos-animated');
+			elements[i].classList.add('aos-animate');
+		else
+			elements[i].classList.remove('aos-animate');
 	}
 }
