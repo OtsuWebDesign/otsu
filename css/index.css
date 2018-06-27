@@ -5,9 +5,7 @@ body
 }
 
 #container
-{
-	width: 100%;
-}
+	{width: 100%;}
 #outertopic2
 	{background-color: black;color:white}
 .outertopic::before
@@ -25,9 +23,7 @@ body
 #outertopic3::before
 	{background:linear-gradient(to bottom left, black 50%,white 0)}
 .overflow-wrapper
-{
-	overflow: hidden;
-}
+	{overflow: hidden;}
 .topic
 {
 	position:relative;
@@ -48,9 +44,7 @@ body
 	transform: translate(-50%,-50%);
 }
 .topic h1
-{
-	font-size:7vw;
-}
+	{font-size:7vw;}
 .step
 {
 	font-size: 5vw;
@@ -58,13 +52,9 @@ body
 	text-align: center;
 }
 .step p
-{
-	margin: 5vw 0 3vw 0;
-}
+	{margin: 5vw 0 3vw 0;}
 .step a
-{
-	color:black;
-}
+	{color:black;}
 .show-buttons
 {
 	position: relative;
@@ -95,9 +85,7 @@ body
 	top: 0;
 }
 .novisibility
-{
-	visibility: hidden;
-}
+	{visibility: hidden;}
 .novisibility.showless
 {
 	-webkit-transform: translate(-50%, 0) rotateX(90deg);
@@ -130,9 +118,7 @@ body
 	transition: 0.5s;
 }
 .arrow-up.icon
-{
-	margin: 1vw 0 1vw 0;
-}
+	{margin: 1vw 0 1vw 0;}
 .arrow-right.icon
 {
 	margin:0;
@@ -179,20 +165,14 @@ body
 	transform: rotate(45deg);
 }
 .showmore:hover .arrow-down.icon
-{
-	margin: 2vw 0 0 0;
-}
+	{margin: 2vw 0 0 0;}
 .showless:hover .arrow-up.icon
-{
-	margin: 0 0 2vw 0;
-}
+	{margin: 0 0 2vw 0;}
 .showmore:hover .arrow-right.icon
-{
-	left:2vw;
-}
+	{left:2vw;}
 .morecontent
 {
-	margin-top: -14vw;
+	margin-top: -12vw;
 	max-height:500vw; /*value bigger than div can ever get, but as small as possible */
 	-webkit-transition: 1s ease-in-out;
 	-moz-transition: 1s ease-in-out;
@@ -271,24 +251,22 @@ body
 }
 
 #orderbottomheader
-{
-	text-align: center;
-}
+	{text-align: center;}
+#orderbottomheader h1
+	{font-size: 5vw;}
 
-.orderbtn {
-	margin: 20px auto;
-	padding: 20px 30px 20px 30px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
+.orderbtn 
+{
+	margin: 4vw auto 0 auto;
+	border-radius: 4vw;
 	
 	background: #00a3cc;
 	color: white;
+	line-height: 20vw;
 	text-align: center;
-	font-size: 20px;
+	font-size: 6vw;
 	text-decoration: none;
-	line-height: 50px;
-	width:80%;
+	width:90%;
 	
 	-webkit-transition: .7s;
 	-moz-transition: .7s;
@@ -297,9 +275,10 @@ body
 	transition: .7s;
 }
 
-.orderbtn:hover {
+.orderbtn:hover 
+{
 	background: #00aeff;
-	font-size: 23px;
+	font-size: 7vw;
 }
 
 /* Small devices (phones, 350px and up) */
@@ -315,7 +294,7 @@ body
 	.show-buttons
 		{font-size: 3.5vw;}
 	.morecontent
-		{margin-top: -12vw;}
+		{margin-top: -10vw;}
     .step p,
 	.element p 
     {
@@ -338,16 +317,14 @@ body
 @media only screen and (min-width: 640px) {
     
 	.morecontent
-	{
-		max-height:700vw; /*value bigger than div can ever get, but as small as possible */
-	}
+	{max-height:700vw;}
 	.outertopic::before
 	{
 		height: 40px;
 		margin-top:-20px;
 	}
 	.topic
-		{height: 75vw;}
+		{height: 65vw;}
 	.topic h1
 		{font-size:5.5vw;}
 	.show-buttons
@@ -360,7 +337,7 @@ body
     .step p,
 	.element p 
     {
-        font-size: 4vw;
+        font-size: 3.5vw;
 		margin: 4vw 0 2vw 0;
     }
 	.innertopic
@@ -372,12 +349,24 @@ body
 		{margin: 0 auto 3vw auto;}
 	.elementtitle
 		{font-size: 4vw;}
+		
+	#orderbottomheader h1
+		{font-size: 4.5vw;}
+	.orderbtn 
+	{
+		border-radius: 3.5vw;
+		line-height: 15vw;
+		font-size: 5vw;
+		width:85%;
+	}
+	.orderbtn:hover 
+		{font-size: 5.5vw;}
 } 
 /* Medium devices (landscape tablets, 800px and up) */
 @media only screen and (min-width: 800px) {
 	
 	.topic
-		{height: 65vw;}
+		{height: 53vw;}
 	.topic h1
 		{font-size:5vw;}
 	.show-buttons
@@ -391,7 +380,7 @@ body
 		margin: 3vw 0 1.5vw 0;
     }
 	.morecontent
-		{margin-top: -15vw;}
+		{margin-top: -10vw;}
 	#howcontent,
 	#whatcontent
 		{margin: 0 0 12vw 0;}
@@ -416,6 +405,17 @@ body
 		width: 300px;
 		height: 120px;
 	}
+	#orderbottomheader h1
+		{font-size: 4vw;}
+	.orderbtn 
+	{
+		border-radius: 3vw;
+		line-height: 13vw;
+		font-size: 4.5vw;
+		width:80%;
+	}
+	.orderbtn:hover 
+		{font-size: 4.8vw;}
 }
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
@@ -481,15 +481,17 @@ body
 	#howcontent,
 	#whatcontent
 		{margin: 0 0 10vw 0;}
-	.orderbtn
+	#orderbottomheader h1
+		{font-size: 3.5vw;}
+	.orderbtn 
 	{
-		padding-top: 50px;
-		padding-bottom: 50px;
-		font-size: 36px;
+		border-radius: 2.7vw;
+		line-height: 12vw;
+		font-size: 4vw;
+		width:75%;
 	}
-	.orderbtn:hover {
-		font-size: 40px;
-	}
+	.orderbtn:hover 
+		{font-size: 4.3vw;}
 } 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
@@ -511,6 +513,17 @@ body
 	#howcontent,
 	#whatcontent
 		{margin: 0 0 7vw 0;}
+	#orderbottomheader h1
+		{font-size: 3vw;}
+	.orderbtn 
+	{
+		margin-top: 3vw;
+		border-radius: 2.5vw;
+		line-height: 10vw;
+		font-size: 3.5vw;
+	}
+	.orderbtn:hover 
+		{font-size: 4.3vw;}
 }
 /* Extra enormous devices (TV, 1700px and up) */
 @media only screen and (min-width: 1700px) {
