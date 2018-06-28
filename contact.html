@@ -62,7 +62,7 @@
 			<div class='element'><i class='icon-phone'></i>000-000-000</div>
 			<div class='element'><i class='icon-mail'></i> placeholder@email.com</div>
 		</section>
-		<section>
+		<section class="aos-area">
 			<div id='reginfo'>
 				<h2>Dane rejestracyjne:</h2>
 				<h3>OTSU Webdesign</h3>
@@ -85,14 +85,16 @@
 		<script src="js/aos.js"></script>
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID in google analytics -->
         <script>
+			document.getElementById('reginfo').classList.add('aos', 'flip-up');
 			window.onload = function()
 			{
-				initScroll();
 				activeNav();
+				aos();
 			}
 			window.onscroll = function()
 			{
 				navcolor();
+				aos();
 			}
             window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
             ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
