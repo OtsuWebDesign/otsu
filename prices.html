@@ -17,8 +17,42 @@
 		<link rel="stylesheet "href="https://fonts.googleapis.com/css?family=Lato|Roboto" type="text/css">
 	</head>
 	<body>
+		<!-- Nawigacja -->
+		<noscript>
+			<div style="width:100%; position:fixed; top:0; color:red; z-index: 13;">
+				Twoja przeglądarka ma wyłączony Javascript! Strona nie będzie wyświetlana w pełni poprawnie.
+			</div>
+		</noscript>
+		<nav>
+			<div id="nav">
+				<a href='index.html'><div id="logo"></div></a>
+				<div id="outerburger">
+					<div id="hamburger" class="menu icon"></div>
+				</div>
+				<div id="menu">
+					<ul>
+						<li><a href='index.html'>Główna</a></li>
+						<li><a href='about.html'>O nas</a></li>
+						<li><a href='projects.html'>Nasze projekty</a></li>
+						<li><a class="current" href='prices.html'>Cennik</a></li>
+						<li><a href='contact.html'>Kontakt</a></li>
+					</ul>
+				</div>
+				<noscript>
+					<div id="nojs-menu">
+						<ul>
+							<li><a href='index.html'>Główna</a></li>
+							<li><a href='about.html'>O nas</a></li>
+							<li><a href='projects.html'>Nasze projekty</a></li>
+							<li><a class="current" href='prices.html'>Cennik</a></li>
+							<li><a href='contact.html'>Kontakt</a></li>
+						</ul>
+					</div>
+				</noscript>
+			</div>
+		</nav>
 		<section>
-		<div id='services'>
+		<div id='services' class="aos-area">
 			<div class='service' id="vcard">
 				<div class='serviceheader'><h2>Wizytówka</h2></div>
 				<div class='servicepicture'>This is a picture placeholder :)</div>
@@ -83,41 +117,6 @@
 		</div>
 		</section>
 		
-		<!-- Nawigacja -->
-		<noscript>
-			<div style="width:100%; position:fixed; top:0; color:red; z-index: 13;">
-				Twoja przeglądarka ma wyłączony Javascript! Strona nie będzie wyświetlana w pełni poprawnie.
-			</div>
-		</noscript>
-		<nav>
-			<div id="nav">
-				<a href='index.html'><div id="logo"></div></a>
-				<div id="outerburger">
-					<div id="hamburger" class="menu icon"></div>
-				</div>
-				<div id="menu">
-					<ul>
-						<li><a href='index.html'>Główna</a></li>
-						<li><a href='about.html'>O nas</a></li>
-						<li><a href='projects.html'>Nasze projekty</a></li>
-						<li><a class="current" href='prices.html'>Cennik</a></li>
-						<li><a href='contact.html'>Kontakt</a></li>
-					</ul>
-				</div>
-				<noscript>
-					<div id="nojs-menu">
-						<ul>
-							<li><a href='index.html'>Główna</a></li>
-							<li><a href='about.html'>O nas</a></li>
-							<li><a href='projects.html'>Nasze projekty</a></li>
-							<li><a class="current" href='prices.html'>Cennik</a></li>
-							<li><a href='contact.html'>Kontakt</a></li>
-						</ul>
-					</div>
-				</noscript>
-			</div>
-		</nav>
-		
 		<!-- Content -->
 		<footer>
 			<div id="footer">Otsu&trade; Webdesign Maciej Witkowski i Radosław Kamiński - Wszelkie prawa zastrzeżone &copy;</div>
@@ -128,14 +127,18 @@
 		<script src="js/aos.js"></script>
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID in google analytics -->
         <script>
+			let services = document.getElementsByClassName('service');
+			for(let i=0; i<services.length; i++)
+				services[i].classList.add('aos', 'fade-up');
 			window.onload = function()
 			{
-				initScroll();
 				activeNav();
+				aos();
 			}
 			window.onscroll = function()
 			{
 				navcolor();
+				aos();
 			}
             window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
             ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
