@@ -1,10 +1,5 @@
 /*Extra small devices (small phones, 350px and down)*/
 
-#squares
-{
-   margin-left: -2%;
-   margin-right: -2%;
-}
 #squares::after
 {
    clear: both;
