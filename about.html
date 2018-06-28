@@ -90,6 +90,11 @@
 			<div id="footer">Otsu&trade; Webdesign Maciej Witkowski i Radosław Kamiński - Wszelkie prawa zastrzeżone &copy;</div>
 		</footer>
 		<!-- Skrypty -->
+		<script lang="javascript">
+		let persons = document.getElementsByClassName('person');
+		persons[0].classList.add('aos', 'fade-left');
+		persons[1].classList.add('aos', 'fade-right')
+		</script>
         <script src="js/navcolor.js"></script>
         <script src="js/plugins.js"></script>
 		<script src="js/hamburger.js"></script>
@@ -104,10 +109,12 @@
 			{
 				initScroll();
 				activeNav();
+				aos();
 			}
 			window.onscroll = function()
 			{
 				navcolor();
+				aos();
 			}
             window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
             ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
