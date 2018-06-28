@@ -1,23 +1,23 @@
 function togglemore(topic_id)
 {
-	if(document.querySelector("[topic-id='"+topic_id+"']").classList.contains('less'))
+	if(document.getElementsByClassName("morecontent-"+topic_id)[0].classList.contains('less'))
 	{
-		document.querySelector("[showmore-id='"+topic_id+"']").classList.add('novisibility');
-		setTimeout(() => document.querySelector("[showless-id='"+topic_id+"']").classList.remove('novisibility') ,500);
-		document.querySelector("[topic-id='"+topic_id+"']").classList.remove('less');
+		document.getElementsByClassName("showmore-"+topic_id)[0].classList.add('novisibility');
+		setTimeout(() => document.getElementsByClassName("showless-"+topic_id)[0].classList.remove('novisibility') ,500);
+		document.getElementsByClassName("morecontent-"+topic_id)[0].classList.remove('less');
 		setTimeout(function()
 		{
-			document.querySelector("[topic-id='"+topic_id+"']").style.maxHeight = document.querySelector("[topic-id='"+topic_id+"']").offsetHeight+'px';
+			document.getElementsByClassName("morecontent-"+topic_id)[0].style.maxHeight = document.getElementsByClassName("morecontent-"+topic_id)[0].offsetHeight+'px';
 		}, 1050);
 	}
 	else 
 	{
-		document.querySelector("[showless-id='"+topic_id+"']").classList.add('novisibility');
-		setTimeout(() => document.querySelector("[showmore-id='"+topic_id+"']").classList.remove('novisibility') ,500);
-		document.querySelector("[topic-id='"+topic_id+"']").classList.add('less');
+		document.getElementsByClassName("showless-"+topic_id)[0].classList.add('novisibility');
+		setTimeout(() => document.getElementsByClassName("showmore-"+topic_id)[0].classList.remove('novisibility') ,500);
+		document.getElementsByClassName("morecontent-"+topic_id)[0].classList.add('less');
 		setTimeout(function()
 		{
-			document.querySelector("[topic-id='"+topic_id+"']").removeAttribute('style');
+			document.getElementsByClassName("morecontent-"+topic_id)[0].removeAttribute('style');
 		}, 1050);
 	}
 };
