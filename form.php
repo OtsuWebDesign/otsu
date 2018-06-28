@@ -54,7 +54,7 @@
 
         <!-- Content -->
         <div style='margin-top: 100px; text-align: center;'>
-        <h1>Dziękujemy za wypełnienie formularza! (który nie działa :d)</h1>
+        <h1>Dziękujemy za wypełnienie formularza!</h1>
         <a href='order.html'><h2>Placeholderowy przycisk powrotu do formularza</h2></a>
 
         <?php
