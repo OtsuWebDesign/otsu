@@ -64,16 +64,16 @@ input[type='submit']
     margin-bottom: 50px;
     padding: 25px;
     cursor: pointer;
-    background: rgb(0, 133, 29);
+    background: #00a3cc;
     border: 0;
     outline: 0;
     color: white;
     font-family: 'Roboto', sans-serif;
     font-size: 25px;
     vertical-align: sub;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+    -webkit-border-radius: 4vw;
+    -moz-border-radius: 4vw;
+    border-radius: 4vw;
 }
 
 #radiochoice
