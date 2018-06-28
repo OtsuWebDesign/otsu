@@ -59,9 +59,10 @@ input[type='radio']
 
 input[type='submit']
 {
+    width: 300px;
     margin-top: 30px;
     margin-bottom: 50px;
-    padding: 30px;
+    padding: 25px;
     cursor: pointer;
     background: rgb(0, 133, 29);
     border: 0;
@@ -69,12 +70,17 @@ input[type='submit']
     color: white;
     font-family: 'Roboto', sans-serif;
     font-size: 25px;
+    vertical-align: sub;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
 
 #radiochoice
 {
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px;
 }
 
 #formcontainer
@@ -85,15 +91,21 @@ input[type='submit']
     margin-right: auto;
 }
 
+#captcha
+{
+    width: 300;
+    display: inline-block;
+}
+
 /* Small devices (phones, 350px and up) */
 @media only screen and (min-width: 350px) {
-	
+    
 
 } 
 
 /* Small devices (large phones, 540px and up) */
 @media only screen and (min-width: 540px) {
-    
+        
 	
 } 
 /* Small devices (portrait tablets, landscape phones, 640px and up) */
@@ -116,6 +128,11 @@ select
 {
     width: 55%;
 }
+
+    input[type='submit']
+    {
+        margin-left: 10px;
+    }
 	
 } 
 
