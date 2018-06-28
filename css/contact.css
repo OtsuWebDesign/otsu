@@ -11,7 +11,7 @@
     line-height: 60px;
     background: rgb(20, 157, 199);
     color: white;
-    font-size: 17px;
+    font-size: 20px;
     border-top : 1px white dashed;
 }
 
@@ -32,9 +32,10 @@ h1
     background: #3b5999;
     color: white;
     height: 120px;
-    padding-top:10px;
+    padding-top:20px;
     padding-bottom: 10px;
     margin-top: 15px;
+    line-height: 0.4;
 }
 
 #fb:hover
@@ -56,8 +57,9 @@ h1
     border-top : 1px white dashed;
     color: white;
     height: 120px;
-    padding-top:10px;
+    padding-top:20px;
     padding-bottom: 10px;
+    line-height: 0.4;
 }
 
 #form:hover
@@ -113,7 +115,11 @@ h1
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-	
+    
+    .element
+    {
+        font-size: 30px;
+    }
 	
 } 
 

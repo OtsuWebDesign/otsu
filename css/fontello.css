@@ -63,3 +63,14 @@
 .icon-html:before { content: '\f13b'; } /* '' */
 .icon-css:before { content: '\f13c'; } /* '' */
 .icon-form:before { content: '\f298'; } /* '' */
+
+.icon-phone , .icon-mail  
+{
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.icon-fb, .icon-form, .icon-form2
+{
+  font-size: 50px;
+}
