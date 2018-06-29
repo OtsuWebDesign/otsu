@@ -16,6 +16,12 @@
     
 }
 
+#mail:hover
+{
+    background: rgb(22, 167, 211);
+    cursor: pointer;
+}
+
 body
 {
     text-align: center;
