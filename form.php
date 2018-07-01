@@ -27,11 +27,11 @@
 			<div id="nav" class="nav-transparent">
 				<a href='index.html'><div id="logo"></div></a>
 				<div id="outerburger">
-					<i id="hamburger" class="icon-hamburger"></i>
+					<div id="hamburger" class="menu icon"></div>
 				</div>
 				<div id="menu">
 					<ul>
-						<li><a class="current" href='index.html'>Główna</a></li>
+						<li><a href='index.html'>Główna</a></li>
 						<li><a href='about.html'>O nas</a></li>
 						<li><a href='prices.html'>Cennik</a></li>
 						<li><a href='contact.html'>Kontakt</a></li>
@@ -41,7 +41,7 @@
 				<noscript>
 					<div id="nojs-menu">
 						<ul>
-							<li><a class="current" href='index.html'>Główna</a></li>
+							<li><a href='index.html'>Główna</a></li>
 							<li><a href='about.html'>O nas</a></li>
 							<li><a href='prices.html'>Cennik</a></li>
 							<li><a href='contact.html'>Kontakt</a></li>
@@ -67,13 +67,8 @@
 			<div id="footer">Otsu&trade; Webdesign Maciej Witkowski i Radosław Kamiński - Wszelkie prawa zastrzeżone &copy;</div>
 		</footer>
 		<!-- Skrypty -->
-		<script src="js/navcolor.js"></script>
+		<script src="js/nav.js"></script>
         <script src="js/plugins.js"></script>
-		<script src="js/hamburger.js"></script>
-		<script src="js/slider.js"></script>
-		<script src="js/indeximgload.js"></script>
-		<script src="js/scroll.js"></script>
-		<script src="js/aos.js"></script>
         <script>
 		
 			window.onload = function()
