@@ -23,6 +23,7 @@ select, input[type='text'] , input[type='tel'] , input[type='email'], textarea
 	border-radius: calc(10px + 1.5vw);
 	border: calc(2px + 0.07vw) solid gray;
 	background-color: white;
+	margin: 10px 0 10px 0;
 }
 
 select:hover,
