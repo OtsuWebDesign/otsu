@@ -3,25 +3,26 @@
 body
 {
     text-align: center;
-    margin-top: 100px;
-    color: rgb(119, 119, 119);
+    padding-top: 70px;
+    color: black;
+	font-family: 'Roboto' ,sans-serif;
 }
 
-select
+body,
+h2
+{
+	font-size: calc(15px + 1.5vw);
+	line-height: 1.3;
+}
+
+select, input[type='text'] , input[type='tel'] , input[type='email'], textarea
 {
 	color: gray;
 	width: 95%;
-	padding: 20px;
-	border-radius: 20px;
-	border-color: gray;
+	padding: calc(10px + 1.5vw);
+	border-radius: calc(10px + 1.5vw);
+	border: calc(2px + 0.07vw) solid gray;
 	background-color: white;
-	font-size: 20px;
-	font-family: 'Roboto' ,sans-serif;
-	-webkit-transition: .7s;
-	-moz-transition: .7s;
-	-ms-transition:.7s;
-	-o-transition:.7s;
-	transition: .7s;
 }
 
 select:hover,
@@ -31,33 +32,15 @@ input[type='text']:focus , input[type='tel']:focus , input[type='email']:focus,
 textarea:hover,
 textarea:focus
 {
-    cursor: pointer;
 	border-color: black;
 	color: black;
     outline: none;
 }
 
-input[type='text'] , input[type='tel'] , input[type='email'], textarea
-{
-	color: gray;
-	width: 95%;
-	padding: 15px;
-	border-radius: 20px;
-	border-color: gray;
-	background-color: white;
-	font-size: 20px;
-	font-family: 'Roboto' ,sans-serif;
-	-webkit-transition: .7s;
-	-moz-transition: .7s;
-	-ms-transition:.7s;
-	-o-transition:.7s;
-	transition: .7s;
-}
-
 textarea
 {
 	resize: none;
-	height: 200px;
+	min-height: 100px;
 }
 
 
@@ -68,18 +51,13 @@ input[type='radio']
 
 input[type='submit']
 {
-    width: 300px;
-    margin-top: 30px;
-    margin-bottom: 50px;
-    padding: 25px;
+    width: 100%;
     cursor: pointer;
     background: #00a3cc;
     border: 0;
     outline: 0;
     color: white;
     font-family: 'Roboto', sans-serif;
-    font-size: 25px;
-	line-height: 40px;
     vertical-align: sub;
     border-radius: 20px;
 	-webkit-transition: .7s;
@@ -91,7 +69,6 @@ input[type='submit']
 input[type='submit']:hover 
 {
 	background: #00aeff;
-	font-size: 27px;
 }
 
 #radiochoice
@@ -111,19 +88,28 @@ input[type='submit']:hover
 
 #captcha
 {
-    width: 300;
-    display: inline-block;
+	display: inline-block;
+	max-width:100%;
 }
 
+#rc-imageselect, .g-recaptcha 
+{transform:scale(0.68);-webkit-transform:scale(0.68);transform-origin:0 0;-webkit-transform-origin:0 0;} 
+
+/* Small devices (280px and up) */
+@media only screen and (min-width: 280px) {
+	#rc-imageselect, .g-recaptcha 
+	{transform:scale(0.8);-webkit-transform:scale(0.8);} 
+} 
 /* Small devices (phones, 350px and up) */
 @media only screen and (min-width: 350px) {
-    
-
+	#rc-imageselect, .g-recaptcha 
+	{transform:scale(1);-webkit-transform:scale(1);} 
+	
 } 
 
 /* Small devices (large phones, 540px and up) */
 @media only screen and (min-width: 540px) {
-        
+	
 	
 } 
 /* Small devices (portrait tablets, landscape phones, 640px and up) */
