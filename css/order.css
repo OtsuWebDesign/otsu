@@ -52,6 +52,8 @@ input[type='radio']
 input[type='submit']
 {
     width: 100%;
+    height: calc(20px + 10vw);
+    margin: calc(20px + 1vw) 0 calc(30px + 1vw) 0;
     cursor: pointer;
     background: #00a3cc;
     border: 0;
