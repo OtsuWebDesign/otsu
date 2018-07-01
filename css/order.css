@@ -41,7 +41,7 @@ textarea:focus
 textarea
 {
 	resize: none;
-	min-height: 100px;
+	height: 100px;
 }
 
 
@@ -49,13 +49,16 @@ input[type='radio']
 {
     margin: calc(8px + 0.7vw);
 }
-
+label
+{
+	display: inline-block;
+}
 input[type='submit']
 {
     width: 100%;
-	padding: calc(20px + 1.5vw);
-	border-radius: calc(20px + 1.5vw);
-    margin: calc(20px + 1vw) 0 30px 0;
+    padding: calc(20px + 1.5vw);
+    border-radius: calc(20px + 1.5vw);
+    margin: 15px 0 30px 0;
     font-size: 1.2em;
     cursor: pointer;
     background: #00a3cc;
@@ -63,11 +66,11 @@ input[type='submit']
     outline: 0;
     color: white;
     font-family: 'Roboto', sans-serif;
-	-webkit-transition: .7s;
-	-moz-transition: .7s;
-	-ms-transition:.7s;
-	-o-transition:.7s;
-	transition: .7s;
+    -webkit-transition: .7s;
+    -moz-transition: .7s;
+    -ms-transition:.7s;
+    -o-transition:.7s;
+    transition: .7s;
 }
 input[type='submit']:hover 
 {
@@ -92,7 +95,7 @@ input[type='submit']:hover
 #captcha
 {
 	display: inline-block;
-	max-width:100%;
+	max-width: 100%;
 }
 
 #rc-imageselect, .g-recaptcha 
@@ -150,10 +153,10 @@ input[type='submit']:hover
 	input[type='tel']
 		{width: 30%;}
 	textarea
-		{min-height: 150px;}
+		{height: 150px;}
 	#prefhdr
 	{
-		width: 50%; 
+		width: 40%; 
 		display: inline-block;
 		line-height: 2;
 		position: relative;
@@ -162,9 +165,13 @@ input[type='submit']:hover
 	}
 	#radiochoice
 	{
-		width: 30%;
+		width: 20%;
 		margin: 0;
 		line-height: 1;
+	}
+	input[type="radio"]
+	{
+		margin: 10px;
 	}
 	input[type="submit"]
 	{
@@ -176,10 +183,11 @@ input[type='submit']:hover
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-	
 	#formcontainer
 	{
-		margin-top: 20px;
+		position: relative;
+		top: 50%;
+		transform: translate(0, -50%);
 	}
 	body,
 	h2
@@ -210,7 +218,9 @@ input[type='submit']:hover
 	input[type='tel']
 		{width: 35%;}
 	textarea
-		{min-height: 90px;}
+	{
+		height: calc(30px + 8vw);
+	}
 	#prefhdr
 	{
 		width: 100%; 
@@ -226,7 +236,7 @@ input[type='submit']:hover
 	}
 	input[type="submit"]
 	{
-		width: 95%;
+		width: calc(95% - 310px);
 		font-size: calc(25px);
 		line-height: 78px;
 		padding: 0;
