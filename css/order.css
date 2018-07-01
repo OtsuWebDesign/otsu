@@ -177,38 +177,54 @@ input[type='submit']:hover
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 	
+	#part1
+	{
+		width: 60%;
+		display: inline-block;
+	}
+	#part2
+	{
+		width: 38%;
+		display: inline-block;
+	}
 	select, input[type='text'] , input[type='tel'] , input[type='email'], textarea
 	{
-		width: 80%;
+		width: 90%;
 		padding: calc(10px + 1.5vw);
 		border-radius: calc(10px + 1.5vw);
 	}
 	input[type='text']
-		{width: 40%;}
+		{width: 45%;}
 	input[type='email']
-		{width: 50%;}
+		{width: 55%;}
 	input[type='tel']
-		{width: 30%;}
+		{width: 35%;}
+	#innerpart1
+	{
+
+	}
+	#innerpart2
+	{
+		
+	}
 	textarea
 		{min-height: 150px;}
 	#prefhdr
 	{
-		width: 50%; 
+		width: 100%; 
 		display: inline-block;
-		line-height: 2;
+		line-height: 1;
 		position: relative;
-		top: 50%;
-		transform: translate(0, -50%);
+		top: 1;
+		transform: translate(0, 0);
 	}
 	#radiochoice
 	{
-		width: 30%;
-		margin: 0;
-		line-height: 1;
+		width: 100%;
 	}
 	input[type="submit"]
 	{
-		width: calc(80% - 310px);
+		width: 95%;
 		line-height: 78px;
 		padding: 0;
 	}
