@@ -532,6 +532,10 @@ body
 }
 /* Extra enormous devices (TV, 1700px and up) */
 @media only screen and (min-width: 1700px) {
+	.element
+	{
+		width: 55%;
+	}
 	.topic
 		{height: 30vw;}
 	.topic h1
