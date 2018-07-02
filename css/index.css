@@ -385,7 +385,7 @@ body
 	#whatcontent
 		{margin: 0 0 12vw 0;}
 	.element
-		{margin: 0 auto 1vw auto;}
+		{margin: 0 auto 2vw auto;}
 	.elementtitle
     {
 		font-size: 3vw;
@@ -498,7 +498,7 @@ body
 	
 	.element
 	{
-		width: 60%;
+		width: 70%;
 	}
 	
 	.topic
@@ -534,7 +534,6 @@ body
 @media only screen and (min-width: 1700px) {
 	.element
 	{
-		width: 55%;
 	}
 	.topic
 		{height: 30vw;}
