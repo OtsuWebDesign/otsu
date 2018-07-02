@@ -542,5 +542,16 @@ body
 		{font-size:3.5vw;}
 	.morecontent
 		{margin-top: -5vw;}
-}
+	#orderbottomheader h1
+		{font-size: 2.5vw;}
+	.orderbtn 
+	{
+		margin-top: 2.5vw;
+		border-radius: 2.5vw;
+		line-height: 8vw;
+		font-size: 3vw;
+		width: 70%;
+	}
+	.orderbtn:hover 
+		{font-size: 3.2vw;}
 }
