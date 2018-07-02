@@ -495,7 +495,12 @@ body
 } 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    
+	
+	.element
+	{
+		width: 60%;
+	}
+	
 	.topic
 		{height: 35vw;}
 	.topic h1
