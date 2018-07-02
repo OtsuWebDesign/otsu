@@ -1,0 +1,30 @@
+body
+{
+    text-align: center;
+    margin-top: 100px;
+}
+
+#privinfo
+	{
+        width: 90%;
+        display: inline-block;
+    }	
+    
+/* Medium devices (landscape tablets, 800px and up) */
+@media only screen and (min-width: 800px) {
+	
+#privinfo
+{
+    width: 60%;
+    
+}	
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+    #privinfo
+	{
+		width: 50%;
+    }	
+}

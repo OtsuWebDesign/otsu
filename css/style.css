@@ -28,6 +28,8 @@ footer
 	letter-spacing:0.5px;
 	z-index: 10;
 }
+
+
 /* Small devices (phones, 350px and up) */
 @media only screen and (min-width: 350px) {
 	
