@@ -34,9 +34,9 @@
 					<ul>
 						<li><a href='index.html'>Główna</a></li>
 						<li><a href='about.html'>O nas</a></li>
-						<li><a href='projects.html'>Nasze projekty</a></li>
 						<li><a href='prices.html'>Cennik</a></li>
 						<li><a href='contact.html'>Kontakt</a></li>
+						<li><a href='getstarted.html'>FAQ</a></li>
 					</ul>
 				</div>
 				<noscript>
@@ -44,9 +44,9 @@
 						<ul>
 							<li><a href='index.html'>Główna</a></li>
 							<li><a href='about.html'>O nas</a></li>
-							<li><a href='projects.html'>Nasze projekty</a></li>
 							<li><a href='prices.html'>Cennik</a></li>
 							<li><a href='contact.html'>Kontakt</a></li>
+							<li><a href='getstarted.html'>FAQ</a></li>
 						</ul>
 					</div>
 				</noscript>
@@ -56,35 +56,36 @@
 		<!-- Content -->
 		<div id='formcontainer'>
 			<form method="post" action="form.php">
-				<h2>Typ usługi, jaka Cię interesuje:</h2>
-				<select name="service">
-					<option value="vcard">Wizytówka</option>
-					<option value="wwwpage">Strona internetowa</option>
-					<option value="onlinestore">Sklep internetowy</option>
-					<option value="rebuild">Przebudowa witryny</option>
-					<option value="rebuildour">Przebudowa witryny naszego autorstwa</option>
-				</select>
-				<h2>E-mail:</h2>
-				<input type='email' name='email'></input>
-				<h2>Imię:</h2>
-				<input type='text'></input>
-				<h2>Nazwisko:</h2>
-				<input type='text'></input>
-				<h2>Telefon kontaktowy:</h2>
-				<input type='tel' maxlength='9'></input>
-				<h2>Opis potrzebnej Ci usługi, dodatkowe informacje (opcjonalne):</h2>
-				<textarea></textarea>
-				<h2>Preferowany sposób kontaktu:</h2>
-				<div id='radiochoice'>
-					<input type="radio" id="contactChoice1"
-					name="contact" value="email" checked>E-mailowy
-					</br>
-					<input type="radio" id="contactChoice2"
-					name="contact" value="phone">Telefoniczny
-				  </div>
-				  <div id='captcha'>
+				<div id="part1">
+					<h2>Typ usługi, jaka Cię interesuje:</h2>
+					<select name="service">
+						<option value="vcard">Wizytówka internetowa</option>
+						<option value="wwwpage">Strona internetowa</option>
+						<option value="onlinestore">Sklep internetowy</option>
+						<option value="rebuild">Przebudowa witryny</option>
+						<option value="rebuildour">Przebudowa witryny naszego autorstwa</option>
+					</select>
+					<h2>Podaj dane do kontaktu, użyjemy je tylko do skontaktowania się z tobą.</h2>
+					<input type='text' name="firstname" placeholder="Twoje imię"></input>
+					<input type='text' name="lastname" placeholder="Twoje nazwisko"></input>
+					<input type='email' name="email" placeholder="adres@email.com"></input>
+					<input type='tel' maxlength='9' name="telnum" placeholder="Numer telefonu"></input>
+				</div>
+				<div id="part2">
+					<h2>Opisz krótko potrzebną Ci usługę przekaż dodatkowe informacje:</h2>
+					<textarea placeholder="Krótki opis tego, co potrzebujesz :)"></textarea>
+					<h2 id="prefhdr">Preferowany sposób kontaktu:</h2>
+					<div id='radiochoice'>
+						<input type="radio" id="email-contact" name="contact" value="email" checked>
+						<label for="email-contact">E-mailowy</label>
+						</br>
+						<input type="radio" id="phone-contact" name="contact" value="phone">
+						<label for="phone-contact">Telefoniczny</label>
+					 </div>
+				</div>
+				<div id='captcha'>
 					<div class="g-recaptcha" data-sitekey="6LcfKWEUAAAAAGML5zsdvLXCyk-_INvqHXQFoAlH"></div>
-				  </div>
+				</div>
 				<input type='submit' value='Złóż zamówienie'>
 			</form>
 		</div>
@@ -100,10 +101,6 @@
 			window.onload = function()
 			{
 				activeNav();
-			}
-			window.onscroll = function()
-			{
-				navcolor();
 			}
             window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
             ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
