@@ -61,7 +61,7 @@ input[type='submit']
     margin: 15px 0 30px 0;
     font-size: 1.2em;
     cursor: pointer;
-    background: #00a3cc;
+    background: #5FC023;
     border: 0;
     outline: 0;
     color: white;
@@ -74,7 +74,7 @@ input[type='submit']
 }
 input[type='submit']:hover 
 {
-	background: #00aeff;
+	background: #5FE023;
     font-size: 1.4em;
 }
 

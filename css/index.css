@@ -260,7 +260,7 @@ body
 	margin: 4vw auto 0 auto;
 	border-radius: 4vw;
 	
-	background: #00a3cc;
+	background: #5FC023;
 	color: white;
 	line-height: 20vw;
 	text-align: center;
@@ -277,7 +277,7 @@ body
 
 .orderbtn:hover 
 {
-	background: #00aeff;
+	background: #5FE023;
 	font-size: 7vw;
 }
 
