@@ -12,9 +12,9 @@ body
 {
 	position: absolute;
 	width: 100%;
-	height: 16vw;
+	height: calc(10px + 3vw);
 	z-index: 2;
-	margin-top:-8vw;
+	margin-top: calc(-5px - 0.5vw);
 }
 #outertopic1::before
 	{display:none;}
@@ -27,7 +27,7 @@ body
 .topic
 {
 	position:relative;
-	height: 110vw;
+	height: calc(280px + 18vw);
 	width: 100%;
 	text-align: center;
 	margin-top: 10px;
@@ -36,6 +36,7 @@ body
 {
 	position:relative;
 	width:90%;
+	width: calc(43px + 77vw);
 	top: 50%;
 	left:50%;
 	-webkit-transform: translate(-50%,-50%);
@@ -44,27 +45,27 @@ body
 	transform: translate(-50%,-50%);
 }
 .topic h1
-	{font-size:7vw;}
+	{font-size: calc(12px + 3.2vw);}
 .step
 {
-	font-size: 5vw;
+	font-size: calc(10px + 1.5vw);
 	margin: 0 auto 0 auto;
 	text-align: center;
 }
 .step p
-	{margin: 5vw 0 3vw 0;}
+	{margin: calc(10px + 1.5vw) 0 calc(6px + 0.9vw) 0;}
 .step a
 	{color:black;}
 .show-buttons
 {
 	position: relative;
-	font-size: 4vw;
+	font-size: calc(8px + 1.1vw);
 }
 .showmore,
 .showless
 {
 	display:inline-block;
-	padding: 2vw;
+	padding: calc(4px + 0.9vw);
 	margin: 0 auto;
 	cursor: pointer;
 	opacity: 1;
@@ -117,8 +118,6 @@ body
 	-o-transition:0.5s;
 	transition: 0.5s;
 }
-.arrow-up.icon
-	{margin: 1vw 0 1vw 0;}
 .arrow-right.icon
 {
 	margin:0;
@@ -172,8 +171,8 @@ body
 	{left:2vw;}
 .morecontent
 {
-	margin-top: -12vw;
-	max-height:500vw; /*value bigger than div can ever get, but as small as possible */
+	margin-top: calc(-30px - 5vw);
+	max-height: calc(1000px + 100vw); /*value bigger than div can ever get, but as small as possible */
 	-webkit-transition: 1s ease-in-out;
 	-moz-transition: 1s ease-in-out;
 	-ms-transition: 1s ease-in-out;
@@ -190,12 +189,12 @@ body
 #whatcontent
 {
 	text-align:center;
-	margin: 0 0 20vw 0;
+	margin: 0 0 calc(15px + 6vw) 0;
 }
 .element
 {
-	margin: 0 auto 4vw auto;
-    width: 90%;
+	margin: 0 auto calc(6px + 1.9vw) auto;
+	width: calc(80px + 67vw);
 }
 .elementtitle
 {
@@ -206,15 +205,15 @@ body
 .elementpic
 {
     background-repeat: no-repeat;
-	background-size: cover !important;
-	background-position: center center !important;
-    width: 25vw;
-    height: 25vw;
+    background-size: cover !important;
+    background-position: center center !important;
+    width: calc(40px + 10vw);
+    height: calc(40px + 10vw);
     margin-left: auto;
     margin-right: auto;
 }
 .element p 
-	{font-size: 5vw;}
+	{font-size: calc(10px + 1.5vw)}
 #passiontitle
 	{color: rgb(228, 59, 59);}
 #passionimg
@@ -224,8 +223,8 @@ body
 #techimg
 {
 	margin-top: 3vw;
-    width: 50vw;
-    height: 20vw;
+    width: calc(80px + 20vw);
+    height: calc(32px + 8vw);
     background-image: url(../img/how/min/tech.png);
 }
 #knowledgetitle
@@ -253,21 +252,19 @@ body
 #orderbottomheader
 	{text-align: center;}
 #orderbottomheader h1
-	{font-size: 5vw;}
+	{font-size: calc(15px + 2vw);}
 
 .orderbtn 
 {
-	margin: 4vw auto 0 auto;
-	border-radius: 4vw;
-	
+	margin: calc(8px + 2vw) auto 0 auto;
+	border-radius: calc(5px + 1.5vw);
 	background: #5FC023;
 	color: white;
-	line-height: 20vw;
+	line-height: calc(25px + 6.5vw);
 	text-align: center;
-	font-size: 6vw;
+	font-size: calc(10px + 2.6vw);
 	text-decoration: none;
-	width:90%;
-	
+	width: calc(80px + 67vw);
 	-webkit-transition: .7s;
 	-moz-transition: .7s;
 	-ms-transition:.7s;
@@ -278,114 +275,22 @@ body
 .orderbtn:hover 
 {
 	background: #5FE023;
-	font-size: 7vw;
+	font-size: calc(12px + 2.8vw);
 }
-
-/* Small devices (phones, 350px and up) */
-@media only screen and (min-width: 350px) {
-	
-	.outertopic::before
-	{
-		height: 10vw;
-		margin-top:-5vw;
-	}
-	.topic
-		{height: 90vw;}
-	.show-buttons
-		{font-size: 3.5vw;}
-	.morecontent
-		{margin-top: -10vw;}
-    .step p,
-	.element p 
-    {
-        font-size: 4.5vw;
-		margin: 4.5vw 0 2.5vw 0;
-    }
-	.element
-		{margin: 0 auto 3vw auto;}
-	.elementpic
-	{
-		width: 20vw;
-		height: 20vw;
-	}
-	#techimg
-	{
-		width: 45vw;
-		height: 18vw;
-	}
 /* Small devices (portrait tablets, landscape phones, 640px and up) */
 @media only screen and (min-width: 640px) {
     
-	.morecontent
-	{max-height:700vw;}
 	.outertopic::before
 	{
 		height: 40px;
 		margin-top:-20px;
 	}
-	.topic
-		{height: 65vw;}
-	.topic h1
-		{font-size:5.5vw;}
-	.show-buttons
-		{font-size: 3vw;}
-	.showmore,
-	.showless
-		{padding: 1vw;}
-	.morecontent
-		{margin-top: -10vw;}
-    .step p,
-	.element p 
-    {
-        font-size: 3.5vw;
-		margin: 4vw 0 2vw 0;
-    }
-	.innertopic
-		{width:85%;}
-	#howcontent,
-	#whatcontent
-		{margin: 0 0 16vw 0;}
-	.element
-		{margin: 0 auto 3vw auto;}
 	.elementtitle
 		{font-size: 4vw;}
-		
-	#orderbottomheader h1
-		{font-size: 4.5vw;}
-	.orderbtn 
-	{
-		border-radius: 3.5vw;
-		line-height: 15vw;
-		font-size: 5vw;
-		width:85%;
-	}
-	.orderbtn:hover 
-		{font-size: 5.5vw;}
 } 
 /* Medium devices (landscape tablets, 800px and up) */
 @media only screen and (min-width: 800px) {
 	
-	.topic
-		{height: 53vw;}
-	.topic h1
-		{font-size:5vw;}
-	.show-buttons
-		{font-size: 2.5vw;}
-	.innertopic
-		{width:80%;}
-    .step p,
-	.element p 
-    {
-        font-size: 3vw;
-		margin: 3vw 0 1.5vw 0;
-    }
-	.morecontent
-		{margin-top: -10vw;}
-	#howcontent,
-	#whatcontent
-		{margin: 0 0 12vw 0;}
-	.element
-		{margin: 0 auto 2vw auto;}
 	.elementtitle
     {
 		font-size: 3vw;
@@ -395,45 +300,12 @@ body
     .elementpic
     {
 		margin-top: 0!important;
-        display: inline-block;
-        vertical-align: middle;
-		width: 150px;
-		height: 150px;
-    }
-	#techimg
-	{
-		width: 300px;
-		height: 120px;
+		display: inline-block;
+		vertical-align: middle;
 	}
-	#orderbottomheader h1
-		{font-size: 4vw;}
-	.orderbtn 
-	{
-		border-radius: 3vw;
-		line-height: 13vw;
-		font-size: 4.5vw;
-		width:80%;
-	}
-	.orderbtn:hover 
-		{font-size: 4.8vw;}
 }
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-	
-	.topic
-		{height: 45vw;}
-	.topic h1
-		{font-size:4.5vw;}
-	.show-buttons
-		{font-size: 2vw;}
-    .step p,
-	.element p 
-    {
-        font-size: 2.5vw;
-		margin: 2.5vw 0 0.5vw 0;
-    }	
-	.innertopic
-		{width:80%;}
 	
 	.arrow-down.icon,
 	.arrow-up.icon
@@ -476,81 +348,4 @@ body
 		border-top: solid 2px currentColor;
 		border-right: solid 2px currentColor;
 	}
-	.morecontent
-		{margin-top: -8vw;}
-	#howcontent,
-	#whatcontent
-		{margin: 0 0 10vw 0;}
-	#orderbottomheader h1
-		{font-size: 3.5vw;}
-	.orderbtn 
-	{
-		border-radius: 2.7vw;
-		line-height: 12vw;
-		font-size: 4vw;
-		width:75%;
-	}
-	.orderbtn:hover 
-		{font-size: 4.3vw;}
-} 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-	
-	.element
-	{
-		width: 70%;
-	}
-	
-	.topic
-		{height: 35vw;}
-	.topic h1
-		{font-size:4vw;}
-	.show-buttons
-		{font-size: 1.5vw;}
-    .step p,
-	.element p 
-		{font-size: 2vw;}
-	.morecontent
-	{
-		margin-top: -7vw;
-		max-height: 900vw; /*value bigger than div can ever get, but as small as possible */
-	}
-	#howcontent,
-	#whatcontent
-		{margin: 0 0 7vw 0;}
-	#orderbottomheader h1
-		{font-size: 3vw;}
-	.orderbtn 
-	{
-		margin-top: 3vw;
-		border-radius: 2.5vw;
-		line-height: 10vw;
-		font-size: 3.5vw;
-	}
-	.orderbtn:hover 
-		{font-size: 4.3vw;}
-}
-/* Extra enormous devices (TV, 1700px and up) */
-@media only screen and (min-width: 1700px) {
-	.element
-	{
-	}
-	.topic
-		{height: 30vw;}
-	.topic h1
-		{font-size:3.5vw;}
-	.morecontent
-		{margin-top: -5vw;}
-	#orderbottomheader h1
-		{font-size: 2.5vw;}
-	.orderbtn 
-	{
-		margin-top: 2.5vw;
-		border-radius: 2.5vw;
-		line-height: 8vw;
-		font-size: 3vw;
-		width: 70%;
-	}
-	.orderbtn:hover 
-		{font-size: 3.2vw;}
 }
