@@ -345,61 +345,50 @@ AddDefaultCharset utf-8
 # ----------------------------------------------------------------------
 # | Forcing `https://`                                                 |
 # ----------------------------------------------------------------------
-
-# Redirect from the `http://` to the `https://` version of the URL.
-# https://wiki.apache.org/httpd/RewriteHTTPToHTTPS
-
-# <IfModule mod_rewrite.c>
-#    RewriteEngine On
-#    RewriteCond %{HTTPS} !=on
-#    RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
-# </IfModule>
-
 # ----------------------------------------------------------------------
 # | Suppressing / Forcing the `www.` at the beginning of URLs          |
 # ----------------------------------------------------------------------
+
+# Redirect from the `http://` to the `https://` version of the URL.
+# https://wiki.apache.org/httpd/RewriteHTTPToHTTPS
 
 # The same content should never be available under two different
 # URLs, especially not with and without `www.` at the beginning.
 # This can cause SEO problems (duplicate content), and therefore,
 # you should choose one of the alternatives and redirect the other
 # one.
-#
-# By default `Option 1` (no `www.`) is activated.
-# http://no-www.org/faq.php?q=class_b
-#
-# If you would prefer to use `Option 2`, just comment out all the
-# lines from `Option 1` and uncomment the ones from `Option 2`.
-#
-# (!) NEVER USE BOTH RULES AT THE SAME TIME!
-
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
 # Option 1: rewrite www.example.com → example.com
 
+
 <IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteCond %{HTTPS} !=on
+	RewriteEngine On
+	RewriteCond %{HTTPS} !=on
     RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-    RewriteRule ^ %{ENV:PROTO}://%1%{REQUEST_URI} [R=301,L]
+    RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+	
+	RewriteCond %{HTTPS} !=on
+	RewriteRule ^(.*)$ https://otsu.pl/$1 [R=301,L]
+	
+    RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+    RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+	
+	# ----------------------------------------------------------------------
+	#Redirect traffic from pretty links
+	# ----------------------------------------------------------------------
+	
+	#Omit files and folders that exist
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !-f
+	
+	#Rules for pretty links
+	RewriteRule ^kontakt /contact.html [NC]
+	RewriteRule ^o-nas /about.html [NC]
+	RewriteRule ^cennik /prices.html [NC]
+	RewriteRule ^FAQ /getstarted.html [NC]
+	RewriteRule ^zamow /order.html [NC]
+	RewriteRule ^dziekujemy /form.php [NC]
+	RewriteRule ^polityka-prywatnosci /privacy.html [NC]
 </IfModule>
-
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-# Option 2: rewrite example.com → www.example.com
-#
-# Be aware that the following might not be a good idea if you use "real"
-# subdomains for certain parts of your website.
-
-# <IfModule mod_rewrite.c>
-#     RewriteEngine On
-#     RewriteCond %{HTTPS} !=on
-#     RewriteCond %{HTTP_HOST} !^www\. [NC]
-#     RewriteCond %{SERVER_ADDR} !=127.0.0.1
-#     RewriteCond %{SERVER_ADDR} !=::1
-#     RewriteRule ^ %{ENV:PROTO}://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
-# </IfModule>
-
 
 # ######################################################################
 # # SECURITY                                                           #
@@ -581,9 +570,9 @@ AddDefaultCharset utf-8
 # https://tools.ietf.org/html/draft-ietf-websec-strict-transport-sec-14#section-6.1
 # http://blogs.msdn.com/b/ieinternals/archive/2014/08/18/hsts-strict-transport-security-attacks-mitigations-deployment-https.aspx
 
-# <IfModule mod_headers.c>
-#     Header always set Strict-Transport-Security "max-age=16070400; includeSubDomains"
-# </IfModule>
+<IfModule mod_headers.c>
+	Header always set Strict-Transport-Security "max-age=16070400; includeSubDomains"
+</IfModule>
 
 # ----------------------------------------------------------------------
 # | Reducing MIME type security risks                                  |
