@@ -8,6 +8,7 @@
 		<meta name="keywords" content="otsu, webmaster, strona, tworzenie, design, webdesign" />
 		<link rel="manifest" href="site.webmanifest">
 		<title>Otsu Webdesign</title>
+		<link rel="canonical" href="https://otsu.pl/dziekujemy"/>
 		<link rel="apple-touch-icon" href="icon.png">
         <link rel="stylesheet" href="css/main.css" type="text/css">
 		<link rel="stylesheet" href="css/style.css"  type="text/css"/>
