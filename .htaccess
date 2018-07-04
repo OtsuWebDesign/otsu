@@ -386,6 +386,7 @@ AddDefaultCharset utf-8
 	RewriteRule ^cennik /prices.html [NC]
 	RewriteRule ^FAQ /getstarted.html [NC]
 	RewriteRule ^zamow /order.html [NC]
+	RewriteRule ^dziekujemy /form.php [NC]
 	RewriteRule ^polityka-prywatnosci /privacy.html [NC]
 </IfModule>
 
