@@ -56,7 +56,7 @@ ol
     color: rgb(177, 177, 177);
 }
 
-#index h2
+#index h3
 {
     color: rgb(24, 95, 153);
 }
@@ -116,7 +116,7 @@ ul a:hover
         display: block;
     }
 
-    #index h2 
+    #index h3 
     {
         font-size: 30px;
     }
@@ -126,7 +126,7 @@ ul a:hover
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 
-    .chapter h2
+    .chapter h3
     {
         font-size: 36px;
     }

@@ -44,7 +44,7 @@ body
 	-o-transform:translate(-50%,-50%);
 	transform: translate(-50%,-50%);
 }
-.topic h1
+.topic h2
 	{font-size: calc(12px + 3.2vw);}
 .step
 {
@@ -251,7 +251,7 @@ body
 
 #orderbottomheader
 	{text-align: center;}
-#orderbottomheader h1
+#orderbottomheader h2
 	{font-size: calc(15px + 2vw);}
 
 .orderbtn 

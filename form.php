@@ -55,8 +55,8 @@
 
         <!-- Content -->
         <div style='margin-top: 100px; text-align: center;'>
-        <h1>Dziękujemy za wypełnienie formularza!</h1>
-        <a href='zamow'><h2>Placeholderowy przycisk powrotu do formularza</h2></a>
+        <h2>Dziękujemy za wypełnienie formularza!</h2>
+        <a href='zamow'><h3>Placeholderowy przycisk powrotu do formularza</h3></a>
 
         <?php
             $email = $_POST['email'];

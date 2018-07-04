@@ -32,11 +32,11 @@ html {
 body {
   margin: 0;
 }
-h1 {
+h2 {
 	font-size: 2em;
 	margin: 0;
 }
-:-webkit-any(article,aside,nav,section) :-webkit-any(article,aside,nav,section) h1 {
+:-webkit-any(article,aside,nav,section) :-webkit-any(article,aside,nav,section) h2 {
     font-size: 2em;
     -webkit-margin-before: 0;
     -webkit-margin-after: 0;
@@ -340,13 +340,13 @@ canvas {
     }
 
     p,
-    h2,
+    h3,
     h3 {
         orphans: 3;
         widows: 3;
     }
 
-    h2,
+    h3,
     h3 {
         page-break-after: avoid;
     }

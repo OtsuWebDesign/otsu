@@ -12,7 +12,7 @@ body
         height: 100px;
     }
 
-h1
+h2
 {
     text-align: center;
     border-bottom: rgba(212, 212, 212, 0.596) 1px dashed;
@@ -20,7 +20,7 @@ h1
     padding-bottom: 10px;
 }
 
-h2
+h3
 {
     color: rgb(24, 95, 153);
 }
@@ -139,12 +139,12 @@ h2
         font-size: 20px;
     }
 
-    h2 
+    h3 
     {
         font-size: 32px;
     }
 
-    h1 
+    h2 
     {
         padding: 20px;
         border-top: rgba(212, 212, 212, 0.596) 1px dashed;
@@ -183,7 +183,7 @@ h2
         padding-right: 5px;
     }
     
-    h2 
+    h3 
     {
         font-size: 25px;
     }
