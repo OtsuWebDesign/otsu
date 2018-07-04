@@ -40,6 +40,11 @@
 <url>
   <loc>https://otsu.pl/dziekujemy</loc>
   <lastmod>2018-07-04T10:29:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://otsu.pl/order.html</loc>
+  <lastmod>2018-07-04T10:29:27+00:00</lastmod>
   <priority>0.60</priority>
 </url>
 </urlset>
