@@ -1,196 +1,91 @@
 /* Extra super small devices (small phones, 350px and down) */
-
-
 body
 {
     text-align: center;
     color: rgb(119, 119, 119);
 }
-
-#mainheader
+h3
 {
-	margin-top: 80px;
 	text-align: center;
 	color: black;
-	font-size: 20px;
+	font-size: calc(20px + 1.8vw);
+}
+#mainheader>h3
+{
+	margin-top: calc(80px + 3vw);
+	font-size: calc(25px + 2vw);
 }
 
 #aboutlogo
 {
     width: 180px;
     height: 69.3px;
-    margin-left: auto;
-    margin-right: auto;
+    width: calc(100px + 6vw);
+    height: calc(39px + 2.4vw);
+    margin: 0 auto;
 }
 
 #aboutphoto
 {
-    width: 200px;
-    height: 152px;
-    margin-left: auto;
-    margin-right: auto;
+    width: calc(150px + 20vw);
+    height: calc(114px + 15.2vw);
+    margin: 0 auto;
 }
 
 .nameheader
 {
-    font-size: 20px;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    font-size: calc(15px + 1.2vw);
+    margin: 20px 0 10px 0;
     color: #58b220;
     font-weight: bold;
 }
 
-
 .indphoto
 {
-    width: 100px;
-    height: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    width: calc(100px + 8vw);
+    height: calc(100px + 8vw);
+    margin: 10px auto;
 }
 q 
 	{display: block;}
 .quote
 {
-    min-width: 170px;
-    max-width: 400px;
-	width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
-    background-color: lemonchiffon;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-style: italic;
-    -webkit-box-shadow: 10px 10px 9px -2px rgba(0,0,0,0.43);
-    -moz-box-shadow: 10px 10px 9px -2px rgba(0,0,0,0.43);
-    box-shadow: 10px 10px 9px -2px rgba(0,0,0,0.43);
-}
+	max-width: 60%;
+	width: calc(60px + 40%);
+	margin: 0 auto 30px auto;
+	padding: 0 20px;
+	font-style: italic;
+	font-weight: bold;
+	font-size: calc(11px + 0.8vw);
 
+	background-color: lemonchiffon;
+	-webkit-box-shadow: 10px 10px 9px -2px rgba(0,0,0,0.43);
+	-moz-box-shadow: 10px 10px 9px -2px rgba(0,0,0,0.43);
+	box-shadow: 10px 10px 9px -2px rgba(0,0,0,0.43);
+}
 .section
 {
 	width: 90%;
-	margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    font-size: 14px;
+	margin: 10px auto;
+    padding: 0 15px;
+    font-size: calc(15px + 1.2vw);
     font-weight: lighter;
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
-
+#introduction .section
+{
+  width: calc(120px + 50vw);
+}
 .person
 {
 	float: left;
 	width: 100%;
 }
-/* Small devices (phones, 350px and up) */
-@media only screen and (min-width: 350px) {
-    
-	#aboutlogo
-	{
-		width: 200px;
-		height: 77px;
-	}
-	#aboutphoto 
-    {
-        width: 300px;
-        height: 203px;
-    }
-	.section
-	{
-		width: 80%;
-	}
-} 
-
-/* Small devices (large phones, 540px and up) */
-@media only screen and (min-width: 540px) {
-    
-    h3 
-    {
-        font-size: 40px;
-    }
-
-    .section
-    {
-        font-size: 18px;
-    }
-	
-	
-} 
-/* Small devices (portrait tablets, landscape phones, 640px and up) */
-@media only screen and (min-width: 640px) {
-    
-    #aboutphoto 
-    {
-        width: 400px;
-        height: 271px;
-    }
-    
-    .nameheader
-    {
-        font-size: 25px;
-    }
-    
-} 
-
-/* Medium devices (landscape tablets, 800px and up) */
-@media only screen and (min-width: 800px) {
-    #maciej
-    {
-        width: 180px;
-        height: 180px;
-    }
-
-	#radek
-    {
-        width: 180px;
-        height: 180px;
-    }
-
-    .quote
-    {
-        line-height: 30px;
-        font-weight: bold;
-    }
-    .section
-    {
-        font-size: 24px;
-    }
-} 
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-
-	#aboutlogo
-	{
-		width: 250px;
-		height: 96.25px;
-	}
 	.person
 	{
 		width: 50%;
+		margin-bottom: calc(10px + 3vw);
 	}
-    
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-
-  #introduction .section
-  {
-      width: 1000px;
-  }
-  
-    .section
-    {
-        font-size: 30px;
-    }
-}
-
-/* Extra enormous devices (TV, 1700px and up) */
-@media only screen and (min-width: 1700px) {
-	
 }
