@@ -29,10 +29,6 @@ body
 
 #aboutphoto
 {
-    background-image: url(../img/aboutphoto/250.png);
-	background-size: cover !important;
-	background-position: center center !important;
-    background-repeat: no-repeat;
     width: 200px;
     height: 152px;
     margin-left: auto;
@@ -93,18 +89,6 @@ body
 	float: left;
 	width: 100%;
 }
-
-#maciej
-{
-    background-image: url(../img/aboutphoto/m.png);
-}
-
-#radek
-{
-    background-image: url(../img/aboutphoto/r.png)
-}
-
-
 /* Small devices (phones, 350px and up) */
 @media only screen and (min-width: 350px) {
     
@@ -117,7 +101,6 @@ body
     {
         width: 300px;
         height: 203px;
-        background-image: url(../img/aboutphoto/400.png)
     }
 	.section
 	{
@@ -162,14 +145,12 @@ body
     {
         width: 180px;
         height: 180px;
-        background-image: url(../img/aboutphoto/mbig.png);
     }
 
 	#radek
     {
         width: 180px;
         height: 180px;
-        background-image: url(../img/aboutphoto/rbig.png);
     }
 
     .quote
