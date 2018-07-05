@@ -7,7 +7,7 @@ function aos()
 	{
 		var elementOffset = elements[i].getBoundingClientRect().top + window.scrollY;
 		var elementHeight = elements[i].offsetHeight;
-		if(scrolled + windowHeight > elementOffset + elementHeight || scrolled + windowHeight > elementOffset + 0.15*windowHeight)
+		if(scrolled + windowHeight > elementOffset + 0.8*elementHeight || scrolled + windowHeight > elementOffset + 0.15*windowHeight)
 			elements[i].classList.add('aos-animate');
 		else
 			elements[i].classList.remove('aos-animate');
