@@ -17,10 +17,6 @@ body
 
 #aboutlogo
 {
-    background-image: url('../img/logo/full-transp-black.png');
-	background-size: cover !important;
-	background-position: center center !important;
-    background-repeat: no-repeat;
     width: 180px;
     height: 69.3px;
     margin-left: auto;
