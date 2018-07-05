@@ -2,24 +2,24 @@
 body
 {
     text-align: center;
-    color: rgb(119, 119, 119);
+    color: #626262;
 }
 h3
 {
 	text-align: center;
 	color: black;
-	font-size: calc(20px + 1.8vw);
+	font-size: calc(25px + 2vw);
 }
 #mainheader>h3
 {
 	margin-top: calc(80px + 3vw);
-	font-size: calc(25px + 2vw);
+	margin-left: calc(5px + 1vw);/*to compensate for the empty field at the question mark*/
 }
 
 #aboutlogo
 {
     width: 180px;
-    height: 69.3px;
+    height: 69px;
     width: calc(100px + 6vw);
     height: calc(39px + 2.4vw);
     margin: 0 auto;
@@ -68,12 +68,13 @@ q
 	width: 90%;
 	margin: 10px auto;
     padding: 0 15px;
-    font-size: calc(15px + 1.2vw);
+    font-size: calc(13px + 1vw);
     font-weight: lighter;
 }
 #introduction .section
 {
-  width: calc(120px + 50vw);
+	width: calc(120px + 50vw);
+	font-size: calc(15px + 1.2vw);
 }
 .person
 {
