@@ -13,12 +13,6 @@ ul
     padding: 0;
 }
 
-ol
-{
-    margin: 0;
-    padding: 0;
-}
-
 .chapter
 {
     border-bottom: rgba(212, 212, 212, 0.596) 1px dashed;
@@ -51,12 +45,12 @@ ol
     padding-bottom: 20px;
 }
 
-#index h3
+#index h2
 {
     color: rgb(177, 177, 177);
 }
 
-#index h3
+#index h2
 {
     color: rgb(24, 95, 153);
 }
@@ -66,7 +60,7 @@ ul a
     color: rgb(85, 85, 85);
     text-decoration: none;
 }
-ul li ul li
+ul>li>ul>li
 {
     padding: 5px;
 }
@@ -116,7 +110,7 @@ ul a:hover
         display: block;
     }
 
-    #index h3 
+    #index h2
     {
         font-size: 30px;
     }
@@ -126,7 +120,7 @@ ul a:hover
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 
-    .chapter h3
+    .chapter h2
     {
         font-size: 36px;
     }
