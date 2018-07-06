@@ -17,7 +17,7 @@ h1
 	text-align: center;
 	color: black;
 	font-size: calc(20px + 1.5vw);
-	margin-top: calc(80px + 3vw);
+	margin: calc(80px + 3vw) 30px 0 30px;
 }
 #intro
 {
@@ -49,7 +49,7 @@ h1
 .innerchapter
 {
 	padding: calc(20px + 2vw);
-	width: calc(120px + 70vw);
+	width: calc(80px + 65vw);
 	margin: 0 auto;
 }
 h2
@@ -60,11 +60,8 @@ h2
 {
 	margin: calc(19px + 1.4vw) 0;;
 }
-.outer-question:first-child
-	{/*border-top: 1px dashed currentColor;*/}
 .outer-question
 {
-	/*text-align: left;*/
 	border-bottom: 1px dashed currentColor;
 }
 .question
