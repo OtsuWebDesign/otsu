@@ -22,8 +22,7 @@ h1
 #intro
 {
 	width: 90%;
-	margin: 10px auto;
-    padding: 0 15px;
+	margin: calc(19px + 1.4vw) auto calc(25px + 1.5vw) auto;
 	width: calc(120px + 50vw);
 	font-size: calc(15px + 1.2vw);
     font-weight: lighter;
@@ -42,7 +41,7 @@ h1
 	width: 100%;
 	height: calc(10px + 3vw);
 	z-index: 2;
-	margin-top: calc(-5px - 0.5vw);
+	margin-top: calc(-5px - 1.5vw);
 }
 #chapter1::before,
 #chapter3::before
@@ -52,9 +51,33 @@ h1
 	{background:linear-gradient(to bottom left, black 50%,white 0);}
 .innerchapter
 {
-	padding: 40px;
+	padding: calc(20px + 2vw);
+	width: calc(120px + 70vw);
+	margin: 0 auto;
 }
-
+h2
+{
+	font-size: calc(19px + 1.4vw);
+}
+.questions
+{
+	margin: calc(19px + 1.4vw) 0;;
+}
+.outer-question
+{
+	/*text-align: left;*/
+}
+#chapter1 .outer-question,
+#chapter3 .outer-question
+	{border-bottom: 1px dashed white;}
+#chapter2 .outer-question,
+#chapter4 .outer-question
+	{border-bottom: 1px dashed black;}
+.question
+{
+	font-size: calc(15px + 1.2vw);
+	padding: calc(5px + 0.5vw);
+}
 .answer
 {
 	overflow: hidden;
