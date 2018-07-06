@@ -86,11 +86,16 @@ h2
 }
 .answer
 {
+	font-size: calc(10px + 1vw);
     overflow: hidden;
-    transition: max-height 1s ease-out;
+    transition: max-height 0.7s ease-out;
+}
+.inneranswer
+{
+	padding: calc(10px + 1vw);
 }
 .noheight
-{max-height:0}
+	{max-height:0;}
 /* Small devices (phones, 350px and up) */
 @media only screen and (min-width: 350px) {
 	
