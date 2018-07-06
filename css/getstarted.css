@@ -63,20 +63,24 @@ h2
 {
 	margin: calc(19px + 1.4vw) 0;;
 }
+.outer-question:first-child
+	{/*border-top: 1px dashed currentColor;*/}
 .outer-question
 {
 	/*text-align: left;*/
+	border-bottom: 1px dashed currentColor;
 }
-#chapter1 .outer-question,
-#chapter3 .outer-question
-	{border-bottom: 1px dashed white;}
-#chapter2 .outer-question,
-#chapter4 .outer-question
-	{border-bottom: 1px dashed black;}
 .question
 {
 	font-size: calc(15px + 1.2vw);
 	padding: calc(5px + 0.5vw);
+	cursor: pointer;
+}
+.question-active,
+.question:hover
+{
+	background-color: #202020;
+	transition: 0.7s
 }
 .answer
 {
