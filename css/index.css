@@ -179,7 +179,7 @@ body
 	transition: 1s ease-in-out;
 }
 .morecontent-1
-	{margin-top: calc(-30px - 5vw);}
+	{margin-top: calc(-10px - 5.1vw);}
 .morecontent-2
 	{margin-top: calc(-20px - 3vw);}
 .morecontent.less
