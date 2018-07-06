@@ -194,24 +194,24 @@
         <script src="js/plugins.js"></script>
 		<script src="js/aos.js"></script>
         <script>
-				let answers = document.getElementsByClassName("answer");
-				for (let i = 0; i < answers.length; i++) 
+			let answers = document.getElementsByClassName("answer");
+			for (let i = 0; i < answers.length; i++) 
+			{
+				answers[i].classList.add('noheight');
+			}
+			let questions = document.getElementsByClassName("question");
+			for (let i = 0; i < questions.length; i++) 
+			{
+				questions[i].addEventListener("click", function() 
 				{
-					answers[i].classList.add('noheight');
-				}
-				let questions = document.getElementsByClassName("question");
-				for (let i = 0; i < questions.length; i++) 
-				{
-					questions[i].addEventListener("click", function() 
-					{
-						this.classList.toggle("question-active");
-						let answer = this.nextElementSibling;
-						if (answer.style.maxHeight)
-							answer.style.maxHeight = null;
-						else
-							answer.style.maxHeight = answer.scrollHeight + "px";
-					});
-				}
+					this.classList.toggle("question-active");
+					let answer = this.nextElementSibling;
+					if (answer.style.maxHeight)
+						answer.style.maxHeight = null;
+					else
+						answer.style.maxHeight = answer.scrollHeight + "px";
+				});
+			}
 			window.onload = function()
 			{
 				activeNav();

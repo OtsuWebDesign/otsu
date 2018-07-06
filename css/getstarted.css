@@ -38,9 +38,9 @@ h1
 {
 	position: absolute;
 	width: 100%;
-	height: calc(10px + 3vw);
+	height: calc(10px + 2vw);
 	z-index: 2;
-	margin-top: calc(-5px - 1.5vw);
+	margin-top: calc(-5px - 1vw);
 }
 .chapter:nth-child(2n)::before
 	{background:linear-gradient(to bottom left, black 50%,white 0)}
@@ -96,35 +96,3 @@ h2
 }
 .noheight
 	{max-height:0;}
-/* Small devices (phones, 350px and up) */
-@media only screen and (min-width: 350px) {
-	
-} 
-
-/* Small devices (large phones, 540px and up) */
-@media only screen and (min-width: 540px) {
-
-} 
-/* Small devices (portrait tablets, landscape phones, 640px and up) */
-@media only screen and (min-width: 640px) {
-    
-} 
-
-/* Medium devices (landscape tablets, 800px and up) */
-@media only screen and (min-width: 800px) {
-	
-} 
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-	
-} 
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-
-}
-/* Extra enormous devices (TV, 1700px and up) */
-@media only screen and (min-width: 1700px) {
-	
-}
