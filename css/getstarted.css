@@ -27,8 +27,7 @@ h1
 	font-size: calc(15px + 1.2vw);
     font-weight: lighter;
 }
-#chapter1,
-#chapter3
+.chapter:nth-child(2n+1)
 	{background-color: black;color:white}
 .chapter
 {
@@ -43,12 +42,10 @@ h1
 	z-index: 2;
 	margin-top: calc(-5px - 1.5vw);
 }
-#chapter1::before,
-#chapter3::before
+.chapter:nth-child(2n)::before
+	{background:linear-gradient(to bottom left, black 50%,white 0)}
+.chapter:nth-child(2n+1)::before
 	{background:linear-gradient(to bottom left, white 50%,black 0)}
-#chapter2::before,
-#chapter4::before
-	{background:linear-gradient(to bottom left, black 50%,white 0);}
 .innerchapter
 {
 	padding: calc(20px + 2vw);
@@ -75,18 +72,25 @@ h2
 	font-size: calc(15px + 1.2vw);
 	padding: calc(5px + 0.5vw);
 	cursor: pointer;
+	transition: 0.7s
 }
-.question-active,
-.question:hover
+.chapter:nth-child(2n+1) .question-active,
+.chapter:nth-child(2n+1) .question:hover
 {
 	background-color: #202020;
-	transition: 0.7s
+}
+.chapter:nth-child(2n) .question-active,
+.chapter:nth-child(2n) .question:hover
+{
+	background-color: #cccccc;
 }
 .answer
 {
-	overflow: hidden;
-	max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease-out;
 }
+.noheight
+{max-height:0}
 /* Small devices (phones, 350px and up) */
 @media only screen and (min-width: 350px) {
 	
