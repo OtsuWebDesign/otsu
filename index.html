@@ -120,8 +120,7 @@
 								</div>
 							</div>
 						</div>
-						<noscript><div class="morecontent morecontent-1"></noscript>
-						<script>document.write('<div class="morecontent morecontent-1 less">');</script>
+						<div class="morecontent morecontent-1">
 							<section id="howcontent">
 								<div class="element">
 									<div class="elementtitle" id="passiontitle">Po pierwsze: Pasja</div>
@@ -168,8 +167,7 @@
 								</div>
 							</div>
 						</div>
-						<noscript><div class="morecontent morecontent-2"></noscript>
-						<script>document.write('<div class="morecontent morecontent-2 less">');</script>
+						<div class="morecontent morecontent-2">
 							<section id="whatcontent">
 								<div class="element">
 									<div class="elementtitle">Łatwy dostęp do&nbsp;informacji</div>
@@ -241,6 +239,11 @@
 		<script src="js/aos.js"></script>
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID in google analytics -->
         <script>
+			let morecontent = document.getElementsByClassName("morecontent");
+			for (let i = 0; i < morecontent.length; i++) 
+			{
+				morecontent[i].classList.add('less');
+			}
 			let steps = document.getElementsByClassName('step');
 			for(let i=0; i<steps.length; i++)
 				steps[i].classList.add('aos', 'fade-up');
