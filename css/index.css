@@ -171,7 +171,6 @@ body
 	{left:2vw;}
 .morecontent
 {
-	margin-top: calc(-30px - 5vw);
 	max-height: calc(1000px + 100vw); /*value bigger than div can ever get, but as small as possible */
 	-webkit-transition: 1s ease-in-out;
 	-moz-transition: 1s ease-in-out;
@@ -179,6 +178,10 @@ body
 	-o-transition: 1s ease-in-out;
 	transition: 1s ease-in-out;
 }
+.morecontent-1
+	{margin-top: calc(-30px - 5vw);}
+.morecontent-2
+	{margin-top: calc(-20px - 3vw);}
 .morecontent.less
 {
 	visibility:hidden;
