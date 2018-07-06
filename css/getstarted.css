@@ -2,7 +2,6 @@
 
 body
 {
-	padding-top: 60px;
 	color: #626262;
 }
 
@@ -11,14 +10,56 @@ body
     width: 100%;
     text-align: center;
 }
+ul {list-style-type:none; padding:0}
 
-#questions
+h1
 {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+	text-align: center;
+	color: black;
+	font-size: calc(20px + 1.5vw);
+	margin-top: calc(80px + 3vw);
+}
+#intro
+{
+	width: 90%;
+	margin: 10px auto;
+    padding: 0 15px;
+	width: calc(120px + 50vw);
+	font-size: calc(15px + 1.2vw);
+    font-weight: lighter;
+}
+#chapter1,
+#chapter3
+	{background-color: black;color:white}
+.chapter
+{
+	width: 100%;
+	text-align: center;
+}
+.chapter::before
+{
+	position: absolute;
+	width: 100%;
+	height: calc(10px + 3vw);
+	z-index: 2;
+	margin-top: calc(-5px - 0.5vw);
+}
+#chapter1::before,
+#chapter3::before
+	{background:linear-gradient(to bottom left, white 50%,black 0)}
+#chapter2::before,
+#chapter4::before
+	{background:linear-gradient(to bottom left, black 50%,white 0);}
+.innerchapter
+{
+	padding: 40px;
 }
 
+.answer
+{
+	overflow: hidden;
+	max-height: 0;
+}
 /* Small devices (phones, 350px and up) */
 @media only screen and (min-width: 350px) {
 	
