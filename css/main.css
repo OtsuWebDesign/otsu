@@ -75,7 +75,8 @@ img,
 video {
     vertical-align: middle;
 }
-
+strong
+{display: inline-block}
 textarea {
     resize: vertical;
 	overflow: auto;
