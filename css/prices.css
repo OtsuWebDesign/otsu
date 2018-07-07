@@ -20,6 +20,7 @@ h2
 .service
 {
     text-align: center;
+    padding-bottom: calc(15px + 1.5vw);
     border-bottom: lightgray 1px dashed;
 }
 .service::after
