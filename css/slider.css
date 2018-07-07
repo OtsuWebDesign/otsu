@@ -67,9 +67,9 @@
 	background-position: center center !important;
 }
 
-#slide1 {background: #086484 url("../img/slider/pixel/1.jpg")}
-#slide2 {background: #232323 url("../img/slider/pixel/2.jpg")}
-#slide3 {background: #cacaca url("../img/slider/pixel/3.jpg")}
+#slide1 {background: lightgray url("../img/slider/pixel/1.jpg")}
+#slide2 {background: lightgray url("../img/slider/pixel/2.jpg")}
+#slide3 {background: lightgray url("../img/slider/pixel/3.jpg")}
 
 /* slide aktywny */
 .slide-active
