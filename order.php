@@ -103,7 +103,7 @@
 		<!-- Content -->
 		<div id='formcontainer'>
 			<h1>ZŁóż zamównienie (formularz w trakcie prac)</h1>
-			<form method="post" action="<?='order.php'/*htmlspecialchars($_SERVER["PHP_SELF"])*/?>">
+			<form method="post" action="<?=htmlspecialchars($_SERVER["PHP_SELF"])?>">
 				<div id='upper'>
 					<div id="part1">
 						<h3>Typ usługi, jaka Cię interesuje:</h3>
