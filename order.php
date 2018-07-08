@@ -30,7 +30,7 @@
 		if (!empty($_POST["telnum"]))
 		{
 			$telnum = filter_var(test_input($_POST["telnum"]), FILTER_SANITIZE_NUMBER_INT);
-			if (strlen($telnum) != 9 || strlen($telnum) != 12) // xxx xxx xxx || +48 xxx xxx xxx
+			if (!(strlen($telnum) == 9 || strlen($telnum) == 12)) // xxx xxx xxx || +48 xxx xxx xxx
 			{
 				$telnumErr = "Nieprawidłowy format";
 				$ok = false;
