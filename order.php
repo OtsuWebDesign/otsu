@@ -1,13 +1,20 @@
 <?php
 	$emailErr  =$telnumErr  = $contactErr  = $policyErr  = "";
 	$service = $firstname = $lastname = $email = $telnum = $description = $contact =  $policy = "";
+	$msg = "";
 	if ($_SERVER["REQUEST_METHOD"] == "POST")
 	{
 		$ok = true;
 		if (!empty($_POST["firstname"]))
+		{
 			$firstname = test_input($_POST["firstname"]);
+			$msg = "Imię: ".$firstname."\n";
+		}
 		if (!empty($_POST["lastname"]))
+		{
 			$lastname = test_input($_POST["lastname"]);
+			$msg = $msg."Nazwisko: ".$lastname."\n";
+		}
 
 		if (!empty($_POST["email"]))
 		{
@@ -17,6 +24,8 @@
 				$emailErr = "Nieprawidłowy format";
 				$ok = false;
 			}
+			else
+				$msg = $msg."Adres E-mail: ".$email."\n";
 		}
 		if (!empty($_POST["telnum"]))
 		{
@@ -26,11 +35,23 @@
 				$telnumErr = "Nieprawidłowy format";
 				$ok = false;
 			}
+			else
+				$msg = $msg."Numer telefonu: ".$telnum."\n";
 		}
 		if (!empty($_POST["description"]))
+		{
 			$description = test_input($_POST["description"]);
+			$msg = $msg."Opis: ".$description."\n";
+		}
 		if (!empty($_POST["contact"]))
+		{
 			$contact = test_input($_POST["contact"]);
+			$msg = $msg."Preferowany kontakt: ";
+			if ($contact=="email")
+				$msg = $msg."E-mail";
+			else
+				$msg = $msg."Telefon";
+		}
 		if (empty($_POST["policy"]))
 		{
 			$policyErr = "Akceptacja wymagana";
@@ -49,7 +70,7 @@
 		
 		if($ok)
 		{
-			//send mail here
+			mail("kontakt@otsu.pl","Zlecenie",$msg,"From: <".$email.">\r\n");
 			header('Location: form.php'); //---------------zmienić na "dziekujemy"----------------------
 		}
 	}
