@@ -63,10 +63,10 @@
 							<option value="rebuildour">Przebudowa witryny naszego autorstwa</option>
 						</select>
 						<h3>Podaj dane do kontaktu, użyjemy ich tylko do skontaktowania się z Tobą:</h3>
-						<input type='text' name="firstname" placeholder="Twoje imię"></input>
-						<input type='text' name="lastname" placeholder="Twoje nazwisko"></input>
-						<input type='email' name="email" placeholder="adres@email.com"></input>
-						<input type='tel' maxlength='9' name="telnum" placeholder="Numer telefonu"></input>
+						<input type='text' name="firstname" placeholder="Twoje imię">
+						<input type='text' name="lastname" placeholder="Twoje nazwisko">
+						<input type='email' name="email" placeholder="adres@email.com">
+						<input type='tel' maxlength='9' name="telnum" placeholder="Numer telefonu">
 					</div>
 					<div id="part2">
 						<h3>Opisz krótko potrzebną Ci usługę, przekaż dodatkowe informacje:</h3>
