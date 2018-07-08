@@ -118,11 +118,11 @@
 						<input type='text' name="firstname" placeholder="Imię" value="<?=$firstname?>">
 						<input type='text' name="lastname" placeholder="Nazwisko" value="<?=$lastname?>">
 						<div id='email'>
-							<input type='email' name="email" placeholder="adres@email.com" value="<?=$email?>">
+							<input type='email' name="email" placeholder="adres@email.com" value="<?=$email?>" class='<?php if(!empty($emailErr)) echo 'input-error' ?>'>
 							<span class="error"><?=$emailErr?></span>
 						</div>
 						<div id='telnum'>
-							<input type='tel' name="telnum" placeholder="Numer telefonu" value="<?php echo $telnum?>">
+							<input type='tel' name="telnum" placeholder="Numer telefonu" value="<?php echo $telnum?>" class='<?php if(!empty($telnumErr)) echo 'input-error' ?>'>
 							<span class="error"><?=$telnumErr?></span>
 						</div>
 					</div>

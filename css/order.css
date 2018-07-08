@@ -93,6 +93,10 @@ input[type='submit']:hover
 	color: red;
 	width: 100%;
 }
+.input-error
+	{border-color: #e90000!important;}
+.input-error:hover
+	{border-color: #bb0000!important;}
 #email,
 #telnum
 	{position: relative}
