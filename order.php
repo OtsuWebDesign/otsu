@@ -1,3 +1,55 @@
+<?php
+	$emailErr  =$telnumErr  = $contactErr  = $policyErr  = "";
+	$service = $firstname = $lastname = $email = $telnum = $description = $contact =  $policy = "";
+	if ($_SERVER["REQUEST_METHOD"] == "POST")
+	{
+		$ok = true;
+		if (!empty($_POST["firstname"]))
+			$firstname = test_input($_POST["firstname"]);
+		if (!empty($_POST["lastname"]))
+			$lastname = test_input($_POST["lastname"]);
+
+		if (!empty($_POST["email"]))
+		{
+			$email = test_input($_POST["email"]);
+			if (!filter_var($email, FILTER_VALIDATE_EMAIL))
+			{
+				$emailErr = "Nieprawidłowy format";
+				$ok = false;
+			}
+		}
+		if (!empty($_POST["telnum"]))
+		{
+			$telnum = filter_var(test_input($_POST["telnum"]), FILTER_SANITIZE_NUMBER_INT);
+			if (strlen($telnum) != 9 || strlen($telnum) != 12) // xxx xxx xxx || +48 xxx xxx xxx
+			{
+				$telnumErr = "Nieprawidłowy format";
+				$ok = false;
+			}
+		}
+		if (!empty($_POST["description"]))
+			$description = test_input($_POST["description"]);
+		if (!empty($_POST["contact"]))
+			$contact = test_input($_POST["contact"]);
+		if (empty($_POST["policy"]))
+		{
+			$policyErr = "Akceptacja wymagana";
+			$ok = false;
+		}
+		//logic here
+		
+		if($ok)
+		{
+			//send mail here
+			header('Location: form.php'); //---------------zmienić na "dziekujemy"----------------------
+		}
+	}
+
+	function test_input($data) 
+	{
+		return htmlspecialchars(stripslashes(trim($data)));
+	}
+?>
 <!doctype html>
 <html lang="pl">
 	<head>
@@ -51,37 +103,45 @@
 		<!-- Content -->
 		<div id='formcontainer'>
 			<h1>ZŁóż zamównienie (formularz w trakcie prac)</h1>
-			<form method="post" action="dziekujemy">
+			<form method="post" action="<?='order.php'/*htmlspecialchars($_SERVER["PHP_SELF"])*/?>">
 				<div id='upper'>
 					<div id="part1">
 						<h3>Typ usługi, jaka Cię interesuje:</h3>
 						<select name="service">
-							<option value="vcard">Wizytówka internetowa</option>
-							<option value="wwwpage">Strona internetowa</option>
-							<option value="onlinestore">Sklep internetowy</option>
-							<option value="rebuild">Przebudowa witryny</option>
-							<option value="rebuildour">Przebudowa witryny naszego autorstwa</option>
+							<option value="vcard" <?php if ($service=="vcard") echo "selected";?>>Wizytówka internetowa</option>
+							<option value="wwwpage" <?php if ($service=="wwwpage") echo "selected";?>>Strona internetowa</option>
+							<option value="onlinestore" <?php if ($service=="onlinestore") echo "selected";?>>Sklep internetowy</option>
+							<option value="rebuild" <?php if ($service=="rebuild") echo "selected";?>>Przebudowa witryny</option>
+							<option value="rebuildour" <?php if ($service=="rebuildour") echo "selected";?>>Przebudowa witryny naszego autorstwa</option>
 						</select>
 						<h3>Podaj dane do kontaktu, użyjemy ich tylko do skontaktowania się z Tobą:</h3>
-						<input type='text' name="firstname" placeholder="Twoje imię">
-						<input type='text' name="lastname" placeholder="Twoje nazwisko">
-						<input type='email' name="email" placeholder="adres@email.com">
-						<input type='tel' maxlength='9' name="telnum" placeholder="Numer telefonu">
+						<input type='text' name="firstname" placeholder="Imię" value="<?=$firstname?>">
+						<input type='text' name="lastname" placeholder="Nazwisko" value="<?=$lastname?>">
+						<div id='email'>
+							<input type='email' name="email" placeholder="adres@email.com" value="<?=$email?>">
+							<span class="error"><?=$emailErr?></span>
+						</div>
+						<div id='telnum'>
+							<input type='tel' name="telnum" placeholder="Numer telefonu" value="<?php echo $telnum?>">
+							<span class="error"><?=$telnumErr?></span>
+						</div>
 					</div>
 					<div id="part2">
 						<h3>Opisz krótko potrzebną Ci usługę, przekaż dodatkowe informacje:</h3>
-						<textarea placeholder="Krótki opis tego, czego potrzebujesz :)"></textarea>
+						<textarea name="description" placeholder="Krótki opis tego, czego potrzebujesz :)"><?=$description?></textarea>
 						<h3 id="prefhdr">Preferowany sposób kontaktu:</h3>
 						<div id='radiochoice'>
-							<input type="radio" id="email-contact" name="contact" value="email" checked>
+							<input type="radio" id="email-contact" name="contact" value="email" <?php if ($contact=="email") echo "checked";?>>
 							<label for="email-contact">E-mailowy</label>
 							</br>
-							<input type="radio" id="phone-contact" name="contact" value="phone">
+							<input type="radio" id="phone-contact" name="contact" value="phone" <?php if ($contact=="phone") echo "checked";?>>
 							<label for="phone-contact">Telefoniczny</label>
+							<span class="error"><?=$contactErr?></span>
 						</div>
 						<div id='policy'>
-							<input type='checkbox' id='policy-checkbox'>
+							<input type='checkbox' id='policy-checkbox' name='policy' value='Akceptuję politykę prywatności'>
 							<label for="policy-checkbox">Akceptuję <a href='polityka-prywatnosci'>politykę prywatności</a></label>
+							<span class="error"><?=$policyErr?></span>
 						</div>
 					</div>
 				</div>

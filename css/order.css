@@ -45,7 +45,6 @@ textarea
 	height: 100px;
 }
 
-
 input[type='radio']
 {
     margin: calc(8px + 0.2vw);
@@ -78,6 +77,14 @@ input[type='submit']:hover
 	background: #5FE023;
     font-size: 1.4em;
 }
+.error
+{
+	position: absolute;
+	bottom: 0;
+}
+#email,
+#telnum
+	{position: relative}
 #policy,
 #radiochoice
 {
@@ -85,6 +92,7 @@ input[type='submit']:hover
     width: 100%;
     display: inline-block;
     margin-bottom: calc(15px + 1vw);
+	position: relative;
 }
 #policy>label>a
 	{display:inline-block}
