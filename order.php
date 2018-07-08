@@ -36,7 +36,16 @@
 			$policyErr = "Akceptacja wymagana";
 			$ok = false;
 		}
-		//logic here
+		if($contact=="email" && empty($email))
+		{
+			$emailErr = "Nie podałeś adresu E-mail, a to twój preferowany kontakt";
+			$ok = false;
+		}
+		else if($contact=="telnum" && empty($telnum))
+		{
+			$telnumErr = "Nie podałeś numeru telefonu, a to twój preferowany kontakt";
+			$ok = false;
+		}
 		
 		if($ok)
 		{
@@ -131,7 +140,7 @@
 						<textarea name="description" placeholder="Krótki opis tego, czego potrzebujesz :)"><?=$description?></textarea>
 						<h3 id="prefhdr">Preferowany sposób kontaktu:</h3>
 						<div id='radiochoice'>
-							<input type="radio" id="email-contact" name="contact" value="email" <?php if ($contact=="email") echo "checked";?>>
+							<input type="radio" id="email-contact" name="contact" value="email" <?php if ($contact!="phone") echo "checked";?>>
 							<label for="email-contact">E-mailowy</label>
 							</br>
 							<input type="radio" id="phone-contact" name="contact" value="phone" <?php if ($contact=="phone") echo "checked";?>>
