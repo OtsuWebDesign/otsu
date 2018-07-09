@@ -210,12 +210,6 @@ input[type='submit']:hover
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-	#formcontainer
-	{
-		position: relative;
-		top: 50%;
-		transform: translate(0, -50%);
-	}
 	#part1
 	{
 		width: 60%;
