@@ -14,7 +14,7 @@
 		if (!empty($_POST["lastname"]))
 		{
 			$lastname = test_input($_POST["lastname"]);
-			$msg = $msg."Nazwisko: ".$lastname."\n";
+			$msg .= "Nazwisko: ".$lastname."\n";
 		}
 
 		if (empty($_POST["email"]))
@@ -31,7 +31,7 @@
 				$ok = false;
 			}
 			else
-				$msg = $msg."Adres E-mail: ".$email."\n";
+				$msg .= "Adres E-mail: ".$email."\n";
 		}
 		
 		if (!empty($_POST["telnum"]))
@@ -43,22 +43,22 @@
 				$ok = false;
 			}
 			else
-				$msg = $msg."Numer telefonu: ".$telnum."\n";
+				$msg .= "Numer telefonu: ".$telnum."\n";
 		}
 		
 		if (!empty($_POST["description"]))
 		{
 			$description = test_input($_POST["description"]);
-			$msg = $msg."Opis: ".$description."\n";
+			$msg .= "Opis: ".$description."\n";
 		}
 		if (!empty($_POST["contact"]))
 		{
 			$contact = test_input($_POST["contact"]);
-			$msg = $msg."Preferowany kontakt: ";
+			$msg .= "Preferowany kontakt: ";
 			if ($contact=="email")
-				$msg = $msg."E-mail";
+				$msg .= "E-mail";
 			else
-				$msg = $msg."Telefon";
+				$msg .= "Telefon";
 		}
 		if($contact=='phone' && empty($telnum))
 		{
@@ -70,11 +70,12 @@
 			$policyErr = "Akceptacja wymagana";
 			$ok = false;
 		}
-		
 		if($ok)
 		{
-			mail("kontakt@otsu.pl","Zlecenie",$msg,"From: <".$email.">\r\n");
-			header('Location: dziekujemy');
+			if(mail("kontakt@otsu.pl","Zlecenie",wordwrap("=?utf-8?b?".base64_encode($msg)."?=", 70, "\r\n"),"From: <".$email.">\r\nContent-Type: text/plain;charset=utf-8\r\n"))
+				header('Location: dziekujemy');
+			else
+				$policyErr = "Przepraszamy, coś poszło nie tak, spróbuj ponownie";
 		}
 	}
 
