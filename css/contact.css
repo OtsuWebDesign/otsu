@@ -9,8 +9,7 @@
 .element
 {
     line-height: 60px;
-    background: rgb(20, 157, 199);
-    color: white;
+    color: rgb(80, 79, 79);
     font-size: 20px;
     border-top : 1px lightgray dashed;
     
@@ -27,9 +26,15 @@
     vertical-align: middle;
 }
 
+#mail
+{
+    transition: background 0.3s ease-out;
+}
+
 #mail:hover
 {
-    background: rgb(23, 176, 223);
+    color: white;
+    background: rgb(39, 39, 39);
     cursor: pointer;
 }
 
@@ -57,6 +62,7 @@ h2
     padding-top:20px;
     padding-bottom: 10px;
     line-height: 30px;
+    transition: background 0.3s ease-out;
 }
 
 #fb
@@ -82,7 +88,7 @@ h2
 #form
 {
     background: rgb(39, 39, 39);
-    border-top : 1px white dashed;
+    border-top : 1px lightgray dashed;
 }
 
 #form:hover
@@ -125,7 +131,6 @@ h2
     
     .bigtile
     {
-        transition: background 0.3s ease-out;
         font-weight: bolder;
         color: rgb(80, 79, 79);
     }
@@ -168,12 +173,6 @@ h2
     {
         font-size: 30px;
     }
-
-    .bigtile
-    {
-        height: 200px;
-        padding-top: 50px;
-    }
 	
 } 
 
@@ -184,5 +183,17 @@ h2
 }
 /* Extra enormous devices (TV, 1700px and up) */
 @media only screen and (min-width: 1700px) {
-	
+    
+    .bigtile
+    {
+        height: 200px;
+        padding-top: 50px;
+        font-size: 25px;
+    }
+    
+    .element
+    {
+        height: 100px;
+        padding-top: 20px;
+    }
 }
