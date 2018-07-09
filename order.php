@@ -71,7 +71,7 @@
 		if($ok)
 		{
 			mail("kontakt@otsu.pl","Zlecenie",$msg,"From: <".$email.">\r\n");
-			header('Location: form.php'); //---------------zmienić na "dziekujemy"----------------------
+			header('Location: dziekujemy');
 		}
 	}
 
@@ -133,7 +133,7 @@
 		<!-- Content -->
 		<div id='formcontainer'>
 			<h1>ZŁóż zamównienie (formularz w trakcie prac)</h1>
-			<form method="post" action="<?=htmlspecialchars($_SERVER["PHP_SELF"])?>">
+			<form method="post" action="https://otsu.pl/zamow">
 				<div id='upper'>
 					<div id="part1">
 						<h3>Typ usługi, jaka Cię interesuje:</h3>
