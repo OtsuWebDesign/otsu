@@ -34,12 +34,7 @@
 				$msg = $msg."Adres E-mail: ".$email."\n";
 		}
 		
-		if (empty($_POST["telnum"]))
-		{
-			$telnumErr = "Nie podałeś numeru";
-			$ok = false;
-		}
-		else
+		if (!empty($_POST["telnum"]))
 		{
 			$telnum = filter_var(test_input($_POST["telnum"]), FILTER_SANITIZE_NUMBER_INT);
 			if (!(strlen($telnum) == 9 || strlen($telnum) == 12)) // xxx xxx xxx || +48 xxx xxx xxx
@@ -64,6 +59,11 @@
 				$msg = $msg."E-mail";
 			else
 				$msg = $msg."Telefon";
+		}
+		if($contact=='phone' && empty($telnum))
+		{
+			$telnumErr = "Nie podałeś numeru";
+			$ok = false;
 		}
 		if (empty($_POST["policy"]))
 		{
