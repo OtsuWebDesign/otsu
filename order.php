@@ -72,7 +72,7 @@
 		}
 		if($ok)
 		{
-			if(mail("kontakt@otsu.pl","Zlecenie",wordwrap("=?utf-8?b?".base64_encode($msg)."?=", 70, "\r\n"),"From: <".$email.">\r\nContent-Type: text/plain;charset=utf-8\r\n"))
+			if(mail("kontakt@otsu.pl","Zlecenie",wordwrap($msg, 70, "\r\n"),"From: <".$email.">\r\nContent-Type: text/plain;charset=utf-8\r\n"))
 				header('Location: dziekujemy');
 			else
 				$policyErr = "Przepraszamy, coś poszło nie tak, spróbuj ponownie";
