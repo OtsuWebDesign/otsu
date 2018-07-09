@@ -79,18 +79,81 @@ ul li
 
 .definitionheader
 {
-    font-size: 16px;
+    font-size: 17px;
     font-weight: bolder !important;
 }
 
     
 /* Medium devices (landscape tablets, 800px and up) */
 @media only screen and (min-width: 800px) {
-	
+    
+    #container
+    {
+        width: 70%;
+    }
 
 } 
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 
+    p 
+    {
+        font-size: 18px;
+    }
+
+    #container a
+    {
+        font-size: 20px;
+    }
+
+    h4 
+    {
+        font-size: 20px;
+    }
+
+    .definitionheader
+    {
+        font-size: 19px;
+    }
+
+    #container 
+    {
+        width: 50%;
+    }
+
+    ul li
+    {
+        font-size: 20px;
+    }
+
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
+    p 
+    {
+        font-size: 24px;
+    }
+    h4 
+    {
+        font-size: 26px;
+    }
+
+    ul li
+    {
+        font-size: 22px;
+    }
+
+    .definitionheader
+    {
+        font-size: 25px;
+    }
+
+}
+/* Extra enormous devices (TV, 1700px and up) */
+@media only screen and (min-width: 1700px) {
+	
 }
