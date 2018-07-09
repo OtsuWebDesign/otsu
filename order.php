@@ -62,7 +62,7 @@
 			$emailErr = "Nie podałeś adresu E-mail, a to twój preferowany kontakt";
 			$ok = false;
 		}
-		else if($contact=="telnum" && empty($telnum))
+		else if($contact=="phone" && empty($telnum))
 		{
 			$telnumErr = "Nie podałeś numeru telefonu, a to twój preferowany kontakt";
 			$ok = false;
@@ -152,7 +152,7 @@
 							<span class="error"><?=$emailErr?></span>
 						</div>
 						<div id='telnum'>
-							<input type='tel' name="telnum" placeholder="Numer telefonu" value="<?php echo $telnum?>" class='<?php if(!empty($telnumErr)) echo 'input-error' ?>'>
+							<input type='tel' name="telnum" placeholder="Numer telefonu" value="<?=$telnum?>" class='<?php if(!empty($telnumErr)) echo 'input-error' ?>'>
 							<span class="error"><?=$telnumErr?></span>
 						</div>
 					</div>
@@ -166,7 +166,6 @@
 							</br>
 							<input type="radio" id="phone-contact" name="contact" value="phone" <?php if ($contact=="phone") echo "checked";?>>
 							<label for="phone-contact">Telefoniczny</label>
-							<span class="error"><?=$contactErr?></span>
 						</div>
 						<div id='policy'>
 							<input type='checkbox' id='policy-checkbox' name='policy' value='Akceptuję politykę prywatności'>
