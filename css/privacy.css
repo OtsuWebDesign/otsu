@@ -5,12 +5,20 @@ body
     color: #626262;
 }
 
+h2
+{
+	font-size: calc(20px + 1.4vw);
+}
 h3
 {
+	font-size: calc(15px + 1.1vw);
     border-top: 1px rgb(158, 154, 154) dashed;
     padding-top: 20px;
 }
-
+h4
+{
+	font-size: calc(10px + 1vw);
+}
 ul
 {
     list-style: none;
@@ -27,28 +35,23 @@ ul li
 {
     color: black;
     font-weight: bold;
-    font-size: 18px;
+	font-size: calc(10px + 1vw);
     display: block;
     margin-top: 20px;
 }
 
 .privacc 
 {
-    background-color: rgb(255, 255, 255);
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
+    background-color: white;
     color: #626262;
+    cursor: pointer;
+    font-size: calc(15px + 1.1vw);
+    padding: calc(5px + 0.5vw);
+    width: 100%;
     border: none;
     outline: none;
-    font-size: 20px;
     transition: 0.7s;
     font-weight: bold;
-}
-
-.privacc:first-of-type
-{
-    border-top: 1px rgb(158, 154, 154) dashed;
 }
 
 #container
@@ -67,19 +70,28 @@ ul li
     background-color: #ccc; 
 }
 
-.privacctxt 
+.privacctxt
 {
     padding: 0 18px;
+    font-size: calc(10px + 1vw);
     max-height: 0;
     background-color: white;
     overflow: hidden;
     transition: max-height 0.5s ease-out;
-    border-bottom: 1px rgb(158, 154, 154) dashed;
+}
+p
+{font-size: calc(10px + 1vw);}
+
+.outerprivacc
+	{border-bottom: 1px rgb(158, 154, 154) dashed;}
+.outerprivacc:first-of-type
+{
+    border-top: 1px rgb(158, 154, 154) dashed;
 }
 
 .definitionheader
 {
-    font-size: 17px;
+	font-size: calc(10px + 1vw);
     font-weight: bolder !important;
 }
 
@@ -97,60 +109,11 @@ ul li
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 
-    p 
-    {
-        font-size: 18px;
-    }
-
-    #container a
-    {
-        font-size: 20px;
-    }
-
-    h4 
-    {
-        font-size: 20px;
-    }
-
-    .definitionheader
-    {
-        font-size: 19px;
-    }
-
-    #container 
-    {
-        width: 50%;
-    }
-
-    ul li
-    {
-        font-size: 20px;
-    }
-
 }
 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    
-    p 
-    {
-        font-size: 24px;
-    }
-    h4 
-    {
-        font-size: 26px;
-    }
-
-    ul li
-    {
-        font-size: 22px;
-    }
-
-    .definitionheader
-    {
-        font-size: 25px;
-    }
 
 }
 /* Extra enormous devices (TV, 1700px and up) */
