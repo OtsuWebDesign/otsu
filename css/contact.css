@@ -12,7 +12,7 @@
     background: rgb(20, 157, 199);
     color: white;
     font-size: 20px;
-    border-top : 1px white dashed;
+    border-top : 1px lightgray dashed;
     
 }
 
@@ -81,14 +81,14 @@ h2
 
 #form
 {
-    background: #201e8a;
+    background: rgb(39, 39, 39);
     border-top : 1px white dashed;
 }
 
 #form:hover
 {
     cursor: pointer;
-    background: #2e2c85;;
+    background: rgb(80, 80, 80);
 }
 
 
@@ -117,12 +117,48 @@ h2
         margin-right: auto;
     }
 
-	
+   
 } 
 
 /* Medium devices (landscape tablets, 800px and up) */
 @media only screen and (min-width: 800px) {
+    
+    .bigtile
+    {
+        transition: background 0.3s ease-out;
+        font-weight: bolder;
+        color: rgb(80, 79, 79);
+    }
+
+    #fb,#form
+    {
+        background: none;
+    }
+
+    #fb i 
+    {
+        color: #3b5999;
+        transition: color 0.3s ease-out;
+    }
+
+    #fb:hover 
+    {
+        background: #3b5999;
+        color: white;
+    }
+
+    #fb:hover i 
+    {
+        color: white;
+    }
+
+    #form:hover 
+    {
+        background: rgb(39, 39, 39);
+        color: white;
+    }
 	
+    
 } 
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -131,6 +167,12 @@ h2
     .element
     {
         font-size: 30px;
+    }
+
+    .bigtile
+    {
+        height: 200px;
+        padding-top: 50px;
     }
 	
 } 
