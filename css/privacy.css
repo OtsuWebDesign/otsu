@@ -40,10 +40,9 @@ ul li
     width: 100%;
     color: #626262;
     border: none;
-    border-bottom: 1px rgb(158, 154, 154) dashed;
     outline: none;
     font-size: 20px;
-    transition: 0.4s;
+    transition: 0.7s;
     font-weight: bold;
 }
 
@@ -74,7 +73,8 @@ ul li
     max-height: 0;
     background-color: white;
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
+    transition: max-height 0.5s ease-out;
+    border-bottom: 1px rgb(158, 154, 154) dashed;
 }
 
 .definitionheader
