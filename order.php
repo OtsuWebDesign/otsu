@@ -1,5 +1,5 @@
 <?php
-	$emailErr  =$telnumErr  = $contactErr  = $policyErr  = "";
+	$firstnameErr = $emailErr  =$telnumErr  = $contactErr  = $policyErr  = "";
 	$service = $firstname = $lastname = $email = $telnum = $description = $contact =  $policy = "";
 	$msg = "";
 	if ($_SERVER["REQUEST_METHOD"] == "POST")
@@ -10,13 +10,19 @@
 			$firstname = test_input($_POST["firstname"]);
 			$msg = "Imię: ".$firstname."\n";
 		}
+		
 		if (!empty($_POST["lastname"]))
 		{
 			$lastname = test_input($_POST["lastname"]);
 			$msg = $msg."Nazwisko: ".$lastname."\n";
 		}
 
-		if (!empty($_POST["email"]))
+		if (empty($_POST["email"]))
+		{
+			$emailErr = "Nie podałeś adresu E-mail";
+			$ok = false;
+		}
+		else
 		{
 			$email = test_input($_POST["email"]);
 			if (!filter_var($email, FILTER_VALIDATE_EMAIL))
@@ -27,7 +33,13 @@
 			else
 				$msg = $msg."Adres E-mail: ".$email."\n";
 		}
-		if (!empty($_POST["telnum"]))
+		
+		if (empty($_POST["telnum"]))
+		{
+			$telnumErr = "Nie podałeś numeru";
+			$ok = false;
+		}
+		else
 		{
 			$telnum = filter_var(test_input($_POST["telnum"]), FILTER_SANITIZE_NUMBER_INT);
 			if (!(strlen($telnum) == 9 || strlen($telnum) == 12)) // xxx xxx xxx || +48 xxx xxx xxx
@@ -38,6 +50,7 @@
 			else
 				$msg = $msg."Numer telefonu: ".$telnum."\n";
 		}
+		
 		if (!empty($_POST["description"]))
 		{
 			$description = test_input($_POST["description"]);
@@ -55,16 +68,6 @@
 		if (empty($_POST["policy"]))
 		{
 			$policyErr = "Akceptacja wymagana";
-			$ok = false;
-		}
-		if($contact=="email" && empty($email))
-		{
-			$emailErr = "Nie podałeś adresu E-mail, a to twój preferowany kontakt";
-			$ok = false;
-		}
-		else if($contact=="phone" && empty($telnum))
-		{
-			$telnumErr = "Nie podałeś numeru telefonu, a to twój preferowany kontakt";
 			$ok = false;
 		}
 		
