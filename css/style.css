@@ -1,5 +1,10 @@
 /* Extra super small devices (small phones, 350px and down) */
-
+.ball 
+{
+  position: absolute;
+  border-radius: 100%;
+  opacity: 0.7;
+}
 .aos-animate
 {
 	width: 100%;
