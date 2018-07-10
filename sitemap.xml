@@ -2,44 +2,49 @@
 <urlset
       xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  xmlns:xhtml="http://www.w3.org/1999/xhtml"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
 <url>
   <loc>https://otsu.pl/</loc>
   <lastmod>2018-07-04T10:16:23+00:00</lastmod>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://otsu.pl/"/>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://otsu.pl/o-nas</loc>
   <lastmod>2018-07-04T10:17:41+00:00</lastmod>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://otsu.pl/o-nas"/>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://otsu.pl/cennik</loc>
   <lastmod>2018-07-04T10:16:25+00:00</lastmod>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://otsu.pl/cennik"/>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://otsu.pl/kontakt</loc>
   <lastmod>2018-07-04T10:17:42+00:00</lastmod>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://otsu.pl/kontakt"/>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://otsu.pl/FAQ</loc>
   <lastmod>2018-07-04T10:17:45+00:00</lastmod>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://otsu.pl/FAQ"/>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://otsu.pl/zamow</loc>
   <lastmod>2018-07-04T10:29:27+00:00</lastmod>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://otsu.pl/zamow"/>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://otsu.pl/dziekujemy</loc>
   <lastmod>2018-07-04T10:29:27+00:00</lastmod>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://otsu.pl/dziekujemy"/>
   <priority>0.64</priority>
 </url>
 </urlset>
