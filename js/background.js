@@ -1,6 +1,8 @@
 const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
 const numBalls = 50;
 
+var balls = [];
+
 for (let i = 0; i < numBalls; i++) {
   let ball = document.createElement("div");
   ball.classList.add("ball");
@@ -12,7 +14,7 @@ for (let i = 0; i < numBalls; i++) {
   ball.style.height = ball.style.width;
   
   balls.push(ball);
-  document.body.append(ball);
+  document.getElementById('container').append(ball);
 }
 
 
