@@ -1,4 +1,4 @@
-const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
+const colors = ["#000", "#FFF"];
 const numBalls = 100;
 
 var balls = [];
