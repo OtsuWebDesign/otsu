@@ -1,6 +1,8 @@
 
 #container
-	{width: 100%;position: relative;}
+	{width: 100%;}
+.outertopic
+	{position: relative;}
 #outertopic2
 	{background-color: black;color:white}
 .outertopic::before

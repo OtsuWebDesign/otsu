@@ -1,8 +1,8 @@
 const colors = ["red"];
-const numBalls = 10;
+const numBalls = 3;
 
 var balls = [];
-var containers = [document.getElementById('container')];
+var containers = [document.getElementById('outertopic1'), document.getElementById('outertopic2'), document.getElementById('outertopic3')];
 
 containers.forEach((container) =>
 {
@@ -23,13 +23,14 @@ containers.forEach((container) =>
 	}
 
 
-	balls.forEach((el) => {
+	balls.forEach((el) => 
+	{
 		setInterval(frame, 30);
 		setInterval(changeDirection, el.changeTime, el, Math.floor(Math.random() < 0.5 ? 0 : 1));
 		function frame()
 		{
-			let toX = Math.floor(el.offsetLeft + el.dirx * Math.random() + el.dirx); 
-			let toY = Math.floor(el.offsetTop + el.diry * Math.random() + el.diry); 
+			let toX = Math.floor(el.offsetLeft + (el.dirx * Math.random() + el.dirx)); 
+			let toY = Math.floor(el.offsetTop + (el.diry * Math.random() + el.diry)); 
 			if(toX > container.clientWidth-50 || toX < 50)
 			{
 				el.dirx == 1 ? el.dirx = -1 : el.dirx = 1;
