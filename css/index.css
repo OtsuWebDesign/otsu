@@ -5,10 +5,10 @@
 	{position: relative;}
 #outertopic2
 	{background-color: black;color:white}
-#outertopic1 .square,
-#outertopic3 .square
+#outertopic1 .side,
+#outertopic3 .side
 {border-color: black;}
-#outertopic2 .square
+#outertopic2 .side
 {border-color: white;}
 .outertopic::before
 {

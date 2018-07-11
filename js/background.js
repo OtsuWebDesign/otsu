@@ -1,60 +1,61 @@
-const numsquares = 3;
+const numcubes = 3;
 var containers = [document.getElementById('outertopic1'), document.getElementById('outertopic2'), document.getElementById('outertopic3')];
 
-function Square(cont)
+function Cube(cont)
 {
-	let div = document.createElement("div");
-	let square = this;
-	div.classList.add("square");
-	div.style.left = `${Math.floor(Math.random() * (cont.clientWidth-50))}px`;
-	div.style.top = `${Math.floor(Math.random() * (cont.clientHeight-50))}px`;
-	div.style.width = `${Math.random()*100+100}px`;
-	div.style.height = div.style.width;
+	let viewport = document.createElement("div");
+	viewport.classList.add("viewport");
+	viewport.style.left = `${Math.floor(Math.random() * (cont.clientWidth-100))}px`;
+	viewport.style.top = `${Math.floor(Math.random() * (cont.clientHeight-100))}px`;
+
+	viewport.innerHTML = '<div class="cube"><div class="side"> </div><div class="side"> </div><div class="side"></div> <div class="side"> </div> <div class="side"> </div><div class="side"> </div> </div>';
+	cont.append(viewport);
 
 	this.dirx = (Math.random() > 0.5 ? 1 : -1);//choose (randomly) initial direction
 	this.diry = (Math.random() > 0.5 ? 1 : -1);
 	this.changeTime = Math.random()*300 + 600;//randomly assign changePosition interval
-	cont.append(div);
+
+	let cube = this;
 	this.move = function()
 	{
-		square.toX = Math.floor(div.offsetLeft + square.dirx); //set where to move (where it is + 1px in chosen direction)
-		square.toY = Math.floor(div.offsetTop + square.diry); 
-		if(square.toX > cont.clientWidth-50 || square.toX < 50) //check if not running out of container in x
+		cube.toX = Math.floor(viewport.offsetLeft + cube.dirx); //set where to move (where it is + 1px in chosen direction)
+		cube.toY = Math.floor(viewport.offsetTop + cube.diry); 
+		if(cube.toX > cont.clientWidth-100 || cube.toX < 100) //check if not running out of container in x
 		{
-			square.dirx == 1 ? square.dirx = -1 : square.dirx = 1; //if yes, change direction
-			square.toX = (square.toX > cont.clientWidth-50 ? cont.clientWidth-50 : 50); //change move to new direction
+			cube.dirx == 1 ? cube.dirx = -1 : cube.dirx = 1; //if yes, change direction
+			cube.toX = (cube.toX > cont.clientWidth-100 ? cont.clientWidth-100 : 100); //change move to new direction
 		}
-		if(square.toY > cont.clientHeight-50 || square.toY < 50)//check if not running out of container in y
+		if(cube.toY > cont.clientHeight-100 || cube.toY < 100)//check if not running out of container in y
 		{
-			square.diry == 1 ? square.diry = -1 : square.diry = 1;
-			square.toY = (square.toY > cont.clientHeight-50 ? cont.clientHeight-50 : 50); 
+			cube.diry == 1 ? cube.diry = -1 : cube.diry = 1;
+			cube.toY = (cube.toY > cont.clientHeight-100 ? cont.clientHeight-100 : 100); 
 		}
-		div.style.left = square.toX + 'px'; //move element
-		div.style.top = square.toY + 'px';
+		viewport.style.left = cube.toX + 'px'; //move element
+		viewport.style.top = cube.toY + 'px';
 	}
 	this.rotate = function()
 	{
-		
+
 	}
 	this.frame = function()
 	{
-		square.move();
-		square.rotate();
+		cube.move();
+		cube.rotate();
 	}
 	this.changeDirection = function()
 	{
 		Math.random() < 0.5 ? //choose (randomly) which direction change (x or y)
-		(square.dirx = Math.random() > 0.5 ? 1 : -1) :	//choose (randomly) direction (right or left)
-		(square.diry = Math.random() > 0.5 ? 1 : -1);	//(down or up)
+		(cube.dirx = Math.random() > 0.5 ? 1 : -1) :	//choose (randomly) direction (right or left)
+		(cube.diry = Math.random() > 0.5 ? 1 : -1);	//(down or up)
 	}
 }
 
 containers.forEach((container) =>
 {
-	for (let i = 0; i < numsquares; i++) 
+	for (let i = 0; i < numcubes; i++) 
 	{
-		var square = new Square(container);
-		setInterval(square.frame, 30);
-		setInterval(square.changeDirection, square.changeTime);
+		let cube = new Cube(container);
+		setInterval(cube.frame, 30);
+		setInterval(cube.changeDirection, cube.changeTime);
 	}
 });
