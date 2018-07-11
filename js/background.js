@@ -20,7 +20,7 @@ for (let i = 0; i < numBalls; i++) {
 
 balls.forEach((el) => {
 	setInterval(frame, 10);
-	setInterval(changeDirection(Math.floor(Math.random())), 500);
+	setInterval(changeDirection, 500, Math.floor(Math.random()));
 	var directionX = directionY = (Math.random() > 0.5 ? 1 : -1);
 	function frame()
 	{
