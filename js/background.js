@@ -3,16 +3,6 @@ const numsquares = 3;
 
 var containers = [document.getElementById('outertopic1'), document.getElementById('outertopic2'), document.getElementById('outertopic3')];
 
-containers.forEach((container) =>
-{
-	for (let i = 0; i < numsquares; i++) 
-	{
-		let square = new Square(container);
-		setInterval(square.frame, 30);
-		setInterval(changeDirection, square.changeTime, square, Math.floor(Math.random() < 0.5 ? 0 : 1));
-	}
-});
-
 function Square(cont)
 {
 	let div = document.createElement("div");
@@ -26,6 +16,8 @@ function Square(cont)
 	this.dirx = (Math.random() > 0.5 ? 1 : -1);
 	this.diry = (Math.random() > 0.5 ? 1 : -1);
 	this.changeTime = Math.random()*300 + 600;
+	this.toX = Math.floor(div.offsetLeft + this.dirx); 
+	this.toY = Math.floor(div.offsetTop + this.diry); 
 	cont.append(div);
 	this.frame = function()
 	{
@@ -44,11 +36,20 @@ function Square(cont)
 		div.style.left = this.toX + 'px'; 
 		div.style.top = this.toY + 'px';
 	}
+	this.changeDirection = function()
+	{
+		Math.random() < 0.5 ? 
+		(this.dirx = Math.random() > 0.5 ? 1 : -1) : 
+		(this.diry = Math.random() > 0.5 ? 1 : -1);
+	}
 }
 
-function changeDirection(element, xy)
+containers.forEach((container) =>
 {
-	xy == 0 ?
-	element.dirx = Math.random() > 0.5 ? 1 : -1 :
-	element.diry = Math.random() > 0.5 ? 1 : -1;
-}
+	for (let i = 0; i < numsquares; i++) 
+	{
+		var square = new Square(container);
+		setInterval(square.frame, 30);
+		setInterval(square.changeDirection, square.changeTime);
+	}
+});
