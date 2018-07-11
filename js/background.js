@@ -10,7 +10,7 @@ for (let i = 0; i < numBalls; i++) {
 	ball.style.left = `${Math.floor(Math.random() * (container.clientWidth-50))}px`;
 	ball.style.top = `${Math.floor(Math.random() * (container.clientHeight-50))}px`;
 	//ball.style.transform = `scale(${Math.random()})`;
-	ball.style.width = `${Math.random()*100}px`;
+	ball.style.width = `${Math.random()*100+100}px`;
 	ball.style.height = ball.style.width;
 
 	balls.push(ball);
