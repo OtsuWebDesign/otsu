@@ -6,7 +6,7 @@ const container = document.getElementById('container');
 for (let i = 0; i < numBalls; i++) {
 	let ball = document.createElement("div");
 	ball.classList.add("ball");
-	ball.style.background = colors[Math.floor(Math.random() * colors.length)];
+	ball.style.borderColor = colors[Math.floor(Math.random() * colors.length)];
 	ball.style.left = `${Math.floor(Math.random() * (container.clientWidth-50))}px`;
 	ball.style.top = `${Math.floor(Math.random() * (container.clientHeight-50))}px`;
 	//ball.style.transform = `scale(${Math.random()})`;
