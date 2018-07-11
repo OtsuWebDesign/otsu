@@ -18,7 +18,7 @@ function Square(cont)
 	this.diry = (Math.random() > 0.5 ? 1 : -1);
 	this.changeTime = Math.random()*300 + 600;//randomly assign changePosition interval
 	cont.append(div);
-	this.frame = function()
+	this.move = function()
 	{
 		square.toX = Math.floor(div.offsetLeft + square.dirx); //set where to move (where it is + 1px in chosen direction)
 		square.toY = Math.floor(div.offsetTop + square.diry); 
@@ -34,6 +34,15 @@ function Square(cont)
 		}
 		div.style.left = square.toX + 'px'; //move element
 		div.style.top = square.toY + 'px';
+	}
+	this.rotate = function()
+	{
+		
+	}
+	this.frame = function()
+	{
+		square.move();
+		square.rotate();
 	}
 	this.changeDirection = function()
 	{
