@@ -6,6 +6,7 @@ var containers = [document.getElementById('outertopic1'), document.getElementByI
 function Square(cont)
 {
 	let div = document.createElement("div");
+	let square = this;
 	div.classList.add("square");
 	div.style.borderColor = colors[Math.floor(Math.random() * colors.length)];
 	div.style.left = `${Math.floor(Math.random() * (cont.clientWidth-50))}px`;
@@ -16,31 +17,29 @@ function Square(cont)
 	this.dirx = (Math.random() > 0.5 ? 1 : -1);
 	this.diry = (Math.random() > 0.5 ? 1 : -1);
 	this.changeTime = Math.random()*300 + 600;
-	this.toX = Math.floor(div.offsetLeft + this.dirx); 
-	this.toY = Math.floor(div.offsetTop + this.diry); 
 	cont.append(div);
 	this.frame = function()
 	{
-		this.toX = Math.floor(div.offsetLeft + this.dirx); 
-		this.toY = Math.floor(div.offsetTop + this.diry); 
-		if(this.toX > cont.clientWidth-50 || this.toX < 50)
+		square.toX = Math.floor(div.offsetLeft + square.dirx); 
+		square.toY = Math.floor(div.offsetTop + square.diry); 
+		if(square.toX > cont.clientWidth-50 || square.toX < 50)
 		{
-			this.dirx == 1 ? this.dirx = -1 : this.dirx = 1;
-			this.toX = (this.toX > cont.clientWidth-50 ? cont.clientWidth-50 : 50);
+			square.dirx == 1 ? square.dirx = -1 : square.dirx = 1;
+			square.toX = (square.toX > cont.clientWidth-50 ? cont.clientWidth-50 : 50);
 		}
-		if(this.toY > cont.clientHeight-50 || this.toY < 50)
+		if(square.toY > cont.clientHeight-50 || square.toY < 50)
 		{
-			this.diry == 1 ? this.diry = -1 : this.diry = 1;
-			this.toY = (this.toY > cont.clientHeight-50 ? cont.clientHeight-50 : 50); 
+			square.diry == 1 ? square.diry = -1 : square.diry = 1;
+			square.toY = (square.toY > cont.clientHeight-50 ? cont.clientHeight-50 : 50); 
 		}
-		div.style.left = this.toX + 'px'; 
-		div.style.top = this.toY + 'px';
+		div.style.left = square.toX + 'px'; 
+		div.style.top = square.toY + 'px';
 	}
 	this.changeDirection = function()
 	{
 		Math.random() < 0.5 ? 
-		(this.dirx = Math.random() > 0.5 ? 1 : -1) : 
-		(this.diry = Math.random() > 0.5 ? 1 : -1);
+		(square.dirx = Math.random() > 0.5 ? 1 : -1) : 
+		(square.diry = Math.random() > 0.5 ? 1 : -1);
 	}
 }
 
