@@ -1,29 +1,29 @@
 const colors = ["red"];
-const numBalls = 3;
+const numsquares = 3;
 
-var balls = [];
+var squares = [];
 var containers = [document.getElementById('outertopic1'), document.getElementById('outertopic2'), document.getElementById('outertopic3')];
 
 containers.forEach((container) =>
 {
-	for (let i = 0; i < numBalls; i++) {
-		let ball = document.createElement("div");
-		ball.classList.add("ball");
-		ball.style.borderColor = colors[Math.floor(Math.random() * colors.length)];
-		ball.style.left = `${Math.floor(Math.random() * (container.clientWidth-50))}px`;
-		ball.style.top = `${Math.floor(Math.random() * (container.clientHeight-50))}px`;
-		//ball.style.transform = `scale(${Math.random()})`;
-		ball.style.width = `${Math.random()*100+100}px`;
-		ball.style.height = ball.style.width;
-		ball.dirx = (Math.random() > 0.5 ? 1 : -1);
-		ball.diry = (Math.random() > 0.5 ? 1 : -1);
-		ball.changeTime = Math.random()*300 + 600;
-		balls.push(ball);
-		container.append(ball);
+	for (let i = 0; i < numsquares; i++) {
+		let square = document.createElement("div");
+		square.classList.add("square");
+		square.style.borderColor = colors[Math.floor(Math.random() * colors.length)];
+		square.style.left = `${Math.floor(Math.random() * (container.clientWidth-50))}px`;
+		square.style.top = `${Math.floor(Math.random() * (container.clientHeight-50))}px`;
+		//square.style.transform = `scale(${Math.random()})`;
+		square.style.width = `${Math.random()*100+100}px`;
+		square.style.height = square.style.width;
+		square.dirx = (Math.random() > 0.5 ? 1 : -1);
+		square.diry = (Math.random() > 0.5 ? 1 : -1);
+		square.changeTime = Math.random()*300 + 600;
+		squares.push(square);
+		container.append(square);
 	}
 
 
-	balls.forEach((el) => 
+	squares.forEach((el) => 
 	{
 		setInterval(frame, 30);
 		setInterval(changeDirection, el.changeTime, el, Math.floor(Math.random() < 0.5 ? 0 : 1));
