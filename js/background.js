@@ -1,6 +1,4 @@
-const colors = ["red"];
 const numsquares = 3;
-
 var containers = [document.getElementById('outertopic1'), document.getElementById('outertopic2'), document.getElementById('outertopic3')];
 
 function Square(cont)
@@ -8,7 +6,6 @@ function Square(cont)
 	let div = document.createElement("div");
 	let square = this;
 	div.classList.add("square");
-	div.style.borderColor = colors[Math.floor(Math.random() * colors.length)];
 	div.style.left = `${Math.floor(Math.random() * (cont.clientWidth-50))}px`;
 	div.style.top = `${Math.floor(Math.random() * (cont.clientHeight-50))}px`;
 	div.style.width = `${Math.random()*100+100}px`;

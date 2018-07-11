@@ -2,9 +2,9 @@
 .square 
 {
   position: absolute;
-  border: 10px solid;
+  border: 7px solid;
   opacity: 1;
-  z-index: 8;
+  z-index: 3;
 }
 .aos-animate
 {

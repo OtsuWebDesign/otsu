@@ -5,6 +5,11 @@
 	{position: relative;}
 #outertopic2
 	{background-color: black;color:white}
+#outertopic1 .square,
+#outertopic3 .square
+{border-color: black;}
+#outertopic2 .square
+{border-color: white;}
 .outertopic::before
 {
 	position: absolute;
