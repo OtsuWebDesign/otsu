@@ -1,52 +1,51 @@
 const colors = ["red"];
 const numsquares = 3;
 
-var squares = [];
 var containers = [document.getElementById('outertopic1'), document.getElementById('outertopic2'), document.getElementById('outertopic3')];
 
 containers.forEach((container) =>
 {
-	for (let i = 0; i < numsquares; i++) {
-		let square = document.createElement("div");
-		square.classList.add("square");
-		square.style.borderColor = colors[Math.floor(Math.random() * colors.length)];
-		square.style.left = `${Math.floor(Math.random() * (container.clientWidth-50))}px`;
-		square.style.top = `${Math.floor(Math.random() * (container.clientHeight-50))}px`;
-		//square.style.transform = `scale(${Math.random()})`;
-		square.style.width = `${Math.random()*100+100}px`;
-		square.style.height = square.style.width;
-		square.dirx = (Math.random() > 0.5 ? 1 : -1);
-		square.diry = (Math.random() > 0.5 ? 1 : -1);
-		square.changeTime = Math.random()*300 + 600;
-		squares.push(square);
-		container.append(square);
-	}
-
-
-	squares.forEach((el) => 
+	for (let i = 0; i < numsquares; i++) 
 	{
-		setInterval(frame, 30);
-		setInterval(changeDirection, el.changeTime, el, Math.floor(Math.random() < 0.5 ? 0 : 1));
-		function frame()
-		{
-			let toX = Math.floor(el.offsetLeft + (el.dirx * Math.random() + el.dirx)); 
-			let toY = Math.floor(el.offsetTop + (el.diry * Math.random() + el.diry)); 
-			if(toX > container.clientWidth-50 || toX < 50)
-			{
-				el.dirx == 1 ? el.dirx = -1 : el.dirx = 1;
-				toX = (toX > container.clientWidth-50 ? container.clientWidth-50 : 50);
-			}
-			if(toY > container.clientHeight-50 || toY < 50)
-			{
-				el.diry == 1 ? el.diry = -1 : el.diry = 1;
-				toY = (toY > container.clientHeight-50 ? container.clientHeight-50 : 50); 
-			}
-			el.style.left = toX + 'px'; 
-			el.style.top = toY + 'px';
-		}
-	});
-
+		let square = new Square(container);
+		setInterval(square.frame, 30);
+		setInterval(changeDirection, square.changeTime, square, Math.floor(Math.random() < 0.5 ? 0 : 1));
+	}
 });
+
+function Square(cont)
+{
+	let div = document.createElement("div");
+	div.classList.add("square");
+	div.style.borderColor = colors[Math.floor(Math.random() * colors.length)];
+	div.style.left = `${Math.floor(Math.random() * (cont.clientWidth-50))}px`;
+	div.style.top = `${Math.floor(Math.random() * (cont.clientHeight-50))}px`;
+	div.style.width = `${Math.random()*100+100}px`;
+	div.style.height = div.style.width;
+
+	this.dirx = (Math.random() > 0.5 ? 1 : -1);
+	this.diry = (Math.random() > 0.5 ? 1 : -1);
+	this.changeTime = Math.random()*300 + 600;
+	cont.append(div);
+	this.frame = function()
+	{
+		this.toX = Math.floor(div.offsetLeft + this.dirx); 
+		this.toY = Math.floor(div.offsetTop + this.diry); 
+		if(this.toX > cont.clientWidth-50 || this.toX < 50)
+		{
+			this.dirx == 1 ? this.dirx = -1 : this.dirx = 1;
+			this.toX = (this.toX > cont.clientWidth-50 ? cont.clientWidth-50 : 50);
+		}
+		if(this.toY > cont.clientHeight-50 || this.toY < 50)
+		{
+			this.diry == 1 ? this.diry = -1 : this.diry = 1;
+			this.toY = (this.toY > cont.clientHeight-50 ? cont.clientHeight-50 : 50); 
+		}
+		div.style.left = this.toX + 'px'; 
+		div.style.top = this.toY + 'px';
+	}
+}
+
 function changeDirection(element, xy)
 {
 	xy == 0 ?
