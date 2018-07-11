@@ -7,9 +7,9 @@ for (let i = 0; i < numBalls; i++) {
 	let ball = document.createElement("div");
 	ball.classList.add("ball");
 	ball.style.background = colors[Math.floor(Math.random() * colors.length)];
-	ball.style.left = `${Math.floor(Math.random() * container.offsetWidth)}px`;
-	ball.style.top = `${Math.floor(Math.random() * container.offsetHeight)}px`;
-	ball.style.transform = `scale(${Math.random()})`;
+	ball.style.left = `${Math.floor(Math.random() * (container.clientWidth-50))}px`;
+	ball.style.top = `${Math.floor(Math.random() * (container.clientHeight-50))}px`;
+	//ball.style.transform = `scale(${Math.random()})`;
 	ball.style.width = `${Math.random()*100}px`;
 	ball.style.height = ball.style.width;
 
@@ -19,22 +19,22 @@ for (let i = 0; i < numBalls; i++) {
 
 
 balls.forEach((el) => {
-	setInterval(frame, 10);
-	setInterval(changeDirection, 500, Math.floor(Math.random()));
-	var directionX = directionY = (Math.random() > 0.5 ? 1 : -1);
+	setInterval(frame, 30);
+	setInterval(changeDirection, 500, Math.random() > 0.5 ? 1 : 0);
+	let directionX = directionY = (Math.random() > 0.5 ? 1 : -1);
 	function frame()
 	{
-		var toX = Math.floor(el.offsetLeft + directionX * Math.random()); 
-		var toY = Math.floor(el.offsetTop + directionY * Math.random()); 
-		if(toX > container.offsetWidth || toX < 0)
+		let toX = Math.floor(el.offsetLeft + directionX * Math.random() + directionX); 
+		let toY = Math.floor(el.offsetTop + directionY * Math.random() + directionY); 
+		if(toX > container.clientWidth-50 || toX < 50)
 		{
 			directionX == 1 ? directionX = -1 : directionX = 1;
-			toX = Math.floor(el.offsetLeft + Math.floor(directionX * Math.random()*10));
+			toX = (toX > container.clientWidth-50 ? container.clientWidth-50 : 50);
 		}
-		if(toY > container.offsetHeight || toY < 0)
+		if(toY > container.clientHeight-50 || toY < 50)
 		{
 			directionY == 1 ? directionY = -1 : directionY = 1;
-			toY = Math.floor(el.offsetTop + Math.floor(directionY * Math.random()*10)); 
+			toY = (toY > container.clientHeight-50 ? container.clientHeight-50 : 50); 
 		}
 		el.style.left = toX + 'px'; 
 		el.style.top = toY + 'px';
