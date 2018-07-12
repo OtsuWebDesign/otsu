@@ -1,6 +1,7 @@
 <?php
 	$firstnameErr = $emailErr  =$telnumErr  = $contactErr  = $policyErr  = "";
 	$service = $firstname = $lastname = $email = $telnum = $description = $contact =  $policy = "";
+	$captchaErr = false;
 	$msg = "";
 	if ($_SERVER["REQUEST_METHOD"] == "POST")
 	{
@@ -70,6 +71,11 @@
 			$policyErr = "Akceptacja wymagana";
 			$ok = false;
 		}
+		if($_POST["g-recaptcha-response"] == '')
+		{
+			$captchaErr = true;
+			$ok = false;
+		}
 		if($ok)
 		{
 			if(mail("kontakt@otsu.pl","Zlecenie",wordwrap($msg, 70, "\r\n"),"From: <".$email.">\r\nContent-Type: text/plain;charset=utf-8\r\n"))
@@ -100,8 +106,14 @@
 		<link rel="stylesheet" href="css/style.css"  type="text/css"/>
 		<link rel="stylesheet" href="css/nav.css"  type="text/css"/>
 		<link rel="stylesheet" href="css/order.css"  type="text/css"/>
-		
-		<script src='https://www.google.com/recaptcha/api.js'></script>
+		<?php 
+			if(captchaErr)
+				echo 
+				"<script>
+					document.getElementsByClassName('recaptcha-checkbox-border')[0].style.borderColor = 'red!important';
+					document.getElementsByClassName('rc-anchor-checkbox-label')[0].html += '<p style=\"color:red\">Potwierdź, że nie jesteś robotem</p>'
+				</script>"
+		?>
 	</head>
 	<body>
 	
@@ -200,6 +212,7 @@
             window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
             ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
         </script>
-		<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+		<script src="js/analytics.js" async defer></script>
+		<script src='https://www.google.com/recaptcha/api.js' async defer></script>
 	</body>
 </html>
