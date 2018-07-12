@@ -120,25 +120,26 @@ input[type='submit']:hover
 
 #captcha
 {
+	position: relative;
 	display: inline-block;
 	max-width: 100%;
 }
 
-#rc-imageselect, .g-recaptcha 
+#rc-imageselect, .g-recaptcha, #captcha>div
 {transform:scale(0.68);-webkit-transform:scale(0.68);transform-origin:0 0;-webkit-transform-origin:0 0;} 
 #captcha
 {height: 54px; width: 211px;}
 
 /* Small devices (280px and up) */
 @media only screen and (min-width: 280px) {
-	#rc-imageselect, .g-recaptcha 
+	#rc-imageselect, .g-recaptcha, #captcha>div
 	{transform:scale(0.8);-webkit-transform:scale(0.8);} 
 	#captcha
 	{height: 63px; width: 248px;}
 } 
 /* Small devices (phones, 350px and up) */
 @media only screen and (min-width: 350px) {
-	#rc-imageselect, .g-recaptcha 
+	#rc-imageselect, .g-recaptcha, #captcha>div
 	{transform:scale(1);-webkit-transform:scale(1);} 
 	#captcha
 	{height: 78px; width: 310px;}

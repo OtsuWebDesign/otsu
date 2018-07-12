@@ -106,14 +106,6 @@
 		<link rel="stylesheet" href="css/style.css"  type="text/css"/>
 		<link rel="stylesheet" href="css/nav.css"  type="text/css"/>
 		<link rel="stylesheet" href="css/order.css"  type="text/css"/>
-		<?php 
-			if(captchaErr)
-				echo 
-				"<script>
-					document.getElementsByClassName('recaptcha-checkbox-border')[0].style.borderColor = 'red!important';
-					document.getElementsByClassName('rc-anchor-checkbox-label')[0].html += '<p style=\"color:red\">Potwierdź, że nie jesteś robotem</p>'
-				</script>"
-		?>
 	</head>
 	<body>
 	
@@ -148,7 +140,7 @@
 		</nav>
 		<!-- Content -->
 		<div id='formcontainer'>
-			<h1>ZŁóż zamównienie (formularz w trakcie prac)</h1>
+			<h1>ZŁóż zamównienie</h1>
 			<form method="post" action="https://otsu.pl/zamow">
 				<div id='upper'>
 					<div id="part1">
@@ -192,6 +184,12 @@
 				</div>
 				<div id='captcha'>
 					<div class="g-recaptcha" data-sitekey="6LcfKWEUAAAAAGML5zsdvLXCyk-_INvqHXQFoAlH"></div>
+					<?php 
+						if($captchaErr)
+						{
+							echo "<div style='position:absolute;bottom:5px;left:10px;color:red;font-size:14px'>Potwierdź, że nie jesteś robotem</div>";
+						}
+					?>
 				</div>
 				<input type='submit' value='Złóż zamówienie'>
 			</form>
