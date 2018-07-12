@@ -120,6 +120,7 @@ input[type='submit']:hover
 
 #captcha
 {
+	position: relative;
 	display: inline-block;
 	max-width: 100%;
 }
