@@ -13,8 +13,9 @@
         <link rel="stylesheet" href="css/main.css" type="text/css">
 		<link rel="stylesheet" href="css/style.css"  type="text/css"/>
 		<link rel="stylesheet" href="css/nav.css"  type="text/css"/>
-		<link rel="stylesheet" href="css/aos.css"  type="text/css"/>
-		
+		<style>
+			#container{position:absolute;top:50%;left:50%;width:90%;transform: translate(-50%,-50%);}h1{font-size: calc(20px + 2vw);}h2{font-size: calc(15px + 1.5vw);}
+		</style>
 	</head>
 	<body>
 	
@@ -50,14 +51,10 @@
 
         <!-- Content -->
         <div style='margin-top: 100px; text-align: center;'>
-        <h2>Dziękujemy za wypełnienie formularza!</h2>
-        <a href='zamow'><h3>Placeholderowy przycisk powrotu do formularza</h3></a>
-
-        <?php
-            $email = $_POST['email'];
-            echo "Test php. E-mail podany w formularzu to $email";
-        ?>
-
+		<div id="container">
+			<h1>Dziękujemy za wypełnienie formularza!</h1>
+			<h2>Skontaktujemy się z Tobą najszybcziej jak to możliwe, aby uzgodnić szczegóły.</h2>
+		</div>
         </div>
 		<footer>
 			<div id="footer">Otsu&trade; Webdesign Maciej Witkowski i Radosław Kamiński - Wszelkie prawa zastrzeżone &copy;</div>
@@ -66,7 +63,6 @@
 		<script src="js/nav.js"></script>
         <script src="js/plugins.js"></script>
         <script>
-		
 			window.onload = function()
 			{
 				activeNav();
