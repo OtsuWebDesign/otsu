@@ -1,16 +1,61 @@
-var CACHE_NAME = 'index-cache';
+var CACHE_NAME = 'site-all-cachev1';
 var urlsToCache = [
 	'/',
-	'/css/main.css',
-	'/css/style.css',
-	'/css/index.css',
-	'/css/nav.css',
-	'/css/slider.css',
+	'/o-nas',
+	'/cennik',
+	'/kontakt',
+	'/FAQ',
+	'/zamow',
+	'/polityka-prywatnosci',
+	
+	'/css/about.css',
 	'/css/aos.css',
+	'/css/contact.css',
+	'/css/getstarted.css',
+	'/css/index.css',
+	'/css/main.css',
+	'/css/nav.css',
+	'/css/order.css',
+	'/css/prices.css',
+	'/css/privacy.css',
+	'/css/slider.css',
+	'/css/style.css',
+	
+	'/js/analytics.js',
+	'/js/aos.js',
+	'/js/more.js',
 	'/js/nav.js',
 	'/js/slider.js',
-	'/js/more.js',
-	'/js/aos.js'
+	
+	'/img/aboutphoto/aboutphoto.jpg',
+	'/img/aboutphoto/maciej.jpg',
+	'/img/aboutphoto/radoslaw.jpeg',
+	
+	'/img/how/intuitive.png',
+	'/img/how/knowledge.png',
+	'/img/how/passion.png',
+	'/img/how/responsive.png',
+	'/img/how/tech.png',
+	
+	'/img/logo/fb.png',
+	'/img/logo/formph.png',
+	'/img/logo/full-transp-black.png',
+	
+	'/img/prices/nasza-przebudowa.png',
+	'/img/prices/przebudowa.png',
+	'/img/prices/sklep.png',
+	'/img/prices/strona.png',
+	'/img/prices/wizytowka.png',
+	
+	'/img/slider/min/1.jpg',
+	'/img/slider/min/2.jpg',
+	'/img/slider/min/3.jpg',
+	'/img/slider/middle/1.jpg',
+	'/img/slider/middle/2.jpg',
+	'/img/slider/middle/3.jpg',
+	'/img/slider/max/1.jpg',
+	'/img/slider/max/2.jpg',
+	'/img/slider/max/3.jpg'
 ];
 
 self.addEventListener('install', function(event) {
@@ -66,7 +111,7 @@ self.addEventListener('fetch', function(event) {
 });
 
 self.addEventListener('activate', function(event) {
-	var cacheWhitelist = ['index-cache'];
+	var cacheWhitelist = ['site-all-cachev1'];
 
 	event.waitUntil(
 		caches.keys()
