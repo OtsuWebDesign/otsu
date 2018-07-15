@@ -149,7 +149,7 @@
 		</nav>
 		<!-- Content -->
 		<div id='formcontainer'>
-			<h1>ZŁóż zamównienie</h1>
+			<h1>Złóż zamówienie</h1>
 			<form method="post" action="https://otsu.pl/zamow">
 				<div id='upper'>
 					<div id="part1">
