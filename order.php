@@ -108,7 +108,7 @@
 		<meta name="description" content="Potrzebujesz strony dla swojej firmy? Możemy ci w tym pomóc! Otsu to profesjonalne tworzenie stron internetowych." />
 		<meta name="keywords" content="otsu, webmaster, strona, tworzenie, design, webdesign" />
 		<link rel="manifest" href="site.webmanifest">
-		<title>Otsu Webdesign - Tworzenie stron i wizytówek internetowych</title>
+		<title>OTSU Webdesign - Formularz kontaktowy</title>
 		<link rel="canonical" href="https://otsu.pl/zamow"/>
 		<link rel="apple-touch-icon" href="icon.png">
         <link rel="stylesheet" href="css/main.css" type="text/css">
@@ -149,7 +149,7 @@
 		</nav>
 		<!-- Content -->
 		<div id='formcontainer'>
-			<h1>ZŁóż zamównienie</h1>
+			<h1>Zamów wycenę</h1>
 			<form method="post" action="https://otsu.pl/zamow">
 				<div id='upper'>
 					<div id="part1">
