@@ -84,11 +84,6 @@ h2
 	background: #5FE023;
 	font-size: calc(18px + 0.9vw);
 }
-/* Small devices (phones, 350px and up) */
-@media only screen and (min-width: 350px) {
-	
-} 
-
 /* Small devices (large phones, 540px and up) */
 @media only screen and (min-width: 540px) {
      
@@ -121,16 +116,6 @@ h2
 		font-size: calc(22px + 1.2vw);
 	}
 } 
-/* Small devices (portrait tablets, landscape phones, 640px and up) */
-@media only screen and (min-width: 640px) {
-    
-} 
-
-/* Medium devices (landscape tablets, 800px and up) */
-@media only screen and (min-width: 800px) {
-
-} 
-
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
  
@@ -174,13 +159,3 @@ h2
     	width: 40%;
     }
 } 
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-	
-
-}
-/* Extra enormous devices (TV, 1700px and up) */
-@media only screen and (min-width: 1700px) {
-	
-}

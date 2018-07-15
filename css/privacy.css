@@ -94,29 +94,10 @@ p
 	font-size: calc(10px + 1vw);
     font-weight: bolder !important;
 }
-
-    
 /* Medium devices (landscape tablets, 800px and up) */
 @media only screen and (min-width: 800px) {
-    
     #container
     {
         width: 70%;
     }
-
 } 
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-
-}
-
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-
-}
-/* Extra enormous devices (TV, 1700px and up) */
-@media only screen and (min-width: 1700px) {
-	
-}
