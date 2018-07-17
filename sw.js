@@ -1,4 +1,4 @@
-var CACHE_NAME = 'site-all-cachev1';
+var CACHE_NAME = 'site-all-cachev2';
 var urlsToCache = [
 	'/',
 	'/o-nas',
@@ -39,7 +39,9 @@ var urlsToCache = [
 	
 	'/img/logo/fb.png',
 	'/img/logo/formph.png',
+	'/img/logo/70px/full-transp-black.png',
 	'/img/logo/full-transp-black.png',
+	'/img/logo/logo-black.png',
 	
 	'/img/prices/nasza-przebudowa.png',
 	'/img/prices/przebudowa.png',
@@ -111,7 +113,7 @@ self.addEventListener('fetch', function(event) {
 });
 
 self.addEventListener('activate', function(event) {
-	var cacheWhitelist = ['site-all-cachev1'];
+	var cacheWhitelist = ['site-all-cachev2'];
 
 	event.waitUntil(
 		caches.keys()
