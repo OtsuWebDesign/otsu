@@ -71,7 +71,7 @@ q
 #introduction .section
 {
 	width: calc(120px + 50vw);
-	font-size: calc(15px + 1.2vw);
+	font-size: calc(10px + 1.2vw);
 }
 .person
 {
