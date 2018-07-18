@@ -96,11 +96,11 @@ function createPrevNext()
 
 function createDots() 
 {
-    var ulDots = document.createElement('ul');
+    var ulDots = document.createElement('div');
     ulDots.classList.add('slider-dots');
     ulDots.setAttribute('aria-label', 'Przyciski zmiany slajdu: kropki');
 	
-	var dotsContainer = document.createElement('div');
+	var dotsContainer = document.createElement('ul');
 	dotsContainer.classList.add('dots-container');
 	
     //tworzymy pętlę w ilości liczby slajów

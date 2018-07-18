@@ -1,7 +1,7 @@
-var CACHE_NAME = 'site-all-cachev2';
+var CACHE_NAME = 'site-all-cachev3';
 var urlsToCache = [
 	'/',
-	'/o-nas',
+	/*'/o-nas',*/
 	'/cennik',
 	'/kontakt',
 	'/FAQ',
@@ -113,7 +113,7 @@ self.addEventListener('fetch', function(event) {
 });
 
 self.addEventListener('activate', function(event) {
-	var cacheWhitelist = ['site-all-cachev2'];
+	var cacheWhitelist = ['site-all-cachev3'];
 
 	event.waitUntil(
 		caches.keys()
