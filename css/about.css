@@ -28,7 +28,14 @@ h1, h3
     height: calc(114px + 15.2vw);
     margin: 0 auto;
 }
-
+#about-formlink
+{
+	font-size: calc(15px + 1.2vw);
+	font-weight: 500;
+	color: currentColor;
+	display:block;
+	margin-top:calc(15px + 1.2vw);
+}
 .nameheader
 {
     font-size: calc(15px + 1.2vw);
