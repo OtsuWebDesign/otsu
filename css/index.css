@@ -240,7 +240,12 @@
 	margin-top: 3vw;
 	background-image: url(../img/how/min/responsive.png);
 }
-
+#formlink
+{
+	display: inline-block;
+	color: black;
+	font-weight:bold;
+}
 #orderbottomheader
 	{text-align: center;}
 #orderbottomheader h2

@@ -1,7 +1,7 @@
-var CACHE_NAME = 'site-all-cachev3';
+var CACHE_NAME = 'site-all-cachev4';
 var urlsToCache = [
 	'/',
-	/*'/o-nas',*/
+	'/o-nas',
 	'/cennik',
 	'/kontakt',
 	'/FAQ',
@@ -29,7 +29,7 @@ var urlsToCache = [
 	
 	'/img/aboutphoto/aboutphoto.jpg',
 	'/img/aboutphoto/maciej.jpg',
-	'/img/aboutphoto/radoslaw.jpeg',
+	'/img/aboutphoto/radoslaw.jpg',
 	
 	'/img/how/intuitive.png',
 	'/img/how/knowledge.png',
@@ -113,7 +113,7 @@ self.addEventListener('fetch', function(event) {
 });
 
 self.addEventListener('activate', function(event) {
-	var cacheWhitelist = ['site-all-cachev3'];
+	var cacheWhitelist = ['site-all-cachev4'];
 
 	event.waitUntil(
 		caches.keys()
