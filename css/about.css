@@ -4,13 +4,13 @@ body
     text-align: center;
     color: #626262;
 }
-h3
+h1, h3
 {
 	text-align: center;
 	color: black;
 	font-size: calc(25px + 2vw);
 }
-#mainheader>h3
+#mainheader>h1
 {
 	margin-top: calc(80px + 3vw);
 	margin-left: calc(5px + 1vw);/*to compensate for the empty field at the question mark*/
