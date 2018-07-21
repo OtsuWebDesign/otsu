@@ -170,7 +170,7 @@
 							<option value="rebuild" <?php if ($service=="rebuild") echo "selected";?>>Przebudowa witryny</option>
 							<option value="rebuildour" <?php if ($service=="rebuildour") echo "selected";?>>Przebudowa witryny naszego autorstwa</option>
 						</select>
-						<h3>Podaj dane do kontaktu, użyjemy ich tylko do skontaktowania się z Tobą:</h3>
+						<h3>Podaj swoje dane, użyjemy ich tylko do skontaktowania się z Tobą:</h3>
 						<input type='text' name="firstname" placeholder="Imię" value="<?=$firstname?>">
 						<input type='text' name="lastname" placeholder="Nazwisko" value="<?=$lastname?>">
 						<div id='email'>
