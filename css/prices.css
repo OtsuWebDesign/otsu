@@ -4,7 +4,7 @@ body
 {
     color: #626262;
     text-align: center;
-    margin: calc(70px + 2vw) auto 0 auto;
+    margin-top: 70px;
     padding:3%;
 }
 
@@ -81,10 +81,10 @@ h1
 		{padding:0;}
     .service
     {
-    	width: 33%;
-        float:left;
-        border: 0;
-        padding: calc(4px + 1.5vw);
+    	width: 33.33%;
+    	float:left;
+    	border: 0;
+    	padding: calc(4px + 1.5vw);
     }
     .serviceheader
     {
