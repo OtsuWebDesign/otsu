@@ -103,6 +103,7 @@ function createDots()
 	var dotsContainer = document.createElement('ul');
 	dotsContainer.classList.add('dots-container');
 	
+	"use strict";//do poprawnego działania zmiennych o zasięgy blokowym (np. let)
     //tworzymy pętlę w ilości liczby slajów
     for (let i=0; i<slides.length; i++) 
 	{

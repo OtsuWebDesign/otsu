@@ -1,3 +1,4 @@
+"use strict";//do poprawnego działania zmiennych o zasięgy blokowym (np. let)
 function showmore(topic_id)
 {
 	let morecontent = document.getElementsByClassName("morecontent-"+topic_id)[0];

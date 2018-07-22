@@ -1,5 +1,6 @@
 function aos()
 {
+	"use strict";
 	var scrolled = Math.max(window.pageYOffset, document.body.scrollTop, document.documentElement.scrollTop);
 	const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
 	var elements = document.getElementsByClassName('aos');

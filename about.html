@@ -63,22 +63,6 @@
 				</noscript>
 			</div>
 		</nav>
-		<!--Tags-->
-		<section id="tags">
-			<h2>Otsu.pl, Pasja tworzenia stron</h2>
-			<article>
-				<h3>Firma Otsu.pl</h3>
-				<p>co to otsu, kto to otsu, otsu firma</p>
-			</article>
-			<article>
-				<h3>Radosław Kamiński i Maciej witkowski</h3>
-				<p>Właściciele i założyciele otsu to Maciej witkowski i Radosław Kamiński</p>
-			</article>
-			<article>
-				<h3>Tworzenie stron www</h3>
-				<p>Projektowanie wizytówek online i portali dla firm</p>
-			</article>
-		</section>
 		<!-- Content -->
 		<div class="aos-area">
 			<section>	
@@ -138,6 +122,7 @@
 		<script src="js/aos.js"></script>
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID in google analytics -->
         <script>
+			"use strict";//do poprawnego działania zmiennych o zasięgy blokowym (np. let)
 			document.getElementById('team-h3').classList.add('aos', 'zoom-in');
 			document.getElementById('introduction').classList.add('aos', 'fade-down');
 			let persons = document.getElementsByClassName('person');
