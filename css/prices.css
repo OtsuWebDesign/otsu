@@ -4,18 +4,14 @@ body
 {
     color: #626262;
     text-align: center;
-}
-
-#services
-{
-    width: 90%;
+    width: 95%;
     margin: calc(70px + 2vw) auto 0 auto;
 }
-h2
+
+h1
 {
-    border-bottom: lightgray 1px dashed;
-    padding: 10px 0;
-    font-size: calc(20px + 1vw);
+	font-size:calc(14px + 3vw);
+	margin:calc(7px + 1vw);
 }
 .service
 {
@@ -27,26 +23,21 @@ h2
 {
     clear:both;
 }
-.serviceheader>h3
+.serviceheader>h2
 {
     font-size: calc(20px + 0.8vw);
     color: #58b220;
     font-weight: bold;
-    margin: calc(10px + 1vw) 0;
+    margin: calc(10px + 0.8vw) 0;
 }
 .servicedesc
 {
     padding: 10px;
-	font-size: calc(15px + 0.8vw);
+	font-size: calc(15px + 0.7vw);
 }
 .servicedesc p
 {
     margin: 0;
-}
-.servicepicture
-{
-    width: calc(20px + 30vw);
-    margin: 0 auto;
 }
 .servicedetails
 {
@@ -59,7 +50,7 @@ h2
 .servicedetails h4
 {
     margin: 0;
-	font-size: calc(15px + 1vw);
+	font-size: calc(10px + 1vw);
 }
 .btn 
 {
@@ -87,41 +78,9 @@ h2
 /* Small devices (large phones, 540px and up) */
 @media only screen and (min-width: 540px) {
      
-    .part
-    {
-        width: 45%;
-        display: block;
-        float: left;
-        margin: 0 2.5%;
-    }
-	.servicedetails
-	{
-		font-weight: bold;
-		height: calc(75px + 25.5vw);
-		margin-top: calc(4px + 2vw);
-	}
-	.servicedetails h3,
-	.servicedetails h4
-	{
-		height: 25%;
-		margin: 0;
-	}
-	h2
-	{
-		padding: calc(4px + 1.5vw) 0;
-		font-size: calc(25px + 1.4vw);
-	}
-	.serviceheader>h3
-	{
-		font-size: calc(22px + 1.2vw);
-	}
-} 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
- 
     .service
     {
-        width: 30%;
+    	width: 30%;
         display: inline-block;
         border: 0;
         padding: calc(4px + 1.5vw);
@@ -147,15 +106,15 @@ h2
 	.servicedetails h4
 	{
 		height: auto;
-		margin: calc(4px + 2vw) 0;
+		margin: calc(4px + 1vw) 0;
 	}
     #wwwpage 
     {
         border-right: 1px lightgray dashed;
         border-left: 1px lightgray dashed;
     }
-    .bottomservice
-    {
-    	width: 40%;
-    }
+} 
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+ 
 } 
