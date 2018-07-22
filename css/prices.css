@@ -107,8 +107,8 @@ h1
     	position: relative;
     	padding: 10px;
     	font-size: calc(15px + 0.7vw);
-    	height: calc(200px - 4vw);
- 	}
+    	height: calc(170px - 3.5vw);
+  }
 	.servicedesc p
 	{
 		position:absolute;
@@ -123,7 +123,7 @@ h1
 	.servicedetails h4
 	{
 		height: auto;
-		margin: calc(4px + 1vw) 0;
+		margin: calc(5px + 1.5vw) 0;
 	}
     #wwwpage 
     {
