@@ -217,7 +217,6 @@
 			<div id="footer">Otsu.pl&trade; Maciej Witkowski i Radosław Kamiński - Wszelkie prawa zastrzeżone &copy;</div>
 		</footer>
         <link rel="stylesheet" href="css/main.css" type="text/css">
-		<link rel="stylesheet" href="css/style.css"  type="text/css"/>
 		<link rel="stylesheet" href="css/nav.css"  type="text/css"/>
 		<link rel="stylesheet" href="css/order.css"  type="text/css"/>
 		<!-- Skrypty -->

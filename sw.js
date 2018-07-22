@@ -19,7 +19,6 @@ var urlsToCache = [
 	'/css/prices.css',
 	'/css/privacy.css',
 	'/css/slider.css',
-	'/css/style.css',
 	
 	'/js/analytics.js',
 	'/js/aos.js',
