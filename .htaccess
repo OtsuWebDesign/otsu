@@ -874,7 +874,8 @@ FileETag None
     ExpiresByType text/javascript                       "access plus 1 year"
 	
 	<FilesMatch "^(sw.js)$">
-		ExpiresByType application/javascript            "access plus 0 seconds"
+		ExpiresByType application/javascript            "access plus 60 seconds"
+		Header set Cache-Control "max-age=60, public"
     </FilesMatch>
 
   # Manifest files

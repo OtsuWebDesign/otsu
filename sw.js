@@ -1,4 +1,4 @@
-var CACHE_NAME = 'site-all-cachev7';
+var CACHE_NAME = 'site-all-cachev3';
 var urlsToCache = [
 	'/',
 	'/o-nas',
@@ -106,7 +106,6 @@ self.addEventListener('fetch', function(event) {
 });
 
 self.addEventListener('activate', function(event) {
-	var cacheWhitelist = ['site-all-cachev7'];
 	event.waitUntil(
 		caches.keys()
 		.then(function(cacheNames) 
@@ -114,7 +113,7 @@ self.addEventListener('activate', function(event) {
 			return Promise.all(
 				cacheNames.map(function(cacheName) 
 				{
-					if (cacheWhitelist.indexOf(cacheName) === -1)
+					if (CACHE_NAME != cacheName)
 						return caches.delete(cacheName);
 				})
 			);
