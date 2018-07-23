@@ -1,4 +1,4 @@
-var CACHE_NAME = 'site-all-cachev5';
+var CACHE_NAME = 'site-all-cachev6';
 var urlsToCache = [
 	'/',
 	'/o-nas',
@@ -112,7 +112,7 @@ self.addEventListener('fetch', function(event) {
 });
 
 self.addEventListener('activate', function(event) {
-	var cacheWhitelist = ['site-all-cachev5'];
+	var cacheWhitelist = ['site-all-cachev6'];
 	event.waitUntil(
 		caches.keys()
 		.then(function(cacheNames) 

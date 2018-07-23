@@ -872,7 +872,10 @@ FileETag None
     ExpiresByType application/javascript                "access plus 1 year"
     ExpiresByType application/x-javascript              "access plus 1 year"
     ExpiresByType text/javascript                       "access plus 1 year"
-
+	
+	<FilesMatch "^(sw.js)$">
+		ExpiresByType application/javascript            "access plus 0 seconds"
+    </FilesMatch>
 
   # Manifest files
 
