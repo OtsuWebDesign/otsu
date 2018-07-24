@@ -166,9 +166,7 @@
 						<select name="service">
 							<option value="vcard" <?php if ($service=="vcard") echo "selected";?>>Wizytówka internetowa</option>
 							<option value="wwwpage" <?php if ($service=="wwwpage") echo "selected";?>>Strona internetowa</option>
-							<option value="onlinestore" <?php if ($service=="onlinestore") echo "selected";?>>Sklep internetowy</option>
 							<option value="rebuild" <?php if ($service=="rebuild") echo "selected";?>>Przebudowa witryny</option>
-							<option value="rebuildour" <?php if ($service=="rebuildour") echo "selected";?>>Przebudowa witryny naszego autorstwa</option>
 						</select>
 						<h3>Podaj swoje dane, użyjemy ich tylko do skontaktowania się z Tobą:</h3>
 						<input type='text' name="firstname" placeholder="Imię" value="<?=$firstname?>">
@@ -204,9 +202,7 @@
 					<div class="g-recaptcha" data-sitekey="6LcfKWEUAAAAAGML5zsdvLXCyk-_INvqHXQFoAlH"></div>
 					<?php 
 						if($captchaErr)
-						{
 							echo "<div style='position:absolute;bottom:5px;left:10px;color:red;font-size:14px'>Potwierdź, że nie jesteś robotem</div>";
-						}
 					?>
 				</div>
 				<input type='submit' value='Złóż zamówienie'>

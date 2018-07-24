@@ -1,4 +1,4 @@
-var CACHE_NAME = 'site-all-cachev3';
+var CACHE_NAME = 'site-all-cachev4';
 var urlsToCache = [
 	'/',
 	'/o-nas',

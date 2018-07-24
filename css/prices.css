@@ -5,13 +5,16 @@ body
     color: #626262;
     text-align: center;
     margin-top: 70px;
-    padding:3%;
 }
 
 h1
 {
 	font-size:calc(14px + 3vw);
 	margin:calc(7px + 1vw);
+}
+#services
+{
+    padding: 0 3%;
 }
 .service
 {
@@ -113,7 +116,9 @@ h1
 	{
 		position:absolute;
 		top:50%;
-		transform: translate(0,-50%);
+		left: 50%;
+		transform: translate(-50%,-50%);
+		width: 100%;
 	}
 	.servicedetails
 	{
