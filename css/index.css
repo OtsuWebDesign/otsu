@@ -194,52 +194,49 @@
     font-weight: bold;
     font-style: italic;
 }
-.elementpic
+.elementtitle
 {
-    background-repeat: no-repeat;
-    background-size: cover !important;
-    background-position: center center !important;
-    width: calc(40px + 10vw);
-    height: calc(40px + 10vw);
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0.6em 0;
 }
 .element p 
 	{font-size: calc(10px + 1.5vw)}
 #passiontitle
 	{color: rgb(228, 59, 59);}
-#passionimg
-	{background-image: url(../img/how/min/passion.png);}
 #techtitle
 	{color: green;}
-#techimg
-{
-	margin-top: 3vw;
-    width: calc(80px + 20vw);
-    height: calc(32px + 8vw);
-    background-image: url(../img/how/min/tech.png);
-}
 #knowledgetitle
 	{color: orangered;}
-#knowledgeimg
-{
-	margin-top: 3vw;
-    background-image: url(../img/how/min/knowledge.png);
-}
 #intuitivetitle
 	{color: rgb(95, 95, 95);}
-#intuitiveimg
-{
-	margin-top: 3vw;
-    background-image: url(../img/how/min/intuitive.png);
-}
 #responsivetitle
 	{color: rgb(192, 91, 138);}
-#responsiveimg
+#pwatitle
+	{color: rgb(223, 70, 10);}
+
+#addpwa
 {
-	margin-top: 3vw;
-	background-image: url(../img/how/min/responsive.png);
+	background-color: rgb(223, 70, 0);
+	color: white;
+	border-radius: calc(5px + 1.5vw);
+	line-height: calc(20px + 4vw);
+	text-align: center;
+	font-size: calc(10px + 1.5vw);
+	width: calc(150px + 35vw);
+	-webkit-transition: .7s;
+	-moz-transition: .7s;
+	-ms-transition:.7s;
+	-o-transition:.7s;
+	transition: .7s;
 }
+#addpwa:disabled
+{background-color: gray}
+#addpwa:hover
+{
+	background-color: rgb(255, 80, 0);
+	font-size: calc(10px + 1.7vw);
+	cursor:pointer;
+}
+
 #formlink
 {
 	display: inline-block;
@@ -292,14 +289,7 @@
     {
 		font-size: 3vw;
         display: inline-block;
-        margin-right: 2vw;
     }
-    .elementpic
-    {
-		margin-top: 0!important;
-		display: inline-block;
-		vertical-align: middle;
-	}
 }
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
