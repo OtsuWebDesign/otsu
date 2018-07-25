@@ -150,6 +150,7 @@ h2
 .system-tut
 {
 	display:none;
+	/* visibility: hidden; */
 }
 .system-tut.selected
 {

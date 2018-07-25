@@ -11,7 +11,11 @@ for (let i = 0; i < system_options.length; i++)
 		for(let j=0; j<instructions.length; j++)
 		{
 			if(instructions[j].id == this.id+"-tut")
+			{
 				instructions[j].classList.add("selected");
+				let answerHeight = instructions[j].scrollHeight + 100;
+				document.getElementById("tutorial-answer").style.maxHeight = answerHeight + "px";
+			}
 			else
 				instructions[j].classList.remove("selected");
 		}
