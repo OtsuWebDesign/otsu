@@ -222,6 +222,7 @@
 	text-align: center;
 	font-size: calc(10px + 1.5vw);
 	width: calc(150px + 35vw);
+	text-decoration: none;
 	-webkit-transition: .7s;
 	-moz-transition: .7s;
 	-ms-transition:.7s;
