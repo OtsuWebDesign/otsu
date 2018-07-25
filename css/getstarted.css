@@ -122,7 +122,8 @@ h2
 }
 #systemchoice
 {
-	background-color: rgb(254, 133, 78);
+	background-color: black;
+	border: 1px solid grey;
 	border-radius: calc(5px + 1.5vw);
 	width: 100%;
 }
