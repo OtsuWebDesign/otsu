@@ -369,6 +369,38 @@
 			{
 				activeNav();
 			}
+			
+			let deferredPrompt;
+			let btnAdd = document.getElementById("addpwa");
+			window.addEventListener('beforeinstallprompt', (e) => 
+			{
+				e.preventDefault(); // Prevent Chrome 67 and earlier from automatically showing the prompt
+				deferredPrompt = e; // Stash the event so it can be triggered later.
+				btnAdd.style.display = 'block'; // Update UI notify the user they can add to home screen
+			});
+			btnAdd.addEventListener('click', (e) => 
+			{
+				deferredPrompt.prompt(); // Show the prompt
+				deferredPrompt.userChoice // Wait for the user to respond to the prompt
+				.then((choiceResult) => 
+				{
+					if (choiceResult.outcome === 'accepted')
+						console.log('User accepted the A2HS prompt');
+					else
+						console.log('User dismissed the A2HS prompt');
+					deferredPrompt = null;
+				});
+			});
+			if ('serviceWorker' in navigator) {
+				window.addEventListener('load', function() {
+					navigator.serviceWorker.register('https://otsu.pl/sw.js').then(function(registration) {
+						console.log('ServiceWorker registration successful with scope: ', registration.scope);
+					}, 
+					function(err) 	{
+						console.log('ServiceWorker registration failed: ', err);
+					});
+				});
+			}
             window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
             ga('create','UA-122305723-1','auto');ga('send','pageview')
         </script>
