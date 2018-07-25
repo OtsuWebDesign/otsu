@@ -120,3 +120,29 @@ h2
 	font-size: calc(10px + 1.7vw);
 	cursor:pointer;
 }
+#systemchoice
+{
+	background-color: rgb(254, 133, 78);
+	border-radius: calc(5px + 1.5vw);
+	width: 100%;
+}
+#systemchoice::after
+	{clear:both;}
+.system-option
+{
+	float:left;
+	width:33.3%;
+	border-radius: calc(5px + 1.5vw);
+	line-height: calc(15px + 3vw);
+	text-align: center;
+	font-size: calc(10px + 1.5vw);
+	cursor:pointer;
+}
+.system-option:hover
+{
+	background-color: rgb(255, 103, 34);
+}
+.system-option.selected
+{
+	background-color: rgb(223, 70, 0);
+}
