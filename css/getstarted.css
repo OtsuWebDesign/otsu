@@ -146,3 +146,11 @@ h2
 {
 	background-color: rgb(223, 70, 0);
 }
+.system-tut
+{
+	display:none;
+}
+.system-tut.selected
+{
+	display:block;
+}
