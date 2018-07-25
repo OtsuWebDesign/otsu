@@ -1,4 +1,4 @@
-var CACHE_NAME = 'site-all-cachev6';
+var CACHE_NAME = 'site-all-cachev9';
 var urlsToCache = [
 	'/',
 	'/o-nas',
@@ -25,6 +25,7 @@ var urlsToCache = [
 	'/js/more.js',
 	'/js/nav.js',
 	'/js/slider.js',
+	'/js/tutorial-change.js',
 	
 	//'/img/aboutphoto/aboutphoto.jpg',
 	'/img/aboutphoto/maciej.jpg',

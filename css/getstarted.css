@@ -96,7 +96,7 @@ h2
 	
 #pwa-button-container
 {
-	display:none;
+	/* display:none; */
 }
 #addpwa
 {
@@ -108,6 +108,8 @@ h2
 	font-size: calc(10px + 1.5vw);
 	width: calc(150px + 35vw);
 	text-decoration: none;
+	display: block;
+	margin: 1% auto 4% auto;
 	-webkit-transition: .7s;
 	-moz-transition: .7s;
 	-ms-transition:.7s;

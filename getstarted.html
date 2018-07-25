@@ -371,14 +371,19 @@
 			}
 			
 			let deferredPrompt;
-			let btnAdd = document.getElementById("addpwa");
+			let btnContainer = document.getElementById("pwa-button-container");
 			window.addEventListener('beforeinstallprompt', (e) => 
 			{
 				e.preventDefault(); // Prevent Chrome 67 and earlier from automatically showing the prompt
 				deferredPrompt = e; // Stash the event so it can be triggered later.
-				btnAdd.style.display = 'block'; // Update UI notify the user they can add to home screen
+				btnContainer.style.display = 'block'; // Update UI notify the user they can add to home screen
 			});
-			btnAdd.addEventListener('click', (e) => 
+			if(localStorage.getItem("deferredPrompt"))
+			{
+				deferredPrompt = localStorage.getItem("deferredPrompt");
+				btnContainer.style.display = 'block'; // Update UI notify the user they can add to home screen
+			}
+			document.getElementById("addpwa").addEventListener('click', (e) => 
 			{
 				deferredPrompt.prompt(); // Show the prompt
 				deferredPrompt.userChoice // Wait for the user to respond to the prompt
