@@ -136,7 +136,7 @@ h2
 	border-radius: calc(5px + 1.5vw);
 	line-height: calc(15px + 3vw);
 	text-align: center;
-	font-size: calc(10px + 1.5vw);
+	font-size: calc(8px + 1.2vw);
 	cursor:pointer;
 }
 .system-option:hover
@@ -150,14 +150,27 @@ h2
 .system-tut
 {
 	display:none;
-	/* visibility: hidden; */
 }
 .system-tut.selected
 {
 	display:block;
 }
 
-#windows-tut > img
+.system-tut > img
 {
-	width:100%;
+	max-width: 100%;
+	padding: 5% 2%;
+	max-height: 100vh;
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	.system-tut > img
+	{
+		max-width: 45%;
+		max-height: 100vh;
+	}
+	#windows-tut > img
+	{
+		max-width: 100%;
+	}
 }
