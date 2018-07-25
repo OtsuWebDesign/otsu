@@ -213,7 +213,7 @@
 #pwatitle
 	{color: rgb(223, 70, 10);}
 
-#addpwa
+#pwainfo
 {
 	background-color: rgb(223, 70, 0);
 	color: white;
@@ -229,9 +229,7 @@
 	-o-transition:.7s;
 	transition: .7s;
 }
-#addpwa:disabled
-{background-color: gray}
-#addpwa:hover
+#pwainfo:hover
 {
 	background-color: rgb(255, 80, 0);
 	font-size: calc(10px + 1.7vw);

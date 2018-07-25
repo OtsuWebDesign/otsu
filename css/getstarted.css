@@ -93,3 +93,30 @@ h2
 }
 .noheight
 	{max-height:0;}
+	
+#pwa-button-container
+{
+	display:none;
+}
+#addpwa
+{
+	background-color: rgb(223, 70, 0);
+	color: white;
+	border-radius: calc(5px + 1.5vw);
+	line-height: calc(20px + 4vw);
+	text-align: center;
+	font-size: calc(10px + 1.5vw);
+	width: calc(150px + 35vw);
+	text-decoration: none;
+	-webkit-transition: .7s;
+	-moz-transition: .7s;
+	-ms-transition:.7s;
+	-o-transition:.7s;
+	transition: .7s;
+}
+#addpwa:hover
+{
+	background-color: rgb(255, 80, 0);
+	font-size: calc(10px + 1.7vw);
+	cursor:pointer;
+}
