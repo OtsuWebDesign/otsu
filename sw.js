@@ -1,7 +1,8 @@
 var CACHE_FILES = 'otsu.pl-files-cache-v1';
 var CACHE_IMAGES = 'otsu.pl-images-cache-v1';
-var cache_whitelist = [CACHE_FILES, CACHE_IMAGES];
-var urlsToCache = [
+var CACHE_OTHER = 'otsu.pl-other-cache';
+var cache_whitelist = [CACHE_FILES, CACHE_IMAGES, CACHE_OTHER];
+var urlsToCache_FILES = [
 	'/',
 	'/o-nas',
 	'/cennik',
@@ -27,9 +28,9 @@ var urlsToCache = [
 	'/js/more.js',
 	'/js/nav.js',
 	'/js/slider.js',
-	'/js/tutorial-change.js',
-	
-	//'/img/aboutphoto/aboutphoto.jpg',
+	'/js/tutorial-change.js'
+];
+var urlsToCache_IMAGES = [
 	'/img/aboutphoto/maciej.jpg',
 	'/img/aboutphoto/radoslaw.jpg',
 	
@@ -68,12 +69,18 @@ var urlsToCache = [
 self.addEventListener('install', function(event) {
 	// Perform install steps
 	event.waitUntil(
-		caches.open(CACHE_NAME)
+		caches.open(CACHE_FILES)
 		.then(function(cache) 
 		{
-			console.log('Opened cache');
-			return cache.addAll(urlsToCache);
-		})
+			console.log('Opened cache files');
+			return cache.addAll(urlsToCache_FILES);
+		});
+		caches.open(CACHE_IMAGES)
+		.then(function(cache) 
+		{
+			console.log('Opened cache images');
+			return cache.addAll(urlsToCache_IMAGES);
+		});
 	);
 });
 
@@ -105,7 +112,7 @@ self.addEventListener('fetch', function(event) {
 				// to clone it so we have two streams.
 				var responseToCache = response.clone();
 
-				caches.open(CACHE_NAME)
+				caches.open(CACHE_OTHER)
 				.then(function(cache) 
 				{
 					cache.put(event.request, responseToCache);
