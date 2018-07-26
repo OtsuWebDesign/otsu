@@ -92,11 +92,11 @@ h2
 	padding: calc(10px + 1vw);
 }
 .noheight
-	{max-height:0;}
+	{max-height:0;overflow: hidden;}
 	
 #pwa-button-container
 {
-	/* display:none; */
+	display:none;
 }
 #addpwa
 {
@@ -106,10 +106,10 @@ h2
 	line-height: calc(20px + 4vw);
 	text-align: center;
 	font-size: calc(10px + 1.5vw);
-	width: calc(150px + 35vw);
+	width: 100%;
 	text-decoration: none;
 	display: block;
-	margin: 1% auto 4% auto;
+	margin: 1% 0 2% 0;
 	-webkit-transition: .7s;
 	-moz-transition: .7s;
 	-ms-transition:.7s;
@@ -120,6 +120,12 @@ h2
 {
 	background-color: rgb(255, 80, 0);
 	font-size: calc(10px + 1.7vw);
+	cursor:pointer;
+}
+#addpwa_span
+{
+	margin-bottom:2%;
+	display:block;
 	cursor:pointer;
 }
 #systemchoice

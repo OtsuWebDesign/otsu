@@ -208,6 +208,7 @@
 										<div class='inneranswer'>
 											<div id="pwa-button-container">
 												<button id="addpwa">Dodaj witrynę do ekranu głównego!</button>
+												<span id="addpwa_span">Przycisk nie działa? Zobacz instrukcje!</span>
 											</div>
 											<div id="installtutorial">
 												<div id="systemchoice">
@@ -372,16 +373,19 @@
 			
 			let deferredPrompt;
 			let btnContainer = document.getElementById("pwa-button-container");
+			let instructions = document.getElementById("installtutorial");
 			window.addEventListener('beforeinstallprompt', (e) => 
 			{
 				e.preventDefault(); // Prevent Chrome 67 and earlier from automatically showing the prompt
 				deferredPrompt = e; // Stash the event so it can be triggered later.
 				btnContainer.style.display = 'block'; // Update UI notify the user they can add to home screen
+				instructions.classList.add("noheight");
 			});
 			if(localStorage.getItem("deferredPrompt"))
 			{
 				deferredPrompt = localStorage.getItem("deferredPrompt");
 				btnContainer.style.display = 'block'; // Update UI notify the user they can add to home screen
+				instructions.classList.add("noheight");
 			}
 			document.getElementById("addpwa").addEventListener('click', (e) => 
 			{
@@ -395,6 +399,14 @@
 						console.log('User dismissed the A2HS prompt');
 					deferredPrompt = null;
 				});
+			});
+			document.getElementById("addpwa_span").addEventListener("click", function() 
+			{
+				if (instructions.style.maxHeight)
+					instructions.style.maxHeight = null;
+				else
+					instructions.style.maxHeight = instructions.scrollHeight + "px";
+				document.getElementById('tutorial-answer').style.maxHeight = document.getElementById('tutorial-answer').scrollHeight + "px";
 			});
 			if ('serviceWorker' in navigator) {
 				window.addEventListener('load', function() {

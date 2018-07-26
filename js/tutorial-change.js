@@ -15,6 +15,7 @@ for (let i = 0; i < system_options.length; i++)
 				instructions[j].classList.add("selected");
 				let answerHeight = instructions[j].scrollHeight + 200;
 				document.getElementById("tutorial-answer").style.maxHeight = answerHeight + "px";
+				document.getElementById("installtutorial").style.maxHeight = document.getElementById("installtutorial").scrollHeight + "px";
 			}
 			else
 				instructions[j].classList.remove("selected");
