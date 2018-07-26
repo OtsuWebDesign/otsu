@@ -43,7 +43,7 @@ var urlsToCache_IMAGES = [
 	
 	'/img/logo/fb.png',
 	'/img/logo/formph.png',
-	'/img/logo/70px/full-transp-black.png',
+	'/img/logo/200px/full-transp-black.png',
 	'/img/logo/full-transp-black.png',
 	'/img/logo/logo-black.png',
 	
