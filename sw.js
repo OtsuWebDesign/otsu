@@ -1,4 +1,6 @@
-var CACHE_NAME = 'site-all-cachev10';
+var CACHE_FILES = 'otsu.pl-files-cache-v1';
+var CACHE_IMAGES = 'otsu.pl-images-cache-v1';
+var cache_whitelist = [CACHE_FILES, CACHE_IMAGES];
 var urlsToCache = [
 	'/',
 	'/o-nas',
@@ -51,7 +53,16 @@ var urlsToCache = [
 	'/img/slider/middle/3.jpg',
 	'/img/slider/max/1.jpg',
 	'/img/slider/max/2.jpg',
-	'/img/slider/max/3.jpg'
+	'/img/slider/max/3.jpg',
+	
+	'/img/tutorial/android/step1.jpg',
+	'/img/tutorial/android/step2.jpg',
+	'/img/tutorial/windows/step1.jpg',
+	'/img/tutorial/windows/step2.jpg',
+	'/img/tutorial/windows/step3.jpg',
+	'/img/tutorial/ios/step1.jpg',
+	'/img/tutorial/ios/step2.jpg',
+	'/img/tutorial/ios/step3.jpg'
 ];
 
 self.addEventListener('install', function(event) {
@@ -114,7 +125,7 @@ self.addEventListener('activate', function(event) {
 			return Promise.all(
 				cacheNames.map(function(cacheName) 
 				{
-					if (CACHE_NAME != cacheName)
+					if (!cache_whitelist.includes(cacheName))
 						return caches.delete(cacheName);
 				})
 			);
