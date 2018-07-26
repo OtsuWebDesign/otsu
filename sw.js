@@ -1,5 +1,6 @@
-var CACHE_FILES = 'otsu.pl-files-cache-v1';
-var CACHE_IMAGES = 'otsu.pl-images-cache-v1';
+var swVersion = 'v1';
+var CACHE_FILES = 'otsu.pl-files-cache-v3';
+var CACHE_IMAGES = 'otsu.pl-images-cache-v3';
 var CACHE_OTHER = 'otsu.pl-other-cache';
 var cache_whitelist = [CACHE_FILES, CACHE_IMAGES, CACHE_OTHER];
 var urlsToCache_FILES = [
@@ -74,13 +75,15 @@ self.addEventListener('install', function(event) {
 		{
 			console.log('Opened cache files');
 			return cache.addAll(urlsToCache_FILES);
-		});
+		})
+	);
+	event.waitUntil(
 		caches.open(CACHE_IMAGES)
 		.then(function(cache) 
 		{
 			console.log('Opened cache images');
 			return cache.addAll(urlsToCache_IMAGES);
-		});
+		})
 	);
 });
 

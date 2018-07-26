@@ -164,7 +164,10 @@
 								<article class="element">
 									<h3 class="elementtitle" id="pwatitle">PWA</h3>
 									<p>Jako jedni z niewielu możemy pochwalić się faktem, że wszystkie nasze witryny spełniają standardy progresywnej aplikacji webowej. W skrócie - nasze strony działają na każdym urządzeniu, są szybkie, mogą być wyświetlane offline, a nawet potrafią zachowywać się jak natywne aplikacje na Twoim smartfonie. Brzmi niemożliwie? Przekonaj się sam!</p>
-									<a href="FAQ#PWA" target"_blank"><button id="pwainfo">Dowidz się więcej o PWA</button></a>
+									<a href="FAQ#PWA"><button id="pwainfo">Dowidz się więcej o PWA</button></a>
+									<div id="pwa-button-container">
+										<button id="addpwa">Dodaj witrynę do ekranu głównego!</button>
+									</div>
 								</article>
 							</section>
 						</div>
@@ -304,19 +307,34 @@
 				aos();
 			}
 			let deferredPrompt;
+			let btnContainer = document.getElementById("pwa-button-container");
 			window.addEventListener('beforeinstallprompt', (e) => 
 			{
+				console.log("Strona może być dodana do ekranu głównego, kliknij przycisk, który się pojawił w sekcji o PWA na stronie głównej :)");
 				e.preventDefault(); // Prevent Chrome 67 and earlier from automatically showing the prompt
 				deferredPrompt = e; // Stash the event so it can be triggered later.
-				localStorage.setItem("deferredPrompt", deferredPrompt);
+				btnContainer.style.display = 'block'; // Update UI notify the user they can add to home screen
+			});
+			document.getElementById("addpwa").addEventListener('click', (e) => 
+			{
+				deferredPrompt.prompt(); // Show the prompt
+				deferredPrompt.userChoice // Wait for the user to respond to the prompt
+				.then((choiceResult) => 
+				{
+					if (choiceResult.outcome === 'accepted')
+						console.log('Zaakceptowano powiadomienie');
+					else
+						console.log('Odrzucono powiadomienie');
+					deferredPrompt = null;
+				});
 			});
 			if ('serviceWorker' in navigator) {
 				window.addEventListener('load', function() {
 					navigator.serviceWorker.register('https://otsu.pl/sw.js').then(function(registration) {
-						console.log('ServiceWorker registration successful with scope: ', registration.scope);
+						console.log('Udana rejestracja ServiceWorker\'a w zasięgu: ', registration.scope);
 					}, 
 					function(err) 	{
-						console.log('ServiceWorker registration failed: ', err);
+						console.log('Błąd rejestracji ServiceWorker\'a: ', err);
 					});
 				});
 			}

@@ -377,17 +377,12 @@
 			let instructions = document.getElementById("installtutorial");
 			window.addEventListener('beforeinstallprompt', (e) => 
 			{
+				console.log("Strona może być dodana do ekranu głównego, kliknij przycisk, który się pojawił w sekcji o PWA na stronie głównej :)");
 				e.preventDefault(); // Prevent Chrome 67 and earlier from automatically showing the prompt
 				deferredPrompt = e; // Stash the event so it can be triggered later.
 				btnContainer.style.display = 'block'; // Update UI notify the user they can add to home screen
 				instructions.classList.add("noheight");
 			});
-			if(localStorage.getItem("deferredPrompt"))
-			{
-				deferredPrompt = localStorage.getItem("deferredPrompt");
-				btnContainer.style.display = 'block'; // Update UI notify the user they can add to home screen
-				instructions.classList.add("noheight");
-			}
 			document.getElementById("addpwa").addEventListener('click', (e) => 
 			{
 				deferredPrompt.prompt(); // Show the prompt
@@ -395,9 +390,9 @@
 				.then((choiceResult) => 
 				{
 					if (choiceResult.outcome === 'accepted')
-						console.log('User accepted the A2HS prompt');
+						console.log('Zaakceptowano powiadomienie');
 					else
-						console.log('User dismissed the A2HS prompt');
+						console.log('Odrzucono powiadomienie');
 					deferredPrompt = null;
 				});
 			});
@@ -412,10 +407,10 @@
 			if ('serviceWorker' in navigator) {
 				window.addEventListener('load', function() {
 					navigator.serviceWorker.register('https://otsu.pl/sw.js').then(function(registration) {
-						console.log('ServiceWorker registration successful with scope: ', registration.scope);
+						console.log('Udana rejestracja ServiceWorker\'a w zasięgu: ', registration.scope);
 					}, 
 					function(err) 	{
-						console.log('ServiceWorker registration failed: ', err);
+						console.log('Błąd rejestracji ServiceWorker\'a: ', err);
 					});
 				});
 			}

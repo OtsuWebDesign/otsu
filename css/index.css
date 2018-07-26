@@ -213,7 +213,7 @@
 #pwatitle
 	{color: rgb(223, 70, 10);}
 
-#pwainfo
+#pwainfo, #addpwa
 {
 	background-color: rgb(223, 70, 0);
 	color: white;
@@ -229,11 +229,15 @@
 	-o-transition:.7s;
 	transition: .7s;
 }
-#pwainfo:hover
+#pwainfo:hover, #addpwa:hover
 {
 	background-color: rgb(255, 80, 0);
 	font-size: calc(10px + 1.7vw);
 	cursor:pointer;
+}
+#pwa-button-container
+{
+	display:none;
 }
 
 #formlink
