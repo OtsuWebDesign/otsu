@@ -59,9 +59,6 @@ var urlsToCache_IMAGES = [
 	
 	'/img/tutorial/android/step1.jpg',
 	'/img/tutorial/android/step2.jpg',
-	'/img/tutorial/windows/step1.jpg',
-	'/img/tutorial/windows/step2.jpg',
-	'/img/tutorial/windows/step3.jpg',
 	'/img/tutorial/ios/step1.jpg',
 	'/img/tutorial/ios/step2.jpg',
 	'/img/tutorial/ios/step3.jpg'
