@@ -158,7 +158,7 @@
 		</nav>
 		<!-- Content -->
 		<div id='formcontainer'>
-			<h1>Zamów wycenę</h1>
+			<h1>Skontaktuj się z nami!</h1>
 			<form method="post" action="https://otsu.pl/zamow">
 				<div id='upper'>
 					<div id="part1">
@@ -205,7 +205,7 @@
 							echo "<div style='position:absolute;bottom:5px;left:10px;color:red;font-size:14px'>Potwierdź, że nie jesteś robotem</div>";
 					?>
 				</div>
-				<input type='submit' value='Złóż zamówienie'>
+				<input type='submit' value='Wyślij prośbę o kontakt'>
 			</form>
 		</div>
 
