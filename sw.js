@@ -1,7 +1,7 @@
 var swVersion = 'v1';
-var CACHE_FILES = 'otsu.pl-files-cache-v9';
-var CACHE_IMAGES = 'otsu.pl-images-cache-v9';
-var CACHE_OTHER = 'otsu.pl-other-cache-v7';
+var CACHE_FILES = 'otsu.pl-files-cache-v10';
+var CACHE_IMAGES = 'otsu.pl-images-cache-v10';
+var CACHE_OTHER = 'otsu.pl-other-cache-v8';
 var cache_whitelist = [CACHE_FILES, CACHE_IMAGES, CACHE_OTHER];
 var urlsToCache_FILES = [
 	'/',
