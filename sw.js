@@ -40,12 +40,6 @@ CACHE_IMAGES.urls = [
 	'/img/aboutphoto/maciej.jpg',
 	'/img/aboutphoto/radoslaw.jpg',
 	
-	'/img/how/intuitive.png',
-	'/img/how/knowledge.png',
-	'/img/how/passion.png',
-	'/img/how/responsive.png',
-	'/img/how/tech.png',
-	
 	'/img/logo/fb.png',
 	'/img/logo/formph.png',
 	'/img/logo/200px/full-transp-black.png',
