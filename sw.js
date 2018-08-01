@@ -1,9 +1,13 @@
-var swVersion = 'v1';
-var CACHE_FILES = 'otsu.pl-files-cache-v11';
-var CACHE_IMAGES = 'otsu.pl-images-cache-v11';
-var CACHE_OTHER = 'otsu.pl-other-cache-v9';
-var cache_whitelist = [CACHE_FILES, CACHE_IMAGES, CACHE_OTHER];
-var urlsToCache_FILES = [
+var swVersion = 'v2';
+var CACHE_FILES = {};
+var CACHE_IMAGES = {};
+var CACHE_OTHER = {};
+var CACHE_FILES.name = 'otsu.pl-files-cache-v1.0';
+var CACHE_IMAGES.name = 'otsu.pl-images-cache-v1.0';
+var CACHE_OTHER.name = 'otsu.pl-other-cache-v1.0';
+var otsu_caches = [CACHE_FILES, CACHE_IMAGES, CACHE_OTHER];
+var cache_whitelist = [CACHE_FILES.name, CACHE_IMAGES.name, CACHE_OTHER.name];
+var CACHE_FILES.urls = [
 	'/',
 	'/o-nas',
 	'/cennik',
@@ -31,7 +35,7 @@ var urlsToCache_FILES = [
 	'/js/slider.js',
 	'/js/tutorial-change.js'
 ];
-var urlsToCache_IMAGES = [
+var CACHE_IMAGES.urls = [
 	'/img/aboutphoto/maciej.jpg',
 	'/img/aboutphoto/radoslaw.jpg',
 	
@@ -66,22 +70,18 @@ var urlsToCache_IMAGES = [
 
 self.addEventListener('install', function(event) {
 	// Perform install steps
-	event.waitUntil(
-		caches.open(CACHE_FILES)
-		.then(function(cache) 
+	event.waitUntil(Promise.all(
+		otsu_caches.map(function(myCache) 
 		{
-			console.log('Opened cache files');
-			return cache.addAll(urlsToCache_FILES);
+			return caches.open(myCache.name)
+			.then(function(cache) 
+			{
+				console.log('Opened cache');
+				return cache.addAll(myCache.urls);
+			})
 		})
-	);
-	event.waitUntil(
-		caches.open(CACHE_IMAGES)
-		.then(function(cache) 
-		{
-			console.log('Opened cache images');
-			return cache.addAll(urlsToCache_IMAGES);
-		})
-	);
+	));
+	
 });
 
 self.addEventListener('fetch', function(event) {
@@ -112,7 +112,7 @@ self.addEventListener('fetch', function(event) {
 				// to clone it so we have two streams.
 				var responseToCache = response.clone();
 
-				caches.open(CACHE_OTHER)
+				caches.open(CACHE_OTHER.name)
 				.then(function(cache) 
 				{
 					cache.put(event.request, responseToCache);
