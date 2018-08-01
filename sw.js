@@ -7,6 +7,7 @@ CACHE_IMAGES.name = 'otsu.pl-images-cache-v1.0';
 CACHE_OTHER.name = 'otsu.pl-other-cache-v1.0';
 var otsu_caches = [CACHE_FILES, CACHE_IMAGES, CACHE_OTHER];
 var cache_whitelist = [CACHE_FILES.name, CACHE_IMAGES.name, CACHE_OTHER.name];
+CACHE_OTHER.urls =[];
 CACHE_FILES.urls = [
 	'/',
 	'/o-nas',
