@@ -35,7 +35,7 @@ CACHE_FILES.urls = [
 	'/js/slider.js',
 	'/js/tutorial-change.js'
 ];
-var CACHE_IMAGES.urls = [
+CACHE_IMAGES.urls = [
 	'/img/aboutphoto/maciej.jpg',
 	'/img/aboutphoto/radoslaw.jpg',
 	
