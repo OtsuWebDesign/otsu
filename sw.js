@@ -56,6 +56,12 @@ CACHE_IMAGES.urls = [
 	
 	'/img/tutorial/android/step1.jpg',
 	'/img/tutorial/android/step2.jpg',
+	'/img/tutorial/windows/step1.jpg',
+	'/img/tutorial/windows/step2.jpg',
+	'/img/tutorial/windows/step3.jpg',
+	'/img/tutorial/windows/step4.jpg',
+	'/img/tutorial/windows/step5.jpg',
+	'/img/tutorial/windows/step6.jpg',
 	'/img/tutorial/ios/step1.jpg',
 	'/img/tutorial/ios/step2.jpg',
 	'/img/tutorial/ios/step3.jpg'
