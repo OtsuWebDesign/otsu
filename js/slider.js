@@ -10,12 +10,22 @@ var currentSlide = 0, //aktualny slide
 	prevText = "Poprzedni slajd",
 	nextText = "Następny slajd";
 	
+window.addEventListener("load",()=>{
+	generate_slider();
+	cutslider()
+});
+window.addEventListener("scroll",()=>{
+	cutslider()
+});
 function cutslider()
 {
-	if (document.body.scrollTop > 0.6*document.getElementById('slider-container').offsetHeight || document.documentElement.scrollTop > 0.6*document.getElementById('slider-container').offsetHeight)
-		document.getElementById('slider-container').classList.add('cuted');
-	else
-		document.getElementById('slider-container').classList.remove('cuted');
+	if(document.getElementById('slider-container'))
+	{
+		if (document.body.scrollTop > 0.6*document.getElementById('slider-container').offsetHeight || document.documentElement.scrollTop > 0.6*document.getElementById('slider-container').offsetHeight)
+			document.getElementById('slider-container').classList.add('cuted');
+		else
+			document.getElementById('slider-container').classList.remove('cuted');
+	}
 };
 function generate_slider()
 {

@@ -4,15 +4,13 @@ document.getElementById('outerburger').onclick = function()
 	document.getElementById('hamburger').classList.toggle('menu');
 	document.getElementById('hamburger').classList.toggle('close');
 };
-function activeNav()
-{
+window.addEventListener("load",()=>{
 	if(!document.getElementById('nav').classList.contains('nav-transparent'))
 	{
 		document.getElementById('nav').classList.add('nav-active');
 	}
-}
-function navcolor()
-{
+});
+window.addEventListener("scroll",()=>{
 	if(document.getElementById('nav').classList.contains('nav-transparent'))
 	{
 		if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30)
@@ -24,4 +22,4 @@ function navcolor()
 			document.getElementById('nav').classList.remove('nav-active');
 		}
 	}
-};
+});

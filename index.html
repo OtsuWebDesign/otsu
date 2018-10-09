@@ -298,22 +298,11 @@
 				slide2.onload = function() {document.getElementById('slide2').style.backgroundImage = 'url('+this.src+')';};
 				slide3.onload = function() {document.getElementById('slide3').style.backgroundImage = 'url('+this.src+')';};
 			}
-			window.onload = function()
-			{
-				activeNav();
-				aos();
-				cutslider();
-				generate_slider();
+			window.addEventListener("load",()=>{
 				bind_images();
 				more992.addListener(bind_images);
 				more540.addListener(bind_images);
-			}
-			window.onscroll = function()
-			{
-				navcolor();
-				cutslider();
-				aos();
-			}
+			});
 			let deferredPrompt;
 			let btnContainer = document.getElementById("pwa-button-container");
 			window.addEventListener('beforeinstallprompt', (e) => 
