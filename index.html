@@ -305,14 +305,14 @@
 			});
 			let deferredPrompt;
 			let btnContainer = document.getElementById("pwa-button-container");
-			window.addEventListener('beforeinstallprompt', (e) => 
+			window.addEventListener('beforeinstallprompt', function(e)
 			{
 				console.log("Strona może być dodana do ekranu głównego, kliknij przycisk, który się pojawił w sekcji o PWA na stronie głównej :)");
 				e.preventDefault(); // Prevent Chrome 67 and earlier from automatically showing the prompt
 				deferredPrompt = e; // Stash the event so it can be triggered later.
 				btnContainer.style.display = 'block'; // Update UI notify the user they can add to home screen
 			});
-			document.getElementById("addpwa").addEventListener('click', (e) => 
+			document.getElementById("addpwa").addEventListener('click', function(e)
 			{
 				deferredPrompt.prompt(); // Show the prompt
 				deferredPrompt.userChoice // Wait for the user to respond to the prompt

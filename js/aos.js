@@ -14,9 +14,9 @@ function aos()
 			elements[i].classList.remove('aos-animate');
 	}
 }
-window.addEventListener("load",()=>{
+window.addEventListener("load",function(){
 	aos();
 });
-window.addEventListener("scroll",()=>{
+window.addEventListener("scroll",function(){
 	aos();
 });

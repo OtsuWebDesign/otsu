@@ -10,11 +10,11 @@ var currentSlide = 0, //aktualny slide
 	prevText = "Poprzedni slajd",
 	nextText = "Następny slajd";
 	
-window.addEventListener("load",()=>{
+window.addEventListener("load",function(){
 	generate_slider();
 	cutslider()
 });
-window.addEventListener("scroll",()=>{
+window.addEventListener("scroll",function(){
 	cutslider()
 });
 function cutslider()
